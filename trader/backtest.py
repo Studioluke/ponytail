@@ -33,11 +33,13 @@ def split_days(bars):
 
 def simulate(bars_by_symbol, cfg, slippage=0.01):
     book, trades = Book(), []
+    held = []  # (entry_time, exit_time, cost) of today's trades, to cap capital in use
     per_day = {s: split_days(bs) for s, bs in bars_by_symbol.items()}
     all_days = sorted({d for days in per_day.values() for d in days})
     for day in all_days:
         iso = day.isocalendar()
         book.roll(day.isoformat(), f"{iso.year}-W{iso.week:02d}")
+        held = []
         for sym in cfg.symbols:
             bars = per_day.get(sym, {}).get(day, [])
             if book.halted(cfg):
@@ -51,11 +53,14 @@ def simulate(bars_by_symbol, cfg, slippage=0.01):
                 if not sig:
                     continue
                 entry = sig.entry + slippage
-                qty = size(cfg.capital, cfg.risk_per_trade, entry, sig.stop, cfg.capital)
+                now = _et(bars[i - 1])
+                in_use = sum(c for a, b, c in held if a <= now < b)
+                qty = size(cfg.capital, cfg.risk_per_trade, entry, sig.stop, cfg.capital - in_use)
                 if qty < 1:
                     break
-                exit_px, how = None, "close"
+                exit_px, how, exit_t = None, "close", _et(bars[-1])
                 for b in bars[i:]:
+                    exit_t = _et(b)
                     if _et(b).time() >= cfg.flatten_at:
                         exit_px = b["o"]
                         break
@@ -68,6 +73,7 @@ def simulate(bars_by_symbol, cfg, slippage=0.01):
                 if exit_px is None:
                     exit_px = bars[-1]["c"]
                 exit_px -= slippage
+                held.append((now, exit_t, entry * qty))
                 pnl = (exit_px - entry) * qty
                 book.record(pnl)
                 trades.append({"day": day.isoformat(), "symbol": sym, "qty": qty, "entry": round(entry, 2),

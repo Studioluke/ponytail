@@ -92,7 +92,9 @@ def step(broker, cfg, book, now):
         return
     if t < cfg.session_start or t > cfg.last_entry:
         return
-    cash = float(broker.account()["cash"])
+    # Only the configured capital is ours to use, whatever the account holds.
+    used = sum(abs(float(p["cost_basis"])) for p in broker.positions())
+    cash = min(float(broker.account()["cash"]), cfg.capital - used)
     bars = todays_bars(broker, cfg, now)
     for sym in cfg.symbols:
         if sym in book.traded_today:
