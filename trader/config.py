@@ -13,7 +13,10 @@ def _f(name, default):
 
 @dataclass(frozen=True)
 class Config:
-    symbols: tuple = ("SPY", "QQQ")
+    # SPY/QQQ plus the large caps whose breakouts were profitable in both
+    # Jan-Jun and Jul-Oct 2026 backtests (see the vault journal, 2026-10-21).
+    symbols: tuple = field(default_factory=lambda: tuple(
+        os.environ.get("TRADER_SYMBOLS", "SPY,QQQ,AAPL,MSFT,GOOGL").split(",")))
     # Capital the bot sizes against. Luke set $300 on 2026-10-21; the paper
     # account itself holds more, and everything above this is ignored.
     capital: float = field(default_factory=lambda: _f("TRADER_CAPITAL", 300))

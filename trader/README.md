@@ -8,7 +8,7 @@ any other trading endpoint. It is unrelated to the rest of this repo.
 
 | Rule | Default | Env var |
 |---|---|---|
-| Symbols | SPY, QQQ (shares, long only, cash) | |
+| Symbols | SPY, QQQ, AAPL, MSFT, GOOGL (long only, cash) | `TRADER_SYMBOLS` |
 | Capital it sizes against | $300 (fractional shares) | `TRADER_CAPITAL` |
 | Risk per trade | 0.5% | `TRADER_RISK_PER_TRADE` |
 | Daily stop | -2% or 3 losing trades | `TRADER_MAX_DAILY_LOSS`, `TRADER_MAX_DAILY_LOSSES` |
