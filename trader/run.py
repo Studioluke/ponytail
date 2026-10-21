@@ -55,27 +55,66 @@ def todays_bars(broker, cfg, now):
             for s, bs in bars.items()}
 
 
-def reconcile(broker, cfg, book, now):
-    """Book realized P&L for symbols we traded today that are now flat."""
-    held = {p["symbol"] for p in broker.positions()}
-    open_ = now.replace(hour=9, minute=30, second=0, microsecond=0)
-    orders = broker.closed_orders(open_.isoformat())
+def _fills(broker, sym, since):
     flat = []
-    for o in orders:
+    for o in broker.closed_orders(since):
         flat.append(o)
         flat.extend(o.get("legs") or [])
-    for sym in book.traded_today:
-        if sym in held or f"{book.day}:{sym}" in book.seen_orders:
+    return [o for o in flat if o["symbol"] == sym and o.get("filled_at") and float(o["filled_qty"] or 0)]
+
+
+def reconcile(broker, cfg, book, now):
+    """Book realized P&L for trades that are now flat, and say why they closed."""
+    held = {p["symbol"] for p in broker.positions()}
+    open_ = now.replace(hour=9, minute=30, second=0, microsecond=0).isoformat()
+    for sym, t in list(book.open.items()):
+        if sym in held:
             continue
-        fills = [o for o in flat if o["symbol"] == sym and o.get("filled_at")]
-        if not fills:
-            continue
+        fills = _fills(broker, sym, open_)
+        if not any(o["side"] == "sell" for o in fills):
+            continue  # buy never filled or sell still pending
         pnl = sum(float(o["filled_qty"]) * float(o["filled_avg_price"]) * (1 if o["side"] == "sell" else -1)
                   for o in fills)
+        sells = [o for o in fills if o["side"] == "sell"]
+        exit_px = sum(float(o["filled_qty"]) * float(o["filled_avg_price"]) for o in sells) / \
+            sum(float(o["filled_qty"]) for o in sells)
+        reason = t.get("exit_reason") or ("stop" if any(o["id"] == t.get("stop_order_id") for o in sells) else "other")
         book.record(pnl)
-        book.seen_orders.append(f"{book.day}:{sym}")
-        journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "closed", "pnl": f"{pnl:.2f}"})
-        log(f"{sym} closed, P&L ${pnl:.2f}; day ${book.day_pnl:.2f}, week ${book.week_pnl:.2f}")
+        del book.open[sym]
+        journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": f"exit_{reason}", "qty": t["qty"],
+                      "price": f"{exit_px:.2f}", "stop": t["stop"], "target": t["target"], "pnl": f"{pnl:.2f}",
+                      "note": f"entry {t['entry']:.2f}, R = {(exit_px - t['entry']) / (t['entry'] - t['stop']):+.2f}"})
+        log(f"{sym} closed ({reason}) at {exit_px:.2f}, P&L ${pnl:.2f}; day ${book.day_pnl:.2f}, week ${book.week_pnl:.2f}")
+
+
+def manage(broker, cfg, book):
+    """Take profit at the target. The resting stop order handles the downside."""
+    for sym, t in book.open.items():
+        if t.get("exit_reason"):
+            continue
+        px = broker.latest_price(sym, cfg.data_feed)
+        if px >= t["target"]:
+            if t.get("stop_order_id"):
+                try:
+                    broker.cancel(t["stop_order_id"])
+                except RuntimeError:
+                    pass
+            broker.close_position(sym)
+            t["exit_reason"] = "target"
+            log(f"{sym} hit target {t['target']} (last {px:.2f}), closing")
+
+
+def gap_ok(broker, cfg, sym, bars, now):
+    """Vault rule: skip a symbol whose open gapped more than max_gap from the prior close."""
+    if not bars:
+        return True, ""
+    start = (now - timedelta(days=7)).date().isoformat()
+    daily = broker.bars([sym], "1Day", start, end=now.date().isoformat(), feed=cfg.data_feed).get(sym, [])
+    prior = [b for b in daily if b["t"][:10] < now.date().isoformat()]
+    if not prior:
+        return True, ""
+    gap = bars[0]["o"] / prior[-1]["c"] - 1
+    return abs(gap) <= cfg.max_gap, f"gap {gap:+.2%} vs prior close {prior[-1]['c']}"
 
 
 def step(broker, cfg, book, now):
@@ -83,11 +122,17 @@ def step(broker, cfg, book, now):
     if t >= cfg.flatten_at:
         if broker.positions() or broker.open_orders():
             log("flattening for the close")
+            for sym, tr in book.open.items():
+                tr.setdefault("exit_reason", "eod")
             broker.flatten()
         return
     reconcile(broker, cfg, book, now)
+    manage(broker, cfg, book)
     reason = book.halted(cfg)
     if reason:
+        if f"halt:{book.day}" not in book.seen_orders:
+            book.seen_orders.append(f"halt:{book.day}")
+            journal(cfg, {"time": now.isoformat(), "event": "halted", "note": reason})
         log(f"halted: {reason}")
         return
     if t < cfg.session_start or t > cfg.last_entry:
@@ -102,17 +147,36 @@ def step(broker, cfg, book, now):
         sig = strategy.check(sym, bars.get(sym, []), cfg.opening_range_minutes, cfg.reward_risk)
         if not sig:
             continue
-        qty = size(cfg.capital, cfg.risk_per_trade, sig.entry, sig.stop, cash)
-        if qty < 1:
-            log(f"{sym} signal skipped, size rounds to 0 shares ({sig.reason})")
-            book.traded_today.append(sym)
-            continue
-        broker.bracket_buy(sym, qty, sig.stop, sig.target, f"orb-{book.day}-{sym}")
         book.traded_today.append(sym)
-        cash -= qty * sig.entry
+        ok, gap_note = gap_ok(broker, cfg, sym, bars.get(sym, []), now)
+        if not ok:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
+                          "note": f"{sig.reason}; skipped, {gap_note} exceeds {cfg.max_gap:.2%}"})
+            log(f"{sym} signal skipped: {gap_note}")
+            continue
+        qty = size(cfg.capital, cfg.risk_per_trade, sig.entry, sig.stop, cash, cfg.fractional)
+        if not qty:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
+                          "note": f"{sig.reason}; skipped, size rounds to 0"})
+            log(f"{sym} signal skipped, size rounds to 0 ({sig.reason})")
+            continue
+        order = broker.buy_market(sym, qty, f"orb-{book.day}-{sym}")
+        fill = None
+        for _ in range(20):
+            o = broker.order(order["id"])
+            if o["status"] == "filled":
+                fill = float(o["filled_avg_price"])
+                break
+            _time.sleep(1)
+        entry = fill or sig.entry
+        stop_order = broker.sell_stop(sym, qty, sig.stop)
+        book.open[sym] = {"qty": qty, "entry": entry, "stop": sig.stop, "target": sig.target,
+                          "stop_order_id": stop_order["id"]}
+        cash -= qty * entry
         journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
-                      "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target, "note": sig.reason})
-        log(f"BUY {qty} {sym} ~{sig.entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
+                      "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
+                      "note": f"{sig.reason}; {gap_note}; risk ${qty * (entry - sig.stop):.2f}"})
+        log(f"BUY {qty} {sym} @ {entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
 
 
 def run(mode):

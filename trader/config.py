@@ -14,9 +14,11 @@ def _f(name, default):
 @dataclass(frozen=True)
 class Config:
     symbols: tuple = ("SPY", "QQQ")
-    # Capital the bot sizes against. Until Luke sets it, we act as if the
-    # account held $1,000, even though the paper account itself holds more.
-    capital: float = field(default_factory=lambda: _f("TRADER_CAPITAL", 1000))
+    # Capital the bot sizes against. Luke set $300 on 2026-10-21; the paper
+    # account itself holds more, and everything above this is ignored.
+    capital: float = field(default_factory=lambda: _f("TRADER_CAPITAL", 300))
+    # $300 can't buy a whole SPY share, so trade fractional shares.
+    fractional: bool = True
     risk_per_trade: float = field(default_factory=lambda: _f("TRADER_RISK_PER_TRADE", 0.005))
     max_daily_loss: float = field(default_factory=lambda: _f("TRADER_MAX_DAILY_LOSS", 0.02))
     max_daily_losses: int = field(default_factory=lambda: int(_f("TRADER_MAX_DAILY_LOSSES", 3)))
@@ -27,6 +29,8 @@ class Config:
     flatten_at: time = time(15, 45)
     opening_range_minutes: int = 15
     reward_risk: float = 2.0
+    # Vault rule: skip a symbol that opens more than 0.75% away from the prior close.
+    max_gap: float = 0.0075
     data_feed: str = field(default_factory=lambda: os.environ.get("TRADER_FEED", "iex"))
-    state_path: str = field(default_factory=lambda: os.environ.get("TRADER_STATE", "trader/data/state.json"))
-    journal_path: str = field(default_factory=lambda: os.environ.get("TRADER_JOURNAL", "trader/data/journal.csv"))
+    state_path: str = field(default_factory=lambda: os.environ.get("TRADER_STATE", "trader/journal/state.json"))
+    journal_path: str = field(default_factory=lambda: os.environ.get("TRADER_JOURNAL", "trader/journal/trades.csv"))

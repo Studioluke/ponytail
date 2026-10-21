@@ -44,6 +44,11 @@ def simulate(bars_by_symbol, cfg, slippage=0.01):
             bars = per_day.get(sym, {}).get(day, [])
             if book.halted(cfg):
                 break
+            prior = [d for d in per_day.get(sym, {}) if d < day]
+            if bars and prior:
+                prev_close = per_day[sym][max(prior)][-1]["c"]
+                if abs(bars[0]["o"] / prev_close - 1) > cfg.max_gap:
+                    continue
             for i in range(cfg.opening_range_minutes + 1, len(bars) + 1):
                 t = _et(bars[i - 1]).time()
                 # A bar stamped 09:40 closes at 09:41, which is when we'd act.
@@ -55,8 +60,8 @@ def simulate(bars_by_symbol, cfg, slippage=0.01):
                 entry = sig.entry + slippage
                 now = _et(bars[i - 1])
                 in_use = sum(c for a, b, c in held if a <= now < b)
-                qty = size(cfg.capital, cfg.risk_per_trade, entry, sig.stop, cfg.capital - in_use)
-                if qty < 1:
+                qty = size(cfg.capital, cfg.risk_per_trade, entry, sig.stop, cfg.capital - in_use, cfg.fractional)
+                if not qty:
                     break
                 exit_px, how, exit_t = None, "close", _et(bars[-1])
                 for b in bars[i:]:

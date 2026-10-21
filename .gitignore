@@ -30,5 +30,4 @@ benchmarks/agentic/fixtures/
 /tsconfig.json
 
 # Day trader runtime state
-trader/data/
 __pycache__/

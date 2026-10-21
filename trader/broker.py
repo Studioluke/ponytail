@@ -50,6 +50,29 @@ class Broker:
             "stop_loss": {"stop_price": f"{stop:.2f}"},
         })
 
+    def buy_market(self, symbol, qty, client_id):
+        return self._req("POST", f"{self.base}/v2/orders", json={
+            "symbol": symbol, "qty": str(qty), "side": "buy", "type": "market",
+            "time_in_force": "day", "client_order_id": client_id})
+
+    def sell_stop(self, symbol, qty, stop):
+        return self._req("POST", f"{self.base}/v2/orders", json={
+            "symbol": symbol, "qty": str(qty), "side": "sell", "type": "stop",
+            "stop_price": f"{stop:.2f}", "time_in_force": "day"})
+
+    def order(self, order_id):
+        return self._req("GET", f"{self.base}/v2/orders/{order_id}")
+
+    def cancel(self, order_id):
+        return self._req("DELETE", f"{self.base}/v2/orders/{order_id}")
+
+    def close_position(self, symbol):
+        return self._req("DELETE", f"{self.base}/v2/positions/{symbol}")
+
+    def latest_price(self, symbol, feed="iex"):
+        d = self._req("GET", f"{DATA_URL}/v2/stocks/{symbol}/trades/latest", params={"feed": feed})
+        return float(d["trade"]["p"])
+
     def flatten(self):
         """Cancel all orders and close all positions."""
         return self._req("DELETE", f"{self.base}/v2/positions", params={"cancel_orders": "true"})

@@ -35,13 +35,22 @@ class Sizing(unittest.TestCase):
     def test_cash_caps_size(self):
         self.assertEqual(size(1000, 0.005, 600, 599.5, 10_000), 1)
 
+    def test_fractional(self):
+        # $300 * 0.5% = $1.50 risk, $1.50 stop -> 1 share, but cash allows 0.387
+        self.assertEqual(size(300, 0.005, 775, 773.5, 300, fractional=True), 0.387)
+        self.assertEqual(size(300, 0.005, 775, 774, 300, fractional=True), 0.387)
+        self.assertEqual(size(300, 0.005, 775, 760, 300, fractional=True), 0.1)
+
+    def test_fractional_minimum(self):
+        self.assertEqual(size(300, 0.005, 775, 774, 0.5, fractional=True), 0)
+
     def test_bad_stop(self):
         self.assertEqual(size(1000, 0.005, 50, 51, 1000), 0)
 
 
 class Breakers(unittest.TestCase):
     def test_limits(self):
-        cfg = Config()
+        cfg = Config(capital=1000)
         b = Book()
         b.roll("2026-10-20", "2026-W43")
         self.assertIsNone(b.halted(cfg))
@@ -79,7 +88,7 @@ class Strategy(unittest.TestCase):
 class Backtest(unittest.TestCase):
     def test_target_hit(self):
         bars = day_bars(after=[(103, 101.9, 102.8), (105.5, 102.8, 105.2)])
-        trades = simulate({"SPY": bars}, Config(symbols=("SPY",)), slippage=0)
+        trades = simulate({"SPY": bars}, Config(symbols=("SPY",), capital=1000, fractional=False), slippage=0)
         self.assertEqual(len(trades), 1)
         self.assertEqual(trades[0]["how"], "target")
         self.assertEqual(trades[0]["qty"], 3)  # $5 / $1.50 risk
@@ -87,7 +96,7 @@ class Backtest(unittest.TestCase):
 
     def test_stop_hit(self):
         bars = day_bars(after=[(102.1, 100.2, 100.4)])
-        trades = simulate({"SPY": bars}, Config(symbols=("SPY",)), slippage=0)
+        trades = simulate({"SPY": bars}, Config(symbols=("SPY",), capital=1000, fractional=False), slippage=0)
         self.assertEqual(trades[0]["how"], "stop")
         self.assertAlmostEqual(trades[0]["pnl"], -4.5)
 
