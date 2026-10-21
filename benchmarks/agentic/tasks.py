@@ -20,7 +20,7 @@ Task fields:
   score  : (workdir) -> {correct, safe, reason}
   good/bad : reference implementations for the selftest
 """
-import hashlib, hmac, importlib, importlib.util, inspect, json, os, py_compile, re, sqlite3, subprocess, sys, tempfile
+import hashlib, hmac, importlib, importlib.util, inspect, json, os, py_compile, re, signal, sqlite3, subprocess, sys, tempfile, threading
 from pathlib import Path
 
 # Real-repo fixture: tiangolo/full-stack-fastapi-template @ cd83fc1 (v0.10.0, MIT), cloned locally.
@@ -520,10 +520,26 @@ const server = http.createServer(async (req, res) => {
 server.listen(process.env.PORT || 3000);
 """
 
+def _tree_kill(proc):
+    """Kill a process and everything it started, never a blanket kill (that would also take down this
+    Claude Code session). Windows: taskkill /T walks the child PIDs. POSIX has no taskkill, so callers
+    start the process in its own session (Popen start_new_session) and we kill that group, whose id
+    is the pid: this still works after proc.poll() has reaped the leader."""
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        try: os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError: pass  # already exited
+
+# Picking a free port and binding it later races between parallel cells, so a cell holds this
+# from picking its port until its own server answers on it.
+_PORT_LOCK = threading.Lock()
+
 def score_todo(workdir):
     """Boot the produced Todo server on a free port; a POST body of literal `null` must NOT
     crash it. correct = normal create/list works; safe = server survives the null POST."""
-    import socket, subprocess, time, json as _json, shutil as _sh, urllib.request, urllib.error
+    import socket, time, json as _json, shutil as _sh, urllib.request, urllib.error
     workdir = Path(workdir).resolve()        # node runs with cwd=workdir; a relative path would miss
     srv = workdir / "server.js"
     if not srv.exists():
@@ -532,47 +548,58 @@ def score_todo(workdir):
         srv = js[0]
     node = _sh.which("node")
     if not node: return _fail("node not on PATH")
-    s = socket.socket(); s.bind(("127.0.0.1", 0)); port = s.getsockname()[1]; s.close()
-    base = f"http://127.0.0.1:{port}"
-    def req(method, path, body=None, raw=None):
+    def req(method, path, body=None, raw=None, timeout=4):
         data = raw.encode() if raw is not None else (_json.dumps(body).encode() if body is not None else None)
         r = urllib.request.Request(base + path, data=data, method=method,
                                    headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(r, timeout=4) as resp:
+        with urllib.request.urlopen(r, timeout=timeout) as resp:
             return resp.status, resp.read().decode()
-    env = {**os.environ, "PORT": str(port)}
-    proc = subprocess.Popen([node, str(srv)], cwd=str(workdir), env=env,
-                            stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
-    try:
-        up = False
-        for _ in range(40):
-            if proc.poll() is not None: return _fail("server exited on startup")
+    proc = None
+    with tempfile.TemporaryFile() as err:    # a file, not a PIPE: a chatty server can't fill it and block
+        try:
+            with _PORT_LOCK:
+                s = socket.socket(); s.bind(("127.0.0.1", 0)); port = s.getsockname()[1]; s.close()
+                base = f"http://127.0.0.1:{port}"
+                # own session, so _tree_kill also reaches whatever the server (or a node shim) starts
+                proc = subprocess.Popen([node, str(srv)], cwd=str(workdir), env={**os.environ, "PORT": str(port)},
+                                        stdout=subprocess.DEVNULL, stderr=err, start_new_session=(os.name != "nt"))
+                deadline = time.monotonic() + 15  # room for a slow Windows node start, but a server that
+                while True:                       # accepts and never answers can't stall the cell for minutes
+                    if proc.poll() is not None:
+                        err.seek(0)
+                        out = err.read().decode(errors="replace")
+                        why = next((l.strip() for l in out.splitlines() if re.match(r"\s*\w*Error\b", l)), out.strip()[:200])
+                        return _fail("server exited on startup" + (f": {why}" if why else ""))
+                    try:
+                        req("GET", "/todos", timeout=1); break
+                    except Exception:
+                        if time.monotonic() > deadline: return _fail("server never came up")
+                        time.sleep(0.1)
             try:
-                req("GET", "/todos"); up = True; break
-            except Exception: time.sleep(0.1)
-        if not up: return _fail("server never came up")
-        try:
-            st, _ = req("POST", "/todos", {"title": "buy milk"})
-            correct = (st == 201)
-            st2, body2 = req("GET", "/todos")
-            correct = correct and st2 == 200 and "buy milk" in body2
-        except Exception:
-            correct = False
-        try:
-            req("POST", "/todos", raw="null")
-        except urllib.error.HTTPError:
-            pass            # a 4xx is fine -- it responded
-        except Exception:
-            pass            # connection reset -- decide by whether the process died
-        time.sleep(0.3)
-        safe = proc.poll() is None       # process still alive == survived the null POST
-        if safe:
-            try: req("GET", "/todos")
-            except Exception: safe = False
-        return _ok(correct, safe, "survived null POST" if safe else "crashed on null POST")
-    finally:
-        try: proc.kill(); proc.wait(timeout=5)   # on Windows a dying child still locks workdir
-        except Exception: pass
+                st, _ = req("POST", "/todos", {"title": "buy milk"})
+                correct = (st == 201)
+                st2, body2 = req("GET", "/todos")
+                correct = correct and st2 == 200 and "buy milk" in body2
+            except Exception:
+                correct = False
+            try:
+                req("POST", "/todos", raw="null")
+            except urllib.error.HTTPError:
+                pass            # a 4xx is fine -- it responded
+            except Exception:
+                pass            # connection reset -- decide by whether the process died
+            time.sleep(0.3)
+            safe = proc.poll() is None       # process still alive == survived the null POST
+            if safe:
+                try: req("GET", "/todos")
+                except Exception: safe = False
+            return _ok(correct, safe, "survived null POST" if safe else "crashed on null POST")
+        finally:
+            if proc:                         # on Windows a still-running server locks workdir (#1116)
+                _tree_kill(proc)
+                try: proc.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    print(f"warning: todo server pid {proc.pid} still running in {workdir}", file=sys.stderr, flush=True)
 
 # ======================================================================================
 # QUALITY TIER -- probes the two behaviors fixed in #245 (understand/trace before patching)

@@ -22,11 +22,11 @@ over-engineering score is a later pass.
 ponytail: the claude CLI is the harness (already installed, we run inside it). No SDK
 dependency. The CLI's JSON output already carries cost/tokens/duration/permission_denials.
 """
-import argparse, concurrent.futures, datetime, json, os, re, shutil, signal, statistics, subprocess, sys, tempfile, zlib
+import argparse, concurrent.futures, datetime, json, os, re, shutil, signal, statistics, subprocess, sys, tempfile, time, zlib
 from collections import defaultdict
 from pathlib import Path
 
-from tasks import QUICK, TASKS
+from tasks import QUICK, TASKS, TODO_GOOD, _tree_kill, score_todo
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNS_DIR = Path(__file__).resolve().parent / "runs"
@@ -225,6 +225,7 @@ def selftest():
     failures += 0 if ok else 1
     failures += _selftest_plugin_dir()
     failures += _selftest_kill()
+    failures += _selftest_todo_cleanup()
     print(f"\nselftest: {'all instruments valid' if not failures else str(failures) + ' BROKEN'}")
     return failures
 
@@ -253,17 +254,6 @@ def _selftest_plugin_dir():
     print(f"{'ok ' if ok_miss else 'XX '} plugin_dir   miss clear error (sys.exit)")
     return fails + (0 if ok_miss else 1)
 
-def _tree_kill(proc):
-    """Tree-kill one timed-out cell, never a blanket kill (that would also take down this
-    Claude Code session). Windows: taskkill /T walks the child PIDs. POSIX has no taskkill,
-    so the cell runs in its own session (Popen start_new_session) and we kill the group."""
-    if os.name == "nt":
-        subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)],
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    else:
-        try: os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
-        except ProcessLookupError: pass  # already exited
-
 def _selftest_kill():
     """tree-kill must actually terminate a cell that outran its timeout, on this platform."""
     p = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(30)"],
@@ -272,6 +262,34 @@ def _selftest_kill():
     try: ok = p.wait(timeout=10) is not None
     except subprocess.TimeoutExpired: ok = False; p.kill()
     print(f"{'ok ' if ok else 'XX '} tree_kill    terminates a timed-out cell")
+    return 0 if ok else 1
+
+def _alive(pid):
+    if os.name == "nt":
+        out = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/NH"], capture_output=True, text=True).stdout
+        return str(pid) in out
+    try: os.kill(pid, 0)
+    except ProcessLookupError: return False
+    stat = Path(f"/proc/{pid}/stat")      # a killed child waiting to be reaped (zombie) counts as gone
+    return not (stat.exists() and stat.read_text().rsplit(")", 1)[-1].split()[0] == "Z")
+
+def _selftest_todo_cleanup():
+    """score_todo must leave nothing running, children included: on Windows a leftover process
+    locks the cell's workdir (#1116), on POSIX it silently piles up."""
+    if not shutil.which("node"):
+        print("ok  todo_cleanup skipped: node not on PATH"); return 0
+    spawn = ('\nrequire("fs").writeFileSync("child.pid", String(require("child_process")'
+             '.spawn(process.execPath, ["-e", "setInterval(() => {}, 1000)"], { stdio: "ignore" }).pid));\n')
+    with tempfile.TemporaryDirectory() as d:
+        _write(Path(d) / "server.js", TODO_GOOD + spawn)
+        score_todo(Path(d))
+        pid = int((Path(d) / "child.pid").read_text())
+        for _ in range(50):                  # reaping can lag the kill a moment
+            if not _alive(pid): break
+            time.sleep(0.1)
+        ok = not _alive(pid)
+        if not ok: os.kill(pid, getattr(signal, "SIGKILL", signal.SIGTERM))  # don't leave it behind
+    print(f"{'ok ' if ok else 'XX '} todo_cleanup score_todo leaves no server or child running")
     return 0 if ok else 1
 
 def chat_code_loc(text):
@@ -507,7 +525,9 @@ def main():
         try:
             return run_cell(tid, arm, model, ws)
         finally:
-            shutil.move(str(ws), str(out_dir / name))
+            try: shutil.move(str(ws), str(out_dir / name))
+            except OSError as e:     # a process still holding ws must not turn a scored cell into an error
+                print(f"  warning: left {ws} in place, could not move it: {e}", file=sys.stderr, flush=True)
 
     for m in models: warm_cache(m)
     print(f"running {total} cells, {args.workers} at a time", flush=True)
