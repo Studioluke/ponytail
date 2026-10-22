@@ -26,6 +26,16 @@ allow bracket orders on fractional shares. The
 stop is the range midpoint and the target is 2x the risk. One trade per symbol
 per day. This is a starting point to measure, not a proven edge.
 
+## Research brief
+
+`python -m trader.research` writes `journal/research/<date>.md` and `.json`
+before the open: each symbol's premarket gap, trend, ATR and overnight
+headlines with a **skip / caution / ok** verdict, sector and macro ETFs, a
+regime read, and scheduled events from `journal/research/events.csv` (earnings
+days are marked skip). It runs at 9:10 ET on weekdays and is copied to the
+vault's Research-Briefs note. It informs the trader and the risk manager; it
+does not place or block orders.
+
 ## Use
 
 Needs `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` (paper keys) and `requests`.
@@ -35,6 +45,7 @@ python -m trader.run check        # account, clock, latest prices
 python -m trader.run loop         # trade today's session, flat by 3:45
 python -m trader.backtest 2026-07-01 2026-10-20
 python -m trader.notes 2026-10-22  # the day's journal note in Markdown
+python -m trader.research          # today's premarket research brief
 python -m unittest discover -s trader/tests -t .
 ```
 
