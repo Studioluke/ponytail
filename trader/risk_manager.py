@@ -70,7 +70,11 @@ def research_verdicts(cfg, day):
     try:
         with open(path) as f:
             d = json.load(f)
-        return {w["symbol"]: (w.get("verdict", "ok"), w.get("why", "")) for w in d.get("watchlist", [])}
+        out = {}
+        for w in d.get("watchlist", []):
+            why = w.get("why", "")
+            out[w["symbol"]] = (w.get("verdict", "ok"), "; ".join(why) if isinstance(why, list) else why)
+        return out
     except (ValueError, KeyError, TypeError):
         return {}
 

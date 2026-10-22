@@ -83,11 +83,11 @@ class Veto(Tmp):
     def test_research_skip_vetoes(self):
         os.makedirs(self.cfg.research_dir, exist_ok=True)
         with open(f"{self.cfg.research_dir}/2026-10-22.json", "w") as f:
-            f.write('{"watchlist": [{"symbol": "SPY", "verdict": "skip", "why": "FOMC"},'
+            f.write('{"watchlist": [{"symbol": "SPY", "verdict": "skip", "why": ["FOMC", "earnings"]},'
                     ' {"symbol": "QQQ", "verdict": "caution", "why": "gap"}]}')
         research = rm.research_verdicts(self.cfg, "2026-10-22")
         d = rm.check_entry(self.cfg, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, research)
-        self.assertIn("research says skip SPY: FOMC", str(d))
+        self.assertIn("research says skip SPY: FOMC; earnings", str(d))
         qqq = Signal("QQQ", 600.0, 599.0, 602.0, "test")
         self.assertTrue(rm.check_entry(self.cfg, self.book, qqq, 0.4, NOW, ACCOUNT, [], None, None, research).ok)
         self.assertEqual(rm.research_verdicts(self.cfg, "2026-10-23"), {})
