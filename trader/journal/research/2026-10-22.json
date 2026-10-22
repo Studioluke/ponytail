@@ -1,10 +1,10 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22T09:35-04:00",
+ "generated": "2026-10-22T09:36-04:00",
  "regime": "risk-off open",
  "regime_notes": [
-  "SPY trend up, gap -0.77%, 5d +0.45%",
-  "QQQ trend mixed, gap -1.54%, 5d -0.51%"
+  "SPY trend up, gap -0.82%, 5d +0.45%",
+  "QQQ trend mixed, gap -1.68%, 5d -0.51%"
  ],
  "events": [
   {
@@ -20,11 +20,11 @@
    "symbol": "SPY",
    "verdict": "skip",
    "why": [
-    "premarket gap -0.77% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -0.82% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 773.13,
-   "price": 767.165,
-   "gap": -0.007715390684619683,
+   "price": 766.8,
+   "gap": -0.008187497574793423,
    "ret_5d": 0.004521535763009288,
    "ret_20d": 0.0067714505228342325,
    "sma20": 770.89225,
@@ -32,7 +32,7 @@
    "trend": "up",
    "atr_pct": 0.009073506396078252,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:09.380148564Z",
+   "price_time": "2026-10-22T13:36:47.59694525Z",
    "news": [
     {
      "time": "2026-10-22T13:08:16Z",
@@ -80,11 +80,11 @@
    "symbol": "QQQ",
    "verdict": "skip",
    "why": [
-    "premarket gap -1.54% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -1.68% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 725.25,
-   "price": 714.11,
-   "gap": -0.015360220613581554,
+   "price": 713.035,
+   "gap": -0.016842468114443343,
    "ret_5d": -0.0051235622132143055,
    "ret_20d": -0.021479552599268703,
    "sma20": 739.0335,
@@ -92,7 +92,7 @@
    "trend": "mixed",
    "atr_pct": 0.01555867434874674,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:09.920243812Z",
+   "price_time": "2026-10-22T13:36:46.545087436Z",
    "news": [
     {
      "time": "2026-10-22T13:04:29Z",
@@ -143,8 +143,8 @@
     "nothing unusual"
    ],
    "prior_close": 343.935,
-   "price": 345.975,
-   "gap": 0.0059313533080378456,
+   "price": 345.3,
+   "gap": 0.00396877316934896,
    "ret_5d": 0.002696714381504872,
    "ret_20d": 0.020972481966337053,
    "sma20": 337.993,
@@ -152,7 +152,7 @@
    "trend": "up",
    "atr_pct": 0.01716686500148492,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:09.558559031Z",
+   "price_time": "2026-10-22T13:36:50.141504458Z",
    "news": [
     {
      "time": "2026-10-22T13:31:17Z",
@@ -203,8 +203,8 @@
     "nothing unusual"
    ],
    "prior_close": 532.8,
-   "price": 529.96,
-   "gap": -0.005330330330330146,
+   "price": 529.545,
+   "gap": -0.006109234234234262,
    "ret_5d": -0.0023219234514268994,
    "ret_20d": 0.06428029243737754,
    "sma20": 525.1205,
@@ -212,7 +212,7 @@
    "trend": "up",
    "atr_pct": 0.020701951951951934,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:06.760138186Z",
+   "price_time": "2026-10-22T13:36:47.052521014Z",
    "news": [
     {
      "time": "2026-10-22T13:31:28Z",
@@ -260,11 +260,11 @@
    "symbol": "GOOGL",
    "verdict": "skip",
    "why": [
-    "premarket gap -1.04% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -1.18% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 334.715,
-   "price": 331.22,
-   "gap": -0.010441719074436251,
+   "price": 330.77,
+   "gap": -0.011786146423076294,
    "ret_5d": -0.03756685260797055,
    "ret_20d": -0.009117956156840856,
    "sma20": 345.1675,
@@ -272,7 +272,7 @@
    "trend": "mixed",
    "atr_pct": 0.02384544633920968,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:07.892921185Z",
+   "price_time": "2026-10-22T13:36:44.71533451Z",
    "news": [
     {
      "time": "2026-10-22T12:41:12Z",
@@ -320,8 +320,8 @@
  "sectors": {
   "XLK": {
    "prior_close": 188.52,
-   "price": 185.11,
-   "gap": -0.01808826649692341,
+   "price": 185.02,
+   "gap": -0.018565669424994713,
    "ret_5d": -0.0100819155639571,
    "ret_20d": -0.034864076178774406,
    "sma20": 194.49725,
@@ -329,12 +329,12 @@
    "trend": "mixed",
    "atr_pct": 0.01993725561516776,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:06.73560712Z"
+   "price_time": "2026-10-22T13:36:50.223151737Z"
   },
   "SMH": {
    "prior_close": 556.57,
-   "price": 537.6,
-   "gap": -0.03408376304867322,
+   "price": 537.13,
+   "gap": -0.03492822106832938,
    "ret_5d": -0.015129530011324999,
    "ret_20d": -0.07423486360612108,
    "sma20": 593.3525,
@@ -342,12 +342,12 @@
    "trend": "mixed",
    "atr_pct": 0.030009060598204837,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:09.610266078Z"
+   "price_time": "2026-10-22T13:36:49.748674517Z"
   },
   "XLC": {
    "prior_close": 108.98,
-   "price": 107.67,
-   "gap": -0.01202055423013404,
+   "price": 107.51,
+   "gap": -0.013488713525417473,
    "ret_5d": -0.01669223134530362,
    "ret_20d": -0.031805259417199694,
    "sma20": 111.21575,
@@ -355,12 +355,12 @@
    "trend": "down",
    "atr_pct": 0.014363710248276228,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:00.326639092Z"
+   "price_time": "2026-10-22T13:36:39.675655919Z"
   },
   "XLY": {
    "prior_close": 115.53,
-   "price": 114.78,
-   "gap": -0.006491820306413931,
+   "price": 114.64,
+   "gap": -0.007703626763611138,
    "ret_5d": 0.03595767575322806,
    "ret_20d": 0.044150210131501666,
    "sma20": 111.61749999999999,
@@ -368,12 +368,12 @@
    "trend": "mixed",
    "atr_pct": 0.013033102100876721,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:03.038929982Z"
+   "price_time": "2026-10-22T13:36:31.369676958Z"
   },
   "XLF": {
    "prior_close": 56.02,
-   "price": 56.13,
-   "gap": 0.001963584434130583,
+   "price": 56.19,
+   "gap": 0.003034630489110901,
    "ret_5d": 0.02788990825688087,
    "ret_20d": 0.02713604693802729,
    "sma20": 54.51925,
@@ -381,12 +381,12 @@
    "trend": "mixed",
    "atr_pct": 0.0120173917478452,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:08.476843728Z"
+   "price_time": "2026-10-22T13:36:50.784881531Z"
   },
   "XLI": {
    "prior_close": 168.3,
-   "price": 167.07,
-   "gap": -0.007308377896613316,
+   "price": 167.23,
+   "gap": -0.0063576945929888495,
    "ret_5d": 0.007362183515891685,
    "ret_20d": -0.01058201058201047,
    "sma20": 168.60425,
@@ -394,12 +394,12 @@
    "trend": "down",
    "atr_pct": 0.01475044563279857,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:02.940577477Z"
+   "price_time": "2026-10-22T13:36:46.065929921Z"
   },
   "XLE": {
    "prior_close": 68.15,
-   "price": 68.4,
-   "gap": 0.003668378576669129,
+   "price": 68.46,
+   "gap": 0.0045487894350695335,
    "ret_5d": 0.007837917775805892,
    "ret_20d": 0.09249759538313573,
    "sma20": 64.78524999999999,
@@ -407,12 +407,12 @@
    "trend": "up",
    "atr_pct": 0.01944764699717013,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:06.781652546Z"
+   "price_time": "2026-10-22T13:36:45.059358163Z"
   },
   "XLV": {
    "prior_close": 178.915,
-   "price": 179.06,
-   "gap": 0.0008104407120699264,
+   "price": 179.68,
+   "gap": 0.004275773411955397,
    "ret_5d": 0.028542684679505603,
    "ret_20d": 0.05992298578199051,
    "sma20": 171.47275,
@@ -420,12 +420,12 @@
    "trend": "up",
    "atr_pct": 0.01632259532659165,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:09.727464264Z"
+   "price_time": "2026-10-22T13:36:47.022798401Z"
   },
   "XLP": {
    "prior_close": 87.11,
-   "price": 88.18,
-   "gap": 0.012283319940305404,
+   "price": 88.06,
+   "gap": 0.010905751348869286,
    "ret_5d": 0.012200790146409402,
    "ret_20d": 0.05651910248635539,
    "sma20": 83.58500000000001,
@@ -433,12 +433,12 @@
    "trend": "mixed",
    "atr_pct": 0.012881906292536561,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:08.865658353Z"
+   "price_time": "2026-10-22T13:36:48.384040618Z"
   },
   "XLU": {
    "prior_close": 42.01,
-   "price": 42.2,
-   "gap": 0.004522732682694652,
+   "price": 42.15,
+   "gap": 0.003332539871459206,
    "ret_5d": 0.006468615237182451,
    "ret_20d": 0.056589537223340036,
    "sma20": 40.792,
@@ -446,14 +446,14 @@
    "trend": "mixed",
    "atr_pct": 0.01575305199442312,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:06.734837411Z"
+   "price_time": "2026-10-22T13:36:50.223921865Z"
   }
  },
  "macro": {
   "IWM": {
    "prior_close": 276.46,
-   "price": 275.77,
-   "gap": -0.0024958402662229595,
+   "price": 276.15,
+   "gap": -0.0011213195398972475,
    "ret_5d": 0.018662834613754953,
    "ret_20d": -0.01961062449023021,
    "sma20": 277.74899999999997,
@@ -461,12 +461,12 @@
    "trend": "down",
    "atr_pct": 0.013873099699258984,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:08.280590865Z"
+   "price_time": "2026-10-22T13:36:46.567053418Z"
   },
   "DIA": {
    "prior_close": 527.7,
-   "price": 526.305,
-   "gap": -0.0026435474701537176,
+   "price": 526.58,
+   "gap": -0.0021224180405533533,
    "ret_5d": 0.02336856394841469,
    "ret_20d": 0.02577560065313733,
    "sma20": 515.5355,
@@ -474,12 +474,12 @@
    "trend": "mixed",
    "atr_pct": 0.009638187281734765,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:33:58.827164785Z"
+   "price_time": "2026-10-22T13:36:03.452661902Z"
   },
   "TLT": {
    "prior_close": 80.24,
-   "price": 80.96,
-   "gap": 0.008973080757726848,
+   "price": 80.895,
+   "gap": 0.008163010967098705,
    "ret_5d": 0.01724137931034475,
    "ret_20d": -0.0027962468153857056,
    "sma20": 78.55699999999999,
@@ -487,7 +487,7 @@
    "trend": "mixed",
    "atr_pct": 0.009943384133314357,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:06.485457843Z"
+   "price_time": "2026-10-22T13:36:46.961179868Z"
   },
   "UUP": {
    "prior_close": 28.91,
@@ -504,8 +504,8 @@
   },
   "GLD": {
    "prior_close": 378.98,
-   "price": 373.11,
-   "gap": -0.01548894400759937,
+   "price": 372.55,
+   "gap": -0.01696659454324767,
    "ret_5d": 0.008005957922174511,
    "ret_20d": -0.03488845879596614,
    "sma20": 381.5735,
@@ -513,12 +513,12 @@
    "trend": "down",
    "atr_pct": 0.012884207986851897,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:02.617471592Z"
+   "price_time": "2026-10-22T13:36:47.342308448Z"
   },
   "USO": {
    "prior_close": 159.75,
-   "price": 163.45,
-   "gap": 0.023161189358372303,
+   "price": 163.51,
+   "gap": 0.023536776212832455,
    "ret_5d": 0.0398359695371997,
    "ret_20d": 0.07330018812147276,
    "sma20": 151.23875,
@@ -526,12 +526,12 @@
    "trend": "up",
    "atr_pct": 0.028479767493852007,
    "vol_expanding": false,
-   "price_time": "2026-10-22T13:35:05.824310353Z"
+   "price_time": "2026-10-22T13:36:40.251323457Z"
   },
   "VIXY": {
    "prior_close": 16.68,
-   "price": 16.96,
-   "gap": 0.016786570743405393,
+   "price": 16.97,
+   "gap": 0.017386091127098213,
    "ret_5d": 0.010296789824348673,
    "ret_20d": -0.00655151876116733,
    "sma20": 16.6305,
@@ -539,10 +539,31 @@
    "trend": "mixed",
    "atr_pct": 0.039140116478245966,
    "vol_expanding": true,
-   "price_time": "2026-10-22T13:35:09.851887814Z"
+   "price_time": "2026-10-22T13:36:27.399866583Z"
   }
  },
  "market_news": [
+  {
+   "time": "2026-10-22T13:34:59Z",
+   "headline": "TD Cowen Maintains Buy on Danaher, Raises Price Target to $270",
+   "symbols": [
+    "DHR"
+   ]
+  },
+  {
+   "time": "2026-10-22T13:34:29Z",
+   "headline": "Tech Mahindra Partners With SpaceXSI To Upgrade Legacy Applications, Software Delivery, Developer Productivity",
+   "symbols": [
+    "SPCX"
+   ]
+  },
+  {
+   "time": "2026-10-22T13:34:27Z",
+   "headline": "Valley Ntl Q3 2026 Earnings Call Transcript",
+   "symbols": [
+    "VLY"
+   ]
+  },
   {
    "time": "2026-10-22T13:33:51Z",
    "headline": "Ingredion Incorporated Identified as Offeror in Regulatory Disclosure",
@@ -576,6 +597,25 @@
    "headline": "Peloton Interactive, Inc. Announces Date of First Quarter Fiscal 2027 Earnings Release and Conference Call",
    "symbols": [
     "PTON"
+   ]
+  },
+  {
+   "time": "2026-10-22T13:33:24Z",
+   "headline": "'Long Coins, Short Stocks': Expert Bullish on Bitcoin, Cautious on XRP, Coinbase, Circle",
+   "symbols": [
+    "BNBUSD",
+    "BTCUSD",
+    "COIN",
+    "CRCL",
+    "ETHUSD",
+    "IBIT",
+    "MSTR",
+    "NEARUSD",
+    "PURR",
+    "SOLUSD",
+    "XMRUSD",
+    "XRPUSD",
+    "ZECUSD"
    ]
   },
   {
@@ -619,99 +659,71 @@
    "symbols": [
     "PIPR"
    ]
-  },
-  {
-   "time": "2026-10-22T13:33:08Z",
-   "headline": "Oppenheimer Initiates Coverage of Mercury Systems with Outperform Rating",
-   "symbols": [
-    "MRCY"
-   ]
-  },
-  {
-   "time": "2026-10-22T13:33:08Z",
-   "headline": "Vericel to Report Third Quarter 2026 Financial Results on November 5, 2026",
-   "symbols": [
-    "VCEL"
-   ]
-  },
-  {
-   "time": "2026-10-22T13:33:08Z",
-   "headline": "Gordon Haskett Upgrades Kohl's to Buy From Hold",
-   "symbols": [
-    "KSS"
-   ]
-  },
-  {
-   "time": "2026-10-22T13:33:06Z",
-   "headline": "Webull Introduces Extended-Hours Options Trading",
-   "symbols": [
-    "BULL"
-   ]
   }
  ],
  "movers": {
   "gainers": [
    {
-    "change": 5.425,
-    "percent_change": 16.02,
-    "price": 39.3,
+    "change": 6.345,
+    "percent_change": 18.73,
+    "price": 40.22,
     "symbol": "LMTL"
    },
    {
-    "change": 2.899,
-    "percent_change": 15.56,
-    "price": 21.5291,
+    "change": 2.931,
+    "percent_change": 15.73,
+    "price": 21.5605,
     "symbol": "AAOZ"
    },
    {
-    "change": 5.809,
-    "percent_change": 15.27,
-    "price": 43.86,
+    "change": 5.814,
+    "percent_change": 15.28,
+    "price": 43.865,
     "symbol": "COHQ"
    },
    {
-    "change": 4.856,
-    "percent_change": 14.38,
-    "price": 38.6158,
-    "symbol": "AXTQ"
+    "change": 4.12,
+    "percent_change": 14.72,
+    "price": 32.1,
+    "symbol": "LITZ"
    },
    {
-    "change": 3.8,
-    "percent_change": 13.58,
-    "price": 31.78,
-    "symbol": "LITZ"
+    "change": 2.99,
+    "percent_change": 13.14,
+    "price": 25.75,
+    "symbol": "GDXD"
    }
   ],
   "losers": [
    {
-    "change": -30.07,
-    "percent_change": -29.17,
-    "price": 73,
+    "change": -29.57,
+    "percent_change": -28.69,
+    "price": 73.5,
     "symbol": "NVEC"
    },
    {
-    "change": -23.06,
-    "percent_change": -22.57,
-    "price": 79.095,
+    "change": -22.9,
+    "percent_change": -22.41,
+    "price": 79.255,
     "symbol": "TTMI"
    },
    {
-    "change": -7.04,
-    "percent_change": -20.68,
-    "price": 27,
+    "change": -7.015,
+    "percent_change": -20.61,
+    "price": 27.025,
     "symbol": "LRCU"
-   },
-   {
-    "change": -5.74,
-    "percent_change": -18.23,
-    "price": 25.74,
-    "symbol": "TERG"
    },
    {
     "change": -4.566,
     "percent_change": -18.19,
     "price": 20.539,
     "symbol": "AXTU"
+   },
+   {
+    "change": -5.485,
+    "percent_change": -17.27,
+    "price": 26.275,
+    "symbol": "FPS"
    }
   ]
  }
