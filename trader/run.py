@@ -156,6 +156,7 @@ def step(broker, cfg, book, now):
     used = sum(abs(float(p["cost_basis"])) for p in positions)
     cash = min(float(account["cash"]), cfg.capital - used)
     bars = todays_bars(broker, cfg, now)
+    research = risk_manager.research_verdicts(cfg, book.day)
     for sym in cfg.symbols:
         if sym in book.traded_today:
             continue
@@ -177,7 +178,7 @@ def step(broker, cfg, book, now):
             continue
         last_bar = datetime.fromisoformat(bars[sym][-1]["t"].replace("Z", "+00:00"))
         decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
-                                            broker.latest_price(sym, cfg.data_feed))
+                                            broker.latest_price(sym, cfg.data_feed), research)
         if not decision.ok:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_block", "qty": qty,
                           "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target,

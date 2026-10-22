@@ -37,6 +37,8 @@ class Config:
     max_slippage: float = field(default_factory=lambda: _f("TRADER_MAX_SLIPPAGE", 0.0025))
     # The kill switch is this file (committed with the journal) or TRADER_KILL=1.
     kill_path: str = field(default_factory=lambda: os.environ.get("TRADER_KILL_FILE", "trader/journal/KILL"))
+    # Market research brief; a "skip" verdict there vetoes the symbol for the day.
+    research_dir: str = field(default_factory=lambda: os.environ.get("TRADER_RESEARCH", "trader/journal/research"))
     notes_dir: str = field(default_factory=lambda: os.environ.get("TRADER_NOTES", "trader/journal/notes"))
     # Times are US/Eastern.
     session_start: time = time(9, 40)

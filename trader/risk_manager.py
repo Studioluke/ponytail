@@ -11,6 +11,7 @@ reduces risk always goes through.
     python -m trader.risk_manager review [YYYY-MM-DD]   # daily risk review in Markdown
 """
 import csv
+import json
 import os
 import sys
 from dataclasses import dataclass, field
@@ -58,9 +59,26 @@ def resume(cfg):
         os.remove(cfg.kill_path)
 
 
+# research input
+
+def research_verdicts(cfg, day):
+    """{symbol: (verdict, why)} from the market research brief for `day`
+    (trader/journal/research/DATE.json), or {} if there is no brief."""
+    path = os.path.join(cfg.research_dir, f"{day}.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path) as f:
+            d = json.load(f)
+        return {w["symbol"]: (w.get("verdict", "ok"), w.get("why", "")) for w in d.get("watchlist", [])}
+    except (ValueError, KeyError, TypeError):
+        return {}
+
+
 # pre-trade veto
 
-def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None, last_price=None):
+def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None, last_price=None,
+                research=None):
     """Every rule a new long entry must pass. Returns a Decision with every
     failed rule, not just the first, so the journal shows the whole picture."""
     no = []
@@ -70,6 +88,9 @@ def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None
     halted = book.halted(cfg)
     if halted:
         no.append(f"circuit breaker: {halted}")
+    verdict, why = (research or {}).get(sig.symbol, ("ok", ""))
+    if verdict == "skip":
+        no.append(f"research says skip {sig.symbol}: {why}")
     if sig.symbol not in cfg.symbols:
         no.append(f"{sig.symbol} not on the approved list")
     if not (sig.stop < sig.entry < sig.target):

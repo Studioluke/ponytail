@@ -30,6 +30,7 @@ anything it rejects. Exits are never blocked. Every signal must pass all of:
 - dollar risk at or under 0.5% of capital, total exposure at or under capital,
   one position at or under `TRADER_MAX_POSITION_FRAC` of capital (default 100%)
 - bars no older than 3 minutes, last trade within 0.25% of the signal price and above the stop
+- no "skip" verdict for the symbol in today's research brief (`trader/journal/research/DATE.json`)
 - account ACTIVE and not blocked; under $25k equity, no 4th day trade in 5 days (PDT)
 
 Each pass it also checks that every open position still has a live stop

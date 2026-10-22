@@ -11,6 +11,7 @@ Role (vault Descriptions.md): weigh every trade; if the risk manager and Luke do
 - Max 3 open positions, one per symbol.
 - Dollar risk <= 0.5% of capital ($1.50); exposure <= $300.
 - Stale data (bars > 3 min old) or price > 0.25% away from the signal, or already below the stop: no trade.
+- Market research brief (trader/journal/research/DATE.json, PR #4) verdict "skip" vetoes that symbol for the day; "caution" is allowed and noted.
 - Account must be ACTIVE and unblocked; PDT guard under $25k equity (matters for a real $300 account).
 - Every pass: each open position must have a live stop order; re-placed if missing, position closed if that fails.
 - Exits are never blocked.

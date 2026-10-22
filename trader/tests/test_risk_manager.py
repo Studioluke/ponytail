@@ -20,7 +20,8 @@ class Tmp(unittest.TestCase):
         self.dir = tempfile.TemporaryDirectory()
         d = self.dir.name
         self.cfg = Config(capital=300, symbols=("SPY", "QQQ"), state_path=f"{d}/state.json",
-                          journal_path=f"{d}/trades.csv", kill_path=f"{d}/KILL", notes_dir=f"{d}/notes")
+                          journal_path=f"{d}/trades.csv", kill_path=f"{d}/KILL", notes_dir=f"{d}/notes",
+                          research_dir=f"{d}/research")
         self.book = Book()
         self.book.roll("2026-10-22", "2026-W43")
         os.environ.pop("TRADER_KILL", None)
@@ -78,6 +79,18 @@ class Veto(Tmp):
         self.assertIn("stale data", str(self.check(bar_age=5)))
         self.assertIn("price moved", str(self.check(last=603)))
         self.assertIn("below stop", str(self.check(last=598.9)))
+
+    def test_research_skip_vetoes(self):
+        os.makedirs(self.cfg.research_dir, exist_ok=True)
+        with open(f"{self.cfg.research_dir}/2026-10-22.json", "w") as f:
+            f.write('{"watchlist": [{"symbol": "SPY", "verdict": "skip", "why": "FOMC"},'
+                    ' {"symbol": "QQQ", "verdict": "caution", "why": "gap"}]}')
+        research = rm.research_verdicts(self.cfg, "2026-10-22")
+        d = rm.check_entry(self.cfg, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, research)
+        self.assertIn("research says skip SPY: FOMC", str(d))
+        qqq = Signal("QQQ", 600.0, 599.0, 602.0, "test")
+        self.assertTrue(rm.check_entry(self.cfg, self.book, qqq, 0.4, NOW, ACCOUNT, [], None, None, research).ok)
+        self.assertEqual(rm.research_verdicts(self.cfg, "2026-10-23"), {})
 
     def test_account_flags_and_pdt(self):
         self.assertIn("account status", str(self.check(account={**ACCOUNT, "status": "SUSPENDED"})))
