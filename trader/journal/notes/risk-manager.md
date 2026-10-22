@@ -31,3 +31,6 @@ Passing only means Luke is asked. A 5-day sample will not pass the 30-trade bar;
 
 ## Strategy-change policy
 New symbols, parameters or rules must backtest on two separate periods with PF > 1 each before they trade. Limits are never loosened without Luke.
+
+## Learning mode (Luke, 2026-10-22)
+Luke: mistakes are fine on paper; trade through risk, note it, and learn. With `learning_mode` on (default; `TRADER_LEARNING=0` turns it off), the gap rule and research "skip" verdicts become `risk_taken` warnings instead of vetoes. All other vetoes still hold: breakers, caps, stale data, slippage, kill switch, stop guard. The daily review reports risk-taken trades separately (P&L, win rate, average R vs the other trades), not as breaches, so we can see whether those warnings were worth heeding.
