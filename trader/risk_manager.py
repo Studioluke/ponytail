@@ -186,10 +186,13 @@ def _rows(cfg):
 def closed_trades(rows):
     """Pair each exit with the buy before it. Returns dicts with day, symbol,
     qty, entry, stop, pnl, risk ($ at entry), r, how."""
-    open_, out = {}, []
+    open_, out, flagged = {}, [], set()
     for r in rows:
-        if r["event"] == "buy":
-            open_[r["symbol"]] = r
+        if r["event"] == "risk_taken":
+            flagged.add(r["symbol"])
+        elif r["event"] == "buy":
+            open_[r["symbol"]] = {**r, "risk_taken": r["symbol"] in flagged}
+            flagged.discard(r["symbol"])
         elif r["event"].startswith("exit_") and r["symbol"] in open_:
             b = open_.pop(r["symbol"])
             qty, entry, stop = float(b["qty"]), float(b["price"]), float(b["stop"])
@@ -197,7 +200,7 @@ def closed_trades(rows):
             pnl = float(r["pnl"] or 0)
             out.append({"day": r["time"][:10], "symbol": r["symbol"], "qty": qty, "entry": entry, "stop": stop,
                         "pnl": pnl, "risk": risk, "r": pnl / risk if risk > 0 else 0.0,
-                        "how": r["event"][5:]})
+                        "how": r["event"][5:], "risk_taken": b["risk_taken"]})
     return out
 
 
@@ -278,7 +281,7 @@ def review(cfg, day, book=None, account=None):
                   f"{t['pnl']:.2f} | {t['r']:+.2f} | {t['how']} |" for t in today]
     else:
         lines.append("No closed trades.")
-    vetoes = [r for r in todays_rows if r["event"] in ("risk_block", "risk_guard", "halted", "kill")]
+    vetoes = [r for r in todays_rows if r["event"] in ("risk_block", "risk_taken", "risk_guard", "halted", "kill")]
     if vetoes:
         lines += ["", "**Risk actions:**"]
         lines += [f"- {r['time'][11:16]} {r['symbol'] or ''} {r['event']}: {r['note']}" for r in vetoes]
@@ -290,6 +293,14 @@ def review(cfg, day, book=None, account=None):
               f"{s['trades']} trades, P&L ${s['pnl']:.2f}, win rate {s['win_rate']:.0%}, "
               f"profit factor {s['profit_factor']:.2f}, average {s['avg_r']:+.2f}R, "
               f"max drawdown ${s['max_dd']:.2f} ({s['max_dd_pct']:.2%}), longest losing streak {s['losing_streak']}.", ""]
+    taken = [t for t in all_trades if t["risk_taken"]]
+    if taken:
+        # Learning mode: trades made through a gap or research "skip" on purpose.
+        # Not breaches; tracked so we learn whether those warnings were worth heeding.
+        ts = stats(taken, cfg.capital)
+        lines += [f"**Risks taken knowingly (learning mode):** {ts['trades']} trades, P&L ${ts['pnl']:.2f}, "
+                  f"win rate {ts['win_rate']:.0%}, average {ts['avg_r']:+.2f}R. Other trades average "
+                  f"{stats([t for t in all_trades if not t['risk_taken']], cfg.capital)['avg_r']:+.2f}R.", ""]
     if br:
         lines += ["**Breaches:**", *[f"- {b}" for b in br], ""]
     checks, ready = gate(s, len(br))

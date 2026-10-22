@@ -175,6 +175,7 @@ class Review(Tmp):
     def test_review_pairs_trades_and_flags_breaches(self):
         t = "2026-10-22T10:00:00-04:00"
         self.write([
+            {"time": t, "symbol": "SPY", "event": "risk_taken", "note": "learning mode, trading anyway: gap +1.1%"},
             {"time": t, "symbol": "SPY", "event": "buy", "qty": 0.4, "price": "600.00", "stop": 599, "target": 602},
             {"time": t, "symbol": "SPY", "event": "exit_stop", "qty": 0.4, "price": "599.00", "pnl": "-0.40"},
             {"time": t, "symbol": "QQQ", "event": "buy", "qty": 1, "price": "500.00", "stop": 498, "target": 504},
@@ -185,6 +186,9 @@ class Review(Tmp):
         self.assertEqual([round(x["r"], 2) for x in trades], [-1.0, 2.0])
         text = rm.review(self.cfg, NOW.date(), book=self.book)
         self.assertIn("2 trades", text)
+        self.assertEqual([x["risk_taken"] for x in trades], [True, False])
+        self.assertIn("Risks taken knowingly (learning mode):** 1 trades", text)
+        self.assertIn("risk_taken: learning mode", text)
         self.assertIn("vetoed: stale data", text)
         self.assertIn("$2.00 risk", text)  # QQQ entered over the $1.50 cap
         self.assertIn("stay on paper", text)
