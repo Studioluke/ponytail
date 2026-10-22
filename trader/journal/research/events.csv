@@ -1,0 +1,7 @@
+date,symbol,event,timing,source
+2026-10-22,ALL,Initial jobless claims 8:30 ET,pre,investrade.com weekly calendar
+2026-10-23,ALL,Flash PMIs and UMich inflation expectations,pre,vault Market-Research 2026-10-20
+2026-10-28,ALL,FOMC decision 2:00 ET,during,vault Market-Research 2026-10-20 (unconfirmed)
+2026-10-28,MSFT,Earnings (estimated date),after,blofin.com earnings season preview (unconfirmed)
+2026-10-28,GOOGL,Earnings (estimated date),after,blofin.com earnings season preview (unconfirmed)
+2026-10-29,AAPL,Earnings (estimated date),after,third-party estimate (unconfirmed)
