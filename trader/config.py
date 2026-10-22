@@ -48,6 +48,11 @@ class Config:
     reward_risk: float = 2.0
     # Vault rule: skip a symbol that opens more than 0.75% away from the prior close.
     max_gap: float = 0.0075
+    # Paper learning mode (Luke, 2026-10-22): the gap rule and research "skip"
+    # become logged warnings instead of vetoes, so the bot trades risk-off days
+    # and we learn from them. Hard limits (stops, loss breakers, $ caps, kill
+    # switch) still apply. TRADER_LEARNING=0 restores the strict behaviour.
+    learning_mode: bool = field(default_factory=lambda: os.environ.get("TRADER_LEARNING", "1") != "0")
     data_feed: str = field(default_factory=lambda: os.environ.get("TRADER_FEED", "iex"))
     state_path: str = field(default_factory=lambda: os.environ.get("TRADER_STATE", "trader/journal/state.json"))
     journal_path: str = field(default_factory=lambda: os.environ.get("TRADER_JOURNAL", "trader/journal/trades.csv"))

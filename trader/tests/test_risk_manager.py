@@ -1,3 +1,4 @@
+import dataclasses
 import os
 import tempfile
 import unittest
@@ -86,8 +87,14 @@ class Veto(Tmp):
             f.write('{"watchlist": [{"symbol": "SPY", "verdict": "skip", "why": ["FOMC", "earnings"]},'
                     ' {"symbol": "QQQ", "verdict": "caution", "why": "gap"}]}')
         research = rm.research_verdicts(self.cfg, "2026-10-22")
-        d = rm.check_entry(self.cfg, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, research)
+        strict = dataclasses.replace(self.cfg, learning_mode=False)
+        d = rm.check_entry(strict, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, research)
         self.assertIn("research says skip SPY: FOMC; earnings", str(d))
+        # Learning mode (paper): the skip is a logged warning, not a veto.
+        learn = dataclasses.replace(self.cfg, learning_mode=True)
+        d = rm.check_entry(learn, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, research)
+        self.assertTrue(d.ok)
+        self.assertIn("research says skip SPY: FOMC; earnings", "; ".join(d.warnings))
         qqq = Signal("QQQ", 600.0, 599.0, 602.0, "test")
         self.assertTrue(rm.check_entry(self.cfg, self.book, qqq, 0.4, NOW, ACCOUNT, [], None, None, research).ok)
         self.assertEqual(rm.research_verdicts(self.cfg, "2026-10-23"), {})

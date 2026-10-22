@@ -165,7 +165,10 @@ def step(broker, cfg, book, now):
             continue
         book.traded_today.append(sym)
         ok, gap_note = gap_ok(broker, cfg, sym, bars.get(sym, []), now)
-        if not ok:
+        risks = []
+        if not ok and cfg.learning_mode:
+            risks.append(f"{gap_note} exceeds the {cfg.max_gap:.2%} gap rule")
+        elif not ok:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
                           "note": f"{sig.reason}; skipped, {gap_note} exceeds {cfg.max_gap:.2%}"})
             log(f"{sym} signal skipped: {gap_note}")
@@ -185,6 +188,11 @@ def step(broker, cfg, book, now):
                           "note": f"{sig.reason}; vetoed: {decision}"})
             log(f"{sym} signal vetoed by risk manager: {decision}")
             continue
+        risks += decision.warnings
+        if risks:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_taken", "qty": qty,
+                          "price": f"{sig.entry:.2f}", "note": "learning mode, trading anyway: " + "; ".join(risks)})
+            log(f"{sym} RISK TAKEN (learning mode): {'; '.join(risks)}")
         order = broker.buy_market(sym, qty, f"orb-{book.day}-{sym}")
         fill = None
         for _ in range(20):

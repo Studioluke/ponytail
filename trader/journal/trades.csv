@@ -1,0 +1,3 @@
+time,symbol,event,qty,price,stop,target,pnl,note
+2026-10-22T09:58:02.418061-04:00,QQQ,skip,,714.74,,,,"ORB break of 714.69 (range 712.56-714.69), VWAP 713.27; skipped, gap -1.60% vs prior close 725.25 exceeds 0.75%"
+2026-10-22T10:04:02.524372-04:00,SPY,skip,,767.46,,,,"ORB break of 767.39 (range 765.97-767.39), VWAP 766.62; skipped, gap -0.88% vs prior close 773.13 exceeds 0.75%"

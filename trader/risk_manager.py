@@ -32,6 +32,7 @@ GATE = {"min_trades": 30, "min_profit_factor": 1.2, "max_drawdown": 0.06}
 class Decision:
     ok: bool
     reasons: list = field(default_factory=list)
+    warnings: list = field(default_factory=list)  # risks taken knowingly in learning mode
 
     def __str__(self):
         return "approved" if self.ok else "; ".join(self.reasons)
@@ -92,9 +93,10 @@ def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None
     halted = book.halted(cfg)
     if halted:
         no.append(f"circuit breaker: {halted}")
+    warn = []
     verdict, why = (research or {}).get(sig.symbol, ("ok", ""))
     if verdict == "skip":
-        no.append(f"research says skip {sig.symbol}: {why}")
+        (warn if cfg.learning_mode else no).append(f"research says skip {sig.symbol}: {why}")
     if sig.symbol not in cfg.symbols:
         no.append(f"{sig.symbol} not on the approved list")
     if not (sig.stop < sig.entry < sig.target):
@@ -135,7 +137,7 @@ def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None
         # days flags the account. Paper holds $100k, live $300 would not.
         if float(account.get("equity", 0)) < 25_000 and int(account.get("daytrade_count", 0)) >= 3:
             no.append(f"PDT guard: {account['daytrade_count']} day trades in 5 days under $25k equity")
-    return Decision(not no, no)
+    return Decision(not no, no, warn)
 
 
 # position guard
