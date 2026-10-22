@@ -2,7 +2,7 @@ import os
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from trader import strategy
+from trader import research, strategy
 from trader.backtest import simulate
 from trader.broker import Broker, LiveTradingRefused
 from trader.config import Config
@@ -113,3 +113,50 @@ class PaperOnly(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Research(unittest.TestCase):
+    def daily(self, closes):
+        return [{"t": f"2026-09-{i + 1:02d}", "o": c, "h": c * 1.01, "l": c * 0.99, "c": c}
+                for i, c in enumerate(closes)]
+
+    def test_trend_and_gap(self):
+        p = research.profile(self.daily([100 + i for i in range(60)]), 160.8)
+        self.assertEqual(p["trend"], "up")
+        self.assertAlmostEqual(p["gap"], 160.8 / 159 - 1)
+
+    def test_stale_price_has_no_gap(self):
+        p = research.profile(self.daily([100] * 60), 100, fresh=False)
+        self.assertIsNone(p["gap"])
+        level, why = research.verdict(p, [], 0.0075)
+        self.assertEqual(level, "ok")
+        self.assertIn("gap unknown", why[0])
+
+    def test_big_gap_is_skip(self):
+        p = research.profile(self.daily([100] * 60), 98.5)
+        self.assertEqual(research.verdict(p, [], 0.0075)[0], "skip")
+
+    def test_downtrend_is_caution(self):
+        p = research.profile(self.daily([160 - i for i in range(60)]), 101)
+        self.assertEqual(research.verdict(p, [], 0.0075)[0], "caution")
+
+    def test_news_flags_skip_index_etfs(self):
+        items = [{"symbols": ["MSFT", "SPY"], "created_at": "2026-10-22T08:00:00Z",
+                  "headline": "Microsoft beats on Q3 earnings, raises guidance"}]
+        self.assertTrue(research.tag_news(items, "MSFT")[0]["earnings"])
+        self.assertFalse(research.tag_news(items, "SPY")[0]["earnings"])
+        # "steps" must not match "eps"
+        items[0]["headline"] = "Microsoft steps up AI spending"
+        self.assertFalse(research.tag_news(items, "MSFT")[0]["earnings"])
+
+    def test_earnings_event_is_skip(self):
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as f:
+            f.write("date,symbol,event,timing,source\n2026-10-28,MSFT,Earnings,after,x\n2026-10-29,ALL,GDP,pre,x\n")
+        from datetime import date
+        self.assertEqual(research.load_events(f.name, date(2026, 10, 28))[0]["symbol"], "MSFT")
+        ev = research.load_events(f.name, date(2026, 10, 29))
+        self.assertEqual(sorted(e["symbol"] for e in ev), ["ALL", "MSFT"])  # after-close report carries over
+        p = research.profile(self.daily([100] * 60), 100)
+        self.assertEqual(research.verdict(p, [], 0.0075, [ev[0] if ev[0]["symbol"] == "MSFT" else ev[1]])[0], "skip")
+        os.unlink(f.name)

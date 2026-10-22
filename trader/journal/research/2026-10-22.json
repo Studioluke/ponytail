@@ -1,0 +1,694 @@
+{
+ "date": "2026-10-22",
+ "generated": "2026-10-22T05:27-04:00",
+ "regime": "mixed / range",
+ "regime_notes": [
+  "SPY trend up, gap n/a, 5d +0.45%",
+  "QQQ trend mixed, gap n/a, 5d -0.51%"
+ ],
+ "events": [
+  {
+   "date": "2026-10-22",
+   "symbol": "ALL",
+   "event": "Initial jobless claims 8:30 ET",
+   "timing": "pre",
+   "source": "investrade.com weekly calendar"
+  }
+ ],
+ "watchlist": [
+  {
+   "symbol": "SPY",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 773.13,
+   "price": 773.22,
+   "gap": null,
+   "ret_5d": 0.004521535763009288,
+   "ret_20d": 0.0067714505228342325,
+   "sma20": 770.89225,
+   "sma50": 768.3261,
+   "trend": "up",
+   "atr_pct": 0.009073506396078252,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T20:00:05.026014293Z",
+   "news": [
+    {
+     "time": "2026-10-22T06:08:59Z",
+     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62516693/stock-market-will-sp-500-open-up-or-down-today-63",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T19:17:34Z",
+     "headline": "'U.S. Preparing To Issue Ordered Departure Of Some Personnel From Gulf Embassies, Say U.S. Officials' - Reuters Exclusive",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509130/u-s-preparing-issue-ordered-departure-some-personnel-gulf-embassies-say-u-s-officials-reuters-exclus",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T19:12:55Z",
+     "headline": "Microsoft Says China-Aligned Hackers Used AI To Accelerate ConnectWise Supply-Chain Attack Across Hundreds Of Organizations",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509021/microsoft-says-china-aligned-hackers-used-ai-accelerate-connectwise-supply-chain-attack-across-hundr",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T18:54:05Z",
+     "headline": "Carney Says It Will Take Some Time To Address Big Structural Challenges In Auto And Steel Sectors; Canada Remains Ready To Negotiate A Fair Trade Deal When The U.S. Is Prepared To Sit Down In Good Faith",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62508387/carney-says-it-will-take-some-time-address-big-structural-challenges-auto-and-steel-sectors-canada-r",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T18:28:32Z",
+     "headline": "Reported Earlier: 'Ukraine's Zelenskiy says he supports ceasefire, trilateral talks with US and Russia' - Reuters",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/10/62507527/reported-earlier-ukraine-s-zelenskiy-says-he-supports-ceasefire-trilateral-talks-us-and-russia-reute",
+     "earnings": false,
+     "catalyst": false
+    }
+   ]
+  },
+  {
+   "symbol": "QQQ",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 725.25,
+   "price": 725.5,
+   "gap": null,
+   "ret_5d": -0.0051235622132143055,
+   "ret_20d": -0.021479552599268703,
+   "sma20": 739.0335,
+   "sma50": 726.7421,
+   "trend": "mixed",
+   "atr_pct": 0.01555867434874674,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T20:53:09.291819516Z",
+   "news": [
+    {
+     "time": "2026-10-22T06:08:59Z",
+     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62516693/stock-market-will-sp-500-open-up-or-down-today-63",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T17:02:19Z",
+     "headline": "SpaceX Jumps 10%, Nasdaq 100 Rises as AI Trade Returns: Stock Market Today",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/10/62504696/spacex-jumps-nasdaq-100-ai-trade-netflix-att-stock-market-today",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T15:32:22Z",
+     "headline": "SpaceX's Strong AI Computing Returns And Hidden Risk",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/opinion/26/10/62501333/spacex-strong-ai-computing-returns-and-hidden-risk",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T15:00:39Z",
+     "headline": "Cyclicals Top Sectors In Wednesday Trading As Defensives Trail",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62499965/cyclicals-top-sectors-in-wednesday-trading-as-defensives-trail",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T13:04:54Z",
+     "headline": "Larry Fink Warns Data Center Slowdown Could Push US Into \u2018Recession\u2019 as Trump Orders Facilities to Generate Their Own Power and \u2018Make Deals\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/economic-data/26/10/62494399/larry-fink-warns-data-center-slowdown-could-push-us-into-recession-as-trump-orders-facilities-to-generate-their-own-power-and-make-deals",
+     "earnings": false,
+     "catalyst": false
+    }
+   ]
+  },
+  {
+   "symbol": "AAPL",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 343.935,
+   "price": 343.935,
+   "gap": null,
+   "ret_5d": 0.002696714381504872,
+   "ret_20d": 0.020972481966337053,
+   "sma20": 337.993,
+   "sma50": 327.719,
+   "trend": "up",
+   "atr_pct": 0.01716686500148492,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:57.84955167Z",
+   "news": [
+    {
+     "time": "2026-10-22T06:21:12Z",
+     "headline": "Reported Earlier, Australian Court Orders Apple To Allow Alternative App Distribution, Payments For Australian Users From March 1, 2027; Rejects Epic\u2019s Global Relief",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/quote/EWA",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T20:31:36Z",
+     "headline": "Apple Confirms Apple Pencil Support for iPhone Duo via iOS 27.2",
+     "source": "fiscal.ai",
+     "url": "https://appleosophy.com/wire/396es5h/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T19:00:22Z",
+     "headline": "\u2018Ergonomically Terrible\u2019 \u2014 Steve Jobs Said Touchscreen MacBook Wouldn\u2019t Work, but Apple Is Finally Doing It Anyway",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/10/62508566/steve-jobs-said-touchscreen-macbook-wouldnt-work-apple-is-doing-it-anyway",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T18:01:33Z",
+     "headline": "Apple Music Unveils Refreshed Visual Identity",
+     "source": "fiscal.ai",
+     "url": "https://appleosophy.com/wire/1tciaux/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T17:35:14Z",
+     "headline": "10 Information Technology Stocks With Whale Alerts In Today\u2019s Session",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/10/62505787/10-information-technology-stocks-whale-alerts-today-s-session",
+     "earnings": false,
+     "catalyst": false
+    }
+   ]
+  },
+  {
+   "symbol": "MSFT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 532.8,
+   "price": 532.8,
+   "gap": null,
+   "ret_5d": -0.0023219234514268994,
+   "ret_20d": 0.06428029243737754,
+   "sma20": 525.1205,
+   "sma50": 507.29690000000005,
+   "trend": "up",
+   "atr_pct": 0.020701951951951934,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.904784062Z",
+   "news": [
+    {
+     "time": "2026-10-21T13:32:27Z",
+     "headline": "Guggenheim Reiterates Buy on Microsoft, Maintains $586 Price Target",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/10/62495360/guggenheim-reiterates-buy-microsoft-maintains-586-price-target",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-10-22T08:40:50Z",
+     "headline": "Anthropic Could Take Major IPO Step as Soon as Friday: What Investors Need to Know",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/ipos/26/10/62517881/anthropic-could-take-major-ipo-step-as-soon-as-friday-what-investors-need-to-know",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-20T04:33:47Z",
+     "headline": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here\u2019s How Big the Payoff Could Get (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/ipos/26/10/62457427/former-google-ceo-eric-schmidt-reportedly-owns-1-percent-anthropic",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T02:01:32Z",
+     "headline": "Tavant Launches Accelerator for Microsoft Fabric on Microsoft Marketplace",
+     "source": "fiscal.ai",
+     "url": "https://ittech-pulse.com/news/tavant-microsoft-fabric-accelerator-marketplace-launch/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T19:12:55Z",
+     "headline": "Microsoft Says China-Aligned Hackers Used AI To Accelerate ConnectWise Supply-Chain Attack Across Hundreds Of Organizations",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509021/microsoft-says-china-aligned-hackers-used-ai-accelerate-connectwise-supply-chain-attack-across-hundr",
+     "earnings": false,
+     "catalyst": false
+    }
+   ]
+  },
+  {
+   "symbol": "GOOGL",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 334.715,
+   "price": 334.715,
+   "gap": null,
+   "ret_5d": -0.03756685260797055,
+   "ret_20d": -0.009117956156840856,
+   "sma20": 345.1675,
+   "sma50": 343.83529999999996,
+   "trend": "mixed",
+   "atr_pct": 0.02384544633920968,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:58.039265623Z",
+   "news": [
+    {
+     "time": "2026-10-21T13:36:53Z",
+     "headline": "Meta Earnings Prediction Market Preview: What Will Mark Zuckerberg Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62495590/meta-earnings-mark-zuckerberg-prediction-market",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T13:22:53Z",
+     "headline": "Google\u2019s Parent Alphabet Reports Earnings in a Week. Here\u2019s the Setup",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62495052/googles-parent-alphabet-reports-earnings-in-a-week-heres-the-setup",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-21T12:26:45Z",
+     "headline": "Tesla Earnings Prediction Market Preview: Will Elon Musk Discuss a SpaceX Merger?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62492793/tesla-earnings-musk-spacex-merger",
+     "earnings": true,
+     "catalyst": true
+    },
+    {
+     "time": "2026-10-22T08:40:50Z",
+     "headline": "Anthropic Could Take Major IPO Step as Soon as Friday: What Investors Need to Know",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/ipos/26/10/62517881/anthropic-could-take-major-ipo-step-as-soon-as-friday-what-investors-need-to-know",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-20T04:33:47Z",
+     "headline": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here\u2019s How Big the Payoff Could Get (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/ipos/26/10/62457427/former-google-ceo-eric-schmidt-reportedly-owns-1-percent-anthropic",
+     "earnings": false,
+     "catalyst": false
+    }
+   ]
+  }
+ ],
+ "sectors": {
+  "XLK": {
+   "prior_close": 188.52,
+   "price": 188.52,
+   "gap": null,
+   "ret_5d": -0.0100819155639571,
+   "ret_20d": -0.034864076178774406,
+   "sma20": 194.49725,
+   "sma50": 189.92950000000002,
+   "trend": "mixed",
+   "atr_pct": 0.01993725561516776,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.99853924Z"
+  },
+  "SMH": {
+   "prior_close": 556.57,
+   "price": 556.57,
+   "gap": null,
+   "ret_5d": -0.015129530011324999,
+   "ret_20d": -0.07423486360612108,
+   "sma20": 593.3525,
+   "sma50": 577.5074,
+   "trend": "mixed",
+   "atr_pct": 0.030009060598204837,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.282801149Z"
+  },
+  "XLC": {
+   "prior_close": 108.98,
+   "price": 108.98,
+   "gap": null,
+   "ret_5d": -0.01669223134530362,
+   "ret_20d": -0.031805259417199694,
+   "sma20": 111.21575,
+   "sma50": 111.8021,
+   "trend": "down",
+   "atr_pct": 0.014363710248276228,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.914331793Z"
+  },
+  "XLY": {
+   "prior_close": 115.53,
+   "price": 115.53,
+   "gap": null,
+   "ret_5d": 0.03595767575322806,
+   "ret_20d": 0.044150210131501666,
+   "sma20": 111.61749999999999,
+   "sma50": 113.5988,
+   "trend": "mixed",
+   "atr_pct": 0.013033102100876721,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:57.847127692Z"
+  },
+  "XLF": {
+   "prior_close": 56.02,
+   "price": 56.02,
+   "gap": null,
+   "ret_5d": 0.02788990825688087,
+   "ret_20d": 0.02713604693802729,
+   "sma20": 54.51925,
+   "sma50": 56.1448,
+   "trend": "mixed",
+   "atr_pct": 0.0120173917478452,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:57.440189572Z"
+  },
+  "XLI": {
+   "prior_close": 168.3,
+   "price": 168.3,
+   "gap": null,
+   "ret_5d": 0.007362183515891685,
+   "ret_20d": -0.01058201058201047,
+   "sma20": 168.60425,
+   "sma50": 173.03599999999997,
+   "trend": "down",
+   "atr_pct": 0.01475044563279857,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.848812334Z"
+  },
+  "XLE": {
+   "prior_close": 68.15,
+   "price": 68.16,
+   "gap": null,
+   "ret_5d": 0.007837917775805892,
+   "ret_20d": 0.09249759538313573,
+   "sma20": 64.78524999999999,
+   "sma50": 64.0392,
+   "trend": "up",
+   "atr_pct": 0.01944764699717013,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T20:00:00.212089382Z"
+  },
+  "XLV": {
+   "prior_close": 178.915,
+   "price": 178.915,
+   "gap": null,
+   "ret_5d": 0.028542684679505603,
+   "ret_20d": 0.05992298578199051,
+   "sma20": 171.47275,
+   "sma50": 170.64419999999998,
+   "trend": "up",
+   "atr_pct": 0.01632259532659165,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:57.846986376Z"
+  },
+  "XLP": {
+   "prior_close": 87.11,
+   "price": 87.11,
+   "gap": null,
+   "ret_5d": 0.012200790146409402,
+   "ret_20d": 0.05651910248635539,
+   "sma20": 83.58500000000001,
+   "sma50": 84.2342,
+   "trend": "mixed",
+   "atr_pct": 0.012881906292536561,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.929079736Z"
+  },
+  "XLU": {
+   "prior_close": 42.01,
+   "price": 42.01,
+   "gap": null,
+   "ret_5d": 0.006468615237182451,
+   "ret_20d": 0.056589537223340036,
+   "sma20": 40.792,
+   "sma50": 41.9123,
+   "trend": "mixed",
+   "atr_pct": 0.01575305199442312,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:52.080645149Z"
+  }
+ },
+ "macro": {
+  "IWM": {
+   "prior_close": 276.46,
+   "price": 276.21,
+   "gap": null,
+   "ret_5d": 0.018662834613754953,
+   "ret_20d": -0.01961062449023021,
+   "sma20": 277.74899999999997,
+   "sma50": 287.4863,
+   "trend": "down",
+   "atr_pct": 0.013873099699258984,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T20:31:45.023758712Z"
+  },
+  "DIA": {
+   "prior_close": 527.7,
+   "price": 527.7,
+   "gap": null,
+   "ret_5d": 0.02336856394841469,
+   "ret_20d": 0.02577560065313733,
+   "sma20": 515.5355,
+   "sma50": 523.2711,
+   "trend": "mixed",
+   "atr_pct": 0.009638187281734765,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:59.008693308Z"
+  },
+  "TLT": {
+   "prior_close": 80.24,
+   "price": 80.22,
+   "gap": null,
+   "ret_5d": 0.01724137931034475,
+   "ret_20d": -0.0027962468153857056,
+   "sma20": 78.55699999999999,
+   "sma50": 80.5872,
+   "trend": "mixed",
+   "atr_pct": 0.009943384133314357,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T20:37:49.625084802Z"
+  },
+  "UUP": {
+   "prior_close": 28.91,
+   "price": 28.91,
+   "gap": null,
+   "ret_5d": -0.007552351527634671,
+   "ret_20d": 0.009075043630017543,
+   "sma20": 28.91975,
+   "sma50": 28.454099999999997,
+   "trend": "mixed",
+   "atr_pct": 0.0038913870632998945,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:56:43.848544311Z"
+  },
+  "GLD": {
+   "prior_close": 378.98,
+   "price": 378.98,
+   "gap": null,
+   "ret_5d": 0.008005957922174511,
+   "ret_20d": -0.03488845879596614,
+   "sma20": 381.5735,
+   "sma50": 395.85409999999996,
+   "trend": "down",
+   "atr_pct": 0.012884207986851897,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:52.500504868Z"
+  },
+  "USO": {
+   "prior_close": 159.75,
+   "price": 159.75,
+   "gap": null,
+   "ret_5d": 0.0398359695371997,
+   "ret_20d": 0.07330018812147276,
+   "sma20": 151.23875,
+   "sma50": 144.884,
+   "trend": "up",
+   "atr_pct": 0.028479767493852007,
+   "vol_expanding": false,
+   "price_time": "2026-10-21T19:59:54.132435203Z"
+  },
+  "VIXY": {
+   "prior_close": 16.68,
+   "price": 16.68,
+   "gap": null,
+   "ret_5d": 0.010296789824348673,
+   "ret_20d": -0.00655151876116733,
+   "sma20": 16.6305,
+   "sma50": 17.2848,
+   "trend": "mixed",
+   "atr_pct": 0.039140116478245966,
+   "vol_expanding": true,
+   "price_time": "2026-10-21T19:59:57.852514715Z"
+  }
+ },
+ "market_news": [
+  {
+   "time": "2026-10-22T09:23:35Z",
+   "headline": "Elon Musk Met Xi Jinping and Took Tesla FSD to China \u2014 Now His CFO Says Getting the Green Light for Unsupervised Driving Is \u2018Hard\u2019",
+   "symbols": [
+    "TSLA"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:18:23Z",
+   "headline": "Trump Says US Is \u2018Not Negotiating\u2019 With Iran as Hormuz Crisis Deepens, Hints War Could End \u2018Very Soon\u2019",
+   "symbols": []
+  },
+  {
+   "time": "2026-10-22T09:08:58Z",
+   "headline": "Why QuantumScape Shares Are Trading Higher By 9%; Here Are 20 Stocks Moving Premarket",
+   "symbols": [
+    "BKYI",
+    "CYPH",
+    "IBG",
+    "LRCX",
+    "NCPL",
+    "NIVF",
+    "NVEC",
+    "NWGL",
+    "POM",
+    "QS",
+    "RTO",
+    "SDEV",
+    "SDST",
+    "SHFS",
+    "SSL",
+    "STAK",
+    "TSLA",
+    "VOGX",
+    "WHLR",
+    "YFOR"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:08:21Z",
+   "headline": "Piper Sandler Maintains Neutral on AEVEX, Lowers Price Target to $13",
+   "symbols": [
+    "AVEX"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:02:28Z",
+   "headline": "Meta Has a New \u2018North Star\u2019 \u2014 Mark Zuckerberg Explains Why He\u2019s Betting Big on Personal Superintelligence, AI Models and Smart Glasses",
+   "symbols": [
+    "META"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:49Z",
+   "headline": "Dekel Agri-Vision plc Shares Suspended from Trading on AIM",
+   "symbols": [
+    "DKL"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:42Z",
+   "headline": "NEC Bio to Present Early Results for Oral Neoantigen Therapy",
+   "symbols": [
+    "6701"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:36Z",
+   "headline": "UBS Acquires 4.8% Stake in India's 360 ONE WAM via Warrant Exercise",
+   "symbols": [
+    "UBS"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:33Z",
+   "headline": "AXA Reports Rising Burglary Claims in Switzerland",
+   "symbols": [
+    "CS"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:33Z",
+   "headline": "S\u00e3o Paulo City Government Upholds R$ 11.4 Million Fine Against Enel",
+   "symbols": [
+    "ENEL"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:32Z",
+   "headline": "Fujitsu, Fsas Technologies, and Schwarz Digits Announce Strategic Partnership",
+   "symbols": [
+    "6702"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:30Z",
+   "headline": "Schneider Electric Executive Discusses Electrification Strategy",
+   "symbols": [
+    "SU"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:30Z",
+   "headline": "Deutsche Bank upgrades EssilorLuxottica to Buy",
+   "symbols": [
+    "EL"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:29Z",
+   "headline": "Montana Aerospace subsidiary Asco presents prototype rear secondary structure to Airbus",
+   "symbols": [
+    "AIR"
+   ]
+  },
+  {
+   "time": "2026-10-22T09:01:29Z",
+   "headline": "RBC Expects Glencore to Hit Bottom End of FY26 Copper Production Outlook; Estimates Revised",
+   "symbols": [
+    "GLEN"
+   ]
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "change": 10.78,
+    "percent_change": 41.49,
+    "price": 36.76,
+    "symbol": "SVRN"
+   },
+   {
+    "change": 5.75,
+    "percent_change": 26.45,
+    "price": 27.49,
+    "symbol": "ASSX"
+   },
+   {
+    "change": 5.73,
+    "percent_change": 23.12,
+    "price": 30.51,
+    "symbol": "AMTD"
+   }
+  ],
+  "losers": []
+ }
+}
