@@ -19,7 +19,7 @@ class Config:
     # (PF 1.16 then 0.94 for all 13) and are tracked separately in the notes.
     symbols: tuple = field(default_factory=lambda: tuple(os.environ.get(
         "TRADER_SYMBOLS",
-        "SPY,QQQ,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,IWM,DIA,SMH").split(",")))
+        "SPY,QQQ,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,IWM,DIA,NFLX").split(",")))
     core_symbols: tuple = ("SPY", "QQQ", "AAPL", "MSFT", "GOOGL")
     # Capital the bot sizes against. Luke set $300 on 2026-10-21; the paper
     # account itself holds more, and everything above this is ignored.
