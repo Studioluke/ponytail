@@ -213,7 +213,8 @@ def step(broker, cfg, book, now):
         cash -= qty * entry
         journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
                       "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
-                      "note": f"{sig.reason}; {gap_note}; risk ${qty * (entry - sig.stop):.2f}"})
+                      "note": f"[{'core' if sym in cfg.core_symbols else 'explore'}] {sig.reason}; {gap_note}; "
+                              f"risk ${qty * (entry - sig.stop):.2f}"})
         log(f"BUY {qty} {sym} @ {entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
         if not stop_id:
             risk_manager.protect(broker, cfg, book, journal, log, now)
