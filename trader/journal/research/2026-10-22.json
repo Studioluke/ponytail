@@ -1,10 +1,10 @@
 {
  "date": "2026-10-22",
- "generated": "2026-10-22T05:27-04:00",
- "regime": "mixed / range",
+ "generated": "2026-10-22T09:36-04:00",
+ "regime": "risk-off open",
  "regime_notes": [
-  "SPY trend up, gap n/a, 5d +0.45%",
-  "QQQ trend mixed, gap n/a, 5d -0.51%"
+  "SPY trend up, gap -0.82%, 5d +0.45%",
+  "QQQ trend mixed, gap -1.68%, 5d -0.51%"
  ],
  "events": [
   {
@@ -18,13 +18,13 @@
  "watchlist": [
   {
    "symbol": "SPY",
-   "verdict": "ok",
+   "verdict": "skip",
    "why": [
-    "no premarket trade yet, gap unknown"
+    "premarket gap -0.82% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 773.13,
-   "price": 773.22,
-   "gap": null,
+   "price": 766.8,
+   "gap": -0.008187497574793423,
    "ret_5d": 0.004521535763009288,
    "ret_20d": 0.0067714505228342325,
    "sma20": 770.89225,
@@ -32,45 +32,45 @@
    "trend": "up",
    "atr_pct": 0.009073506396078252,
    "vol_expanding": false,
-   "price_time": "2026-10-21T20:00:05.026014293Z",
+   "price_time": "2026-10-22T13:36:47.59694525Z",
    "news": [
     {
-     "time": "2026-10-22T06:08:59Z",
-     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "time": "2026-10-22T13:08:16Z",
+     "headline": "Punchbowl Senior Energy Reporter Joshua Siegel Posts On X \"SCOOP: The Trump admin is easing its blockade on wind projects as it looks to motivate Democrats to support the Senate\u2019s bipartisan permitting reform bill. A White House official told me DOD has advanced 2  projects in Maine & SD with more to come. Text subscribers got it 1st!\"",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62516693/stock-market-will-sp-500-open-up-or-down-today-63",
+     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62525437/punchbowl-senior-energy-reporter-joshua-siegel-posts-x-scoop-trump-admin-easing-its-blockade-wind-pr",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-21T19:17:34Z",
-     "headline": "'U.S. Preparing To Issue Ordered Departure Of Some Personnel From Gulf Embassies, Say U.S. Officials' - Reuters Exclusive",
+     "time": "2026-10-22T12:37:38Z",
+     "headline": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off, Middle East Tensions\u2014 NFLX, SPCX, SMCI in Focus (UPDATED)",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509130/u-s-preparing-issue-ordered-departure-some-personnel-gulf-embassies-say-u-s-officials-reuters-exclus",
+     "url": "https://www.benzinga.com/markets/equities/26/10/62518477/stock-market-today-sp-500-dow-futures-drop-following-asian-market-sell-off-middle-east-tensions-nflx-spcx-smci-in-focus",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-21T19:12:55Z",
-     "headline": "Microsoft Says China-Aligned Hackers Used AI To Accelerate ConnectWise Supply-Chain Attack Across Hundreds Of Organizations",
+     "time": "2026-10-22T12:30:56Z",
+     "headline": "USA Initial Jobless Claims Revises Prior From 199K To 200K",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509021/microsoft-says-china-aligned-hackers-used-ai-accelerate-connectwise-supply-chain-attack-across-hundr",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-21T18:54:05Z",
-     "headline": "Carney Says It Will Take Some Time To Address Big Structural Challenges In Auto And Steel Sectors; Canada Remains Ready To Negotiate A Fair Trade Deal When The U.S. Is Prepared To Sit Down In Good Faith",
+     "time": "2026-10-22T12:30:33Z",
+     "headline": "USA Continuing Jobless Claims Revises Prior From 1,710K To 1,703K",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62508387/carney-says-it-will-take-some-time-address-big-structural-challenges-auto-and-steel-sectors-canada-r",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-21T18:28:32Z",
-     "headline": "Reported Earlier: 'Ukraine's Zelenskiy says he supports ceasefire, trilateral talks with US and Russia' - Reuters",
+     "time": "2026-10-22T12:30:33Z",
+     "headline": "USA Initial Jobless Claims 194K Vs 200K Est.",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/news/26/10/62507527/reported-earlier-ukraine-s-zelenskiy-says-he-supports-ceasefire-trilateral-talks-us-and-russia-reute",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     }
@@ -78,13 +78,13 @@
   },
   {
    "symbol": "QQQ",
-   "verdict": "ok",
+   "verdict": "skip",
    "why": [
-    "no premarket trade yet, gap unknown"
+    "premarket gap -1.68% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 725.25,
-   "price": 725.5,
-   "gap": null,
+   "price": 713.035,
+   "gap": -0.016842468114443343,
    "ret_5d": -0.0051235622132143055,
    "ret_20d": -0.021479552599268703,
    "sma20": 739.0335,
@@ -92,8 +92,24 @@
    "trend": "mixed",
    "atr_pct": 0.01555867434874674,
    "vol_expanding": false,
-   "price_time": "2026-10-21T20:53:09.291819516Z",
+   "price_time": "2026-10-22T13:36:46.545087436Z",
    "news": [
+    {
+     "time": "2026-10-22T13:04:29Z",
+     "headline": "Questcorp Mining to Acquire Remaining 49% Interest in North Island Copper Project",
+     "source": "fiscal.ai",
+     "url": "https://www.newsfilecorp.com/release/320358/Questcorp-Mining-to-Exercise-Option-to-Acquire-100-of-North-Island-Copper-Project",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T12:37:38Z",
+     "headline": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off, Middle East Tensions\u2014 NFLX, SPCX, SMCI in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/10/62518477/stock-market-today-sp-500-dow-futures-drop-following-asian-market-sell-off-middle-east-tensions-nflx-spcx-smci-in-focus",
+     "earnings": false,
+     "catalyst": false
+    },
     {
      "time": "2026-10-22T06:08:59Z",
      "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
@@ -117,22 +133,6 @@
      "url": "https://www.benzinga.com/opinion/26/10/62501333/spacex-strong-ai-computing-returns-and-hidden-risk",
      "earnings": false,
      "catalyst": false
-    },
-    {
-     "time": "2026-10-21T15:00:39Z",
-     "headline": "Cyclicals Top Sectors In Wednesday Trading As Defensives Trail",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62499965/cyclicals-top-sectors-in-wednesday-trading-as-defensives-trail",
-     "earnings": false,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-21T13:04:54Z",
-     "headline": "Larry Fink Warns Data Center Slowdown Could Push US Into \u2018Recession\u2019 as Trump Orders Facilities to Generate Their Own Power and \u2018Make Deals\u2019",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/economic-data/26/10/62494399/larry-fink-warns-data-center-slowdown-could-push-us-into-recession-as-trump-orders-facilities-to-generate-their-own-power-and-make-deals",
-     "earnings": false,
-     "catalyst": false
     }
    ]
   },
@@ -140,11 +140,11 @@
    "symbol": "AAPL",
    "verdict": "ok",
    "why": [
-    "no premarket trade yet, gap unknown"
+    "nothing unusual"
    ],
    "prior_close": 343.935,
-   "price": 343.935,
-   "gap": null,
+   "price": 345.3,
+   "gap": 0.00396877316934896,
    "ret_5d": 0.002696714381504872,
    "ret_20d": 0.020972481966337053,
    "sma20": 337.993,
@@ -152,8 +152,24 @@
    "trend": "up",
    "atr_pct": 0.01716686500148492,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:57.84955167Z",
+   "price_time": "2026-10-22T13:36:50.141504458Z",
    "news": [
+    {
+     "time": "2026-10-22T13:31:17Z",
+     "headline": "Orangetheory Fitness Launches OTconnect for Apple Watch",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/orangetheory-fitness-launches-otconnect-for-apple-watch-302916283.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T09:58:59Z",
+     "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/10/62518613/investigating-apple-s-standing-technology-hardware-storage-amp-peripherals-industry-compared-competi",
+     "earnings": false,
+     "catalyst": false
+    },
     {
      "time": "2026-10-22T06:21:12Z",
      "headline": "Reported Earlier, Australian Court Orders Apple To Allow Alternative App Distribution, Payments For Australian Users From March 1, 2027; Rejects Epic\u2019s Global Relief",
@@ -177,35 +193,18 @@
      "url": "https://www.benzinga.com/markets/tech/26/10/62508566/steve-jobs-said-touchscreen-macbook-wouldnt-work-apple-is-doing-it-anyway",
      "earnings": false,
      "catalyst": false
-    },
-    {
-     "time": "2026-10-21T18:01:33Z",
-     "headline": "Apple Music Unveils Refreshed Visual Identity",
-     "source": "fiscal.ai",
-     "url": "https://appleosophy.com/wire/1tciaux/",
-     "earnings": false,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-21T17:35:14Z",
-     "headline": "10 Information Technology Stocks With Whale Alerts In Today\u2019s Session",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/options/26/10/62505787/10-information-technology-stocks-whale-alerts-today-s-session",
-     "earnings": false,
-     "catalyst": false
     }
    ]
   },
   {
    "symbol": "MSFT",
-   "verdict": "caution",
+   "verdict": "ok",
    "why": [
-    "no premarket trade yet, gap unknown",
-    "headline catalyst overnight"
+    "nothing unusual"
    ],
    "prior_close": 532.8,
-   "price": 532.8,
-   "gap": null,
+   "price": 529.545,
+   "gap": -0.006109234234234262,
    "ret_5d": -0.0023219234514268994,
    "ret_20d": 0.06428029243737754,
    "sma20": 525.1205,
@@ -213,15 +212,31 @@
    "trend": "up",
    "atr_pct": 0.020701951951951934,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.904784062Z",
+   "price_time": "2026-10-22T13:36:47.052521014Z",
    "news": [
     {
-     "time": "2026-10-21T13:32:27Z",
-     "headline": "Guggenheim Reiterates Buy on Microsoft, Maintains $586 Price Target",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/news/26/10/62495360/guggenheim-reiterates-buy-microsoft-maintains-586-price-target",
+     "time": "2026-10-22T13:31:28Z",
+     "headline": "Infragistics Announces Collaboration with Microsoft to Advance Blazor",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/10/22/3386445/0/en/infragistics-to-strengthen-blazor-development-with-microsoft.html",
      "earnings": false,
-     "catalyst": true
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T12:18:23Z",
+     "headline": "Ted Lieu Pushes Congress to Act as NSA Warns of Critical Cyber Vulnerabilities: \u2018We Need More Cybersecurity Personnel\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/10/62523449/ted-lieu-pushes-congress-to-act-as-nsa-warns-of-critical-cyber-vulnerabilities-we-need-more-cybersecurity-personnel",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T09:51:11Z",
+     "headline": "NextDC's 40% Crash Is the Warning Shot for Data Center Trade",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/10/62518531/nextdcs-40-crash-is-the-warning-shot-for-data-center-trade",
+     "earnings": false,
+     "catalyst": false
     },
     {
      "time": "2026-10-22T08:40:50Z",
@@ -236,22 +251,6 @@
      "headline": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here\u2019s How Big the Payoff Could Get (UPDATED)",
      "source": "benzinga",
      "url": "https://www.benzinga.com/markets/ipos/26/10/62457427/former-google-ceo-eric-schmidt-reportedly-owns-1-percent-anthropic",
-     "earnings": false,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-22T02:01:32Z",
-     "headline": "Tavant Launches Accelerator for Microsoft Fabric on Microsoft Marketplace",
-     "source": "fiscal.ai",
-     "url": "https://ittech-pulse.com/news/tavant-microsoft-fabric-accelerator-marketplace-launch/",
-     "earnings": false,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-21T19:12:55Z",
-     "headline": "Microsoft Says China-Aligned Hackers Used AI To Accelerate ConnectWise Supply-Chain Attack Across Hundreds Of Organizations",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/economics/macro-economic-events/26/10/62509021/microsoft-says-china-aligned-hackers-used-ai-accelerate-connectwise-supply-chain-attack-across-hundr",
      "earnings": false,
      "catalyst": false
     }
@@ -259,14 +258,13 @@
   },
   {
    "symbol": "GOOGL",
-   "verdict": "caution",
+   "verdict": "skip",
    "why": [
-    "no premarket trade yet, gap unknown",
-    "earnings headline overnight; check whether it reports today"
+    "premarket gap -1.18% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 334.715,
-   "price": 334.715,
-   "gap": null,
+   "price": 330.77,
+   "gap": -0.011786146423076294,
    "ret_5d": -0.03756685260797055,
    "ret_20d": -0.009117956156840856,
    "sma20": 345.1675,
@@ -274,45 +272,45 @@
    "trend": "mixed",
    "atr_pct": 0.02384544633920968,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:58.039265623Z",
+   "price_time": "2026-10-22T13:36:44.71533451Z",
    "news": [
     {
-     "time": "2026-10-21T13:36:53Z",
-     "headline": "Meta Earnings Prediction Market Preview: What Will Mark Zuckerberg Say?",
+     "time": "2026-10-22T12:41:12Z",
+     "headline": "Citizens Maintains Market Outperform on Alphabet, Lowers Price Target to $450",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62495590/meta-earnings-mark-zuckerberg-prediction-market",
-     "earnings": true,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-21T13:22:53Z",
-     "headline": "Google\u2019s Parent Alphabet Reports Earnings in a Week. Here\u2019s the Setup",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62495052/googles-parent-alphabet-reports-earnings-in-a-week-heres-the-setup",
-     "earnings": true,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-21T12:26:45Z",
-     "headline": "Tesla Earnings Prediction Market Preview: Will Elon Musk Discuss a SpaceX Merger?",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62492793/tesla-earnings-musk-spacex-merger",
-     "earnings": true,
+     "url": "https://www.benzinga.com/news/26/10/62524223/citizens-maintains-market-outperform-alphabet-lowers-price-target-450",
+     "earnings": false,
      "catalyst": true
     },
     {
-     "time": "2026-10-22T08:40:50Z",
-     "headline": "Anthropic Could Take Major IPO Step as Soon as Friday: What Investors Need to Know",
+     "time": "2026-10-22T13:26:51Z",
+     "headline": "Top Economists Warn California\u2019s Billionaire Tax Could Backfire, Wealthy Residents Leaving Could Cost the State $39 Billion More Than It Collects: 'Will Not Fulfill the Primary Functions'",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/ipos/26/10/62517881/anthropic-could-take-major-ipo-step-as-soon-as-friday-what-investors-need-to-know",
+     "url": "https://www.benzinga.com/news/politics/26/10/62526254/top-economists-warn-californias-billionaire-tax-could-backfire-wealthy-residents-leaving-could-cost-the-state-39-billion-more-than-it-collects-will-not-fulfill-the-primary-functions",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-20T04:33:47Z",
-     "headline": "Eric Schmidt Wrote a Check to Anthropic Before the AI Boom: Here\u2019s How Big the Payoff Could Get (UPDATED)",
+     "time": "2026-10-22T13:14:49Z",
+     "headline": "Google CEO Says Fully Self-Improving AI Is Still a Long Way Off",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/ipos/26/10/62457427/former-google-ceo-eric-schmidt-reportedly-owns-1-percent-anthropic",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62525802/google-self-improving-ai-rsi-pichai",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T12:18:23Z",
+     "headline": "Ted Lieu Pushes Congress to Act as NSA Warns of Critical Cyber Vulnerabilities: \u2018We Need More Cybersecurity Personnel\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/10/62523449/ted-lieu-pushes-congress-to-act-as-nsa-warns-of-critical-cyber-vulnerabilities-we-need-more-cybersecurity-personnel",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-22T11:38:10Z",
+     "headline": "Voltus, Google Expand Agreement To Construct 1 GW Virtual Power Plant In PJM Grid",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/10/62521797/voltus-google-expand-agreement-construct-1-gw-virtual-power-plant-pjm-grid",
      "earnings": false,
      "catalyst": false
     }
@@ -322,8 +320,8 @@
  "sectors": {
   "XLK": {
    "prior_close": 188.52,
-   "price": 188.52,
-   "gap": null,
+   "price": 185.02,
+   "gap": -0.018565669424994713,
    "ret_5d": -0.0100819155639571,
    "ret_20d": -0.034864076178774406,
    "sma20": 194.49725,
@@ -331,12 +329,12 @@
    "trend": "mixed",
    "atr_pct": 0.01993725561516776,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.99853924Z"
+   "price_time": "2026-10-22T13:36:50.223151737Z"
   },
   "SMH": {
    "prior_close": 556.57,
-   "price": 556.57,
-   "gap": null,
+   "price": 537.13,
+   "gap": -0.03492822106832938,
    "ret_5d": -0.015129530011324999,
    "ret_20d": -0.07423486360612108,
    "sma20": 593.3525,
@@ -344,12 +342,12 @@
    "trend": "mixed",
    "atr_pct": 0.030009060598204837,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.282801149Z"
+   "price_time": "2026-10-22T13:36:49.748674517Z"
   },
   "XLC": {
    "prior_close": 108.98,
-   "price": 108.98,
-   "gap": null,
+   "price": 107.51,
+   "gap": -0.013488713525417473,
    "ret_5d": -0.01669223134530362,
    "ret_20d": -0.031805259417199694,
    "sma20": 111.21575,
@@ -357,12 +355,12 @@
    "trend": "down",
    "atr_pct": 0.014363710248276228,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.914331793Z"
+   "price_time": "2026-10-22T13:36:39.675655919Z"
   },
   "XLY": {
    "prior_close": 115.53,
-   "price": 115.53,
-   "gap": null,
+   "price": 114.64,
+   "gap": -0.007703626763611138,
    "ret_5d": 0.03595767575322806,
    "ret_20d": 0.044150210131501666,
    "sma20": 111.61749999999999,
@@ -370,12 +368,12 @@
    "trend": "mixed",
    "atr_pct": 0.013033102100876721,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:57.847127692Z"
+   "price_time": "2026-10-22T13:36:31.369676958Z"
   },
   "XLF": {
    "prior_close": 56.02,
-   "price": 56.02,
-   "gap": null,
+   "price": 56.19,
+   "gap": 0.003034630489110901,
    "ret_5d": 0.02788990825688087,
    "ret_20d": 0.02713604693802729,
    "sma20": 54.51925,
@@ -383,12 +381,12 @@
    "trend": "mixed",
    "atr_pct": 0.0120173917478452,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:57.440189572Z"
+   "price_time": "2026-10-22T13:36:50.784881531Z"
   },
   "XLI": {
    "prior_close": 168.3,
-   "price": 168.3,
-   "gap": null,
+   "price": 167.23,
+   "gap": -0.0063576945929888495,
    "ret_5d": 0.007362183515891685,
    "ret_20d": -0.01058201058201047,
    "sma20": 168.60425,
@@ -396,12 +394,12 @@
    "trend": "down",
    "atr_pct": 0.01475044563279857,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.848812334Z"
+   "price_time": "2026-10-22T13:36:46.065929921Z"
   },
   "XLE": {
    "prior_close": 68.15,
-   "price": 68.16,
-   "gap": null,
+   "price": 68.46,
+   "gap": 0.0045487894350695335,
    "ret_5d": 0.007837917775805892,
    "ret_20d": 0.09249759538313573,
    "sma20": 64.78524999999999,
@@ -409,12 +407,12 @@
    "trend": "up",
    "atr_pct": 0.01944764699717013,
    "vol_expanding": false,
-   "price_time": "2026-10-21T20:00:00.212089382Z"
+   "price_time": "2026-10-22T13:36:45.059358163Z"
   },
   "XLV": {
    "prior_close": 178.915,
-   "price": 178.915,
-   "gap": null,
+   "price": 179.68,
+   "gap": 0.004275773411955397,
    "ret_5d": 0.028542684679505603,
    "ret_20d": 0.05992298578199051,
    "sma20": 171.47275,
@@ -422,12 +420,12 @@
    "trend": "up",
    "atr_pct": 0.01632259532659165,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:57.846986376Z"
+   "price_time": "2026-10-22T13:36:47.022798401Z"
   },
   "XLP": {
    "prior_close": 87.11,
-   "price": 87.11,
-   "gap": null,
+   "price": 88.06,
+   "gap": 0.010905751348869286,
    "ret_5d": 0.012200790146409402,
    "ret_20d": 0.05651910248635539,
    "sma20": 83.58500000000001,
@@ -435,12 +433,12 @@
    "trend": "mixed",
    "atr_pct": 0.012881906292536561,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.929079736Z"
+   "price_time": "2026-10-22T13:36:48.384040618Z"
   },
   "XLU": {
    "prior_close": 42.01,
-   "price": 42.01,
-   "gap": null,
+   "price": 42.15,
+   "gap": 0.003332539871459206,
    "ret_5d": 0.006468615237182451,
    "ret_20d": 0.056589537223340036,
    "sma20": 40.792,
@@ -448,14 +446,14 @@
    "trend": "mixed",
    "atr_pct": 0.01575305199442312,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:52.080645149Z"
+   "price_time": "2026-10-22T13:36:50.223921865Z"
   }
  },
  "macro": {
   "IWM": {
    "prior_close": 276.46,
-   "price": 276.21,
-   "gap": null,
+   "price": 276.15,
+   "gap": -0.0011213195398972475,
    "ret_5d": 0.018662834613754953,
    "ret_20d": -0.01961062449023021,
    "sma20": 277.74899999999997,
@@ -463,12 +461,12 @@
    "trend": "down",
    "atr_pct": 0.013873099699258984,
    "vol_expanding": false,
-   "price_time": "2026-10-21T20:31:45.023758712Z"
+   "price_time": "2026-10-22T13:36:46.567053418Z"
   },
   "DIA": {
    "prior_close": 527.7,
-   "price": 527.7,
-   "gap": null,
+   "price": 526.58,
+   "gap": -0.0021224180405533533,
    "ret_5d": 0.02336856394841469,
    "ret_20d": 0.02577560065313733,
    "sma20": 515.5355,
@@ -476,12 +474,12 @@
    "trend": "mixed",
    "atr_pct": 0.009638187281734765,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:59.008693308Z"
+   "price_time": "2026-10-22T13:36:03.452661902Z"
   },
   "TLT": {
    "prior_close": 80.24,
-   "price": 80.22,
-   "gap": null,
+   "price": 80.895,
+   "gap": 0.008163010967098705,
    "ret_5d": 0.01724137931034475,
    "ret_20d": -0.0027962468153857056,
    "sma20": 78.55699999999999,
@@ -489,7 +487,7 @@
    "trend": "mixed",
    "atr_pct": 0.009943384133314357,
    "vol_expanding": false,
-   "price_time": "2026-10-21T20:37:49.625084802Z"
+   "price_time": "2026-10-22T13:36:46.961179868Z"
   },
   "UUP": {
    "prior_close": 28.91,
@@ -506,8 +504,8 @@
   },
   "GLD": {
    "prior_close": 378.98,
-   "price": 378.98,
-   "gap": null,
+   "price": 372.55,
+   "gap": -0.01696659454324767,
    "ret_5d": 0.008005957922174511,
    "ret_20d": -0.03488845879596614,
    "sma20": 381.5735,
@@ -515,12 +513,12 @@
    "trend": "down",
    "atr_pct": 0.012884207986851897,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:52.500504868Z"
+   "price_time": "2026-10-22T13:36:47.342308448Z"
   },
   "USO": {
    "prior_close": 159.75,
-   "price": 159.75,
-   "gap": null,
+   "price": 163.51,
+   "gap": 0.023536776212832455,
    "ret_5d": 0.0398359695371997,
    "ret_20d": 0.07330018812147276,
    "sma20": 151.23875,
@@ -528,12 +526,12 @@
    "trend": "up",
    "atr_pct": 0.028479767493852007,
    "vol_expanding": false,
-   "price_time": "2026-10-21T19:59:54.132435203Z"
+   "price_time": "2026-10-22T13:36:40.251323457Z"
   },
   "VIXY": {
    "prior_close": 16.68,
-   "price": 16.68,
-   "gap": null,
+   "price": 16.97,
+   "gap": 0.017386091127098213,
    "ret_5d": 0.010296789824348673,
    "ret_20d": -0.00655151876116733,
    "sma20": 16.6305,
@@ -541,154 +539,192 @@
    "trend": "mixed",
    "atr_pct": 0.039140116478245966,
    "vol_expanding": true,
-   "price_time": "2026-10-21T19:59:57.852514715Z"
+   "price_time": "2026-10-22T13:36:27.399866583Z"
   }
  },
  "market_news": [
   {
-   "time": "2026-10-22T09:23:35Z",
-   "headline": "Elon Musk Met Xi Jinping and Took Tesla FSD to China \u2014 Now His CFO Says Getting the Green Light for Unsupervised Driving Is \u2018Hard\u2019",
+   "time": "2026-10-22T13:34:59Z",
+   "headline": "TD Cowen Maintains Buy on Danaher, Raises Price Target to $270",
    "symbols": [
-    "TSLA"
+    "DHR"
    ]
   },
   {
-   "time": "2026-10-22T09:18:23Z",
-   "headline": "Trump Says US Is \u2018Not Negotiating\u2019 With Iran as Hormuz Crisis Deepens, Hints War Could End \u2018Very Soon\u2019",
-   "symbols": []
-  },
-  {
-   "time": "2026-10-22T09:08:58Z",
-   "headline": "Why QuantumScape Shares Are Trading Higher By 9%; Here Are 20 Stocks Moving Premarket",
+   "time": "2026-10-22T13:34:29Z",
+   "headline": "Tech Mahindra Partners With SpaceXSI To Upgrade Legacy Applications, Software Delivery, Developer Productivity",
    "symbols": [
-    "BKYI",
-    "CYPH",
-    "IBG",
-    "LRCX",
-    "NCPL",
-    "NIVF",
-    "NVEC",
-    "NWGL",
-    "POM",
-    "QS",
-    "RTO",
-    "SDEV",
-    "SDST",
-    "SHFS",
-    "SSL",
-    "STAK",
-    "TSLA",
-    "VOGX",
-    "WHLR",
-    "YFOR"
+    "SPCX"
    ]
   },
   {
-   "time": "2026-10-22T09:08:21Z",
-   "headline": "Piper Sandler Maintains Neutral on AEVEX, Lowers Price Target to $13",
+   "time": "2026-10-22T13:34:27Z",
+   "headline": "Valley Ntl Q3 2026 Earnings Call Transcript",
    "symbols": [
-    "AVEX"
+    "VLY"
    ]
   },
   {
-   "time": "2026-10-22T09:02:28Z",
-   "headline": "Meta Has a New \u2018North Star\u2019 \u2014 Mark Zuckerberg Explains Why He\u2019s Betting Big on Personal Superintelligence, AI Models and Smart Glasses",
+   "time": "2026-10-22T13:33:51Z",
+   "headline": "Ingredion Incorporated Identified as Offeror in Regulatory Disclosure",
    "symbols": [
-    "META"
+    "INGR"
    ]
   },
   {
-   "time": "2026-10-22T09:01:49Z",
-   "headline": "Dekel Agri-Vision plc Shares Suspended from Trading on AIM",
+   "time": "2026-10-22T13:33:45Z",
+   "headline": "L3Harris Adopts Palantir Sovereign AI Technology",
    "symbols": [
-    "DKL"
+    "LHX"
    ]
   },
   {
-   "time": "2026-10-22T09:01:42Z",
-   "headline": "NEC Bio to Present Early Results for Oral Neoantigen Therapy",
+   "time": "2026-10-22T13:33:45Z",
+   "headline": "L3Harris Technologies Appoints Kimberly Fields to Board of Directors",
    "symbols": [
-    "6701"
+    "LHX"
    ]
   },
   {
-   "time": "2026-10-22T09:01:36Z",
-   "headline": "UBS Acquires 4.8% Stake in India's 360 ONE WAM via Warrant Exercise",
+   "time": "2026-10-22T13:33:28Z",
+   "headline": "Buffalo Potash Signs Royalty Agreement with Altius Minerals",
    "symbols": [
-    "UBS"
+    "ALS"
    ]
   },
   {
-   "time": "2026-10-22T09:01:33Z",
-   "headline": "AXA Reports Rising Burglary Claims in Switzerland",
+   "time": "2026-10-22T13:33:24Z",
+   "headline": "Peloton Interactive, Inc. Announces Date of First Quarter Fiscal 2027 Earnings Release and Conference Call",
    "symbols": [
-    "CS"
+    "PTON"
    ]
   },
   {
-   "time": "2026-10-22T09:01:33Z",
-   "headline": "S\u00e3o Paulo City Government Upholds R$ 11.4 Million Fine Against Enel",
+   "time": "2026-10-22T13:33:24Z",
+   "headline": "'Long Coins, Short Stocks': Expert Bullish on Bitcoin, Cautious on XRP, Coinbase, Circle",
    "symbols": [
-    "ENEL"
+    "BNBUSD",
+    "BTCUSD",
+    "COIN",
+    "CRCL",
+    "ETHUSD",
+    "IBIT",
+    "MSTR",
+    "NEARUSD",
+    "PURR",
+    "SOLUSD",
+    "XMRUSD",
+    "XRPUSD",
+    "ZECUSD"
    ]
   },
   {
-   "time": "2026-10-22T09:01:32Z",
-   "headline": "Fujitsu, Fsas Technologies, and Schwarz Digits Announce Strategic Partnership",
+   "time": "2026-10-22T13:33:21Z",
+   "headline": "Floor & Decor Expands Florida Presence With New Melbourne Store",
    "symbols": [
-    "6702"
+    "FND"
    ]
   },
   {
-   "time": "2026-10-22T09:01:30Z",
-   "headline": "Schneider Electric Executive Discusses Electrification Strategy",
+   "time": "2026-10-22T13:33:20Z",
+   "headline": "Badger Meter, Inc. Reports Q3 2026 Financial Results",
    "symbols": [
-    "SU"
+    "BMI"
    ]
   },
   {
-   "time": "2026-10-22T09:01:30Z",
-   "headline": "Deutsche Bank upgrades EssilorLuxottica to Buy",
+   "time": "2026-10-22T13:33:14Z",
+   "headline": "Deutsche Bank Adjusts QuantumScape Price Target to $6",
    "symbols": [
-    "EL"
+    "QS"
    ]
   },
   {
-   "time": "2026-10-22T09:01:29Z",
-   "headline": "Montana Aerospace subsidiary Asco presents prototype rear secondary structure to Airbus",
+   "time": "2026-10-22T13:33:12Z",
+   "headline": "RBC Trims Price Target on Texas Capital Bancshares",
    "symbols": [
-    "AIR"
+    "TCBI"
    ]
   },
   {
-   "time": "2026-10-22T09:01:29Z",
-   "headline": "RBC Expects Glencore to Hit Bottom End of FY26 Copper Production Outlook; Estimates Revised",
+   "time": "2026-10-22T13:33:12Z",
+   "headline": "New Waystar and Modern Healthcare Research Reveals Significant Gaps in Providers' Ability to Prevent Payer Recoupments",
    "symbols": [
-    "GLEN"
+    "WAY"
+   ]
+  },
+  {
+   "time": "2026-10-22T13:33:10Z",
+   "headline": "Piper Sandler & Co. Acts as Joint Book-Running Manager for Securities Offering",
+   "symbols": [
+    "PIPR"
    ]
   }
  ],
  "movers": {
   "gainers": [
    {
-    "change": 10.78,
-    "percent_change": 41.49,
-    "price": 36.76,
-    "symbol": "SVRN"
+    "change": 6.345,
+    "percent_change": 18.73,
+    "price": 40.22,
+    "symbol": "LMTL"
    },
    {
-    "change": 5.75,
-    "percent_change": 26.45,
-    "price": 27.49,
-    "symbol": "ASSX"
+    "change": 2.931,
+    "percent_change": 15.73,
+    "price": 21.5605,
+    "symbol": "AAOZ"
    },
    {
-    "change": 5.73,
-    "percent_change": 23.12,
-    "price": 30.51,
-    "symbol": "AMTD"
+    "change": 5.814,
+    "percent_change": 15.28,
+    "price": 43.865,
+    "symbol": "COHQ"
+   },
+   {
+    "change": 4.12,
+    "percent_change": 14.72,
+    "price": 32.1,
+    "symbol": "LITZ"
+   },
+   {
+    "change": 2.99,
+    "percent_change": 13.14,
+    "price": 25.75,
+    "symbol": "GDXD"
    }
   ],
-  "losers": []
+  "losers": [
+   {
+    "change": -29.57,
+    "percent_change": -28.69,
+    "price": 73.5,
+    "symbol": "NVEC"
+   },
+   {
+    "change": -22.9,
+    "percent_change": -22.41,
+    "price": 79.255,
+    "symbol": "TTMI"
+   },
+   {
+    "change": -7.015,
+    "percent_change": -20.61,
+    "price": 27.025,
+    "symbol": "LRCU"
+   },
+   {
+    "change": -4.566,
+    "percent_change": -18.19,
+    "price": 20.539,
+    "symbol": "AXTU"
+   },
+   {
+    "change": -5.485,
+    "percent_change": -17.27,
+    "price": 26.275,
+    "symbol": "FPS"
+   }
+  ]
  }
 }
