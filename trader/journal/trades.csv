@@ -1,3 +1,5 @@
 time,symbol,event,qty,price,stop,target,pnl,note
 2026-10-22T09:58:02.418061-04:00,QQQ,skip,,714.74,,,,"ORB break of 714.69 (range 712.56-714.69), VWAP 713.27; skipped, gap -1.60% vs prior close 725.25 exceeds 0.75%"
 2026-10-22T10:04:02.524372-04:00,SPY,skip,,767.46,,,,"ORB break of 767.39 (range 765.97-767.39), VWAP 766.62; skipped, gap -0.88% vs prior close 773.13 exceeds 0.75%"
+2026-10-22T15:05:02.848344-04:00,AAPL,buy,0.863,347.29,345.98,349.87,,"ORB break of 347.27 (range 344.68-347.27), VWAP 345.28; gap +0.28% vs prior close 343.935; risk $1.13"
+2026-10-22T15:45:02.311985-04:00,AAPL,exit_eod,0.863,347.79,345.98,349.87,0.43,"entry 347.29, R = +0.38"
