@@ -11,7 +11,7 @@ import time as _time
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from . import strategy
+from . import risk_manager, strategy
 from .broker import Broker
 from .config import Config
 from .risk import Book, size
@@ -119,6 +119,18 @@ def gap_ok(broker, cfg, sym, bars, now):
 
 def step(broker, cfg, book, now):
     t = now.time()
+    killed = risk_manager.kill_reason(cfg)
+    if killed:
+        if f"kill:{book.day}" not in book.seen_orders:
+            book.seen_orders.append(f"kill:{book.day}")
+            journal(cfg, {"time": now.isoformat(), "event": "kill", "note": killed})
+        if broker.positions() or broker.open_orders():
+            log(f"kill switch on ({killed}), flattening")
+            for tr in book.open.values():
+                tr.setdefault("exit_reason", "kill")
+            broker.flatten()
+        reconcile(broker, cfg, book, now)
+        return
     if t >= cfg.flatten_at:
         if broker.positions() or broker.open_orders():
             log("flattening for the close")
@@ -128,6 +140,7 @@ def step(broker, cfg, book, now):
         return
     reconcile(broker, cfg, book, now)
     manage(broker, cfg, book)
+    risk_manager.protect(broker, cfg, book, journal, log, now)
     reason = book.halted(cfg)
     if reason:
         if f"halt:{book.day}" not in book.seen_orders:
@@ -138,8 +151,10 @@ def step(broker, cfg, book, now):
     if t < cfg.session_start or t > cfg.last_entry:
         return
     # Only the configured capital is ours to use, whatever the account holds.
-    used = sum(abs(float(p["cost_basis"])) for p in broker.positions())
-    cash = min(float(broker.account()["cash"]), cfg.capital - used)
+    positions = broker.positions()
+    account = broker.account()
+    used = sum(abs(float(p["cost_basis"])) for p in positions)
+    cash = min(float(account["cash"]), cfg.capital - used)
     bars = todays_bars(broker, cfg, now)
     for sym in cfg.symbols:
         if sym in book.traded_today:
@@ -160,6 +175,15 @@ def step(broker, cfg, book, now):
                           "note": f"{sig.reason}; skipped, size rounds to 0"})
             log(f"{sym} signal skipped, size rounds to 0 ({sig.reason})")
             continue
+        last_bar = datetime.fromisoformat(bars[sym][-1]["t"].replace("Z", "+00:00"))
+        decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
+                                            broker.latest_price(sym, cfg.data_feed))
+        if not decision.ok:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_block", "qty": qty,
+                          "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target,
+                          "note": f"{sig.reason}; vetoed: {decision}"})
+            log(f"{sym} signal vetoed by risk manager: {decision}")
+            continue
         order = broker.buy_market(sym, qty, f"orb-{book.day}-{sym}")
         fill = None
         for _ in range(20):
@@ -169,14 +193,21 @@ def step(broker, cfg, book, now):
                 break
             _time.sleep(1)
         entry = fill or sig.entry
-        stop_order = broker.sell_stop(sym, qty, sig.stop)
+        try:
+            stop_id = broker.sell_stop(sym, qty, sig.stop)["id"]
+        except RuntimeError as e:
+            stop_id = None  # protect() below retries once, then closes the position
+            log(f"{sym} stop order failed: {e}")
         book.open[sym] = {"qty": qty, "entry": entry, "stop": sig.stop, "target": sig.target,
-                          "stop_order_id": stop_order["id"]}
+                          "stop_order_id": stop_id}
+        positions.append({"symbol": sym, "cost_basis": qty * entry})
         cash -= qty * entry
         journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
                       "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
                       "note": f"{sig.reason}; {gap_note}; risk ${qty * (entry - sig.stop):.2f}"})
         log(f"BUY {qty} {sym} @ {entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
+        if not stop_id:
+            risk_manager.protect(broker, cfg, book, journal, log, now)
 
 
 def run(mode):

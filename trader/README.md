@@ -17,6 +17,43 @@ any other trading endpoint. It is unrelated to the rest of this repo.
 | Flat by | 3:45 ET | |
 | Skip a symbol that gaps more than | 0.75% from prior close | |
 
+## Risk manager
+
+`trader/risk_manager.py` has a veto over every entry; the trader cannot buy
+anything it rejects. Exits are never blocked. Every signal must pass all of:
+
+- kill switch off (`trader/journal/KILL` absent and `TRADER_KILL` unset)
+- daily and weekly circuit breakers above
+- symbol on the approved list, long only, stop < entry < target
+- inside the 9:40-3:30 ET entry window
+- at most 3 open positions (`TRADER_MAX_POSITIONS`), one per symbol
+- dollar risk at or under 0.5% of capital, total exposure at or under capital,
+  one position at or under `TRADER_MAX_POSITION_FRAC` of capital (default 100%)
+- bars no older than 3 minutes, last trade within 0.25% of the signal price and above the stop
+- account ACTIVE and not blocked; under $25k equity, no 4th day trade in 5 days (PDT)
+
+Each pass it also checks that every open position still has a live stop
+order, re-places a missing one, and closes the position if that fails.
+Vetoes and guard actions are journaled as `risk_block` and `risk_guard`.
+
+```
+python -m trader.risk_manager kill "reason"   # stop trading and flatten now
+python -m trader.risk_manager resume          # clear the kill switch
+python -m trader.risk_manager status          # limits used, account flags
+python -m trader.risk_manager review [date]   # daily review -> trader/journal/notes/
+```
+
+The daily review shows limits used, each trade's dollar risk and R, every
+veto, running stats (win rate, profit factor, average R, max drawdown), any
+rule breaches, and the live-money gate: 30+ paper trades, profit factor
+1.2+, positive average R, max drawdown under 6%, and no breaches. Passing
+the gate only means Luke is asked; it never turns on live trading.
+
+Strategy changes (new symbols, parameters, or rules) go through the risk
+manager before they trade: backtest on two separate periods, both with a
+profit factor above 1, and no loosening of the limits above without Luke's
+say-so.
+
 ## Strategy
 
 Opening-range breakout: the first 15 minutes set a range. The first 1-minute
