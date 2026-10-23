@@ -1,14 +1,10 @@
 {
- "day": "2026-10-22",
+ "day": "2026-10-23",
  "week": "2026-W43",
- "day_pnl": 0.43322599999999056,
+ "day_pnl": 0.0,
  "week_pnl": 0.43322599999999056,
  "day_losses": 0,
- "traded_today": [
-  "QQQ",
-  "SPY",
-  "AAPL"
- ],
+ "traded_today": [],
  "seen_orders": [],
  "open": {}
 }
