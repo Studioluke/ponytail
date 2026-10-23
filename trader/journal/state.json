@@ -1,9 +1,9 @@
 {
  "day": "2026-10-23",
  "week": "2026-W43",
- "day_pnl": 0.0,
- "week_pnl": 0.43322599999999056,
- "day_losses": 0,
+ "day_pnl": -0.7371799999999809,
+ "week_pnl": -0.3039539999999903,
+ "day_losses": 1,
  "traded_today": [
   "GOOGL",
   "META",
@@ -15,16 +15,9 @@
   "IWM",
   "MSFT",
   "TSLA",
-  "DIA"
+  "DIA",
+  "AMZN"
  ],
  "seen_orders": [],
- "open": {
-  "GOOGL": {
-   "qty": 0.93,
-   "entry": 322.626,
-   "stop": 321.28,
-   "target": 324.88,
-   "stop_order_id": "f7eb87f3-f299-4b1c-9f92-0c1d56ae4e34"
-  }
- }
+ "open": {}
 }
