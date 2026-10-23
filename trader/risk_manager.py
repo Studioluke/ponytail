@@ -272,7 +272,9 @@ def review(cfg, day, book=None, account=None):
         lines.append(f"| Daily/weekly loss | no state for this day | -2% / -5% |")
     lines += [f"| Risk per trade | max ${max([t['risk'] for t in today], default=0):.2f} today | "
               f"${cfg.capital * cfg.risk_per_trade:.2f} |",
-              f"| Open positions | {len(book.open)} now | {cfg.max_open_positions} |", ""]
+              f"| Open positions | {len(book.open)} now | {cfg.max_open_positions} |",
+              f"| Position size | max ${max([t['qty'] * t['entry'] for t in today], default=0):.2f} today | "
+              f"${cfg.capital * cfg.max_position_frac:.2f} ({cfg.max_position_frac:.0%} of capital) |", ""]
 
     lines += ["### Trades today"]
     if today:

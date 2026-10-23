@@ -34,3 +34,7 @@ New symbols, parameters or rules must backtest on two separate periods with PF >
 
 ## Learning mode (Luke, 2026-10-22)
 Luke: mistakes are fine on paper; trade through risk, note it, and learn. With `learning_mode` on (default; `TRADER_LEARNING=0` turns it off), the gap rule and research "skip" verdicts become `risk_taken` warnings instead of vetoes. All other vetoes still hold: breakers, caps, stale data, slippage, kill switch, stop guard. The daily review reports risk-taken trades separately (P&L, win rate, average R vs the other trades), not as breaches, so we can see whether those warnings were worth heeding.
+
+## Change log
+- 2026-10-23, sizing fix (trader thread, 9f612d0): a 9:46 GOOGL entry used the whole $300, so ten later breakouts sized to 0 and were lost for the day. The default `max_position_frac` went from 100% to 1/3 of capital (about $100 a position), which matches the 3-position cap. This only tightens risk. The daily review now shows the position-size limit. Lesson: with $300, concentration rather than stop distance was the binding risk.
+- 2026-10-23: a session committed `trader/journal/state.json` while the loop ran and wiped an open position from state. Rule: only the trader loop writes state.json. Other threads never commit it.
