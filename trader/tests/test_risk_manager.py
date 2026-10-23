@@ -20,7 +20,7 @@ class Tmp(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.TemporaryDirectory()
         d = self.dir.name
-        self.cfg = Config(capital=300, symbols=("SPY", "QQQ"), state_path=f"{d}/state.json",
+        self.cfg = Config(capital=300, symbols=("SPY", "QQQ"), max_position_frac=1.0, state_path=f"{d}/state.json",
                           journal_path=f"{d}/trades.csv", kill_path=f"{d}/KILL", notes_dir=f"{d}/notes",
                           research_dir=f"{d}/research")
         self.book = Book()
@@ -80,6 +80,12 @@ class Veto(Tmp):
         self.assertIn("stale data", str(self.check(bar_age=5)))
         self.assertIn("price moved", str(self.check(last=603)))
         self.assertIn("below stop", str(self.check(last=598.9)))
+
+    def test_default_position_cap_is_a_third(self):
+        self.assertAlmostEqual(Config().max_position_frac, 1 / 3)
+        cfg = dataclasses.replace(self.cfg, max_position_frac=1 / 3)
+        d = rm.check_entry(cfg, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, {})
+        self.assertIn("position over 33% of capital", str(d))
 
     def test_research_skip_vetoes(self):
         os.makedirs(self.cfg.research_dir, exist_ok=True)

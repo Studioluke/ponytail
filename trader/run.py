@@ -173,7 +173,8 @@ def step(broker, cfg, book, now):
                           "note": f"{sig.reason}; skipped, {gap_note} exceeds {cfg.max_gap:.2%}"})
             log(f"{sym} signal skipped: {gap_note}")
             continue
-        qty = size(cfg.capital, cfg.risk_per_trade, sig.entry, sig.stop, cash, cfg.fractional)
+        qty = size(cfg.capital, cfg.risk_per_trade, sig.entry, sig.stop,
+                   min(cash, cfg.capital * cfg.max_position_frac), cfg.fractional)
         if not qty:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
                           "note": f"{sig.reason}; skipped, size rounds to 0"})
