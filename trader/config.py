@@ -14,12 +14,12 @@ def _f(name, default):
 @dataclass(frozen=True)
 class Config:
     # Core five: SPY/QQQ plus the large caps whose breakouts were profitable in
-    # both Jan-Jun and Jul-Oct 2026. The other eight are exploratory (Luke,
+    # both Jan-Jun and Jul-Oct 2026. The other ten are exploratory (Luke,
     # 2026-10-22: "expand... I want to see trades made"); they backtest weaker
-    # (PF 1.16 then 0.94 for all 13) and are tracked separately in the notes.
+    # (PF 1.16 then 0.94 for the first 13; AVGO and COST added 2026-10-23, untested) and are tracked separately in the notes.
     symbols: tuple = field(default_factory=lambda: tuple(os.environ.get(
         "TRADER_SYMBOLS",
-        "SPY,QQQ,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,IWM,DIA,NFLX").split(",")))
+        "SPY,QQQ,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,IWM,DIA,NFLX,AVGO,COST").split(",")))
     core_symbols: tuple = ("SPY", "QQQ", "AAPL", "MSFT", "GOOGL")
     # Capital the bot sizes against. Luke set $300 on 2026-10-21; the paper
     # account itself holds more, and everything above this is ignored.
