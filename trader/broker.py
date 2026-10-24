@@ -82,12 +82,12 @@ class Broker:
                          params={"status": "closed", "after": after_iso, "limit": 500, "nested": "true"})
 
     # market data API
-    def bars(self, symbols, timeframe, start, end=None, feed="iex"):
+    def bars(self, symbols, timeframe, start, end=None, feed="iex", adjustment="raw"):
         """Return {symbol: [bar, ...]} with every page fetched."""
         out, token = {}, None
         while True:
             params = {"symbols": ",".join(symbols), "timeframe": timeframe, "start": start,
-                      "feed": feed, "limit": 10000, "adjustment": "raw"}
+                      "feed": feed, "limit": 10000, "adjustment": adjustment}
             if end:
                 params["end"] = end
             if token:
