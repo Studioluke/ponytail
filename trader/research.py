@@ -35,6 +35,7 @@ SECTORS = {"XLK": "Tech", "SMH": "Semis", "XLC": "Comm services", "XLY": "Discre
 MACRO = {"IWM": "Small caps", "DIA": "Dow", "TLT": "20y+ Treasuries", "UUP": "US dollar", "GLD": "Gold",
          "USO": "Crude oil", "VIXY": "VIX futures"}
 EVENTS_PATH = "trader/journal/research/events.csv"
+SMART_MONEY_DIR = "trader/journal/smartmoney"
 ETFS = {"SPY", "QQQ", "IWM", "DIA"}
 EARNINGS = re.compile(r"\b(earnings|quarterly results|q[1-4] (results|revenue|eps)|eps|guidance|revenue (beat|miss)|"
                       r"to report)\b", re.I)
@@ -199,6 +200,11 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
         shown = [n for n in hs if n["earnings"] or n["catalyst"]]
         shown += [n for n in hs if n not in shown][:max(0, 5 - len(shown))]
         watch.append({"symbol": s, "verdict": level, "why": why, **p, "news": shown})
+    smart = load_smart_money(day)
+    for w in watch:
+        hits = [b for x in smart if x["symbol"] == w["symbol"] for b in x["buys"]]
+        if hits:  # informational: never changes the verdict
+            w["why"].append("smart money: " + ", ".join(f"{b['who']} bought ({b['source']})" for b in hits[:3]))
     # Large, liquid names only: the movers list is mostly penny stocks.
     big = {k: [m for m in movers.get(k, []) if m["price"] >= 20][:5] for k in ("gainers", "losers")}
     data = {"date": day.isoformat(), "generated": datetime.now(ET).isoformat(timespec="minutes"),
@@ -206,8 +212,18 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
             "sectors": {s: prof.get(s) for s in SECTORS}, "macro": {s: prof.get(s) for s in MACRO},
             "market_news": [{"time": n["created_at"], "headline": n["headline"], "symbols": n.get("symbols", [])}
                             for n in market_news],
-            "movers": big}
+            "movers": big, "smart_money": smart}
     return data
+
+
+def load_smart_money(day, base=SMART_MONEY_DIR, lookback=3):
+    """Latest smart-money signal file (trader/smartmoney.py) from the last few days, or []."""
+    for i in range(lookback + 1):
+        p = os.path.join(base, f"{day - timedelta(days=i)}.json")
+        if os.path.exists(p):
+            with open(p) as f:
+                return json.load(f).get("signals", [])
+    return []
 
 
 def markdown(d):
@@ -241,6 +257,12 @@ def markdown(d):
         L.append("- none")
     L += ["", "### Market headlines", ""]
     L += [f"- {n['headline']} ({', '.join(n['symbols'][:4]) or 'market'})" for n in d["market_news"][:10]] or ["- none"]
+    L += ["", "### Smart money (insider and congressional buys that pass the backtest; info only, not orders)", ""]
+    for x in d.get("smart_money") or []:
+        L.append(f"- {x['symbol']}: " + "; ".join(f"{b['who']} ${b['value']:,.0f}, public {b['public']} "
+                                                   f"({b['source']}: {', '.join(b['filters'])})" for b in x["buys"]))
+    if not d.get("smart_money"):
+        L.append("- none in the last 3 days")
     L += ["", "### Large-cap movers (price $20 and up, info only, not in the bot's universe)", ""]
     for k in ("gainers", "losers"):
         L.append(f"- {k.title()}: " + (", ".join(f"{m['symbol']} {m['percent_change']:+.1f}%" for m in d["movers"][k])
