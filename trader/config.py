@@ -57,6 +57,10 @@ class Config:
     # become logged warnings instead of vetoes, so the bot trades risk-off days
     # and we learn from them. Hard limits (stops, loss breakers, $ caps, kill
     # switch) still apply. TRADER_LEARNING=0 restores the strict behaviour.
+    # With learning mode on, if no trade has been entered by this time, take one
+    # "learning trade" in the strongest trend at a fraction of normal risk.
+    learning_trade_after: time = time(11, 0)
+    learning_risk_frac: float = 0.5
     learning_mode: bool = field(default_factory=lambda: os.environ.get("TRADER_LEARNING", "1") != "0")
     data_feed: str = field(default_factory=lambda: os.environ.get("TRADER_FEED", "iex"))
     state_path: str = field(default_factory=lambda: os.environ.get("TRADER_STATE", "trader/journal/state.json"))

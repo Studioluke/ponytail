@@ -52,3 +52,28 @@ def check(symbol, bars, minutes, reward_risk):
         return None
     return Signal(symbol, entry, round(stop, 2), round(entry + reward_risk * risk, 2),
                   f"ORB break of {hi:.2f} (range {lo:.2f}-{hi:.2f}), VWAP {vw:.2f}")
+
+
+def strongest_trend(bars_by_symbol, minutes, reward_risk):
+    """Fallback "learning trade": among symbols whose last close is above both
+    VWAP and the opening-range midpoint, pick the one furthest above VWAP.
+    Stop at the higher of VWAP and the range low (always below entry), target
+    `reward_risk` times the risk."""
+    best = None
+    for sym, bars in bars_by_symbol.items():
+        rng = opening_range(bars, minutes)
+        vw = vwap(bars)
+        if rng is None or vw is None or len(bars) <= minutes:
+            continue
+        hi, lo = rng
+        last = bars[-1]["c"]
+        if last <= vw or last <= (hi + lo) / 2:
+            continue
+        stop = round(min(max(vw, lo), last * 0.998), 2)
+        strength = last / vw - 1
+        if best is None or strength > best[0]:
+            risk = last - stop
+            best = (strength, Signal(sym, last, stop, round(last + reward_risk * risk, 2),
+                                     f"learning trade: strongest trend, {strength:+.2%} above VWAP {vw:.2f}, "
+                                     f"range {lo:.2f}-{hi:.2f}"))
+    return best[1] if best else None

@@ -30,12 +30,15 @@ class Book:
     seen_orders: list = field(default_factory=list)
     # symbol -> {qty, entry, stop, target, stop_order_id, exit_reason}
     open: dict = field(default_factory=dict)
+    entries: int = 0  # buys today
+    learning_tried: bool = False
 
     def roll(self, day, week):
         if week != self.week:
             self.week, self.week_pnl = week, 0.0
         if day != self.day:
             self.day, self.day_pnl, self.day_losses, self.traded_today, self.open = day, 0.0, 0, [], {}
+            self.entries, self.learning_tried = 0, False
 
     def record(self, pnl):
         self.day_pnl += pnl

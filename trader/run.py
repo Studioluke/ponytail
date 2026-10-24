@@ -157,6 +157,58 @@ def step(broker, cfg, book, now):
     cash = min(float(account["cash"]), cfg.capital - used)
     bars = todays_bars(broker, cfg, now)
     research = risk_manager.research_verdicts(cfg, book.day)
+    state = {"cash": cash}
+
+    def enter(sym, sig, risks, gap_note, risk_frac, tag):
+        qty = size(cfg.capital, risk_frac, sig.entry, sig.stop,
+                   min(state["cash"], cfg.capital * cfg.max_position_frac), cfg.fractional)
+        if not qty:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
+                          "note": f"{sig.reason}; skipped, size rounds to 0"})
+            log(f"{sym} signal skipped, size rounds to 0 ({sig.reason})")
+            return False
+        last_bar = datetime.fromisoformat(bars[sym][-1]["t"].replace("Z", "+00:00"))
+        decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
+                                            broker.latest_price(sym, cfg.data_feed), research)
+        if not decision.ok:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_block", "qty": qty,
+                          "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target,
+                          "note": f"{sig.reason}; vetoed: {decision}"})
+            log(f"{sym} signal vetoed by risk manager: {decision}")
+            return False
+        risks = risks + decision.warnings
+        if risks:
+            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_taken", "qty": qty,
+                          "price": f"{sig.entry:.2f}", "note": "learning mode, trading anyway: " + "; ".join(risks)})
+            log(f"{sym} RISK TAKEN (learning mode): {'; '.join(risks)}")
+        order = broker.buy_market(sym, qty, f"{tag}-{book.day}-{sym}")
+        fill = None
+        for _ in range(20):
+            o = broker.order(order["id"])
+            if o["status"] == "filled":
+                fill = float(o["filled_avg_price"])
+                break
+            _time.sleep(1)
+        entry = fill or sig.entry
+        try:
+            stop_id = broker.sell_stop(sym, qty, sig.stop)["id"]
+        except RuntimeError as e:
+            stop_id = None  # protect() below retries once, then closes the position
+            log(f"{sym} stop order failed: {e}")
+        book.open[sym] = {"qty": qty, "entry": entry, "stop": sig.stop, "target": sig.target,
+                          "stop_order_id": stop_id}
+        book.entries += 1
+        positions.append({"symbol": sym, "cost_basis": qty * entry})
+        state["cash"] -= qty * entry
+        group = "learning" if tag == "learn" else "core" if sym in cfg.core_symbols else "explore"
+        journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
+                      "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
+                      "note": f"[{group}] {sig.reason}; {gap_note}; risk ${qty * (entry - sig.stop):.2f}"})
+        log(f"BUY {qty} {sym} @ {entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
+        if not stop_id:
+            risk_manager.protect(broker, cfg, book, journal, log, now)
+        return True
+
     for sym in cfg.symbols:
         if sym in book.traded_today:
             continue
@@ -173,52 +225,24 @@ def step(broker, cfg, book, now):
                           "note": f"{sig.reason}; skipped, {gap_note} exceeds {cfg.max_gap:.2%}"})
             log(f"{sym} signal skipped: {gap_note}")
             continue
-        qty = size(cfg.capital, cfg.risk_per_trade, sig.entry, sig.stop,
-                   min(cash, cfg.capital * cfg.max_position_frac), cfg.fractional)
-        if not qty:
-            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
-                          "note": f"{sig.reason}; skipped, size rounds to 0"})
-            log(f"{sym} signal skipped, size rounds to 0 ({sig.reason})")
-            continue
-        last_bar = datetime.fromisoformat(bars[sym][-1]["t"].replace("Z", "+00:00"))
-        decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
-                                            broker.latest_price(sym, cfg.data_feed), research)
-        if not decision.ok:
-            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_block", "qty": qty,
-                          "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target,
-                          "note": f"{sig.reason}; vetoed: {decision}"})
-            log(f"{sym} signal vetoed by risk manager: {decision}")
-            continue
-        risks += decision.warnings
-        if risks:
-            journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_taken", "qty": qty,
-                          "price": f"{sig.entry:.2f}", "note": "learning mode, trading anyway: " + "; ".join(risks)})
-            log(f"{sym} RISK TAKEN (learning mode): {'; '.join(risks)}")
-        order = broker.buy_market(sym, qty, f"orb-{book.day}-{sym}")
-        fill = None
-        for _ in range(20):
-            o = broker.order(order["id"])
-            if o["status"] == "filled":
-                fill = float(o["filled_avg_price"])
-                break
-            _time.sleep(1)
-        entry = fill or sig.entry
-        try:
-            stop_id = broker.sell_stop(sym, qty, sig.stop)["id"]
-        except RuntimeError as e:
-            stop_id = None  # protect() below retries once, then closes the position
-            log(f"{sym} stop order failed: {e}")
-        book.open[sym] = {"qty": qty, "entry": entry, "stop": sig.stop, "target": sig.target,
-                          "stop_order_id": stop_id}
-        positions.append({"symbol": sym, "cost_basis": qty * entry})
-        cash -= qty * entry
-        journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
-                      "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
-                      "note": f"[{'core' if sym in cfg.core_symbols else 'explore'}] {sig.reason}; {gap_note}; "
-                              f"risk ${qty * (entry - sig.stop):.2f}"})
-        log(f"BUY {qty} {sym} @ {entry:.2f} stop {sig.stop} target {sig.target}: {sig.reason}")
-        if not stop_id:
-            risk_manager.protect(broker, cfg, book, journal, log, now)
+        enter(sym, sig, risks, gap_note, cfg.risk_per_trade, "orb")
+
+    # Luke, 2026-10-24: no day without a trade on paper. If nothing has been
+    # entered by learning_trade_after, take the strongest trend at half risk.
+    if (cfg.learning_mode and book.entries == 0 and not book.learning_tried
+            and cfg.learning_trade_after <= t <= cfg.last_entry):
+        book.learning_tried = True
+        held = set(book.open) | {p["symbol"] for p in positions}
+        sig = strategy.strongest_trend({s: b for s, b in bars.items() if s in cfg.symbols and s not in held},
+                                       cfg.opening_range_minutes, cfg.reward_risk)
+        if sig is None:
+            journal(cfg, {"time": now.isoformat(), "event": "learning_none",
+                          "note": "no ORB entries yet and no symbol trending above VWAP and its range mid"})
+            log("learning trade: no candidate")
+        else:
+            enter(sig.symbol, sig, [f"learning trade: no entry by {cfg.learning_trade_after:%H:%M}, "
+                                    f"taking the strongest trend at {cfg.learning_risk_frac:.0%} of normal risk"],
+                  "", cfg.risk_per_trade * cfg.learning_risk_frac, "learn")
 
 
 def run(mode):
