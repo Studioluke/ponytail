@@ -4,7 +4,14 @@ date,symbol,event,timing,source
 2026-10-28,ALL,FOMC decision 2:00 ET,during,vault Market-Research 2026-10-20 (unconfirmed)
 2026-10-28,MSFT,Earnings (estimated date),after,blofin.com earnings season preview (unconfirmed)
 2026-10-28,GOOGL,Earnings (estimated date),after,blofin.com earnings season preview (unconfirmed)
+2026-10-28,FTNT,Earnings (confirmed; call 4:30 ET),after,Fortinet IR release 2026-10-02
 2026-10-29,AAPL,Earnings (estimated date),after,third-party estimate (unconfirmed)
 2026-10-29,AMZN,Earnings (confirmed; call 5:00 ET),after,aboutamazon.com Q3 2026 announcement
+2026-11-02,CHKP,Earnings (confirmed),pre,Check Point announcement via Investing.com
 2026-11-03,AMD,Earnings (estimated; early Nov pattern),after,estimate from prior years (unconfirmed)
-2026-11-18,NVDA,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)
+2026-11-18,NVDA,Earnings Q3 FY27 (scheduled per several sources),after,stockanalysis.com / 24/7 Wall St. (verify on NVIDIA IR)
+2026-11-18,PANW,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)
+2026-11-24,ZS,Earnings (estimated; late Nov pattern),after,estimate from prior years (unconfirmed)
+2026-12-01,CRWD,Earnings (estimated; early Dec pattern),after,estimate from prior years (unconfirmed)
+2026-12-02,OKTA,Earnings (estimated; early Dec pattern),after,estimate from prior years (unconfirmed)
+2026-12-04,S,Earnings (estimated),after,smartcalendars.ai cybersecurity calendar (unconfirmed)
