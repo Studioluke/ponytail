@@ -1,0 +1,23 @@
+{
+ "day": "2026-10-23",
+ "week": "2026-W43",
+ "day_pnl": -0.7371799999999809,
+ "week_pnl": -0.3039539999999903,
+ "day_losses": 1,
+ "traded_today": [
+  "GOOGL",
+  "META",
+  "AMD",
+  "AVGO",
+  "QQQ",
+  "NVDA",
+  "SPY",
+  "IWM",
+  "MSFT",
+  "TSLA",
+  "DIA",
+  "AMZN"
+ ],
+ "seen_orders": [],
+ "open": {}
+}
