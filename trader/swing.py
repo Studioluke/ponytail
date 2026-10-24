@@ -15,7 +15,8 @@ Fill rules, all conservative:
     target  high >= target exits at the target; a day that hits both counts
             as the stop
     time    still open on exit_by exits at that day's close
-Size: risk RISK of the starting cash per trade, capped by free cash.
+Size: POSITION dollars per trade (Luke, 2026-10-24), capped so a stop-out
+loses at most MAX_LOSS, and by free cash.
 """
 import csv
 import sys
@@ -24,7 +25,8 @@ from datetime import date
 PLAN = "trader/journal/swing/plan.csv"
 REPORT = "trader/journal/swing/report.md"
 START_CASH = 1000.0
-RISK = 0.02
+POSITION = 200.0
+MAX_LOSS = 50.0
 
 
 def load_plan(path=PLAN):
@@ -36,7 +38,7 @@ def load_plan(path=PLAN):
     return rows
 
 
-def simulate(plan, bars, cash=START_CASH, risk=RISK):
+def simulate(plan, bars, cash=START_CASH, position=POSITION, max_loss=MAX_LOSS):
     """Replay the plan day by day. bars: {symbol: [{'t','o','h','l','c'}, ...]}."""
     days = sorted({b["t"][:10] for bs in bars.values() for b in bs})
     by_day = {s: {b["t"][:10]: b for b in bs} for s, bs in bars.items()}
@@ -57,7 +59,7 @@ def simulate(plan, bars, cash=START_CASH, risk=RISK):
                     px = p["entry_high"]
                 else:
                     continue  # gapped through the stop: skip the day
-                qty = min(risk * START_CASH / (px - p["stop"]), cash / px)
+                qty = min(position / px, max_loss / (px - p["stop"]), cash / px)
                 if qty * px < 1:
                     continue
                 cash -= qty * px
@@ -85,7 +87,7 @@ def simulate(plan, bars, cash=START_CASH, risk=RISK):
 
 def report(plan, res, today):
     lines = [f"# Paper swing tracker ({today})", "",
-             f"Simulated ${START_CASH:,.0f} account, {RISK:.0%} risk per trade, no real or Alpaca orders.", "",
+             f"Simulated ${START_CASH:,.0f} account, ${POSITION:,.0f} per trade, max loss ${MAX_LOSS:,.0f}, no real or Alpaca orders.", "",
              f"**Equity ${res['equity']:,.2f}** ({res['equity'] / START_CASH - 1:+.1%}), cash ${res['cash']:,.2f}", "",
              "## Open", "| Symbol | In | Entry | Last | Qty | P&L |", "|---|---|---|---|---|---|"]
     lines += [f"| {s} | {m['date']} | {m['entry']:.2f} | {m['last']:.2f} | {m['qty']:.3f} | {m['pnl']:+.2f} |"

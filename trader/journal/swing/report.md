@@ -1,6 +1,6 @@
 # Paper swing tracker (2026-10-24)
 
-Simulated $1,000 account, 2% risk per trade, no real or Alpaca orders.
+Simulated $1,000 account, $200 per trade, max loss $50, no real or Alpaca orders.
 
 **Equity $1,000.00** (+0.0%), cash $1,000.00
 
