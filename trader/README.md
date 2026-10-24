@@ -88,3 +88,18 @@ python -m unittest discover -s trader/tests -t .
 ```
 
 State (`state.json`) and the trade journal (`trades.csv`) live in `trader/journal/` and are committed after each session, so they survive between cloud sessions. Daily notes also go to Luke's Obsidian vault.
+
+## Pattern lab, screener, options study
+
+Research and backtests behind the trading playbook
+(`trader/journal/notes/trading-playbook.md`):
+
+```
+python -m trader.patterns          # 26 daily candlestick / chart / indicator rules, 2016-now
+python -m trader.intraday_lab      # 8 day-trading rules on 5-minute bars, 2024-now
+python -m trader.options_lab       # the swing setups replayed as modelled calls
+python -m trader.screener [--plan] # best swing candidates, today's firing setups
+```
+
+All read-only; none of them places orders. `--plan` appends firing setups to
+the paper swing tracker's plan (`trader/journal/swing/plan.csv`).
