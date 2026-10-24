@@ -121,3 +121,26 @@ headline as the catalyst, and a risk note (off the high, below VWAP,
 parabolic, low price, offering/dilution, halts, no news). Alerted tickers are
 recorded in `/mnt/project-files/day-trader/spikes/<date>.json` (or
 `trader/journal/spikes/` when that folder is absent).
+
+## ETF sleeves: swing trades and options (paper)
+
+`trader/sleeves.py` runs four $200 paper sleeves (Luke, 2026-10-24): QLD
+(2x Nasdaq 100), SSO (2x S&P 500), USD (2x semiconductors) and NVDL
+(2x Nvidia). Each sleeve swings shares and buys call debit spreads (or a
+single call) on the STRETCH and RSI2+IBS setups from the trading playbook,
+and takes one learning trade a day when nothing fires, so no day passes
+without a trade. Luke's +5-8% a day is tracked as a stretch goal next to the
+real equity.
+
+```
+python -m trader.sleeves scan     # premarket: trend, trigger prices, ETF + holdings news, events
+python -m trader.sleeves trade    # ~15:45 ET: exits, signal entries, learning trade
+python -m trader.sleeves report   # trader/journal/sleeves/report.md
+```
+
+Fills are simulated on live Alpaca quotes and kept in
+`trader/journal/sleeves/ledger.json`; no orders are sent. The shared paper
+account is flattened by the day trader at 15:45 and its risk manager counts
+every position, so real swing or option orders there would be closed the
+same day and block the day trader. Options buy at the ask and sell at the
+bid on every leg, which on these ETFs costs 10-30% of the premium.
