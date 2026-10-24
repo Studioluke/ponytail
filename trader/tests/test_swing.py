@@ -34,5 +34,11 @@ class SwingTest(unittest.TestCase):
         self.assertEqual(res["trades"][0]["why"], "time")
 
 
+    def test_reenters_after_exit(self):
+        res = simulate(PLAN, {"X": [bar(26, 99, 111, 98, 110), bar(27, 99, 100, 97, 98)]})
+        self.assertEqual(res["trades"][0]["why"], "target")
+        self.assertIn("X", res["open"])
+
+
 if __name__ == "__main__":
     unittest.main()

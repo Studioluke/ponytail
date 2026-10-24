@@ -15,6 +15,8 @@ Fill rules, all conservative:
     target  high >= target exits at the target; a day that hits both counts
             as the stop
     time    still open on exit_by exits at that day's close
+    again   after an exit the idea can re-enter from the next day (Luke:
+            trade often on paper and learn from it)
 Size: POSITION dollars per trade (Luke, 2026-10-24), capped so a stop-out
 loses at most MAX_LOSS, and by free cash.
 """
@@ -42,12 +44,12 @@ def simulate(plan, bars, cash=START_CASH, position=POSITION, max_loss=MAX_LOSS):
     """Replay the plan day by day. bars: {symbol: [{'t','o','h','l','c'}, ...]}."""
     days = sorted({b["t"][:10] for bs in bars.values() for b in bs})
     by_day = {s: {b["t"][:10]: b for b in bs} for s, bs in bars.items()}
-    open_pos, trades, done = {}, [], set()
+    open_pos, trades, exited = {}, [], {}
     for d in days:
         for p in plan:
             s = p["symbol"]
             b = by_day.get(s, {}).get(d)
-            if b is None or s in done or d < p["active_from"] or d > p["exit_by"]:
+            if b is None or exited.get(s) == d or d < p["active_from"] or d > p["exit_by"]:
                 continue
             if s not in open_pos:
                 if b["l"] > p["entry_high"]:
@@ -77,7 +79,7 @@ def simulate(plan, bars, cash=START_CASH, position=POSITION, max_loss=MAX_LOSS):
                 trades.append({"symbol": s, "in": pos["date"], "entry": pos["entry"], "out": d, "exit": exit_px,
                                "qty": pos["qty"], "pnl": pos["qty"] * (exit_px - pos["entry"]), "why": why})
                 del open_pos[s]
-                done.add(s)
+                exited[s] = d
     last = {s: bs[-1]["c"] for s, bs in bars.items() if bs}
     marks = {s: {**p, "last": last.get(s, p["entry"]),
                  "pnl": p["qty"] * (last.get(s, p["entry"]) - p["entry"])} for s, p in open_pos.items()}
