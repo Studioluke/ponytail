@@ -99,3 +99,25 @@ python -m unittest discover -s trader/tests -t .
 ```
 
 State (`state.json`) and the trade journal (`trades.csv`) live in `trader/journal/` and are committed after each session, so they survive between cloud sessions. Daily notes also go to Luke's Obsidian vault.
+
+## Exploding-stock alerts (for Luke's own trading)
+
+`trader/spikes.py` scans the whole market during the session for stocks that
+suddenly rip, so Luke can decide to buy them himself. It never places orders.
+
+```
+python -m trader.spikes            # scan now, print alerts, record them (one alert per ticker per day)
+python -m trader.spikes --dry-run  # scan without recording
+```
+
+A stock alerts when it is $2+, listed on a major exchange, trades at least
+~$250k on IEX today (about $5M+ on the whole tape), and either:
+
+- is up 10%+ on the day on 3x+ its normal volume for this time of day, or
+- jumped 5%+ in the last 15 minutes, is up 5%+ on the day, on 2x+ volume.
+
+Each alert shows the move, relative volume, gap, high and VWAP, the latest
+headline as the catalyst, and a risk note (off the high, below VWAP,
+parabolic, low price, offering/dilution, halts, no news). Alerted tickers are
+recorded in `/mnt/project-files/day-trader/spikes/<date>.json` (or
+`trader/journal/spikes/` when that folder is absent).
