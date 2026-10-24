@@ -184,7 +184,8 @@ class Review(Tmp):
             {"time": t, "symbol": "SPY", "event": "risk_taken", "note": "learning mode, trading anyway: gap +1.1%"},
             {"time": t, "symbol": "SPY", "event": "buy", "qty": 0.4, "price": "600.00", "stop": 599, "target": 602},
             {"time": t, "symbol": "SPY", "event": "exit_stop", "qty": 0.4, "price": "599.00", "pnl": "-0.40"},
-            {"time": t, "symbol": "QQQ", "event": "buy", "qty": 1, "price": "500.00", "stop": 498, "target": 504},
+            {"time": t, "symbol": "QQQ", "event": "buy", "qty": 1, "price": "500.00", "stop": 498, "target": 504,
+             "note": "[learning] strongest trend"},
             {"time": t, "symbol": "QQQ", "event": "exit_target", "qty": 1, "price": "504.00", "pnl": "4.00"},
             {"time": t, "symbol": "SPY", "event": "risk_block", "note": "vetoed: stale data"},
         ])
@@ -193,6 +194,8 @@ class Review(Tmp):
         text = rm.review(self.cfg, NOW.date(), book=self.book)
         self.assertIn("2 trades", text)
         self.assertEqual([x["risk_taken"] for x in trades], [True, False])
+        self.assertEqual([x["group"] for x in trades], ["core", "learning"])
+        self.assertIn("| learning | 1 | $4.00 | 100% | +2.00R |", text)
         self.assertIn("Risks taken knowingly (learning mode):** 1 trades", text)
         self.assertIn("risk_taken: learning mode", text)
         self.assertIn("vetoed: stale data", text)

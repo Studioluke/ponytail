@@ -200,7 +200,9 @@ def closed_trades(rows):
             pnl = float(r["pnl"] or 0)
             out.append({"day": r["time"][:10], "symbol": r["symbol"], "qty": qty, "entry": entry, "stop": stop,
                         "pnl": pnl, "risk": risk, "r": pnl / risk if risk > 0 else 0.0,
-                        "how": r["event"][5:], "risk_taken": b["risk_taken"]})
+                        "how": r["event"][5:], "risk_taken": b["risk_taken"],
+                        # run.py tags each buy note "[core]", "[explore]" or "[learning]".
+                        "group": b["note"][1:b["note"].index("]")] if b.get("note", "").startswith("[") else "core"})
     return out
 
 
@@ -295,7 +297,14 @@ def review(cfg, day, book=None, account=None):
               f"{s['trades']} trades, P&L ${s['pnl']:.2f}, win rate {s['win_rate']:.0%}, "
               f"profit factor {s['profit_factor']:.2f}, average {s['avg_r']:+.2f}R, "
               f"max drawdown ${s['max_dd']:.2f} ({s['max_dd_pct']:.2%}), longest losing streak {s['losing_streak']}.", ""]
-    taken = [t for t in all_trades if t["risk_taken"]]
+    groups = sorted({t["group"] for t in all_trades})
+    if len(groups) > 1 or "learning" in groups:
+        lines += ["| Group | Trades | P&L | Win rate | Avg R |", "|---|---|---|---|---|"]
+        for g in groups:
+            gs = stats([t for t in all_trades if t["group"] == g], cfg.capital)
+            lines.append(f"| {g} | {gs['trades']} | ${gs['pnl']:.2f} | {gs['win_rate']:.0%} | {gs['avg_r']:+.2f}R |")
+        lines += ["", "Learning trades are the forced 11:00 ET trade at half risk on days with no entry.", ""]
+    taken = [t for t in all_trades if t["risk_taken"] and t["group"] != "learning"]
     if taken:
         # Learning mode: trades made through a gap or research "skip" on purpose.
         # Not breaches; tracked so we learn whether those warnings were worth heeding.
