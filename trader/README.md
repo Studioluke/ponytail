@@ -74,6 +74,17 @@ days are marked skip). It runs at 9:10 ET on weekdays and is copied to the
 vault's Research-Briefs note. It informs the trader and the risk manager; it
 does not place or block orders.
 
+## Smart money
+
+`trader/smartmoney.py` follows insider (SEC Form 4) and congressional
+(STOCK Act) buys. It ranks filers by how their buys did after they became
+public, backtests filters (role, size, clusters, walk-forward "top filers",
+chamber) on daily bars, and writes fresh disclosures that pass to
+`trader/journal/smartmoney/<date>.json`. The research brief lists them and
+notes any that touch a watchlist symbol; they never change a verdict or place
+an order. A forward paper test tracks every signal (`paper.md`). Data refresh
+and details: `trader/journal/smartmoney/README.md`; results: `report.md` there.
+
 ## Use
 
 Needs `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` (paper keys) and `requests`.
