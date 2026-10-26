@@ -1,0 +1,53 @@
+{
+ "start": "2026-10-26",
+ "sleeves": {
+  "QLD": {
+   "cash": 200.0,
+   "shares": null,
+   "spread": null
+  },
+  "SSO": {
+   "cash": 125.0,
+   "shares": {
+    "qty": 1.0782870935073317,
+    "entry": 69.55475999999999,
+    "date": "2026-10-26",
+    "stop": 67.58,
+    "kind": "learning"
+   },
+   "spread": null
+  },
+  "USD": {
+   "cash": 200.0,
+   "shares": null,
+   "spread": null
+  },
+  "NVDL": {
+   "cash": 200.0,
+   "shares": null,
+   "spread": null
+  }
+ },
+ "trades": [
+  {
+   "date": "2026-10-26",
+   "sleeve": "SSO",
+   "action": "buy",
+   "what": "SSO",
+   "qty": 1.0783,
+   "price": 69.5548,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 58 on SPY",
+   "kind": "learning"
+  }
+ ],
+ "equity": {
+  "2026-10-26": {
+   "QLD": 200.0,
+   "SSO": 199.96,
+   "USD": 200.0,
+   "NVDL": 200.0
+  }
+ },
+ "last_entries": 1
+}
