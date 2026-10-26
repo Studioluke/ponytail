@@ -42,6 +42,8 @@ BURST_DAY_GAIN = 5.0     # a burst also needs at least this much on the day
 BURST_RVOL = 2.0
 MIN_IEX_DOLLARS = 250_000  # today's IEX dollar volume (roughly $5M+ on the whole tape)
 EXCHANGES = {"NYSE", "NASDAQ", "AMEX", "ARCA", "BATS"}
+# Leveraged and other ETFs just track something else: alerts are for real companies.
+FUND = re.compile(r"\bETF\b|\bETN\b|\b[234]X\b", re.I)
 HALT = re.compile(r"\b(halt(ed)?|circuit breaker|luld|trading pause)\b", re.I)
 RISKY = re.compile(r"\b(offering|direct offering|registered direct|warrants?|reverse split|dilution|atm program|"
                    r"private placement|priced? (at|an?) .*offering)\b", re.I)
@@ -117,19 +119,13 @@ def risk_note(a, news, now):
         notes.append("low-priced stock: wide spreads, use limit orders")
     if any(RISKY.search(n["headline"]) for n in news):
         notes.append("offering/dilution headline: shares can drop fast")
-    if any(HALT.search(n["headline"]) for n in news) or _stale(a["trade_time"], now):
+    if any(HALT.search(n["headline"]) for n in news):
         notes.append("halted or volatility halts today: price can gap either way on resume")
     if not news:
         notes.append("no news found: moves without a catalyst fade more often")
     notes.append("if you buy, set a stop (e.g. under VWAP or the breakout level) and size small")
     return notes
 
-
-def _stale(t, now):
-    if not t:
-        return False
-    when = datetime.fromisoformat(re.sub(r"\.\d+", "", t).replace("Z", "+00:00"))
-    return 9.75 <= now.hour + now.minute / 60 < 16 and now - when > timedelta(minutes=5)
 
 
 def scan(broker=None, now=None):
@@ -143,7 +139,8 @@ def scan(broker=None, now=None):
     assets = {a["symbol"]: a for a in broker._req("GET", f"{PAPER_URL}/v2/assets",
                                                   params={"status": "active", "asset_class": "us_equity"})}
     cands = [s for s in dict.fromkeys(list(pct) + [m["symbol"] for m in actives])
-             if assets.get(s, {}).get("tradable") and assets[s]["exchange"] in EXCHANGES]
+             if assets.get(s, {}).get("tradable") and assets[s]["exchange"] in EXCHANGES
+             and not FUND.search(assets[s]["name"])]
     if not cands:
         return []
     snaps = broker._req("GET", f"{DATA_URL}/v2/stocks/snapshots", params={"symbols": ",".join(cands), "feed": "iex"})
