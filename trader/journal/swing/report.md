@@ -1,13 +1,15 @@
-# Paper swing tracker (2026-10-24)
+# Paper swing tracker (2026-10-26)
 
 Simulated $1,000 account, $200 per trade, max loss $50, no real or Alpaca orders.
 
-**Equity $1,000.00** (+0.0%), cash $1,000.00
+**Equity $1,012.62** (+1.3%), cash $400.00
 
 ## Open
 | Symbol | In | Entry | Last | Qty | P&L |
 |---|---|---|---|---|---|
-| none | | | | | |
+| PANW | 2026-10-26 | 382.00 | 390.55 | 0.524 | +4.48 |
+| CRWD | 2026-10-26 | 258.00 | 261.83 | 0.775 | +2.97 |
+| OKTA | 2026-10-26 | 214.51 | 220.06 | 0.932 | +5.17 |
 
 ## Closed
 | Symbol | In | Entry | Out | Exit | Why | P&L |
@@ -21,4 +23,4 @@ Simulated $1,000 account, $200 per trade, max loss $50, no real or Alpaca orders
 | CRWD | 2026-10-26 to 2026-11-06 | 245-258 | 232 | 278 | Pullback to 20-day; Nvidia software-to-silicon deal 10-21 |
 | NVDA | 2026-10-26 to 2026-11-06 | 205-212 | 197 | 225 | Oversold bounce from ~$207 demand zone to the 50-day |
 | FTNT | 2026-10-29 to 2026-11-06 | 171-176 | 164 | 192 | Buy the dip after 10-28 earnings near the 50-day |
-| OKTA | 2026-10-26 to 2026-11-06 | 200-206 | 190 | 230 | Agent-identity name in uptrend; buy a dip |
+| OKTA | 2026-10-26 to 2026-11-06 | 200-215 | 190 | 230 | Agent-identity name in uptrend; zone widened to the current price so it trades (Luke: more risk on paper) |
