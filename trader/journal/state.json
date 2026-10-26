@@ -1,15 +1,6 @@
 {
  "day": "2026-10-26",
  "week": "2026-W44",
-<<<<<<< Updated upstream
- "day_pnl": 0.0,
- "week_pnl": 0.0,
- "day_losses": 0,
- "traded_today": [],
- "seen_orders": [],
- "open": {},
- "entries": 0,
-=======
  "day_pnl": 1.1483340000000197,
  "week_pnl": 1.1483340000000197,
  "day_losses": 2,
@@ -32,6 +23,5 @@
  "seen_orders": [],
  "open": {},
  "entries": 5,
->>>>>>> Stashed changes
  "learning_tried": false
 }
