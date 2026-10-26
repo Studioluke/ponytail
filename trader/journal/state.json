@@ -1,23 +1,12 @@
 {
- "day": "2026-10-23",
- "week": "2026-W43",
- "day_pnl": -0.7371799999999809,
- "week_pnl": -0.3039539999999903,
- "day_losses": 1,
- "traded_today": [
-  "GOOGL",
-  "META",
-  "AMD",
-  "AVGO",
-  "QQQ",
-  "NVDA",
-  "SPY",
-  "IWM",
-  "MSFT",
-  "TSLA",
-  "DIA",
-  "AMZN"
- ],
+ "day": "2026-10-26",
+ "week": "2026-W44",
+ "day_pnl": 0.0,
+ "week_pnl": 0.0,
+ "day_losses": 0,
+ "traded_today": [],
  "seen_orders": [],
- "open": {}
+ "open": {},
+ "entries": 0,
+ "learning_tried": false
 }
