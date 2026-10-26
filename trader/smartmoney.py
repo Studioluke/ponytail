@@ -112,13 +112,14 @@ def merge(source, rows, base=DIR):
     have = {r[key]: r for r in load(source, base)}
     before = len(have)
     for r in rows:
-        have[str(r[key])] = {k: ("" if r.get(k) is None else r[k]) for k in fields}
+        have[str(r[key])] = {k: ("" if r.get(k) is None else str(r[k])) for k in fields}
     date_key = fields[0]
+    rows = sorted(have.values(), key=lambda r: (r[date_key], r[key]), reverse=True)  # sort before truncating the file
     os.makedirs(base, exist_ok=True)
     with open(os.path.join(base, f"{source}.csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
-        w.writerows(sorted(have.values(), key=lambda r: (r[date_key], r[key]), reverse=True))
+        w.writerows(rows)
     return len(have) - before, len(have)
 
 

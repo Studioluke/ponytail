@@ -16,8 +16,8 @@ sec.gov, the House clerk and the Senate eFD site are blocked from the cloud
 sandbox, so an agent fetches the pages with Firecrawl (`formats: ["markdown",
 "rawHtml"]`, which saves the result to a file) and imports them:
 
-- Insider, last 3 days, $1M+ purchases:
-  `http://openinsider.com/screener?fd=3&xp=1&vl=1000&sortcol=0&cnt=500&page=1`
+- Insider, last week, $1M+ purchases (the screener returns nothing unless every parameter is present; use `formats: ["markdown"]` only, the page is small):
+  `http://openinsider.com/screener?s=&o=&pl=&ph=&ll=&lh=&fd=7&fdr=&td=0&tdr=&fdlyl=&fdlyh=&daysago=&xp=1&vl=1000&vh=&ocl=&och=&sic1=-1&sicl=100&sich=9999&grp=0&nfl=&nfh=&nil=&nih=&nol=&noh=&v2l=&v2h=&oc2l=&oc2h=&sortcol=0&cnt=500&page=1`
 - Congress, newest stock buys (96 per page; page 1-2 covers a few days):
   `https://www.capitoltrades.com/trades?pageSize=96&txType=buy&assetType=stock&page=1`
 

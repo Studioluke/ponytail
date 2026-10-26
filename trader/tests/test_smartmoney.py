@@ -38,6 +38,12 @@ class Parsing(unittest.TestCase):
             self.assertEqual(sm.merge("insider", rows, d), (1, 1))
             self.assertEqual(sm.merge("insider", rows, d), (0, 1))
 
+    def test_merge_mixes_new_and_stored_rows(self):
+        with tempfile.TemporaryDirectory() as d:
+            sm.merge("congress", sm.parse_capitoltrades(CT_HTML), d)
+            other = CT_HTML.replace('_txId\\":9', '_txId\\":10')
+            self.assertEqual(sm.merge("congress", sm.parse_capitoltrades(other), d), (1, 2))
+
 
 class Scoring(unittest.TestCase):
     def setUp(self):
