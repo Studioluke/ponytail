@@ -143,5 +143,40 @@ class InPlay(unittest.TestCase):
         self.assertEqual(risk_manager.day_config(self.cfg, "2026-10-26").symbols, ("AAA", "BBB", "CCC"))
 
 
+class TargetExit(unittest.TestCase):
+    def test_close_waits_for_the_stop_cancel_and_survives_a_failed_close(self):
+        class B:
+            def __init__(self):
+                self.polls, self.closed, self.fail = 0, False, True
+
+            def latest_price(self, sym, feed):
+                return 11.0
+
+            def cancel(self, oid):
+                pass
+
+            def order(self, oid):
+                self.polls += 1
+                return {"status": "pending_cancel" if self.polls < 2 else "canceled"}
+
+            def close_position(self, sym):
+                if self.fail:
+                    raise RuntimeError("403 insufficient qty available")
+                self.closed = True
+
+        b, book = B(), Book()
+        book.open["X"] = {"qty": 1, "entry": 10, "stop": 9.5, "target": 10.9, "stop_order_id": "s1"}
+        run._time.sleep, sleep = (lambda s: None), run._time.sleep
+        try:
+            run.manage(b, Config(), book)  # close fails: no crash, exit not marked
+            self.assertNotIn("exit_reason", book.open["X"])
+            b.fail = False
+            run.manage(b, Config(), book)
+        finally:
+            run._time.sleep = sleep
+        self.assertTrue(b.closed)
+        self.assertEqual(book.open["X"]["exit_reason"], "target")
+
+
 if __name__ == "__main__":
     unittest.main()

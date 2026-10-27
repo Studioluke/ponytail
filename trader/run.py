@@ -99,7 +99,17 @@ def manage(broker, cfg, book):
                     broker.cancel(t["stop_order_id"])
                 except RuntimeError:
                     pass
-            broker.close_position(sym)
+                # The cancel is async; closing while the stop still holds the
+                # shares fails with 403 (10-27, SOFI). Wait for it to clear.
+                for _ in range(10):
+                    if broker.order(t["stop_order_id"])["status"] in ("canceled", "filled", "expired", "rejected"):
+                        break
+                    _time.sleep(1)
+            try:
+                broker.close_position(sym)
+            except RuntimeError as e:
+                log(f"{sym} target close failed, retrying next pass: {e}")
+                continue
             t["exit_reason"] = "target"
             log(f"{sym} hit target {t['target']} (last {px:.2f}), closing")
 
