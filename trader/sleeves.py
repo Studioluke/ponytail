@@ -451,10 +451,13 @@ def cmd_scan(day=None):
         L += ["", f"## {s['etf']} ({SLEEVES[s['etf']]['name']})"]
         L += [f"- Event: {r['date']} {r['symbol']} {r['event']} ({r['timing']})" for r in s["events"]]
         L += [f"- {h}" for h in s["news"]] or ["- No headlines in the last 18 hours."]
-    ranked = sorted(out["sleeves"], key=lambda s: s["rsi2"])
+    # Same order as step(): flat sleeves first, then by RSI(2).
+    led = load()
+    busy = {s for s, sl in (led or {}).get("sleeves", {}).items() if sl["shares"] or sl["spread"]}
+    ranked = sorted(out["sleeves"], key=lambda s: (s["etf"] in busy, s["rsi2"]))
     if ranked:
-        L += ["", f"If nothing triggers by 15:45 ET, today's learning trade goes to {ranked[0]['etf']} "
-                  f"(lowest RSI(2), {ranked[0]['rsi2']:.0f}), as "
+        L += ["", f"If nothing triggers by 15:41 ET, today's learning trade goes to {ranked[0]['etf']} "
+                  f"(RSI(2) {ranked[0]['rsi2']:.0f}, lowest among flat sleeves), as "
                   f"{'a call debit spread' if date.fromisoformat(day).weekday() in (1, 3) else 'shares'}."]
     os.makedirs(DIR, exist_ok=True)
     with open(f"{DIR}/scan-{day}.json", "w") as fh:
