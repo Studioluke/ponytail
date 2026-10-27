@@ -2,19 +2,24 @@
  "start": "2026-10-26",
  "sleeves": {
   "QLD": {
-   "cash": 200.0,
+   "cash": 102.0,
    "shares": null,
-   "spread": null
+   "spread": {
+    "long": "QLD261120C00099000",
+    "short": null,
+    "k1": 99.0,
+    "k2": null,
+    "debit": 98.0,
+    "width": null,
+    "qty": 1,
+    "date": "2026-10-27",
+    "expiry": "2026-11-20",
+    "kind": "learning"
+   }
   },
   "SSO": {
-   "cash": 125.0,
-   "shares": {
-    "qty": 1.0782870935073317,
-    "entry": 69.55475999999999,
-    "date": "2026-10-26",
-    "stop": 67.58,
-    "kind": "learning"
-   },
+   "cash": 201.01356291071957,
+   "shares": null,
    "spread": null
   },
   "USD": {
@@ -39,12 +44,40 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 58 on SPY",
    "kind": "learning"
+  },
+  {
+   "date": "2026-10-27",
+   "sleeve": "SSO",
+   "action": "sell",
+   "what": "SSO",
+   "qty": 1.0783,
+   "price": 70.4947,
+   "pnl": 1.01,
+   "why": "target: above prior day's high",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-10-27",
+   "sleeve": "QLD",
+   "action": "open spread",
+   "what": "99C 2026-11-20",
+   "qty": 1,
+   "price": 0.98,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 100 on QQQ",
+   "kind": "learning"
   }
  ],
  "equity": {
   "2026-10-26": {
    "QLD": 200.0,
    "SSO": 199.96,
+   "USD": 200.0,
+   "NVDL": 200.0
+  },
+  "2026-10-27": {
+   "QLD": 184.0,
+   "SSO": 201.01,
    "USD": 200.0,
    "NVDL": 200.0
   }
