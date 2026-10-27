@@ -159,8 +159,44 @@ def _utc_iso(day, hour_et):
     return t.strftime("%Y-%m-%dT%H:%M:%S")
 
 
+def universe(cfg):
+    """Symbols the brief covers: what the bot trades first, then the rest of the watchlist."""
+    return list(dict.fromkeys(list(cfg.symbols) + list(cfg.watchlist)))
+
+
+def in_play(p, news):
+    """How unusual a symbol's morning looks: the gap in units of its daily ATR, plus headlines.
+    0 means nothing to see; above about 1 it is moving more than a normal day's range."""
+    score = 0.0
+    if p.get("gap") is not None and p.get("atr_pct"):
+        score += abs(p["gap"]) / p["atr_pct"]
+    if any(n["earnings"] for n in news):
+        score += 0.5
+    elif any(n["catalyst"] for n in news):
+        score += 0.25
+    if p.get("vol_expanding"):
+        score += 0.25
+    return round(score, 2)
+
+
+def fetch_news(broker, symbols, since, pages=4):
+    """Headlines for the symbols since `since`, newest first, up to pages x 50 items.
+    Alpaca caps a page at 50; 100 symbols need a few pages to reach the quieter names."""
+    out, token = [], None
+    for _ in range(pages):
+        params = {"symbols": ",".join(symbols), "start": since.isoformat(), "limit": 50, "sort": "desc"}
+        if token:
+            params["page_token"] = token
+        d = broker._req("GET", f"{DATA_URL}/v1beta1/news", params=params)
+        out += d.get("news", [])
+        token = d.get("next_page_token")
+        if not token:
+            break
+    return out
+
+
 def gather(broker, cfg, day):
-    syms = list(dict.fromkeys(list(cfg.symbols) + ["SPY", "QQQ"] + list(SECTORS) + list(MACRO)))
+    syms = list(dict.fromkeys(universe(cfg) + ["SPY", "QQQ"] + list(SECTORS) + list(MACRO)))
     start = (day - timedelta(days=100)).isoformat()
     daily = broker.bars(syms, "1Day", start, end=(day - timedelta(days=1)).isoformat(), feed=cfg.data_feed)
     snaps = broker._req("GET", f"{DATA_URL}/v2/stocks/snapshots",
@@ -176,9 +212,7 @@ def gather(broker, cfg, day):
             p["price_time"] = trade.get("t", "")
             prof[s] = p
     since = datetime(day.year, day.month, day.day, tzinfo=ET) - timedelta(hours=18)
-    news = broker._req("GET", f"{DATA_URL}/v1beta1/news",
-                       params={"symbols": ",".join(cfg.symbols), "start": since.isoformat(), "limit": 50,
-                               "sort": "desc"}).get("news", [])
+    news = fetch_news(broker, universe(cfg), since)
     market_news = broker._req("GET", f"{DATA_URL}/v1beta1/news",
                               params={"start": since.isoformat(), "limit": 15, "sort": "desc"}).get("news", [])
     movers = broker._req("GET", f"{DATA_URL}/v1beta1/screener/stocks/movers", params={"top": 50})
@@ -192,14 +226,15 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
     events = load_events(events_path, day)
     label, notes = regime(prof.get("SPY"), prof.get("QQQ"), prof.get("VIXY"))
     watch = []
-    for s in cfg.symbols:
+    for s in universe(cfg):
         p = prof.get(s, {})
         hs = tag_news(news, s)
         level, why = verdict(p, hs, cfg.max_gap, [e for e in events if e["symbol"] == s])
         # Keep every flagged headline so each verdict shows its evidence, then fill to five.
         shown = [n for n in hs if n["earnings"] or n["catalyst"]]
         shown += [n for n in hs if n not in shown][:max(0, 5 - len(shown))]
-        watch.append({"symbol": s, "verdict": level, "why": why, **p, "news": shown})
+        watch.append({"symbol": s, "verdict": level, "why": why, **p, "news": shown,
+                      "traded": s in cfg.symbols, "in_play": in_play(p, hs)})
     smart = load_smart_money(day)
     for w in watch:
         hits = [b for x in smart if x["symbol"] == w["symbol"] for b in x["buys"]]
@@ -209,6 +244,7 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
     big = {k: [m for m in movers.get(k, []) if m["price"] >= 20][:5] for k in ("gainers", "losers")}
     data = {"date": day.isoformat(), "generated": datetime.now(ET).isoformat(timespec="minutes"),
             "regime": label, "regime_notes": notes, "events": events, "watchlist": watch,
+            "in_play": [w["symbol"] for w in sorted(watch, key=lambda w: -w["in_play"]) if w["in_play"] >= 1][:15],
             "sectors": {s: prof.get(s) for s in SECTORS}, "macro": {s: prof.get(s) for s in MACRO},
             "market_news": [{"time": n["created_at"], "headline": n["headline"], "symbols": n.get("symbols", [])}
                             for n in market_news],
@@ -233,12 +269,29 @@ def markdown(d):
          f"**Regime:** {d['regime']}. " + "; ".join(d["regime_notes"]), "",
          "**Scheduled events:** " + ("; ".join(f"{e['symbol']}: {e['event']} ({e['date']}, {e['timing']})"
                                               for e in d["events"]) or "none on the calendar"), "",
-         "### Watchlist", "",
-         "| Symbol | Verdict | Last | Gap | 5d | 20d | Trend | ATR | Why |", "|---|---|---|---|---|---|---|---|---|"]
-    for w in d["watchlist"]:
-        L.append(f"| {w['symbol']} | **{w['verdict']}** | {w.get('price') or 'n/a'} | {_pct(w.get('gap'))} | "
-                 f"{_pct(w.get('ret_5d'))} | {_pct(w.get('ret_20d'))} | {w.get('trend', 'n/a')} | "
-                 f"{_pct(w.get('atr_pct')).lstrip('+')} | {'; '.join(w['why'])} |")
+         "### Traded symbols", ""]
+    head = ["| Symbol | Verdict | Last | Gap | 5d | 20d | Trend | ATR | In play | Why |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
+
+    def row(w):
+        return (f"| {w['symbol']} | **{w['verdict']}** | {w.get('price') or 'n/a'} | {_pct(w.get('gap'))} | "
+                f"{_pct(w.get('ret_5d'))} | {_pct(w.get('ret_20d'))} | {w.get('trend', 'n/a')} | "
+                f"{_pct(w.get('atr_pct')).lstrip('+')} | {w.get('in_play', 0):.1f} | {'; '.join(w['why'])} |")
+    traded = [w for w in d["watchlist"] if w.get("traded", True)]
+    rest = [w for w in d["watchlist"] if not w.get("traded", True)]
+    L += head + [row(w) for w in traded]
+    if rest:
+        by = {w["symbol"]: w for w in d["watchlist"]}
+        hot = [by[s] for s in d.get("in_play", []) if s in by]
+        L += ["", f"### In play across the {len(d['watchlist'])}-stock watchlist", "",
+              "Gap measured in daily ATRs, plus headlines and volatility; 1.0 means moving a full normal "
+              "day's range before the open.", ""]
+        L += (head + [row(w) for w in hot]) if hot else ["- nothing unusual"]
+        L += ["", f"### Rest of the watchlist ({len(rest)} symbols)", ""]
+        for level in ("skip", "caution", "ok"):
+            names = [f"{w['symbol']} {_pct(w.get('gap'))}" if w.get("gap") is not None else w["symbol"]
+                     for w in rest if w["verdict"] == level]
+            L.append(f"- **{level}** ({len(names)}): " + (", ".join(names) or "none"))
     L += ["", "### Sectors and macro (gap vs prior close, 5-day, trend)", "",
           "| ETF | What | Gap | 5d | 20d | Trend |", "|---|---|---|---|---|---|"]
     for group, names in ((d["sectors"], SECTORS), (d["macro"], MACRO)):
@@ -246,9 +299,12 @@ def markdown(d):
         for s, p in rows:
             L.append(f"| {s} | {names[s]} | {_pct(p.get('gap'))} | {_pct(p.get('ret_5d'))} | "
                      f"{_pct(p.get('ret_20d'))} | {p['trend']} |")
-    L += ["", "### Watchlist headlines (last 18 hours)", ""]
+    L += ["", "### Headlines, traded symbols and in-play names (last 18 hours)", ""]
     any_news = False
+    hot = set(d.get("in_play", []))
     for w in d["watchlist"]:
+        if not w.get("traded", True) and w["symbol"] not in hot:
+            continue
         for n in w["news"]:
             any_news = True
             flag = " [earnings]" if n["earnings"] else " [catalyst]" if n["catalyst"] else ""

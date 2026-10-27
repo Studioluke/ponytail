@@ -160,3 +160,21 @@ class Research(unittest.TestCase):
         p = research.profile(self.daily([100] * 60), 100)
         self.assertEqual(research.verdict(p, [], 0.0075, [ev[0] if ev[0]["symbol"] == "MSFT" else ev[1]])[0], "skip")
         os.unlink(f.name)
+
+
+class Watchlist(unittest.TestCase):
+    def test_universe_puts_traded_first_without_duplicates(self):
+        from dataclasses import replace
+        cfg = replace(Config(), symbols=("SPY", "AAPL"), watchlist=("AAPL", "XOM", "SPY", "KO"))
+        self.assertEqual(research.universe(cfg), ["SPY", "AAPL", "XOM", "KO"])
+
+    def test_default_watchlist_is_100_and_covers_traded(self):
+        cfg = Config()
+        self.assertEqual(len(set(cfg.watchlist)), 100)
+        self.assertTrue(set(cfg.symbols) <= set(cfg.watchlist) or os.environ.get("TRADER_SYMBOLS"))
+
+    def test_in_play_scores_gap_in_atrs(self):
+        self.assertEqual(research.in_play({"gap": -0.04, "atr_pct": 0.02}, []), 2.0)
+        self.assertEqual(research.in_play({"gap": None, "atr_pct": 0.02}, []), 0)
+        news = [{"earnings": True, "catalyst": False}]
+        self.assertEqual(research.in_play({"gap": 0.01, "atr_pct": 0.02, "vol_expanding": True}, news), 1.25)

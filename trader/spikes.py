@@ -28,7 +28,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from .broker import Broker
-from .config import DATA_URL, PAPER_URL
+from .config import DATA_URL, PAPER_URL, Config
 
 ET = ZoneInfo("America/New_York")
 SHARED_DIR = "/mnt/project-files/day-trader/spikes"
@@ -138,7 +138,9 @@ def scan(broker=None, now=None):
     pct = {m["symbol"]: m["percent_change"] for m in movers.get("gainers", []) if m["price"] >= MIN_PRICE}
     assets = {a["symbol"]: a for a in broker._req("GET", f"{PAPER_URL}/v2/assets",
                                                   params={"status": "active", "asset_class": "us_equity"})}
-    cands = [s for s in dict.fromkeys(list(pct) + [m["symbol"] for m in actives])
+    # The research watchlist rides along, so a big name's spike counts even when the
+    # market-wide movers list is crowded out by small caps.
+    cands = [s for s in dict.fromkeys(list(pct) + [m["symbol"] for m in actives] + list(Config().watchlist))
              if assets.get(s, {}).get("tradable") and assets[s]["exchange"] in EXCHANGES
              and not FUND.search(assets[s]["name"])]
     if not cands:

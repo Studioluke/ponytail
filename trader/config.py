@@ -11,6 +11,17 @@ def _f(name, default):
     return float(os.environ.get(name, default))
 
 
+WATCHLIST = ("SPY,QQQ,IWM,DIA,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,AVGO,NFLX,COST,"
+             "ORCL,CRM,ADBE,INTC,QCOM,MU,TXN,AMAT,LRCX,KLAC,ARM,SMCI,PLTR,SNOW,CRWD,PANW,NOW,SHOP,UBER,ABNB,"
+             "COIN,MSTR,DELL,ANET,MRVL,IBM,CSCO,"
+             "WMT,HD,LOW,MCD,SBUX,NKE,TGT,DIS,CMG,LULU,BKNG,"
+             "JPM,BAC,WFC,GS,MS,C,SCHW,V,MA,AXP,PYPL,HOOD,SOFI,"
+             "LLY,UNH,JNJ,PFE,MRK,ABBV,AMGN,GILD,ISRG,VRTX,MRNA,CVS,"
+             "XOM,CVX,OXY,COP,SLB,"
+             "BA,CAT,DE,GE,HON,LMT,RTX,UPS,FDX,UNP,"
+             "T,VZ,TMUS,KO,PEP,PG,NEE")
+
+
 @dataclass(frozen=True)
 class Config:
     # Core five: SPY/QQQ plus the large caps whose breakouts were profitable in
@@ -21,6 +32,10 @@ class Config:
         "TRADER_SYMBOLS",
         "SPY,QQQ,AAPL,MSFT,GOOGL,NVDA,META,AMZN,TSLA,AMD,IWM,DIA,NFLX,AVGO,COST").split(",")))
     core_symbols: tuple = ("SPY", "QQQ", "AAPL", "MSFT", "GOOGL")
+    # Research watchlist (Luke, 2026-10-27: "put 100 stocks on the watchlist"):
+    # the premarket brief and spike scan cover these; the bot trades `symbols`.
+    # Liquid large caps across sectors, so ORB fills and stops behave.
+    watchlist: tuple = field(default_factory=lambda: tuple(os.environ.get("TRADER_WATCHLIST", WATCHLIST).split(",")))
     # Capital the bot sizes against. Luke set $300 on 2026-10-21; the paper
     # account itself holds more, and everything above this is ignored.
     capital: float = field(default_factory=lambda: _f("TRADER_CAPITAL", 300))

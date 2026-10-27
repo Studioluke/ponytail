@@ -69,7 +69,7 @@ per day. This is a starting point to measure, not a proven edge.
 `python -m trader.research` writes `journal/research/<date>.md` and `.json`
 before the open: each symbol's premarket gap, trend, ATR and overnight
 headlines with a **skip / caution / ok** verdict, sector and macro ETFs, a
-regime read, and scheduled events from `journal/research/events.csv` (earnings
+regime read, a ranked **in play** list across the 100-stock research watchlist (`watchlist` in config.py, `TRADER_WATCHLIST`; the bot still trades only `symbols`), and scheduled events from `journal/research/events.csv` (earnings
 days are marked skip). It runs at 9:10 ET on weekdays and is copied to the
 vault's Research-Briefs note. It informs the trader and the risk manager; it
 does not place or block orders.
