@@ -81,7 +81,9 @@ def evaluate(sym, pct, snap, hist, minutes, frac):
     if not price or price < MIN_PRICE:
         return None
     vols = [b["v"] for b in hist[-20:]]
-    avg = sum(vols) / len(vols) if vols else 0
+    if len(vols) < 5:  # new listing or spinoff: the % change has no real base
+        return None
+    avg = sum(vols) / len(vols)
     vol = day.get("v", 0)
     rvol = vol / (avg * frac) if avg else float("inf")
     if vol * price < MIN_IEX_DOLLARS:
