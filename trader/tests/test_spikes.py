@@ -42,6 +42,9 @@ class Spikes(unittest.TestCase):
         for s in ("off the high", "below VWAP", "50%+", "dilution"):
             self.assertIn(s, text)
 
+    def test_new_listing_without_history_skipped(self):
+        self.assertIsNone(spikes.evaluate("NEW", 1200.0, snap(180, 900_000, prev=14), HIST[:2], [], 1))
+
     def test_leveraged_etfs_are_not_companies(self):
         self.assertTrue(spikes.FUND.search("Tradr 2X Long BE Daily ETF"))
         self.assertFalse(spikes.FUND.search("GrafTech International Ltd."))
