@@ -46,6 +46,9 @@ SHARES_MAX, MAX_LOSS = 150.0, 50.0
 # bid-ask spread is paid, so options get up to $100 with a -50% stop; a gap can
 # still lose the whole premium.
 SPREAD_MAX = 100.0
+# Skip options that would lose more than 30% of the premium if sold straight
+# back (2026-10-27: a QLD 95/97C paid $99 and was worth $26 at the bid/ask).
+MIN_BACK = 0.7
 SLIP = 0.0005  # shares, each side
 SLEEVES = {
     "QLD": {"under": "QQQ", "name": "2x Nasdaq 100",
@@ -115,13 +118,14 @@ def pick_spread(chain, price, budget):
                 continue
             debit = (lg["ask"] - sh["bid"]) * 100
             width = (sh["strike"] - lg["strike"]) * 100
-            if 0 < debit <= budget and debit <= 0.65 * width:
+            back = (lg["bid"] - sh["ask"]) * 100  # what selling it straight back would bring
+            if 0 < debit <= budget and debit <= 0.65 * width and back >= MIN_BACK * debit:
                 best = {"long": lg["symbol"], "short": sh["symbol"], "k1": lg["strike"], "k2": sh["strike"],
                         "debit": round(debit, 2), "width": width}
         if best:
             return best
     for c in calls:
-        if price * 0.99 <= c["strike"] <= price * 1.12 and c["ask"] * 100 <= budget and c["bid"] > 0:
+        if price * 0.99 <= c["strike"] <= price * 1.12 and c["ask"] * 100 <= budget and c["bid"] >= MIN_BACK * c["ask"]:
             return {"long": c["symbol"], "short": None, "k1": c["strike"], "k2": None,
                     "debit": round(c["ask"] * 100, 2), "width": None}
     return None
@@ -131,12 +135,16 @@ def label(p):
     return f"{p['k1']:g}C" if p["short"] is None else f"{p['k1']:g}/{p['k2']:g}C"
 
 
-def spread_value(quotes, pos):
-    """What closing now would bring: sell the long at its bid, buy back the short at its ask."""
+def spread_value(quotes, pos, mid=False):
+    """What closing now would bring: sell the long at its bid, buy back the short at
+    its ask. mid=True gives the mid-quote value, which the exit rules watch, so the
+    bid-ask haircut alone can't trigger the stop."""
     lq = quotes.get(pos["long"])
-    sq = quotes.get(pos["short"]) if pos["short"] else {"ask": 0.0}
+    sq = quotes.get(pos["short"]) if pos["short"] else {"bid": 0.0, "ask": 0.0}
     if not lq or not sq:
         return None
+    if mid:
+        return max((lq["bid"] + lq["ask"]) / 2 - (sq["bid"] + sq["ask"]) / 2, 0.0) * 100 * pos["qty"]
     return max(lq["bid"] - sq["ask"], 0.0) * 100 * pos["qty"]
 
 
@@ -207,9 +215,9 @@ def step(led, day, mk):
             why = None
             if val is None:
                 pass  # no quote today: hold and mark at cost
-            elif val >= 1.5 * sp["debit"]:
+            elif spread_value(m["quotes"], sp, mid=True) >= 1.5 * sp["debit"]:
                 why = "take profit +50%"
-            elif val <= 0.5 * sp["debit"]:
+            elif spread_value(m["quotes"], sp, mid=True) <= 0.5 * sp["debit"]:
                 why = "stop -50%"
             elif dte <= 7:
                 why = "7 days to expiry"
