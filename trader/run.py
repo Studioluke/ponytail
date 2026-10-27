@@ -118,6 +118,8 @@ def gap_ok(broker, cfg, sym, bars, now):
 
 
 def step(broker, cfg, book, now):
+    base = cfg.symbols
+    cfg = risk_manager.day_config(cfg, book.day)
     t = now.time()
     killed = risk_manager.kill_reason(cfg)
     if killed:
@@ -200,7 +202,8 @@ def step(broker, cfg, book, now):
         book.entries += 1
         positions.append({"symbol": sym, "cost_basis": qty * entry})
         state["cash"] -= qty * entry
-        group = "learning" if tag == "learn" else "core" if sym in cfg.core_symbols else "explore"
+        group = ("learning" if tag == "learn" else "core" if sym in cfg.core_symbols
+                 else "explore" if sym in base else "in_play")
         journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "buy", "qty": qty,
                       "price": f"{entry:.2f}", "stop": sig.stop, "target": sig.target,
                       "note": f"[{group}] {sig.reason}; {gap_note}; risk ${qty * (entry - sig.stop):.2f}"})

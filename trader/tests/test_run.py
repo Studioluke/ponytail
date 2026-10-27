@@ -1,10 +1,12 @@
+import dataclasses
+import json
 import os
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from trader import run, strategy
+from trader import risk_manager, run, strategy
 from trader.config import Config
 from trader.risk import Book
 
@@ -112,6 +114,33 @@ class LearningTrade(unittest.TestCase):
         book.traded_today = ["AAA", "BBB"]
         run.step(broker, self.cfg, book, datetime(2026, 10, 26, 10, 45, 30, tzinfo=ET))
         self.assertEqual(broker.orders, [])
+
+
+class InPlay(unittest.TestCase):
+    setUp = LearningTrade.setUp
+
+    def write_brief(self, in_play):
+        os.makedirs(self.cfg.research_dir, exist_ok=True)
+        with open(f"{self.cfg.research_dir}/2026-10-26.json", "w") as f:
+            json.dump({"watchlist": [], "in_play": in_play}, f)
+
+    def test_in_play_symbol_is_traded_and_tagged(self):
+        self.write_brief(["CCC", "AAA"])
+        b = bars([100] * 20 + [100.4])
+        broker = FakeBroker({"AAA": bars([100] * 21), "BBB": bars([100] * 21), "CCC": b})
+        book = Book()
+        book.roll("2026-10-26", "2026-W44")
+        run.step(broker, self.cfg, book, datetime(2026, 10, 26, 9, 51, 30, tzinfo=ET))
+        self.assertEqual([o[1] for o in broker.orders if o[0] == "buy"], ["CCC"])
+        with open(self.cfg.journal_path) as f:
+            self.assertIn("[in_play]", f.read())
+
+    def test_in_play_off_or_missing_brief_keeps_the_base_list(self):
+        self.assertEqual(risk_manager.day_config(self.cfg, "2026-10-26").symbols, ("AAA", "BBB"))
+        self.write_brief(["CCC"])
+        off = dataclasses.replace(self.cfg, trade_in_play=False)
+        self.assertEqual(risk_manager.day_config(off, "2026-10-26").symbols, ("AAA", "BBB"))
+        self.assertEqual(risk_manager.day_config(self.cfg, "2026-10-26").symbols, ("AAA", "BBB", "CCC"))
 
 
 if __name__ == "__main__":

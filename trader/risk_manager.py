@@ -14,7 +14,7 @@ import csv
 import json
 import os
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -78,6 +78,25 @@ def research_verdicts(cfg, day):
         return out
     except (ValueError, KeyError, TypeError):
         return {}
+
+
+def in_play(cfg, day):
+    """The brief's top-level "in_play" list for `day`, or [] if there is none."""
+    path = os.path.join(cfg.research_dir, f"{day}.json")
+    try:
+        with open(path) as f:
+            return [s for s in json.load(f).get("in_play", []) if isinstance(s, str) and s]
+    except (OSError, ValueError, AttributeError):
+        return []
+
+
+def day_config(cfg, day):
+    """cfg with that day's in-play symbols appended to `symbols`, so the entry
+    loop and the approved-list check in check_entry see the same list."""
+    if not cfg.trade_in_play:
+        return cfg
+    extra = tuple(s for s in in_play(cfg, day) if s not in cfg.symbols)
+    return replace(cfg, symbols=cfg.symbols + extra) if extra else cfg
 
 
 # pre-trade veto
@@ -201,7 +220,7 @@ def closed_trades(rows):
             out.append({"day": r["time"][:10], "symbol": r["symbol"], "qty": qty, "entry": entry, "stop": stop,
                         "pnl": pnl, "risk": risk, "r": pnl / risk if risk > 0 else 0.0,
                         "how": r["event"][5:], "risk_taken": b["risk_taken"],
-                        # run.py tags each buy note "[core]", "[explore]" or "[learning]".
+                        # run.py tags each buy note "[core]", "[explore]", "[in_play]" or "[learning]".
                         "group": b["note"][1:b["note"].index("]")] if b.get("note", "").startswith("[") else "core"})
     return out
 

@@ -77,6 +77,9 @@ class Config:
     learning_trade_after: time = time(11, 0)
     learning_risk_frac: float = 0.5
     learning_mode: bool = field(default_factory=lambda: os.environ.get("TRADER_LEARNING", "1") != "0")
+    # Add the research brief's "in_play" symbols (up to 15 from the 100-stock
+    # watchlist) to the day's tradable list, tagged [in_play]. TRADER_IN_PLAY=0 turns it off.
+    trade_in_play: bool = field(default_factory=lambda: os.environ.get("TRADER_IN_PLAY", "1") != "0")
     data_feed: str = field(default_factory=lambda: os.environ.get("TRADER_FEED", "iex"))
     state_path: str = field(default_factory=lambda: os.environ.get("TRADER_STATE", "trader/journal/state.json"))
     journal_path: str = field(default_factory=lambda: os.environ.get("TRADER_JOURNAL", "trader/journal/trades.csv"))
