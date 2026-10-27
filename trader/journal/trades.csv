@@ -61,3 +61,5 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-10-27T11:42:02.670504-04:00,DIA,risk_block,0.002,523.99,523.06,525.85,,"ORB break of 523.90 (range 522.23-523.90), VWAP 522.91; vetoed: 3 positions open, max 3"
 2026-10-27T11:46:02.606269-04:00,NVDA,risk_block,0.006,218.60,217.96,219.89,,"ORB break of 218.49 (range 217.43-218.49), VWAP 217.20; vetoed: 3 positions open, max 3"
 2026-10-27T12:00:55.363752-04:00,SOFI,exit_target,6.122,16.68,15.92,16.66,3.12,"entry 16.17, R = +2.04"
+2026-10-27T14:15:02.180035-04:00,UPS,exit_target,0.974,105.71,101.12,105.68,2.91,"entry 102.72, R = +1.87"
+2026-10-27T15:45:02.638331-04:00,TSLA,exit_eod,0.247,408.03,399.56,412.69,1.17,"entry 403.28, R = +1.27"
