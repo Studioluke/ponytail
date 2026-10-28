@@ -172,7 +172,9 @@ def step(broker, cfg, book, now):
     state = {"cash": cash}
 
     def enter(sym, sig, risks, gap_note, risk_frac, tag):
-        qty = size(cfg.capital, risk_frac, sig.entry, sig.stop,
+        # Size as if the fill slips by max_slippage, so a fill a few cents
+        # above the signal stays within the risk cap (10-27: SOFI, UPS).
+        qty = size(cfg.capital, risk_frac, sig.entry * (1 + cfg.max_slippage), sig.stop,
                    min(state["cash"], cfg.capital * cfg.max_position_frac), cfg.fractional)
         if not qty:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
