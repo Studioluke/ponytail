@@ -1,29 +1,28 @@
 {
- "day": "2026-10-27",
+ "day": "2026-10-28",
  "week": "2026-W44",
- "day_pnl": 6.083193999999978,
- "week_pnl": 7.231527999999997,
- "day_losses": 1,
+ "day_pnl": -1.6964159999999566,
+ "week_pnl": 5.535112000000041,
+ "day_losses": 4,
  "traded_today": [
-  "TSLA",
-  "AVGO",
-  "SOFI",
-  "UPS",
-  "KO",
-  "AAPL",
+  "KLAC",
+  "NFLX",
   "IWM",
-  "AMZN",
-  "GOOGL",
-  "SPY",
-  "QQQ",
-  "META",
-  "MSFT",
-  "AMD",
-  "DIA",
-  "NVDA"
+  "COST",
+  "DIA"
  ],
- "seen_orders": [],
- "open": {},
- "entries": 4,
+ "seen_orders": [
+  "halt:2026-10-28"
+ ],
+ "open": {
+  "DIA": {
+   "qty": 0.19,
+   "entry": 524.422,
+   "stop": 523.63,
+   "target": 526.03,
+   "stop_order_id": "4922ab75-ecb4-416f-aaac-db927d700132"
+  }
+ },
+ "entries": 5,
  "learning_tried": false
 }
