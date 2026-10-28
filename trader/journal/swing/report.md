@@ -1,15 +1,15 @@
-# Paper swing tracker (2026-10-27)
+# Paper swing tracker (2026-10-28)
 
 Simulated $1,000 account, $200 per trade, max loss $50, no real or Alpaca orders.
 
-**Equity $1,028.78** (+2.9%), cash $400.00
+**Equity $1,020.75** (+2.1%), cash $400.00
 
 ## Open
 | Symbol | In | Entry | Last | Qty | P&L |
 |---|---|---|---|---|---|
-| PANW | 2026-10-26 | 382.00 | 401.54 | 0.524 | +10.23 |
-| CRWD | 2026-10-26 | 258.00 | 267.99 | 0.775 | +7.74 |
-| OKTA | 2026-10-26 | 214.51 | 226.10 | 0.932 | +10.81 |
+| PANW | 2026-10-26 | 382.00 | 394.40 | 0.524 | +6.49 |
+| CRWD | 2026-10-26 | 258.00 | 266.71 | 0.775 | +6.75 |
+| OKTA | 2026-10-26 | 214.51 | 222.56 | 0.932 | +7.51 |
 
 ## Closed
 | Symbol | In | Entry | Out | Exit | Why | P&L |
