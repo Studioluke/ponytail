@@ -46,11 +46,12 @@ class Config:
     max_daily_losses: int = field(default_factory=lambda: int(_f("TRADER_MAX_DAILY_LOSSES", 3)))
     max_weekly_loss: float = field(default_factory=lambda: _f("TRADER_MAX_WEEKLY_LOSS", 0.05))
     # Risk manager limits (trader/risk_manager.py).
-    max_open_positions: int = field(default_factory=lambda: int(_f("TRADER_MAX_POSITIONS", 3)))
+    max_open_positions: int = field(default_factory=lambda: int(_f("TRADER_MAX_POSITIONS", 5)))
     # Largest single position as a share of capital. On 2026-10-23 one GOOGL
     # trade took the whole $300 at 9:46 and ten later breakouts sized to 0, so
-    # each position now gets at most a third, matching max_open_positions.
-    max_position_frac: float = field(default_factory=lambda: _f("TRADER_MAX_POSITION_FRAC", 1 / 3))
+    # each position now gets at most a fifth, matching max_open_positions
+    # (Luke, 2026-10-28: 5 slots of $60 instead of 3 of $100).
+    max_position_frac: float = field(default_factory=lambda: _f("TRADER_MAX_POSITION_FRAC", 1 / 5))
     # Refuse to enter on bars older than this, or if the last trade has run
     # this far from the signal price.
     max_data_age_minutes: int = field(default_factory=lambda: int(_f("TRADER_MAX_DATA_AGE", 3)))

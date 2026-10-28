@@ -82,7 +82,8 @@ class Veto(Tmp):
         self.assertIn("below stop", str(self.check(last=598.9)))
 
     def test_default_position_cap_is_a_third(self):
-        self.assertAlmostEqual(Config().max_position_frac, 1 / 3)
+        self.assertAlmostEqual(Config().max_position_frac, 1 / 5)
+        self.assertEqual(Config().max_open_positions, 5)
         cfg = dataclasses.replace(self.cfg, max_position_frac=1 / 3)
         d = rm.check_entry(cfg, self.book, self.sig, 0.4, NOW, ACCOUNT, [], None, None, {})
         self.assertIn("position over 33% of capital", str(d))
