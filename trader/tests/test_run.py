@@ -178,5 +178,35 @@ class TargetExit(unittest.TestCase):
         self.assertEqual(book.open["X"]["exit_reason"], "target")
 
 
+class Fomc(unittest.TestCase):
+    setUp = LearningTrade.setUp
+
+    def brief(self):
+        os.makedirs(self.cfg.research_dir, exist_ok=True)
+        with open(f"{self.cfg.research_dir}/2026-10-26.json", "w") as f:
+            json.dump({"watchlist": [], "events": [{"date": "2026-10-26", "symbol": "ALL",
+                                                    "event": "FOMC decision 2:00 ET", "timing": "during"}]}, f)
+
+    def test_fomc_day_halves_risk(self):
+        self.brief()
+        broker = FakeBroker({"AAA": bars([100] * 20 + [100.4]), "BBB": bars([100] * 21)})
+        book = Book()
+        book.roll("2026-10-26", "2026-W44")
+        run.step(broker, self.cfg, book, datetime(2026, 10, 26, 9, 51, 30, tzinfo=ET))
+        t = book.open["AAA"]
+        self.assertLessEqual(t["qty"] * (t["entry"] - t["stop"]), 0.75 + 1e-6)
+
+    def test_fomc_blackout_vetoes_entries(self):
+        sig = strategy.Signal("AAA", 100.0, 99.0, 102.0, "test")
+        book = Book()
+        book.roll("2026-10-26", "2026-W44")
+        acct = {"status": "ACTIVE", "cash": "100000", "equity": "100000", "daytrade_count": 0}
+        at = datetime(2026, 10, 26, 14, 10, tzinfo=ET)
+        d = risk_manager.check_entry(self.cfg, book, sig, 0.5, at, acct, [], fomc=True)
+        self.assertTrue(any("FOMC" in r for r in d.reasons))
+        d = risk_manager.check_entry(self.cfg, book, sig, 0.5, at, acct, [], fomc=False)
+        self.assertFalse(any("FOMC" in r for r in d.reasons))
+
+
 if __name__ == "__main__":
     unittest.main()

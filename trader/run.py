@@ -169,9 +169,12 @@ def step(broker, cfg, book, now):
     cash = min(float(account["cash"]), cfg.capital - used)
     bars = todays_bars(broker, cfg, now)
     research = risk_manager.research_verdicts(cfg, book.day)
+    fomc = risk_manager.fomc_day(cfg, book.day)
     state = {"cash": cash}
 
     def enter(sym, sig, risks, gap_note, risk_frac, tag):
+        if fomc:
+            risk_frac /= 2
         # Size as if the fill slips by max_slippage, so a fill a few cents
         # above the signal stays within the risk cap (10-27: SOFI, UPS).
         qty = size(cfg.capital, risk_frac, sig.entry * (1 + cfg.max_slippage), sig.stop,
@@ -183,7 +186,7 @@ def step(broker, cfg, book, now):
             return False
         last_bar = datetime.fromisoformat(bars[sym][-1]["t"].replace("Z", "+00:00"))
         decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
-                                            broker.latest_price(sym, cfg.data_feed), research)
+                                            broker.latest_price(sym, cfg.data_feed), research, fomc)
         if not decision.ok:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "risk_block", "qty": qty,
                           "price": f"{sig.entry:.2f}", "stop": sig.stop, "target": sig.target,

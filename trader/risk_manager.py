@@ -15,7 +15,7 @@ import json
 import os
 import sys
 from dataclasses import dataclass, field, replace
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
 from .config import Config
@@ -99,10 +99,27 @@ def day_config(cfg, day):
     return replace(cfg, symbols=cfg.symbols + extra) if extra else cfg
 
 
+# FOMC days (10-28: 0 for 5 in a pre-decision range): half risk all day and
+# no new entries around the 2:00 decision and 2:30 press conference.
+FOMC_BLACKOUT = (time(13, 30), time(15, 0))
+
+
+def fomc_day(cfg, day):
+    """True if the research brief for `day` lists an ALL-symbol FOMC event today."""
+    path = os.path.join(cfg.research_dir, f"{day}.json")
+    try:
+        with open(path) as f:
+            events = json.load(f).get("events", [])
+        return any(e.get("symbol") == "ALL" and "FOMC" in e.get("event", "") and e.get("date") == day
+                   for e in events)
+    except (OSError, ValueError, AttributeError):
+        return False
+
+
 # pre-trade veto
 
 def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None, last_price=None,
-                research=None):
+                research=None, fomc=False):
     """Every rule a new long entry must pass. Returns a Decision with every
     failed rule, not just the first, so the journal shows the whole picture."""
     no = []
@@ -123,6 +140,8 @@ def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None
     t = now.time()
     if t < cfg.session_start or t > cfg.last_entry:
         no.append(f"outside entry window {cfg.session_start:%H:%M}-{cfg.last_entry:%H:%M} ET")
+    if fomc and FOMC_BLACKOUT[0] <= t <= FOMC_BLACKOUT[1]:
+        no.append(f"FOMC day: no new entries {FOMC_BLACKOUT[0]:%H:%M}-{FOMC_BLACKOUT[1]:%H:%M} ET")
     held = {p["symbol"] for p in positions} | set(book.open)
     if sig.symbol in held:
         no.append(f"already holding {sig.symbol}")
