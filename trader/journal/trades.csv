@@ -63,3 +63,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-10-27T12:00:55.363752-04:00,SOFI,exit_target,6.122,16.68,15.92,16.66,3.12,"entry 16.17, R = +2.04"
 2026-10-27T14:15:02.180035-04:00,UPS,exit_target,0.974,105.71,101.12,105.68,2.91,"entry 102.72, R = +1.87"
 2026-10-27T15:45:02.638331-04:00,TSLA,exit_eod,0.247,408.03,399.56,412.69,1.17,"entry 403.28, R = +1.27"
+2026-10-28T09:47:49.417168-04:00,NFLX,risk_block,1.592,62.63,62.2,63.49,,"ORB break of 62.52 (range 61.88-62.52), VWAP 62.24; vetoed: already holding NFLX"
