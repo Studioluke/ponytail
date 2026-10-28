@@ -10,23 +10,23 @@
   {
    "date": "2026-10-28",
    "symbol": "ALL",
-   "event": "FOMC decision 2:00 ET",
+   "event": "FOMC decision 2:00 ET (press conference 2:30)",
    "timing": "during",
-   "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+   "source": "mitrade.com and stocktwits.com week-ahead previews 2026-10-25"
   },
   {
    "date": "2026-10-28",
    "symbol": "MSFT",
-   "event": "Earnings (estimated date)",
+   "event": "Earnings",
    "timing": "after",
-   "source": "blofin.com earnings season preview (unconfirmed)"
+   "source": "stocktwits.com week-ahead preview 2026-10-25"
   },
   {
    "date": "2026-10-28",
    "symbol": "GOOGL",
-   "event": "Earnings (estimated date)",
+   "event": "Earnings",
    "timing": "after",
-   "source": "blofin.com earnings season preview (unconfirmed)"
+   "source": "stocktwits.com week-ahead preview 2026-10-25"
   }
  ],
  "watchlist": [
@@ -205,7 +205,7 @@
    "symbol": "MSFT",
    "verdict": "skip",
    "why": [
-    "Earnings (estimated date) (2026-10-28, after the session): the opening range is unreliable"
+    "Earnings (2026-10-28, after the session): the opening range is unreliable"
    ],
    "prior_close": 531.58,
    "price": 530.3,
@@ -267,7 +267,7 @@
    "symbol": "GOOGL",
    "verdict": "skip",
    "why": [
-    "Earnings (estimated date) (2026-10-28, after the session): the opening range is unreliable"
+    "Earnings (2026-10-28, after the session): the opening range is unreliable"
    ],
    "prior_close": 320.6,
    "price": 320.6,
