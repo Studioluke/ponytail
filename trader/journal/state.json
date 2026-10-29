@@ -1,20 +1,14 @@
 {
- "day": "2026-10-28",
+ "day": "2026-10-29",
  "week": "2026-W44",
- "day_pnl": -1.8514559999999562,
+ "day_pnl": 0.0,
  "week_pnl": 5.380072000000041,
- "day_losses": 5,
- "traded_today": [
-  "KLAC",
-  "NFLX",
-  "IWM",
-  "COST",
-  "DIA"
- ],
+ "day_losses": 0,
+ "traded_today": [],
  "seen_orders": [
   "halt:2026-10-28"
  ],
  "open": {},
- "entries": 5,
+ "entries": 0,
  "learning_tried": false
 }
