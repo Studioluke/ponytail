@@ -286,7 +286,10 @@ def run(mode):
                 log(f"done for the day: P&L ${book.day_pnl:.2f}, week ${book.week_pnl:.2f}")
             return
         if mode == "loop" and not broker.clock()["is_open"]:
-            return
+            if now.time() >= cfg.session_start.replace(hour=9, minute=30) or now.weekday() >= 5:
+                return
+            # Started before the bell (the scheduled run fires early so a late
+            # scheduler doesn't cost the first breakouts): wait for the open.
         _time.sleep(60 - datetime.now().second + 2)
 
 
