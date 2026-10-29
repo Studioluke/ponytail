@@ -236,7 +236,10 @@ def step(broker, cfg, book, now):
         book.traded_today.append(sym)
         ok, gap_note = gap_ok(broker, cfg, sym, bars.get(sym, []), now)
         risks = []
-        if not ok and cfg.learning_mode:
+        # Learning mode trades through big gap-ups but not gap-downs: by 10-29,
+        # 8 long breakouts after a gap down of more than max_gap lost 8 of 8.
+        gap_down = gap_note.startswith("gap -")
+        if not ok and cfg.learning_mode and not gap_down:
             risks.append(f"{gap_note} exceeds the {cfg.max_gap:.2%} gap rule")
         elif not ok:
             journal(cfg, {"time": now.isoformat(), "symbol": sym, "event": "skip", "price": f"{sig.entry:.2f}",
