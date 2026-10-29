@@ -178,3 +178,16 @@ class Watchlist(unittest.TestCase):
         self.assertEqual(research.in_play({"gap": None, "atr_pct": 0.02}, []), 0)
         news = [{"earnings": True, "catalyst": False}]
         self.assertEqual(research.in_play({"gap": 0.01, "atr_pct": 0.02, "vol_expanding": True}, news), 1.25)
+
+
+class InPlayList(unittest.TestCase):
+    def test_gap_downs_are_not_handed_to_the_bot(self):
+        from unittest import mock
+        prof = {"UP": {"gap": 0.05, "atr_pct": 0.02}, "DN": {"gap": -0.05, "atr_pct": 0.02}}
+        with mock.patch.object(research, "gather", return_value=(prof, [], [], {})), \
+                mock.patch.object(research, "load_smart_money", return_value=[]):
+            from dataclasses import replace
+            cfg = replace(Config(), symbols=("UP",), watchlist=("UP", "DN"))
+            d = research.build(__import__("datetime").date(2026, 10, 29), cfg=cfg, broker=object(), events_path="/nonexistent")
+        self.assertEqual(d["in_play"], ["UP"])
+        self.assertIn("DN", research.markdown(d))

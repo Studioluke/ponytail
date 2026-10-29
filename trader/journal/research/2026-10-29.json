@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generated": "2026-10-29T08:34-04:00",
+ "generated": "2026-10-29T08:35-04:00",
  "regime": "risk-off open",
  "regime_notes": [
   "SPY trend up, gap -0.41%, 5d -0.11%",
@@ -56,42 +56,42 @@
    "price_time": "2026-10-29T12:34:23.297320823Z",
    "news": [
     {
-     "time": "2026-10-29T12:25:16Z",
-     "headline": "Scott Bessent Brushes Off Concerns Over AI Debt Amid CoreWeave Slump, Calls Neoclouds a \u2018Small Component\u2019",
+     "time": "2026-10-29T12:30:55Z",
+     "headline": "USA Core PCE Price Index (MoM) For Sept. Revises Prior From 0.2% To 0.3%",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/market-summary/26/10/62692369/scott-bessent-brushes-off-concerns-over-ai-debt-amid-coreweave-slump-calls-neoclouds-a-small-component",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-29T09:33:23Z",
-     "headline": "Stock Market Today: Dow Jones, S&P 500 Futures Trade Mixed After Fed Keeps Rates Unchanged \u2014 MSFT, GOOG, TMUS in Focus",
+     "time": "2026-10-29T12:30:26Z",
+     "headline": "USA PCE Price Index (MoM) For September 0.5% Vs 0.5% Est.",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/equities/26/10/62684592/stock-market-today-dow-jones-sp-500-futures-trade-mixed-after-fed-keeps-rates-unchanged-msft-goog-tmus-in-focus",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-29T09:24:02Z",
-     "headline": "Top Economist Slams Trump\u2019s $21 Trillion Investment Boast \u2014 \u2018The Jobs Are American. The Profits Aren\u2019t\u2019",
+     "time": "2026-10-29T12:30:25Z",
+     "headline": "USA Core PCE Price Index (YoY) For Sept. 3.1% Vs 3.1% Est.",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/economic-data/26/10/62684510/justin-wolfers-trump-foreign-investment-boast-profits-go-abroad",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-29T08:51:08Z",
-     "headline": "Tom Lee Sees 'Big Beats' Ahead, Says Kevin Warsh-Led Fed Won't Slow AI Growth Despite Inflation: 'Good News Is Good News'",
+     "time": "2026-10-29T12:30:18Z",
+     "headline": "GDP Price Index QoQ For Q3 2.2% Vs 3.2% Expected",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/economic-data/26/10/62684176/tom-lee-sees-big-beats-ahead-says-kevin-warsh-led-fed-wont-slow-ai-growth-despite-inflation-good-news-is-good-news",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-29T06:04:17Z",
-     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "time": "2026-10-29T12:30:18Z",
+     "headline": "USA PCE Price Index (YoY) For September 3.6% Vs 3.6% Est.",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62682843/stock-market-will-sp-500-open-up-or-down-today-68",
+     "url": "https://www.benzinga.com/quote/SPY",
      "earnings": false,
      "catalyst": false
     }
@@ -172,6 +172,14 @@
    "vol_expanding": false,
    "price_time": "2026-10-29T12:24:08.360967185Z",
    "news": [
+    {
+     "time": "2026-10-29T12:32:24Z",
+     "headline": "STMicroelectronics Lifts Forecast Thanks To Data Center Revenue Growth",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/10/62692828/stmicroelectronics-lifts-forecast-thanks-to-data-center-revenue-growth",
+     "earnings": false,
+     "catalyst": false
+    },
     {
      "time": "2026-10-29T11:30:31Z",
      "headline": "Elon Musk Takes a Jab at Apple's $29,799 Mac Studio: 'Makes a Tesla Seem Quite Affordable!'",
@@ -352,18 +360,18 @@
      "catalyst": true
     },
     {
-     "time": "2026-10-29T12:25:16Z",
-     "headline": "Scott Bessent Brushes Off Concerns Over AI Debt Amid CoreWeave Slump, Calls Neoclouds a \u2018Small Component\u2019",
+     "time": "2026-10-29T12:32:24Z",
+     "headline": "STMicroelectronics Lifts Forecast Thanks To Data Center Revenue Growth",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/market-summary/26/10/62692369/scott-bessent-brushes-off-concerns-over-ai-debt-amid-coreweave-slump-calls-neoclouds-a-small-component",
+     "url": "https://www.benzinga.com/markets/earnings/26/10/62692828/stmicroelectronics-lifts-forecast-thanks-to-data-center-revenue-growth",
      "earnings": false,
      "catalyst": false
     },
     {
-     "time": "2026-10-29T11:00:23Z",
-     "headline": "Lumentum Stock Lights Up Thursday: What's Going On?",
+     "time": "2026-10-29T12:25:16Z",
+     "headline": "Scott Bessent Brushes Off Concerns Over AI Debt Amid CoreWeave Slump, Calls Neoclouds a \u2018Small Component\u2019",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62687945/lumentum-stock-lights-up-thursday-whats-going-on",
+     "url": "https://www.benzinga.com/markets/market-summary/26/10/62692369/scott-bessent-brushes-off-concerns-over-ai-debt-amid-coreweave-slump-calls-neoclouds-a-small-component",
      "earnings": false,
      "catalyst": false
     }
@@ -515,6 +523,14 @@
    "price_time": "2026-10-28T20:41:00.858195584Z",
    "news": [
     {
+     "time": "2026-10-29T12:32:24Z",
+     "headline": "STMicroelectronics Lifts Forecast Thanks To Data Center Revenue Growth",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/10/62692828/stmicroelectronics-lifts-forecast-thanks-to-data-center-revenue-growth",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
      "time": "2026-10-29T12:19:37Z",
      "headline": "Tesla, Nutrien and an Industrial Stock on CNBC\u2019s \u2018Final Trades\u2019",
      "source": "benzinga",
@@ -543,14 +559,6 @@
      "headline": "Tesla Prevails in South Korean Court in Full Self-Driving Refund Suit",
      "source": "fiscal.ai",
      "url": "https://www.marketscreener.com/news/tesla-prevails-in-south-korea-court-in-full-self-driving-suit-ce785cd3df8df521",
-     "earnings": false,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-29T10:18:19Z",
-     "headline": "Former Tesla Autopilot Chief Slams Elon Musk's Vision-Only Strategy as a 'Weird Religious Stance That Ignores Physics'",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/tech/26/10/62686112/former-tesla-autopilot-chief-slams-elon-musks-vision-only-strategy-as-a-weird-religious-stance-that-ignores-physics",
      "earnings": false,
      "catalyst": false
     }
@@ -749,11 +757,11 @@
    "symbol": "ORCL",
    "verdict": "skip",
    "why": [
-    "premarket gap -1.91% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -1.84% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 144.29,
-   "price": 141.54,
-   "gap": -0.019058839836440522,
+   "price": 141.63,
+   "gap": -0.018435095987247907,
    "ret_5d": 0.1177473080796343,
    "ret_20d": 0.05052784856206771,
    "sma20": 135.22449999999998,
@@ -761,7 +769,7 @@
    "trend": "mixed",
    "atr_pct": 0.05175341326495254,
    "vol_expanding": false,
-   "price_time": "2026-10-29T12:03:08.45620055Z",
+   "price_time": "2026-10-29T12:35:01.227451012Z",
    "news": [
     {
      "time": "2026-10-29T09:04:40Z",
@@ -797,7 +805,7 @@
     }
    ],
    "traded": false,
-   "in_play": 0.62
+   "in_play": 0.61
   },
   {
    "symbol": "CRM",
@@ -1045,6 +1053,14 @@
    "price_time": "2026-10-28T20:58:18.825388278Z",
    "news": [
     {
+     "time": "2026-10-29T12:31:27Z",
+     "headline": "KLA Analysts Cut Their Forecasts Following Q1 Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/10/62692764/kla-analysts-cut-their-forecasts-following-q1-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
      "time": "2026-10-29T12:11:11Z",
      "headline": "Cantor Fitzgerald Maintains Overweight on KLA, Lowers Price Target to $225",
      "source": "benzinga",
@@ -1065,14 +1081,6 @@
      "headline": "KLA Q1 2027 Earnings Call Transcript",
      "source": "benzinga",
      "url": "https://www.benzinga.com/news/26/10/62680565/kla-q1-2027-earnings-call-transcript",
-     "earnings": true,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-28T21:00:09Z",
-     "headline": "KLA Shares Climb on Q1 Double Beat, Strong Guidance",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/markets/earnings/26/10/62678119/kla-shares-climb-on-q1-double-beat-strong-guidance",
      "earnings": true,
      "catalyst": false
     },
@@ -1374,10 +1382,9 @@
   },
   {
    "symbol": "SHOP",
-   "verdict": "caution",
+   "verdict": "ok",
    "why": [
-    "no premarket trade yet, gap unknown",
-    "headline catalyst overnight"
+    "no premarket trade yet, gap unknown"
    ],
    "prior_close": 168.28,
    "price": 168.28,
@@ -1391,14 +1398,6 @@
    "vol_expanding": false,
    "price_time": "2026-10-28T19:59:56.145041529Z",
    "news": [
-    {
-     "time": "2026-10-28T20:46:53Z",
-     "headline": "Citigroup Maintains Buy on Shopify, Raises Price Target to $216",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/news/26/10/62677711/citigroup-maintains-buy-shopify-raises-price-target-216",
-     "earnings": false,
-     "catalyst": true
-    },
     {
      "time": "2026-10-29T10:56:50Z",
      "headline": "Shopify CEO Doesn't Trust the AI Cloud With His Data \u2014 So He Built a Server in His Wine Cellar",
@@ -1417,7 +1416,7 @@
     }
    ],
    "traded": false,
-   "in_play": 0.25
+   "in_play": 0.0
   },
   {
    "symbol": "UBER",
@@ -3486,19 +3485,11 @@
      "catalyst": false
     },
     {
-     "time": "2026-10-28T20:49:24Z",
-     "headline": "FedEx Raises FY2026 Adj EPS Guidance from $16.90-$18.10 to $18.00-$18.60 vs $17.85 Est; Revenue Growth Outlook Rises To 12% From 11%",
+     "time": "2026-10-28T21:50:14Z",
+     "headline": "FedEx Executive Says Data Center-Related Business Supported 28% Year-over-year Growth In International Freight Revenue",
      "source": "benzinga",
-     "url": "https://www.benzinga.com/news/26/10/62677823/fedex-raises-fy2026-adj-eps-guidance-16-90-18-10-18-00-18-60-vs-17-85-est-revenue-growth-outlook-ris",
-     "earnings": true,
-     "catalyst": false
-    },
-    {
-     "time": "2026-10-28T20:46:53Z",
-     "headline": "FedEx Sees FY2026 GAAP EPS $35.30-$35.90",
-     "source": "benzinga",
-     "url": "https://www.benzinga.com/news/26/10/62677710/fedex-sees-fy2026-gaap-eps-35-30-35-90",
-     "earnings": true,
+     "url": "https://www.benzinga.com/news/26/10/62680098/fedex-executive-says-data-center-related-business-supported-28-year-over-year-growth-international-f",
+     "earnings": false,
      "catalyst": false
     }
    ],
@@ -3777,11 +3768,7 @@
   }
  ],
  "in_play": [
-  "NOW",
-  "CAT",
-  "MRVL",
-  "MSFT",
-  "INTC"
+  "MSFT"
  ],
  "sectors": {
   "XLK": {
@@ -4010,6 +3997,79 @@
  },
  "market_news": [
   {
+   "time": "2026-10-29T12:34:20Z",
+   "headline": "T4 Robotics Announces Start Of Prototype Development For LADI-Hornet Autonomous Drone Interceptor In Ukraine",
+   "symbols": [
+    "BLEG"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:33:57Z",
+   "headline": "IperionX Reports Production Of 8.7 Tons Of Titanium HAMR During Quarter Ended Sept. 30",
+   "symbols": [
+    "IPX"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:33:21Z",
+   "headline": "InterDigital Sees Q4 GAAP EPS $1.04-$1.27 vs $1.71 Est",
+   "symbols": [
+    "IDCC"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:33:01Z",
+   "headline": "CLPS Announces 8-Month Extension Of Buyback Program Through July 3, 2027, With 759,159 Shares Remaining",
+   "symbols": [
+    "CLPS"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:55Z",
+   "headline": "InterDigital Narrows FY2026 GAAP EPS Guidance from $7.91-$9.67 to $8.93-$9.16 vs $9.00 Est",
+   "symbols": [
+    "IDCC"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:49Z",
+   "headline": "ReTo Eco-Solutions Approves 8-1 Share Combination",
+   "symbols": [
+    "RETO"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:39Z",
+   "headline": "Xenon Pharmaceuticals Announces Its XEN1701 Surpasses Target Profile; Data Presented During International Association For The Study Of Pain 2026 World Congress On Pain",
+   "symbols": [
+    "XENE"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:25Z",
+   "headline": "InterDigital Sees Q4 Adj EPS $1.72-$1.98 vs $1.71 Est; Sees Sales $154.000M-$160.000M vs $174.150M Est",
+   "symbols": [
+    "IDCC"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:25Z",
+   "headline": "Powell Max Announces Plan To Enter Defense Sector Through Acquisitions; Says No Agreements Beyond Proposed Remington Maker Blackrod Deal, No Funding Secured",
+   "symbols": [
+    "PMAX"
+   ]
+  },
+  {
+   "time": "2026-10-29T12:32:24Z",
+   "headline": "STMicroelectronics Lifts Forecast Thanks To Data Center Revenue Growth",
+   "symbols": [
+    "AAPL",
+    "NVDA",
+    "STM",
+    "TSLA"
+   ]
+  },
+  {
    "time": "2026-10-29T12:32:10Z",
    "headline": "YPF Reports Third Quarter 2026 Financial Results",
    "symbols": [
@@ -4031,92 +4091,17 @@
    ]
   },
   {
+   "time": "2026-10-29T12:31:47Z",
+   "headline": "InterDigital Narrows FY2026 Adj EPS Guidance from $10.85-$12.81 to $11.99-$12.25 vs $9.00 Est; Narrows FY2026 Sales Guidance from $775.000M-$845.000M to $813.000M-$819.000M vs $796.564M Est",
+   "symbols": [
+    "IDCC"
+   ]
+  },
+  {
    "time": "2026-10-29T12:31:42Z",
    "headline": "Winners of Qorus-Infosys Finacle Banking Innovation Awards 2026 Announced",
    "symbols": [
     "INFY"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:31:40Z",
-   "headline": "Tata Motors Participates in 5GAA Connected Mobility Technology Demonstrations",
-   "symbols": [
-    "TMPV"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:29:16Z",
-   "headline": "BTIG Maintains Buy on Glaukos, Raises Price Target to $234",
-   "symbols": [
-    "GKOS"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:29:09Z",
-   "headline": "Hershey Exec Says Expecting Sales In-Line With 2025, Financial Pressures Could Shape Final Purchase Decisions",
-   "symbols": [
-    "HSY"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:28:55Z",
-   "headline": "Hyatt Bets on Luxury, Wins Big and Raises 2026 Growth Outlook",
-   "symbols": [
-    "H"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:28:54Z",
-   "headline": "Stifel Maintains Hold on Avantor, Raises Price Target to $18",
-   "symbols": [
-    "AVTR"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:27:44Z",
-   "headline": "BTIG Maintains Buy on Fortinet, Lowers Price Target to $186",
-   "symbols": [
-    "FTNT"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:27:24Z",
-   "headline": "Stifel Maintains Hold on Automatic Data Processing, Raises Price Target to $305",
-   "symbols": [
-    "ADP"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:27:12Z",
-   "headline": "Bunge Expects Multi-Oil Refinery In The Netherlands To Start Up In Q1 2027; Expects To Use More Working Capital Than The Prior Year; Brazil Currency Moves Since Election Lowered Some Costs, Increased Farmer Selling",
-   "symbols": [
-    "BG"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:26:47Z",
-   "headline": "Jones Trading Maintains Buy on GBank Financial Holdings, Lowers Price Target to $25",
-   "symbols": [
-    "GBFH"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:25:16Z",
-   "headline": "Scott Bessent Brushes Off Concerns Over AI Debt Amid CoreWeave Slump, Calls Neoclouds a \u2018Small Component\u2019",
-   "symbols": [
-    "CRWV",
-    "DIA",
-    "META",
-    "NVDA",
-    "QQQ",
-    "SPY"
-   ]
-  },
-  {
-   "time": "2026-10-29T12:24:44Z",
-   "headline": "Stephens & Co. Reiterates Overweight on Wingstop, Maintains $200 Price Target",
-   "symbols": [
-    "WING"
    ]
   }
  ],

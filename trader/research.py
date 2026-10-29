@@ -244,7 +244,9 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
     big = {k: [m for m in movers.get(k, []) if m["price"] >= 20][:5] for k in ("gainers", "losers")}
     data = {"date": day.isoformat(), "generated": datetime.now(ET).isoformat(timespec="minutes"),
             "regime": label, "regime_notes": notes, "events": events, "watchlist": watch,
-            "in_play": [w["symbol"] for w in sorted(watch, key=lambda w: -w["in_play"]) if w["in_play"] >= 1][:15],
+            # The bot only buys, so names gapping down are listed in the table but not handed to it.
+            "in_play": [w["symbol"] for w in sorted(watch, key=lambda w: -w["in_play"])
+                        if w["in_play"] >= 1 and (w.get("gap") or 0) >= 0][:15],
             "sectors": {s: prof.get(s) for s in SECTORS}, "macro": {s: prof.get(s) for s in MACRO},
             "market_news": [{"time": n["created_at"], "headline": n["headline"], "symbols": n.get("symbols", [])}
                             for n in market_news],
@@ -282,7 +284,7 @@ def markdown(d):
     L += head + [row(w) for w in traded]
     if rest:
         by = {w["symbol"]: w for w in d["watchlist"]}
-        hot = [by[s] for s in d.get("in_play", []) if s in by]
+        hot = sorted((w for w in d["watchlist"] if w.get("in_play", 0) >= 1), key=lambda w: -w["in_play"])[:15]
         L += ["", f"### In play across the {len(d['watchlist'])}-stock watchlist", "",
               "Gap measured in daily ATRs, plus headlines and volatility; 1.0 means moving a full normal "
               "day's range before the open.", ""]
@@ -301,7 +303,7 @@ def markdown(d):
                      f"{_pct(p.get('ret_20d'))} | {p['trend']} |")
     L += ["", "### Headlines, traded symbols and in-play names (last 18 hours)", ""]
     any_news = False
-    hot = set(d.get("in_play", []))
+    hot = {w["symbol"] for w in d["watchlist"] if w.get("in_play", 0) >= 1}
     for w in d["watchlist"]:
         if not w.get("traded", True) and w["symbol"] not in hot:
             continue
