@@ -1,20 +1,23 @@
 {
- "day": "2026-10-28",
+ "day": "2026-10-29",
  "week": "2026-W44",
- "day_pnl": -1.8514559999999562,
- "week_pnl": 5.380072000000041,
- "day_losses": 5,
+ "day_pnl": -3.2454040000000077,
+ "week_pnl": 2.1346680000000333,
+ "day_losses": 7,
  "traded_today": [
-  "KLAC",
-  "NFLX",
-  "IWM",
-  "COST",
-  "DIA"
+  "DIA",
+  "QQQ",
+  "TSLA",
+  "AMD",
+  "AVGO",
+  "AMZN",
+  "GOOGL"
  ],
  "seen_orders": [
-  "halt:2026-10-28"
+  "halt:2026-10-28",
+  "halt:2026-10-29"
  ],
  "open": {},
- "entries": 5,
+ "entries": 7,
  "learning_tried": false
 }
