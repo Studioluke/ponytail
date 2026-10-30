@@ -110,3 +110,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-10-30T11:44:02.012700-04:00,COST,risk_taken,0.059,1014.17,,,,"learning mode, trading anyway: gap +1.71% vs prior close 995.86 exceeds the 0.75% gap rule"
 2026-10-30T11:44:02.012700-04:00,COST,buy,0.059,1013.88,1011.16,1020.19,,"[explore] ORB break of 1014.07 (range 1008.25-1014.07), VWAP 1010.97; gap +1.71% vs prior close 995.86; risk $0.16"
 2026-10-30T12:01:02.417494-04:00,AAPL,exit_stop,0.171,346.45,346.48,353.5,-0.40,"entry 348.77, R = -1.01"
+2026-10-30T13:14:02.816545-04:00,COST,exit_target,0.059,1020.15,1011.16,1020.19,0.37,"entry 1013.88, R = +2.30"
