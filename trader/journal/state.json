@@ -1,0 +1,32 @@
+{
+ "day": "2026-10-30",
+ "week": "2026-W44",
+ "day_pnl": -1.0285459999999986,
+ "week_pnl": 1.1061220000000347,
+ "day_losses": 2,
+ "traded_today": [
+  "AMZN",
+  "TSLA",
+  "QQQ",
+  "META",
+  "NFLX",
+  "AAPL",
+  "GOOGL",
+  "COST"
+ ],
+ "seen_orders": [
+  "halt:2026-10-28",
+  "halt:2026-10-29"
+ ],
+ "open": {
+  "COST": {
+   "qty": 0.059,
+   "entry": 1013.882,
+   "stop": 1011.16,
+   "target": 1020.19,
+   "stop_order_id": "dcd45117-4d63-47bb-b534-dd8723725d5f"
+  }
+ },
+ "entries": 3,
+ "learning_tried": false
+}

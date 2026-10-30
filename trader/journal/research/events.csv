@@ -1,0 +1,10 @@
+date,symbol,event,timing,source
+2026-10-22,ALL,Initial jobless claims 8:30 ET,pre,investrade.com weekly calendar
+2026-10-23,ALL,Flash PMIs and UMich inflation expectations,pre,vault Market-Research 2026-10-20
+2026-10-28,ALL,FOMC decision 2:00 ET (press conference 2:30),during,mitrade.com and stocktwits.com week-ahead previews 2026-10-25
+2026-10-28,MSFT,Earnings,after,stocktwits.com week-ahead preview 2026-10-25
+2026-10-28,GOOGL,Earnings,after,stocktwits.com week-ahead preview 2026-10-25
+2026-10-29,AAPL,Earnings (estimated date),after,third-party estimate (unconfirmed)
+2026-10-29,AMZN,Earnings (confirmed; call 5:00 ET),after,aboutamazon.com Q3 2026 announcement
+2026-11-03,AMD,Earnings (estimated; early Nov pattern),after,estimate from prior years (unconfirmed)
+2026-11-18,NVDA,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)
