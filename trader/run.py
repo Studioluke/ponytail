@@ -11,6 +11,8 @@ import time as _time
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+import requests
+
 from . import risk_manager, strategy
 from .broker import Broker
 from .config import Config
@@ -276,10 +278,20 @@ def run(mode):
         now = datetime.now(ET)
         iso = now.isocalendar()
         book.roll(now.date().isoformat(), f"{iso.year}-W{iso.week:02d}")
-        if broker.clock()["is_open"]:
-            step(broker, cfg, book, now)
-        elif mode == "loop":
-            log("market closed")
+        try:
+            if broker.clock()["is_open"]:
+                step(broker, cfg, book, now)
+            elif mode == "loop":
+                log("market closed")
+        except requests.RequestException as e:
+            # A network blip (10-30: proxy error fetching bars) must not end
+            # the session; resting stops cover open positions meanwhile.
+            if mode != "loop":
+                raise
+            book.save(cfg.state_path)
+            log(f"network error, retrying next minute: {str(e)[:150]}")
+            _time.sleep(60 - datetime.now().second + 2)
+            continue
         book.save(cfg.state_path)
         if mode == "once" or now.time() >= cfg.flatten_at:
             if mode == "loop" and now.time() >= cfg.flatten_at:
