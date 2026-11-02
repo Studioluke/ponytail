@@ -1,3 +1,4 @@
+date,symbol,event,timing,source
 2026-10-22,ALL,Initial jobless claims 8:30 ET,pre,investrade.com weekly calendar
 2026-10-23,ALL,Flash PMIs and UMich inflation expectations,pre,vault Market-Research 2026-10-20
 2026-10-28,ALL,FOMC decision 2:00 ET (press conference 2:30),during,mitrade.com and stocktwits.com week-ahead previews 2026-10-25
@@ -13,4 +14,3 @@
 2026-11-04,ALL,ISM Services PMI 10:00 ET,during,shattered.io week-ahead 2026-11-01
 2026-11-06,ALL,October jobs report 8:30 ET,pre,stocktwits.com week-ahead 2026-11-01
 2026-11-18,NVDA,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)
-date,symbol,event,timing,source

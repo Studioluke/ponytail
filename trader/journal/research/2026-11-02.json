@@ -1,12 +1,34 @@
 {
  "date": "2026-11-02",
- "generated": "2026-11-02T09:01-05:00",
+ "generated": "2026-11-02T09:02-05:00",
  "regime": "mixed / range",
  "regime_notes": [
   "SPY trend mixed, gap +0.61%, 5d -0.54%",
   "QQQ trend mixed, gap +0.87%, 5d -1.94%"
  ],
- "events": [],
+ "events": [
+  {
+   "date": "2026-11-02",
+   "symbol": "AAPL",
+   "event": "Earnings",
+   "timing": "after",
+   "source": "stocktwits.com week-ahead 2026-11-01"
+  },
+  {
+   "date": "2026-11-02",
+   "symbol": "ALL",
+   "event": "ISM Manufacturing PMI 10:00 ET",
+   "timing": "during",
+   "source": "moomoo.com week-ahead preview 2026-11-01"
+  },
+  {
+   "date": "2026-11-02",
+   "symbol": "PLTR",
+   "event": "Earnings",
+   "timing": "after",
+   "source": "stocktwits.com week-ahead 2026-11-01"
+  }
+ ],
  "watchlist": [
   {
    "symbol": "SPY",
@@ -118,9 +140,9 @@
   },
   {
    "symbol": "AAPL",
-   "verdict": "caution",
+   "verdict": "skip",
    "why": [
-    "earnings headline overnight; check whether it reports today"
+    "Earnings (2026-11-02, after the session): the opening range is unreliable"
    ],
    "prior_close": 344.77,
    "price": 344.22,
@@ -308,11 +330,11 @@
    "symbol": "NVDA",
    "verdict": "skip",
    "why": [
-    "premarket gap +1.12% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap +1.22% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 204.76,
-   "price": 207.05,
-   "gap": 0.011183824965813827,
+   "price": 207.26,
+   "gap": 0.012209415901543341,
    "ret_5d": -0.029665434555966375,
    "ret_20d": -0.124957264957265,
    "sma20": 221.487,
@@ -320,7 +342,7 @@
    "trend": "down",
    "atr_pct": 0.0318229704462367,
    "vol_expanding": true,
-   "price_time": "2026-11-02T14:00:12.527455057Z",
+   "price_time": "2026-11-02T14:02:37.722126529Z",
    "news": [
     {
      "time": "2026-11-02T13:54:37Z",
@@ -372,7 +394,7 @@
     }
    ],
    "traded": true,
-   "in_play": 1.1
+   "in_play": 1.13
   },
   {
    "symbol": "META",
@@ -1274,6 +1296,7 @@
    "symbol": "PLTR",
    "verdict": "skip",
    "why": [
+    "Earnings (2026-11-02, after the session): the opening range is unreliable",
     "premarket gap +2.22% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 184.1,
@@ -4005,8 +4028,8 @@
   },
   "GLD": {
    "prior_close": 355.81,
-   "price": 361.3,
-   "gap": 0.01542958320451926,
+   "price": 361.67,
+   "gap": 0.016469464039796655,
    "ret_5d": -0.029459098224271063,
    "ret_20d": -0.0641381396388695,
    "sma20": 375.77275,
@@ -4014,7 +4037,7 @@
    "trend": "down",
    "atr_pct": 0.016386153123456742,
    "vol_expanding": false,
-   "price_time": "2026-11-02T13:53:43.426172506Z"
+   "price_time": "2026-11-02T14:02:21.379583021Z"
   },
   "USO": {
    "prior_close": 168.86,
@@ -4044,6 +4067,69 @@
   }
  },
  "market_news": [
+  {
+   "time": "2026-11-02T14:02:00Z",
+   "headline": "Seaport Therapeutics Reports Third Quarter 2026 Financial Results and Clinical Progress",
+   "symbols": [
+    "SPTX"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:52Z",
+   "headline": "Stepan Co. Raises Project Catalyst Savings Forecast and Increases Quarterly Dividend",
+   "symbols": [
+    "SCL"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:49Z",
+   "headline": "Dorchester Minerals, L.P. Announces Acquisition of Mineral and Royalty Interests",
+   "symbols": [
+    "DMLP"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:49Z",
+   "headline": "Bakkafrost Reports Q3 2026 Operational EBIT of DKK 128 Million",
+   "symbols": [
+    "BAKKA"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:48Z",
+   "headline": "Inchcape plc Announces Share Buyback Transactions",
+   "symbols": [
+    "INCH"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:44Z",
+   "headline": "Midea Group Conducts Share Repurchase on November 2, 2026",
+   "symbols": [
+    "000333"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:39Z",
+   "headline": "Land Securities Group PLC Announces Total Voting Rights",
+   "symbols": [
+    "LAND"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:39Z",
+   "headline": "Novartis Phase III ORION-4 Trial of Pelacarsen Misses Primary Endpoint",
+   "symbols": [
+    "NVS"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:32Z",
+   "headline": "Descartes Integrates Advanced Ocean Visibility Solution with SAP Transportation Platforms",
+   "symbols": [
+    "SAP"
+   ]
+  },
   {
    "time": "2026-11-02T13:58:15Z",
    "headline": "Keybanc Maintains Overweight on Voyager Technologies, Lowers Price Target to $40",
@@ -4085,73 +4171,6 @@
    "headline": "Wells Fargo Maintains Equal-Weight on Universal Health Services, Raises Price Target to $170",
    "symbols": [
     "UHS"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:55:00Z",
-   "headline": "Trading Halt: Halt status updated at 8:55:00 AM ET: Quotation Resumption: News and Resumption Times",
-   "symbols": [
-    "VCIG"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:54:46Z",
-   "headline": "Keybanc Maintains Overweight on Pattern Group, Lowers Price Target to $25",
-   "symbols": [
-    "PTRN"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:54:37Z",
-   "headline": "Apple Earnings Prediction Market Preview: What Will John Ternus Say?",
-   "symbols": [
-    "AAPL",
-    "AVGO",
-    "GOOGL",
-    "NVDA"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:54:18Z",
-   "headline": "'Goldman Restricts Traders and Bankers From Using Some AI Tools' - Bloomberg Exclusive",
-   "symbols": [
-    "GS"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:54:00Z",
-   "headline": "Wells Fargo Maintains Overweight on Tenet Healthcare, Raises Price Target to $321",
-   "symbols": [
-    "THC"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:53:06Z",
-   "headline": "Keybanc Maintains Overweight on Pinterest, Lowers Price Target to $25",
-   "symbols": [
-    "PINS"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:52:57Z",
-   "headline": "Wells Fargo Maintains Equal-Weight on HCA Healthcare, Raises Price Target to $468",
-   "symbols": [
-    "HCA"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:52:54Z",
-   "headline": "Marvell to Buy Lumentum in $115 Billion All-Stock Deal",
-   "symbols": [
-    "LITE",
-    "MRVL"
-   ]
-  },
-  {
-   "time": "2026-11-02T13:51:51Z",
-   "headline": "Wells Fargo Maintains Overweight on BrightSpring Health, Raises Price Target to $82",
-   "symbols": [
-    "BTSG"
    ]
   }
  ],
