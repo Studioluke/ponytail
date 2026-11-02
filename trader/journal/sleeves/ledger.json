@@ -13,8 +13,14 @@
    "spread": null
   },
   "SSO": {
-   "cash": 201.01356291071957,
-   "shares": null,
+   "cash": 51.01356291071957,
+   "shares": {
+    "qty": 2.2345187790634085,
+    "entry": 67.1285475,
+    "date": "2026-11-02",
+    "stop": 63.33,
+    "kind": "signal"
+   },
    "spread": null
   },
   "USD": {
@@ -127,6 +133,17 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 0 on QQQ",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-02",
+   "sleeve": "SSO",
+   "action": "buy",
+   "what": "SSO",
+   "qty": 2.2345,
+   "price": 67.1285,
+   "pnl": null,
+   "why": "RSI2+IBS on SPY",
+   "kind": "signal"
   }
  ],
  "equity": {
@@ -157,6 +174,12 @@
   "2026-10-30": {
    "QLD": 84.96,
    "SSO": 201.01,
+   "USD": 200.0,
+   "NVDL": 193.21
+  },
+  "2026-11-02": {
+   "QLD": 83.61,
+   "SSO": 200.94,
    "USD": 200.0,
    "NVDL": 193.21
   }
