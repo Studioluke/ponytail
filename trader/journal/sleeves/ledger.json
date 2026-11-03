@@ -24,8 +24,14 @@
    "spread": null
   },
   "USD": {
-   "cash": 200.0,
-   "shares": null,
+   "cash": 125.0,
+   "shares": {
+    "qty": 1.0770476830550244,
+    "entry": 69.63479999999998,
+    "date": "2026-11-03",
+    "stop": 60.7,
+    "kind": "learning"
+   },
    "spread": null
   },
   "NVDL": {
@@ -144,6 +150,17 @@
    "pnl": null,
    "why": "RSI2+IBS on SPY",
    "kind": "signal"
+  },
+  {
+   "date": "2026-11-03",
+   "sleeve": "USD",
+   "action": "buy",
+   "what": "USD",
+   "qty": 1.077,
+   "price": 69.6348,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 44 on SMH",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -181,6 +198,12 @@
    "QLD": 83.61,
    "SSO": 200.94,
    "USD": 200.0,
+   "NVDL": 193.21
+  },
+  "2026-11-03": {
+   "QLD": 84.55,
+   "SSO": 201.62,
+   "USD": 199.96,
    "NVDL": 193.21
   }
  },
