@@ -13,8 +13,10 @@ class Signal:
     symbol: str
     entry: float
     stop: float
-    target: float
+    target: float  # None: no fixed target (hold to the close or a trail)
     reason: str
+    strategy: str = None  # trader/strategies.py name; None for the pre-11-05 single strategy
+    half_at: float = None  # sell half here (control strategy)
 
 
 def opening_range(bars, minutes):

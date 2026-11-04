@@ -32,6 +32,11 @@ class Book:
     open: dict = field(default_factory=dict)
     entries: int = 0  # buys today
     learning_tried: bool = False
+    # Strategy experiment (2026-11-05): losing trades per strategy today, the
+    # 9:35 stocks-in-play list, and once-a-day flags (noise, lasthalf, grid checks).
+    strat_losses: dict = field(default_factory=dict)
+    sip_watch: list = None
+    flags: dict = field(default_factory=dict)
 
     def roll(self, day, week):
         if week != self.week:
@@ -39,21 +44,34 @@ class Book:
         if day != self.day:
             self.day, self.day_pnl, self.day_losses, self.traded_today, self.open = day, 0.0, 0, [], {}
             self.entries, self.learning_tried = 0, False
+            self.strat_losses, self.sip_watch, self.flags = {}, None, {}
 
-    def record(self, pnl):
+    def record(self, pnl, strategy=None):
         self.day_pnl += pnl
         self.week_pnl += pnl
         if pnl < 0:
             self.day_losses += 1
+            if strategy:
+                self.strat_losses[strategy] = self.strat_losses.get(strategy, 0) + 1
 
-    def halted(self, cfg):
-        """Return the reason trading is stopped, or None."""
+    def money_halt(self, cfg):
+        """The dollar breakers, which stop every strategy."""
         if self.day_pnl <= -cfg.max_daily_loss * cfg.capital:
             return f"daily loss limit hit ({self.day_pnl:.2f})"
-        if self.day_losses >= cfg.max_daily_losses:
-            return f"{self.day_losses} losing trades today"
         if self.week_pnl <= -cfg.max_weekly_loss * cfg.capital:
             return f"weekly loss limit hit ({self.week_pnl:.2f})"
+        return None
+
+    def halted(self, cfg, strategy=None):
+        """Return the reason trading is stopped, or None. With a strategy, the
+        losing-trades limit counts that strategy's losses only (2026-11-05: five
+        strategies sharing one 3-loss halt would starve the later ones)."""
+        money = self.money_halt(cfg)
+        if money:
+            return money
+        n = self.strat_losses.get(strategy, 0) if strategy else self.day_losses
+        if n >= cfg.max_daily_losses:
+            return f"{n} losing {strategy + ' ' if strategy else ''}trades today"
         return None
 
     @classmethod
