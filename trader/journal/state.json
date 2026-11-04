@@ -1,26 +1,34 @@
 {
- "day": "2026-11-03",
+ "day": "2026-11-04",
  "week": "2026-W45",
- "day_pnl": -0.731367999999982,
- "week_pnl": -2.5656439999999634,
- "day_losses": 4,
+ "day_pnl": -0.38213799999999054,
+ "week_pnl": -2.947781999999954,
+ "day_losses": 3,
  "traded_today": [
+  "NFLX",
+  "SPY",
   "QQQ",
+  "NVDA",
   "AMD",
-  "IWM",
+  "AVGO",
+  "TSLA",
   "AAPL",
-  "INTC",
-  "META",
+  "WMT",
+  "GOOGL",
+  "COST",
   "MSFT",
-  "SPY"
+  "AMZN",
+  "BKNG",
+  "DIA"
  ],
  "seen_orders": [
   "halt:2026-10-28",
   "halt:2026-10-29",
   "halt:2026-11-02",
-  "halt:2026-11-03"
+  "halt:2026-11-03",
+  "halt:2026-11-04"
  ],
  "open": {},
- "entries": 7,
+ "entries": 6,
  "learning_tried": false
 }
