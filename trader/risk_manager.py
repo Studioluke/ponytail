@@ -119,23 +119,28 @@ def fomc_day(cfg, day):
 # pre-trade veto
 
 def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None, last_price=None,
-                research=None, fomc=False):
+                research=None, fomc=False, strict=None, approved=None):
     """Every rule a new long entry must pass. Returns a Decision with every
-    failed rule, not just the first, so the journal shows the whole picture."""
+    failed rule, not just the first, so the journal shows the whole picture.
+
+    strict: True makes a research "skip" a veto even in learning mode (the
+    2026-11-05 strategies all pass True); None follows cfg.learning_mode.
+    approved: the symbols this entry may use; defaults to cfg.symbols."""
     no = []
     k = kill_reason(cfg)
     if k:
         no.append(f"kill switch: {k}")
-    halted = book.halted(cfg)
+    halted = book.halted(cfg, getattr(sig, "strategy", None))
     if halted:
         no.append(f"circuit breaker: {halted}")
     warn = []
     verdict, why = (research or {}).get(sig.symbol, ("ok", ""))
     if verdict == "skip":
-        (warn if cfg.learning_mode else no).append(f"research says skip {sig.symbol}: {why}")
-    if sig.symbol not in cfg.symbols:
+        warn_only = cfg.learning_mode if strict is None else not strict
+        (warn if warn_only else no).append(f"research says skip {sig.symbol}: {why}")
+    if sig.symbol not in (approved if approved is not None else cfg.symbols):
         no.append(f"{sig.symbol} not on the approved list")
-    if not (sig.stop < sig.entry < sig.target):
+    if not (sig.stop < sig.entry and (sig.target is None or sig.entry < sig.target)):
         no.append(f"bad bracket: stop {sig.stop} / entry {sig.entry} / target {sig.target}")
     t = now.time()
     if t < cfg.session_start or t > cfg.last_entry:
@@ -350,6 +355,7 @@ def review(cfg, day, book=None, account=None):
         lines += [f"**Risks taken knowingly (learning mode):** {ts['trades']} trades, P&L ${ts['pnl']:.2f}, "
                   f"win rate {ts['win_rate']:.0%}, average {ts['avg_r']:+.2f}R. Other trades average "
                   f"{stats([t for t in all_trades if not t['risk_taken']], cfg.capital)['avg_r']:+.2f}R.", ""]
+    lines += experiment_lines(cfg, all_trades)
     if br:
         lines += ["**Breaches:**", *[f"- {b}" for b in br], ""]
     checks, ready = gate(s, len(br))
@@ -357,6 +363,41 @@ def review(cfg, day, book=None, account=None):
     lines += [f"| {name} | {'yes' if ok else 'no'} | {val} |" for name, ok, val in checks]
     lines += ["", f"**Verdict:** {'meets the gate; Luke decides on live' if ready else 'stay on paper'}", ""]
     return "\n".join(lines)
+
+
+def experiment_lines(cfg, all_trades, start=None):
+    """Per-strategy scorecard for the experiment that started 2026-11-05
+    (trader/strategies.py), live and shadow trades together."""
+    from . import shadow, strategies
+    start = start or strategies.EXPERIMENT_START
+    live = [t for t in all_trades if t["day"] >= start and t["group"] in strategies.SLOTS]
+    shadows = [t for t in shadow.results(cfg) if t["day"] >= start]
+    if not live and not shadows:
+        return []
+    lines = [f"### Strategy experiment (since {start})",
+             "| Strategy | Live | Shadow | Win rate | Profit factor | Avg R | P&L (live) | Verdict |",
+             "|---|---|---|---|---|---|---|---|"]
+    need, pf_min = strategies.PROMOTE["min_trades"], strategies.PROMOTE["profit_factor"]
+    for name in strategies.SLOTS:
+        lv = [t for t in live if t["group"] == name]
+        sh = [t for t in shadows if t["group"] == name]
+        both = lv + sh
+        if not both:
+            lines.append(f"| {name} | 0 | 0 | | | | | no trades yet |")
+            continue
+        st = stats(both, cfg.capital)
+        if st["trades"] >= need and st["avg_r"] < 0:
+            verdict = "retire (avg R below 0)"
+        elif st["trades"] >= need and st["profit_factor"] > pf_min:
+            verdict = "promote (more slots)"
+        else:
+            verdict = f"testing ({st['trades']}/{need})"
+        pf = "inf" if st["profit_factor"] == float("inf") else f"{st['profit_factor']:.2f}"
+        lines.append(f"| {name} | {len(lv)} | {len(sh)} | {st['win_rate']:.0%} | {pf} | {st['avg_r']:+.2f}R | "
+                     f"${sum(t['pnl'] for t in lv):.2f} | {verdict} |")
+    lines += ["", f"Shadow trades are signals that got no slot, replayed on the day's bars. Promote at {need}+ trades "
+              f"with PF above {pf_min}; retire at {need} trades with average R below 0.", ""]
+    return lines
 
 
 def write_review(cfg, day, text):

@@ -62,9 +62,11 @@ class Config:
     research_dir: str = field(default_factory=lambda: os.environ.get("TRADER_RESEARCH", "trader/journal/research"))
     notes_dir: str = field(default_factory=lambda: os.environ.get("TRADER_NOTES", "trader/journal/notes"))
     # Times are US/Eastern.
-    session_start: time = time(9, 40)
-    last_entry: time = time(15, 30)
-    flatten_at: time = time(15, 45)
+    # 2026-11-05 strategy experiment (trader/strategies.py): sip_orb enters from
+    # 9:35, lasthalf at 15:30, and the strategies hold to 15:58.
+    session_start: time = time(9, 35)
+    last_entry: time = time(15, 31)
+    flatten_at: time = time(15, 58)
     opening_range_minutes: int = 15
     reward_risk: float = 2.0
     # Vault rule: skip a symbol that opens more than 0.75% away from the prior close.
@@ -73,8 +75,10 @@ class Config:
     # become logged warnings instead of vetoes, so the bot trades risk-off days
     # and we learn from them. Hard limits (stops, loss breakers, $ caps, kill
     # switch) still apply. TRADER_LEARNING=0 restores the strict behaviour.
-    # With learning mode on, if no trade has been entered by this time, take one
-    # "learning trade" in the strongest trend at a fraction of normal risk.
+    # With learning mode on, if no trade had been entered by this time, the bot
+    # used to take one "learning trade". Retired 2026-11-05: the noise strategy's
+    # 11:30 fallback (trader/strategies.py) keeps the no-day-without-a-trade rule,
+    # and every strategy now treats the gap rule and research "skip" strictly.
     learning_trade_after: time = time(11, 0)
     learning_risk_frac: float = 0.5
     learning_mode: bool = field(default_factory=lambda: os.environ.get("TRADER_LEARNING", "1") != "0")

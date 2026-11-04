@@ -55,6 +55,10 @@ class Broker:
             "symbol": symbol, "qty": str(qty), "side": "buy", "type": "market",
             "time_in_force": "day", "client_order_id": client_id})
 
+    def sell_market(self, symbol, qty):
+        return self._req("POST", f"{self.base}/v2/orders", json={
+            "symbol": symbol, "qty": str(qty), "side": "sell", "type": "market", "time_in_force": "day"})
+
     def sell_stop(self, symbol, qty, stop):
         return self._req("POST", f"{self.base}/v2/orders", json={
             "symbol": symbol, "qty": str(qty), "side": "sell", "type": "stop",
