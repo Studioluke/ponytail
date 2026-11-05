@@ -223,7 +223,8 @@ SHADOW_FIELDS = ["time", "strategy", "symbol", "qty", "entry", "stop", "target",
 
 
 def shadow(cfg, now, sig, qty, why, trail=None, d=1):
-    """Log a signal that got no slot, so trader/shadow.py can replay it."""
+    """Log a signal that got no slot (or could not be taken live), so
+    trader/shadow.py can replay it from `now`."""
     path = shadow_path(cfg)
     new = not os.path.exists(path)
     with open(path, "a", newline="") as f:
@@ -456,6 +457,15 @@ def step(broker, cfg, book, now):
             if sig:
                 book.traded_today.append(k)
                 enter(sig, research_view=sip_research)
+                continue
+            missed, at = strategies.sip_missed(c, bars[c["symbol"]])
+            if missed and (now - at).total_seconds() > 180:
+                # A buy stop would have filled at the high minutes ago, and
+                # price has since left the entry zone: keep it in the sample.
+                book.traded_today.append(k)
+                q = size(cfg.capital, strategies.RISK_FRAC["sip_orb"], missed.entry, missed.stop,
+                         cfg.capital * cfg.max_position_frac, cfg.fractional)
+                shadow(cfg, at, missed, q, "break came while the scan ran or price ran past the entry zone")
 
     # control: the old 15-min ORB on the core five, strict gap and research rules.
     for sym in cfg.core_symbols:

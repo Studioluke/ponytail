@@ -104,6 +104,24 @@ def stocks_in_play(first_5m, hist_5m_vol, daily):
 SIP_MAX_CHASE_ATR = 0.20  # a late fill may sit at most this far above the 5-min high
 
 
+def sip_break(c, bars):
+    """The first post-9:35 bar whose high broke the 5-minute high, or None."""
+    return next((b for b in bars if bar_time(b).time() >= SIP_SCAN_AT and b["h"] > c["hi"]), None)
+
+
+def sip_missed(c, bars):
+    """A break we could not take live (it came while the scan ran, or price ran
+    away first), as the Signal a resting buy stop at the 5-min high would have
+    given: entry at the high, at the time of the breaking bar."""
+    b = sip_break(c, bars)
+    if not c["green"] or b is None:
+        return None, None
+    stop = round(c["hi"] - SIP_STOP_ATR * c["atr"], 2)
+    return (Signal(c["symbol"], c["hi"], stop, None,
+                   f"missed 5-min ORB break of {c['hi']:.2f}, RVOL {c['rvol']:.1f}, ATR {c['atr']:.2f}",
+                   strategy="sip_orb"), bar_time(b))
+
+
 def sip_signal(c, bars, last_price):
     """c: a stocks_in_play entry. bars: today's 1-min bars. Signal once any
     post-9:35 bar has broken the 5-minute high (a buy stop there), with the

@@ -435,6 +435,8 @@ class SipLateBreak(unittest.TestCase):
         self.assertAlmostEqual(sig.stop, 50.7)
         self.assertIsNone(strategies.sip_signal(c, b, 51.7))  # ran past 0.2 x ATR
         self.assertIsNone(strategies.sip_signal(c, b, 50.9))  # back under the high
+        missed, at = strategies.sip_missed(c, b)
+        self.assertEqual((missed.entry, missed.stop, at.strftime("%H:%M")), (51.0, 50.7, "09:35"))
 
 
 if __name__ == "__main__":
