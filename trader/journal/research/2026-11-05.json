@@ -1,12 +1,20 @@
 {
  "date": "2026-11-05",
- "generated": "2026-11-05T08:22-05:00",
+ "generated": "2026-11-05T08:23-05:00",
  "regime": "mixed / range",
  "regime_notes": [
-  "SPY trend mixed, gap +0.13%, 5d -0.72%",
+  "SPY trend mixed, gap +0.11%, 5d -0.72%",
   "QQQ trend down, gap n/a, 5d -4.67%"
  ],
- "events": [],
+ "events": [
+  {
+   "date": "2026-11-05",
+   "symbol": "ALL",
+   "event": "Initial jobless claims 8:30 ET (consensus ~197K)",
+   "timing": "pre",
+   "source": "finwire.io five-things 2026-11-05"
+  }
+ ],
  "watchlist": [
   {
    "symbol": "SPY",
@@ -15,8 +23,8 @@
     "volatility expanding (ATR 1.17% of price)"
    ],
    "prior_close": 766.73,
-   "price": 767.72,
-   "gap": 0.001291197683669587,
+   "price": 767.55,
+   "gap": 0.001069476869302033,
    "ret_5d": -0.007186512663800659,
    "ret_20d": -0.013407965000321598,
    "sma20": 767.5725,
@@ -24,7 +32,7 @@
    "trend": "mixed",
    "atr_pct": 0.01169670455794645,
    "vol_expanding": true,
-   "price_time": "2026-11-05T13:18:38.567868955Z",
+   "price_time": "2026-11-05T13:22:19.579579076Z",
    "news": [
     {
      "time": "2026-11-05T13:14:35Z",
@@ -68,7 +76,7 @@
     }
    ],
    "traded": true,
-   "in_play": 0.36
+   "in_play": 0.34
   },
   {
    "symbol": "QQQ",
@@ -2097,13 +2105,13 @@
   },
   {
    "symbol": "NKE",
-   "verdict": "skip",
+   "verdict": "caution",
    "why": [
-    "premarket gap -0.86% is past the 0.75% gap rule, so the bot will skip it"
+    "headline catalyst overnight"
    ],
    "prior_close": 40.49,
-   "price": 40.14,
-   "gap": -0.008644109656705368,
+   "price": 40.28,
+   "gap": -0.005186465794023265,
    "ret_5d": 0.08946589533162941,
    "ret_20d": 0.1782336679761385,
    "sma20": 37.2935,
@@ -2111,7 +2119,7 @@
    "trend": "up",
    "atr_pct": 0.026708534735208,
    "vol_expanding": false,
-   "price_time": "2026-11-05T13:21:06.780880709Z",
+   "price_time": "2026-11-05T13:23:10.373609285Z",
    "news": [
     {
      "time": "2026-11-05T13:02:20Z",
@@ -2139,7 +2147,7 @@
     }
    ],
    "traded": false,
-   "in_play": 0.57
+   "in_play": 0.44
   },
   {
    "symbol": "TGT",

@@ -12,5 +12,6 @@ date,symbol,event,timing,source
 2026-11-03,AMD,Earnings (confirmed; call 5:00 ET),after,finance.yahoo.com live blog 2026-11-03 and tradingkey.com
 2026-11-03,SMCI,Earnings,after,stocktwits.com week-ahead 2026-11-01
 2026-11-04,ALL,ISM Services PMI 10:00 ET,during,shattered.io week-ahead 2026-11-01
+2026-11-05,ALL,Initial jobless claims 8:30 ET (consensus ~197K),pre,finwire.io five-things 2026-11-05
 2026-11-06,ALL,October jobs report 8:30 ET,pre,stocktwits.com week-ahead 2026-11-01
 2026-11-18,NVDA,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)
