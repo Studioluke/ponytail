@@ -183,3 +183,9 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-04T14:10:02.018557-05:00,DIA,exit_target,0.112,532.69,528.4,532.68,0.32,"entry 529.86, R = +1.93"
 2026-11-04T15:37:02.922280-05:00,NFLX,exit_target,0.916,66.65,64.63,66.65,1.26,"entry 65.28, R = +2.12"
 2026-11-04T15:45:02.867285-05:00,AAPL,exit_eod,0.17,351.81,345.71,360.63,0.18,"entry 350.78, R = +0.20"
+2026-11-05T09:35:02.134755-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: QCOM 13.33x green, HD 7.31x green, AXP 6.79x green, ARM 5.61x green, CSCO 5.17x green, UNP 4.32x red, MRVL 3.67x red, ANET 3.66x green, TXN 3.08x red, DIS 2.93x green"
+2026-11-05T09:46:02.779646-05:00,QCOM,buy,0.38,157.31,156.47,,,"[sip_orb] 5-min ORB break of 157.19 (range 149.30-157.19), RVOL 13.3, ATR 7.28; risk $0.32"
+2026-11-05T09:47:02.050841-05:00,QCOM,exit_stop,0.38,156.33,156.47,,-0.37,"[sip_orb] entry 157.31, R = -1.16"
+2026-11-05T10:00:02.385929-05:00,SH,risk_block,1.817,32.93,32.6,,,"[noise] noise area 10:00: SPY 754.19 below lower band 764.38; vetoed: stale data: last bar 14:55, now 10:00"
+2026-11-05T12:00:02.558425-05:00,SH,buy,1.789,33.47,33.12,,,[noise] noise area 12:00: SPY 742.20 below lower band 762.83; risk $0.63
+2026-11-05T15:59:03.845712-05:00,SH,exit_eod,1.789,33.80,33.12,,0.59,"[noise] entry 33.47, R = +0.94"

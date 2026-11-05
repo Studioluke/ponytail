@@ -1,0 +1,5 @@
+time,strategy,symbol,qty,entry,stop,target,half_at,trail,dir,why,note,exit_time,exit_price,how,pnl,r
+2026-11-05T09:35:00-05:00,sip_orb,HD,0.165,362.2250,361.34,,,,1,break came while the scan ran or price ran past the entry zone,"missed 5-min ORB break of 362.23, RVOL 7.3, ATR 8.87",2026-11-05T09:35:00-05:00,361.34,stop,-0.146,-1.0
+2026-11-05T09:35:00-05:00,sip_orb,ARM,0.342,175.1900,173.9,,,,1,break came while the scan ran or price ran past the entry zone,"missed 5-min ORB break of 175.19, RVOL 5.6, ATR 12.91",2026-11-05T09:35:00-05:00,173.9,stop,-0.4412,-1.0
+2026-11-05T09:35:00-05:00,sip_orb,ANET,0.352,170.3200,169.37,,,,1,break came while the scan ran or price ran past the entry zone,"missed 5-min ORB break of 170.32, RVOL 3.7, ATR 9.54",2026-11-05T09:41:00-05:00,169.37,stop,-0.3344,-1.0
+2026-11-05T15:30:02.824098-05:00,lasthalf,SH,1.773,33.7500,33.58,,,,1,already holding SH,last half hour: SPY prior close to 10:00 down,2026-11-05T15:57:00-05:00,33.79,eod,0.0709,0.235

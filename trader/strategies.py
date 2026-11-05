@@ -13,7 +13,7 @@ sample quickly. Promote a strategy at 40+ trades with PF > 1.2. Retire it at
             At 9:35, rank the 100-stock watchlist by relative volume
             9:30-9:35 and keep the top 10 green first candles. Buy the first
             break of the 5-minute high, until 10:30. Stop = high - 0.1 x ATR14.
-            No target: hold to 15:58. 2 slots.
+            No target: hold to 15:57. 2 slots.
   noise     SPY "noise area" momentum (Zarattini, Aziz and Barbon 2024).
             Checks only at :00 and :30. Above the upper band, buy SPY. Below
             the lower band, buy SH. Trail at the band or VWAP. If nothing has
@@ -21,10 +21,10 @@ sample quickly. Promote a strategy at 40+ trades with PF > 1.2. Retire it at
             vs its open. This replaces the 11:00 learning trade. 1 slot.
   lasthalf  Last-half-hour momentum (Gao, Han, Li and Zhou 2018). At 15:30,
             if SPY's return from the prior close to 10:00 is above 0, buy SPY;
-            below 0, buy SH. Hard stop 0.5%, exit 15:58. 1 slot.
+            below 0, buy SH. Hard stop 0.5%, exit 15:57. 1 slot.
   control   The old 15-minute ORB on the 5 core symbols only, strict gap and
             research rules. Stop = max(range midpoint, 0.25 x ATR14), $0.75
-            risk. Sell half at 2R, trail the rest at VWAP, exit 15:58. 1 slot.
+            risk. Sell half at 2R, trail the rest at VWAP, exit 15:57. 1 slot.
 """
 import re
 from datetime import datetime, time
@@ -244,7 +244,7 @@ def exit_action(t, px, close, vw, spy=None, grid=False):
     return None
 
 
-def simulate(t, bars, spy_bars=None, prior_close=None, sigma=None, flatten=time(15, 58)):
+def simulate(t, bars, spy_bars=None, prior_close=None, sigma=None, flatten=time(15, 57)):
     """Replay open trade t (entered at t["time"], an ET iso string) over the
     day's 1-min bars. Returns {exit_time, exit_price, how, pnl, r}, with pnl in
     dollars for t["qty"] and r against the original stop."""

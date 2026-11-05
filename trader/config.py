@@ -63,10 +63,11 @@ class Config:
     notes_dir: str = field(default_factory=lambda: os.environ.get("TRADER_NOTES", "trader/journal/notes"))
     # Times are US/Eastern.
     # 2026-11-05 strategy experiment (trader/strategies.py): sip_orb enters from
-    # 9:35, lasthalf at 15:30, and the strategies hold to 15:58.
+    # 9:35, lasthalf at 15:30, and the strategies hold to 15:57 (15:58 left no
+    # time to retry a failed close, 11-05).
     session_start: time = time(9, 35)
     last_entry: time = time(15, 31)
-    flatten_at: time = time(15, 58)
+    flatten_at: time = time(15, 57)
     opening_range_minutes: int = 15
     reward_risk: float = 2.0
     # Vault rule: skip a symbol that opens more than 0.75% away from the prior close.

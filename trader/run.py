@@ -555,8 +555,21 @@ def run(mode):
         book.save(cfg.state_path)
         if mode == "once" or now.time() >= cfg.flatten_at:
             if mode == "loop" and now.time() >= cfg.flatten_at:
-                _time.sleep(5)  # let the flatten orders fill
-                reconcile(broker, cfg, book, now)
+                # Let the flatten orders fill, and close anything left by hand:
+                # on 11-05 the 15:58 flatten cancelled SH's stop but left the
+                # position open.
+                for _ in range(6):
+                    _time.sleep(5)
+                    left = broker.positions()
+                    if not left:
+                        break
+                    for p in left:
+                        try:
+                            broker.close_position(p["symbol"])
+                            log(f"{p['symbol']} still open after the flatten, closing it")
+                        except RuntimeError as e:
+                            log(f"{p['symbol']} close after flatten failed: {str(e)[:120]}")
+                reconcile(broker, cfg, book, datetime.now(ET))
                 book.save(cfg.state_path)
                 log(f"done for the day: P&L ${book.day_pnl:.2f}, week ${book.week_pnl:.2f}")
             return
