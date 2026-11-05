@@ -101,16 +101,22 @@ def stocks_in_play(first_5m, hist_5m_vol, daily):
     return ranked[:SIP_TOP]
 
 
+SIP_MAX_CHASE_ATR = 0.20  # a late fill may sit at most this far above the 5-min high
+
+
 def sip_signal(c, bars, last_price):
-    """c: a stocks_in_play entry. bars: today's 1-min bars. Signal on the first
-    post-9:35 bar whose high breaks the 5-minute high (a buy stop there), with
-    the market price as entry and the stop 0.1 x ATR below the trigger."""
+    """c: a stocks_in_play entry. bars: today's 1-min bars. Signal once any
+    post-9:35 bar has broken the 5-minute high (a buy stop there), with the
+    market price as entry and the stop 0.1 x ATR below the trigger. The scan
+    itself can take a few minutes, so a break that came while it ran still
+    counts while price holds above the high and has not run more than
+    0.2 x ATR past it (11-05: ARM, HD and ANET broke during the first scan)."""
     post = [b for b in bars if bar_time(b).time() >= SIP_SCAN_AT]
-    if not c["green"] or not post or post[-1]["h"] <= c["hi"] or any(b["h"] > c["hi"] for b in post[:-1]):
+    if not c["green"] or not any(b["h"] > c["hi"] for b in post):
+        return None
+    if last_price <= c["hi"] or last_price - c["hi"] > SIP_MAX_CHASE_ATR * c["atr"]:
         return None
     stop = round(c["hi"] - SIP_STOP_ATR * c["atr"], 2)
-    if last_price <= stop:
-        return None
     return Signal(c["symbol"], last_price, stop, None,
                   f"5-min ORB break of {c['hi']:.2f} (range {c['lo']:.2f}-{c['hi']:.2f}), RVOL {c['rvol']:.1f}, "
                   f"ATR {c['atr']:.2f}", strategy="sip_orb")

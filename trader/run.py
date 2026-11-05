@@ -284,13 +284,7 @@ def sip_scan(broker, cfg, book, now, ctx):
              if bs and strategies.bar_time(bs[0]).time() == time(9, 30)}
     if not first:
         return None  # bar not published yet; try next minute
-    hist = {}
-    for d in ctx["dates"]:
-        o = datetime.fromisoformat(d).replace(hour=9, minute=30, tzinfo=ET)
-        for s, bs in broker.bars(wl, "5Min", o.isoformat(), end=(o + timedelta(minutes=4, seconds=59)).isoformat(),
-                                 feed=cfg.data_feed).items():
-            if bs:
-                hist.setdefault(s, []).append(bs[0]["v"])
+    hist = ctx.get("sip_hist") or sip_history(broker, cfg, ctx)
     ranked = strategies.stocks_in_play(first, hist, ctx["prior"])
     journal(cfg, {"time": now.isoformat(), "event": "sip_scan",
                   "note": "[sip_orb] top RVOL: " + (", ".join(f"{c['symbol']} {c['rvol']}x {'green' if c['green'] else 'red'}"
@@ -298,6 +292,21 @@ def sip_scan(broker, cfg, book, now, ctx):
     log("stocks in play: " + (", ".join(f"{c['symbol']} {c['rvol']}x{'' if c['green'] else ' (red)'}"
                                          for c in ranked) or "none"))
     return ranked
+
+
+def sip_history(broker, cfg, ctx):
+    """9:30-9:35 volume for each of the last 14 sessions. Slow (14 requests),
+    so step() fetches it between 9:30 and 9:35, before the scan needs it."""
+    wl = list(cfg.watchlist)
+    hist = {}
+    for d in ctx["dates"]:
+        o = datetime.fromisoformat(d).replace(hour=9, minute=30, tzinfo=ET)
+        for s, bs in broker.bars(wl, "5Min", o.isoformat(), end=(o + timedelta(minutes=4, seconds=59)).isoformat(),
+                                 feed=cfg.data_feed).items():
+            if bs:
+                hist.setdefault(s, []).append(bs[0]["v"])
+    ctx["sip_hist"] = hist
+    return hist
 
 
 def step(broker, cfg, book, now):
@@ -324,6 +333,11 @@ def step(broker, cfg, book, now):
         return
     reconcile(broker, cfg, book, now)
     ctx = day_data(broker, cfg, now)
+    if book.sip_watch is None and t < strategies.SIP_SCAN_AT and "sip_hist" not in ctx:
+        try:
+            sip_history(broker, cfg, ctx)
+        except RuntimeError as e:
+            log(f"stocks-in-play history fetch failed, retrying: {str(e)[:120]}")
     watch = [c["symbol"] for c in (book.sip_watch or [])] if t <= strategies.SIP_LAST_ENTRY else []
     need = set(book.open) | set(cfg.core_symbols) | {"SPY", "SH"} | set(watch)
     bars = todays_bars(broker, cfg, now, need)
