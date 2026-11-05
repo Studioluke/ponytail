@@ -245,7 +245,8 @@ CAPACITY = ("already holding", "positions open, max", "circuit breaker", "exposu
 def feedcheck(broker, cfg, book, now):
     """Item 7 of the 11-04 research: log IEX vs SIP 9:30-9:35 and 9:30-9:45
     ranges once a day (SIP is free once it is 15 minutes old)."""
-    if book.flags.get("feedcheck") or now.time() < time(9, 52):
+    # SIP bars must be 15+ minutes old on the free plan: 9:30-9:45 is readable from 10:01.
+    if book.flags.get("feedcheck") or now.time() < time(10, 1):
         return
     book.flags["feedcheck"] = True
     syms = ["SPY", "QQQ"] + [c["symbol"] for c in (book.sip_watch or [])][:8]
@@ -393,7 +394,9 @@ def step(broker, cfg, book, now):
                           "note": f"[{name}] {sig.reason}; skipped, size rounds to 0"})
             log(f"{sig.symbol} [{name}] signal skipped, size rounds to 0")
             return
-        sb = bars.get(sig.symbol) or []
+        # SH trades rarely on IEX, so its bars can be minutes old while SPY,
+        # which the noise and lasthalf signals come from, is current (11-05).
+        sb = bars.get("SPY" if sig.symbol == "SH" else sig.symbol) or []
         last_bar = datetime.fromisoformat(sb[-1]["t"].replace("Z", "+00:00")) if sb else None
         decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
                                             broker.latest_price(sig.symbol, cfg.data_feed),
