@@ -1,0 +1,85 @@
+{
+ "date": "2026-10-30",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 715.34,
+   "sma200": 679.1646000000001,
+   "rsi2": 29.801777170198335,
+   "trigger": 690.8662142857142,
+   "premarket": 696.67,
+   "setup": "needs -3.4% to trigger",
+   "news": [
+    "Citizens Maintains Market Outperform on Amazon.com, Lowers Price Target to $275",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings\u2014DELL, LLY, AZN in Focus (UPDATED)",
+    "Amazon\u2019s Earnings Miss Almost Exactly Equals Its New Debt Bill",
+    "Alphabet's $482B Wipeout Sparks AI Spending Fears: Is QQQ's Big Tech Exposure Becoming a Risk?",
+    "Andy Jassy Says West Is 'Very Hungry' For More Western Open Source AI Models as Amazon Adds China's Kimi and GLM to Bedrock"
+   ],
+   "events": []
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 769.36,
+   "sma200": 728.5273,
+   "rsi2": 47.32142857142894,
+   "trigger": 753.6478571428571,
+   "premarket": 761.17,
+   "setup": "needs -2.0% to trigger",
+   "news": [
+    "Citizens Maintains Market Outperform on Amazon.com, Lowers Price Target to $275",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings\u2014DELL, LLY, AZN in Focus (UPDATED)",
+    "Amazon\u2019s Earnings Miss Almost Exactly Equals Its New Debt Bill",
+    "USA Employment Cost Index (QoQ) For Q3 0.8% Vs 0.8% Est.",
+    "Alphabet's $482B Wipeout Sparks AI Spending Fears: Is QQQ's Big Tech Exposure Becoming a Risk?"
+   ],
+   "events": []
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 561.67,
+   "sma200": 518.83025,
+   "rsi2": 61.759082217973095,
+   "trigger": 512.3865000000001,
+   "premarket": 532.5,
+   "setup": "needs -8.8% to trigger",
+   "news": [
+    "Susquehanna Maintains Neutral on Intel, Lowers Price Target to $75",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as AMZN, INTC Slide After Q3 Earnings\u2014DELL, LLY, AZN in Focus (UPDATED)",
+    "Evercore ISI Group Maintains Outperform on Intel, Lowers Price Target to $131",
+    "Keybanc Maintains Overweight on Intel, Lowers Price Target to $140",
+    "Alphabet's $482B Wipeout Sparks AI Spending Fears: Is QQQ's Big Tech Exposure Becoming a Risk?"
+   ],
+   "events": [
+    {
+     "date": "2026-11-03",
+     "symbol": "AMD",
+     "event": "Earnings (estimated; early Nov pattern)",
+     "timing": "after",
+     "source": "estimate from prior years (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 213.66,
+   "sma200": 204.27705000000003,
+   "rsi2": 0.0,
+   "trigger": 203.64888571428574,
+   "premarket": 208.37,
+   "setup": "needs -4.7% to trigger",
+   "news": [
+    "Alphabet's $482B Wipeout Sparks AI Spending Fears: Is QQQ's Big Tech Exposure Becoming a Risk?",
+    "Andy Jassy Says West Is 'Very Hungry' For More Western Open Source AI Models as Amazon Adds China's Kimi and GLM to Bedrock",
+    "NVIDIA in Talks to Provide Credit Support for Nscale Data Center Project",
+    "Why Is Amazon Stock Falling Friday?",
+    "Nvidia Shares Drop Amid Chip Selloff: What's Happening?"
+   ],
+   "events": []
+  }
+ ]
+}

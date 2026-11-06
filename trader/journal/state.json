@@ -1,0 +1,119 @@
+{
+ "day": "2026-11-06",
+ "week": "2026-W45",
+ "day_pnl": -0.938841999999994,
+ "week_pnl": -3.6678939999999542,
+ "day_losses": 5,
+ "traded_today": [
+  "sip_orb:COP",
+  "control:SPY",
+  "control:QQQ",
+  "sip_orb:WMT",
+  "sip_orb:MCD",
+  "control:AAPL",
+  "control:MSFT"
+ ],
+ "seen_orders": [
+  "halt:2026-10-28",
+  "halt:2026-10-29",
+  "halt:2026-11-02",
+  "halt:2026-11-03",
+  "halt:2026-11-04"
+ ],
+ "open": {},
+ "entries": 5,
+ "learning_tried": false,
+ "strat_losses": {
+  "sip_orb": 3,
+  "control": 1,
+  "lasthalf": 1
+ },
+ "sip_watch": [
+  {
+   "symbol": "ABNB",
+   "hi": 192.15,
+   "lo": 185,
+   "atr": 5.1036,
+   "rvol": 12.3,
+   "green": false
+  },
+  {
+   "symbol": "MCD",
+   "hi": 271.69,
+   "lo": 269.33,
+   "atr": 6.0625,
+   "rvol": 4.79,
+   "green": true
+  },
+  {
+   "symbol": "CAT",
+   "hi": 571.86,
+   "lo": 558.39,
+   "atr": 30.0964,
+   "rvol": 4.54,
+   "green": false
+  },
+  {
+   "symbol": "ADBE",
+   "hi": 240.51,
+   "lo": 236.84,
+   "atr": 8.9339,
+   "rvol": 3.62,
+   "green": false
+  },
+  {
+   "symbol": "LRCX",
+   "hi": 209.03,
+   "lo": 202.4,
+   "atr": 15.9907,
+   "rvol": 3.59,
+   "green": false
+  },
+  {
+   "symbol": "ANET",
+   "hi": 172.765,
+   "lo": 167.28,
+   "atr": 10.3368,
+   "rvol": 3.15,
+   "green": false
+  },
+  {
+   "symbol": "COP",
+   "hi": 135.32,
+   "lo": 134.4,
+   "atr": 4.4114,
+   "rvol": 3.02,
+   "green": true
+  },
+  {
+   "symbol": "KLAC",
+   "hi": 140.95,
+   "lo": 137.81,
+   "atr": 9.0114,
+   "rvol": 3.01,
+   "green": false
+  },
+  {
+   "symbol": "SBUX",
+   "hi": 103.72,
+   "lo": 102.76,
+   "atr": 2.7389,
+   "rvol": 2.79,
+   "green": false
+  },
+  {
+   "symbol": "WMT",
+   "hi": 124.7,
+   "lo": 123.47,
+   "atr": 2.9396,
+   "rvol": 2.61,
+   "green": true
+  }
+ ],
+ "flags": {
+  "grid": "15:30",
+  "noise_done": true,
+  "feedcheck": true,
+  "lasthalf_done": true
+ }
+}

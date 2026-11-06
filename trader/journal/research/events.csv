@@ -1,0 +1,17 @@
+date,symbol,event,timing,source
+2026-10-22,ALL,Initial jobless claims 8:30 ET,pre,investrade.com weekly calendar
+2026-10-23,ALL,Flash PMIs and UMich inflation expectations,pre,vault Market-Research 2026-10-20
+2026-10-28,ALL,FOMC decision 2:00 ET (press conference 2:30),during,mitrade.com and stocktwits.com week-ahead previews 2026-10-25
+2026-10-28,GOOGL,Earnings,after,stocktwits.com week-ahead preview 2026-10-25
+2026-10-28,MSFT,Earnings,after,stocktwits.com week-ahead preview 2026-10-25
+2026-10-29,AMZN,Earnings (confirmed; call 5:00 ET),after,aboutamazon.com Q3 2026 announcement
+2026-11-02,AAPL,Earnings,after,stocktwits.com week-ahead 2026-11-01
+2026-11-02,ALL,ISM Manufacturing PMI 10:00 ET,during,moomoo.com week-ahead preview 2026-11-01
+2026-11-02,PLTR,Earnings,after,stocktwits.com week-ahead 2026-11-01
+2026-11-03,ALL,US midterm elections (markets open),during,fxempire.com week-ahead 2026-11-01
+2026-11-03,AMD,Earnings (confirmed; call 5:00 ET),after,finance.yahoo.com live blog 2026-11-03 and tradingkey.com
+2026-11-03,SMCI,Earnings,after,stocktwits.com week-ahead 2026-11-01
+2026-11-04,ALL,ISM Services PMI 10:00 ET,during,shattered.io week-ahead 2026-11-01
+2026-11-05,ALL,Initial jobless claims 8:30 ET (consensus ~197K),pre,finwire.io five-things 2026-11-05
+2026-11-06,ALL,October jobs report 8:30 ET,pre,stocktwits.com week-ahead 2026-11-01
+2026-11-18,NVDA,Earnings (estimated; mid/late Nov pattern),after,estimate from prior years (unconfirmed)

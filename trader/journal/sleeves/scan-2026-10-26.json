@@ -1,0 +1,165 @@
+{
+ "date": "2026-10-26",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 704.4,
+   "sma200": 677.2952499999999,
+   "rsi2": 0.0,
+   "trigger": 694.3627857142857,
+   "premarket": 708.21,
+   "setup": "needs -1.4% to trigger",
+   "news": [
+    "Anthropic Files For Initial Public Offering On NASDAQ Under Ticker \"ANT\"",
+    "Zuckerberg Is Raising the Stakes: Meta Plans $95 Billion Funding Push to Fuel AI Dreams",
+    "Top Economist Warns 'Oil at 150' Could Deal a 'Significant Blow' to the Global Economy if Iran Conflict Widens: 'We Don't Have These Two Other Things That We Had Before...'",
+    "Tesla's Cash Windfall Has a Catch: $1.9 Billion in Unpaid Bills",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After Trump Rules Out Iran Strike \u2014 ITUB, NON, CLS in Focus (UPDATED)"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 759.97,
+   "sma200": 727.00635,
+   "rsi2": 0.0,
+   "trigger": 753.1528428571429,
+   "premarket": 762.37,
+   "setup": "needs -0.9% to trigger",
+   "news": [
+    "Anthropic Files For Initial Public Offering On NASDAQ Under Ticker \"ANT\"",
+    "Zuckerberg Is Raising the Stakes: Meta Plans $95 Billion Funding Push to Fuel AI Dreams",
+    "Top Economist Warns 'Oil at 150' Could Deal a 'Significant Blow' to the Global Economy if Iran Conflict Widens: 'We Don't Have These Two Other Things That We Had Before...'",
+    "'Democrats lay groundwork to probe Trump's diesel deal' - Axios Exclusive",
+    "Chicago Fed National Activity Revises Prior From -0.04 To -0.08"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 527.2,
+   "sma200": 515.4375,
+   "rsi2": 10.349462365591435,
+   "trigger": 511.32941428571434,
+   "premarket": 533.3,
+   "setup": "needs -3.0% to trigger",
+   "news": [
+    "Zuckerberg Is Raising the Stakes: Meta Plans $95 Billion Funding Push to Fuel AI Dreams",
+    "SKHY, BABA in the Crosshairs: Goldman Slashes KOSPI Ahead of Earnings, Morgan Stanley Warns on China AI",
+    "Analyst Maintains Buy Rating and $700 Price Target for Applied Materials",
+    "Broadcom Indicates Interest in Meta Platforms Common Stock Offering",
+    "Honeywell Launches Forge Plant Cognition Platform Powered by NVIDIA AI"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 210.96,
+   "sma200": 203.6654,
+   "rsi2": 0.0,
+   "trigger": 205.12888571428573,
+   "premarket": 211.5,
+   "setup": "needs -2.8% to trigger",
+   "news": [
+    "Zuckerberg Is Raising the Stakes: Meta Plans $95 Billion Funding Push to Fuel AI Dreams",
+    "SKHY, BABA in the Crosshairs: Goldman Slashes KOSPI Ahead of Earnings, Morgan Stanley Warns on China AI",
+    "Honeywell Launches Forge Plant Cognition Platform Powered by NVIDIA AI",
+    "Meta Launches Offering Of 250M Depositary Shares And $22.5B Offering Of Class A Common Stock In Connection With Forward Sale Agreements; Total Value Of Offering Seen At $95B",
+    "UPDATE: Meta Announces That Nvidia, Advanced Micro Devices And Broadcom Have Each Indicated An Interest In Purchasing Up To $5B Of Shares In The Common Stock Offering"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    }
+   ]
+  }
+ ]
+}
