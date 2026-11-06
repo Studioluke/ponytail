@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-06",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 647.05,
+   "sma200": 680.70925,
+   "rsi2": 12.933876284661736,
+   "trigger": 658.8915,
+   "premarket": 656.92,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "October Payrolls Smash Estimates at 165K, Jobless Rate Falls to 4.1% (UPDATED)",
+    "What's Going On With IREN Shares Friday?",
+    "Softbank In Discussions To Invest Hundreds Of Millions Of Dollars In Latest OpenAI Funding Round Of $20B Across Two Parts; Emirati Group Including MGX Expected To Be Largest Investor At Latest Valuation Of $1.25T - NY Times DealBook",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as October Jobs Rose by 165,000\u2014 Airbnb, Cloudflare, Lam Research in Focus (UPDATED)",
+    "SanDisk Surges 10% Following Post-Midterm Crash as Wall Street Debates Chip Demand"
+   ],
+   "events": [
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 733,
+   "sma200": 730.1510000000001,
+   "rsi2": 26.928895612707933,
+   "trigger": 735.223,
+   "premarket": 734.32,
+   "setup": "STRETCH would fire now",
+   "news": [
+    "October Payrolls Smash Estimates at 165K, Jobless Rate Falls to 4.1% (UPDATED)",
+    "What's Going On With IREN Shares Friday?",
+    "Softbank In Discussions To Invest Hundreds Of Millions Of Dollars In Latest OpenAI Funding Round Of $20B Across Two Parts; Emirati Group Including MGX Expected To Be Largest Investor At Latest Valuation Of $1.25T - NY Times DealBook",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed as October Jobs Rose by 165,000\u2014 Airbnb, Cloudflare, Lam Research in Focus (UPDATED)",
+    "SanDisk Surges 10% Following Post-Midterm Crash as Wall Street Debates Chip Demand"
+   ],
+   "events": [
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 447.73,
+   "sma200": 521.4495,
+   "rsi2": 0.0,
+   "trigger": 469.9132142857143,
+   "premarket": 471.18,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "October Payrolls Smash Estimates at 165K, Jobless Rate Falls to 4.1% (UPDATED)",
+    "What's Going On With IREN Shares Friday?",
+    "Softbank In Discussions To Invest Hundreds Of Millions Of Dollars In Latest OpenAI Funding Round Of $20B Across Two Parts; Emirati Group Including MGX Expected To Be Largest Investor At Latest Valuation Of $1.25T - NY Times DealBook",
+    "SanDisk Surges 10% Following Post-Midterm Crash as Wall Street Debates Chip Demand",
+    "TSMC Surges 7% as Taiwan Restricts Short Selling to Halt Brutal Semiconductor Crash"
+   ],
+   "events": [
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 181.6,
+   "sma200": 204.6636,
+   "rsi2": 0.0,
+   "trigger": 189.04642857142858,
+   "premarket": 188.74,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "October Payrolls Smash Estimates at 165K, Jobless Rate Falls to 4.1% (UPDATED)",
+    "What's Going On With IREN Shares Friday?",
+    "Softbank In Discussions To Invest Hundreds Of Millions Of Dollars In Latest OpenAI Funding Round Of $20B Across Two Parts; Emirati Group Including MGX Expected To Be Largest Investor At Latest Valuation Of $1.25T - NY Times DealBook",
+    "SanDisk Surges 10% Following Post-Midterm Crash as Wall Street Debates Chip Demand",
+    "NVIDIA Enhances AI Chip Tracking in Southeast Asia"
+   ],
+   "events": [
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  }
+ ]
+}
