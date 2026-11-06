@@ -1,4 +1,4 @@
-# Paper swing tracker (2026-11-05)
+# Paper swing tracker (2026-11-06)
 
 Simulated $1,000 account, $200 per trade, max loss $50, no real or Alpaca orders.
 
