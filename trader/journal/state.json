@@ -1,14 +1,17 @@
 {
- "day": "2026-11-05",
+ "day": "2026-11-06",
  "week": "2026-W45",
- "day_pnl": 0.21872999999999365,
- "week_pnl": -2.7290519999999603,
- "day_losses": 1,
+ "day_pnl": -0.938841999999994,
+ "week_pnl": -3.6678939999999542,
+ "day_losses": 5,
  "traded_today": [
-  "sip_orb:HD",
-  "sip_orb:ARM",
-  "sip_orb:ANET",
-  "sip_orb:QCOM"
+  "sip_orb:COP",
+  "control:SPY",
+  "control:QQQ",
+  "sip_orb:WMT",
+  "sip_orb:MCD",
+  "control:AAPL",
+  "control:MSFT"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -18,97 +21,99 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 2,
+ "entries": 5,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 1
+  "sip_orb": 3,
+  "control": 1,
+  "lasthalf": 1
  },
  "sip_watch": [
   {
-   "symbol": "QCOM",
-   "hi": 157.195,
-   "lo": 149.3,
-   "atr": 7.28,
-   "rvol": 13.33,
-   "green": true
-  },
-  {
-   "symbol": "HD",
-   "hi": 362.225,
-   "lo": 359.01,
-   "atr": 8.8736,
-   "rvol": 7.31,
-   "green": true
-  },
-  {
-   "symbol": "AXP",
-   "hi": 343.81,
-   "lo": 339.34,
-   "atr": 7.3154,
-   "rvol": 6.79,
-   "green": true
-  },
-  {
-   "symbol": "ARM",
-   "hi": 175.19,
-   "lo": 169.19,
-   "atr": 12.9082,
-   "rvol": 5.61,
-   "green": true
-  },
-  {
-   "symbol": "CSCO",
-   "hi": 102.01,
-   "lo": 100.38,
-   "atr": 2.9775,
-   "rvol": 5.17,
-   "green": true
-  },
-  {
-   "symbol": "UNP",
-   "hi": 301.43,
-   "lo": 295.63,
-   "atr": 5.8536,
-   "rvol": 4.32,
+   "symbol": "ABNB",
+   "hi": 192.15,
+   "lo": 185,
+   "atr": 5.1036,
+   "rvol": 12.3,
    "green": false
   },
   {
-   "symbol": "MRVL",
-   "hi": 152,
-   "lo": 148.6,
-   "atr": 18.0489,
-   "rvol": 3.67,
+   "symbol": "MCD",
+   "hi": 271.69,
+   "lo": 269.33,
+   "atr": 6.0625,
+   "rvol": 4.79,
+   "green": true
+  },
+  {
+   "symbol": "CAT",
+   "hi": 571.86,
+   "lo": 558.39,
+   "atr": 30.0964,
+   "rvol": 4.54,
+   "green": false
+  },
+  {
+   "symbol": "ADBE",
+   "hi": 240.51,
+   "lo": 236.84,
+   "atr": 8.9339,
+   "rvol": 3.62,
+   "green": false
+  },
+  {
+   "symbol": "LRCX",
+   "hi": 209.03,
+   "lo": 202.4,
+   "atr": 15.9907,
+   "rvol": 3.59,
    "green": false
   },
   {
    "symbol": "ANET",
-   "hi": 170.32,
-   "lo": 165.29,
-   "atr": 9.5425,
-   "rvol": 3.66,
-   "green": true
-  },
-  {
-   "symbol": "TXN",
-   "hi": 306.74,
-   "lo": 299.35,
-   "atr": 10.9914,
-   "rvol": 3.08,
+   "hi": 172.765,
+   "lo": 167.28,
+   "atr": 10.3368,
+   "rvol": 3.15,
    "green": false
   },
   {
-   "symbol": "DIS",
-   "hi": 120.72,
-   "lo": 119.35,
-   "atr": 2.1993,
-   "rvol": 2.93,
+   "symbol": "COP",
+   "hi": 135.32,
+   "lo": 134.4,
+   "atr": 4.4114,
+   "rvol": 3.02,
+   "green": true
+  },
+  {
+   "symbol": "KLAC",
+   "hi": 140.95,
+   "lo": 137.81,
+   "atr": 9.0114,
+   "rvol": 3.01,
+   "green": false
+  },
+  {
+   "symbol": "SBUX",
+   "hi": 103.72,
+   "lo": 102.76,
+   "atr": 2.7389,
+   "rvol": 2.79,
+   "green": false
+  },
+  {
+   "symbol": "WMT",
+   "hi": 124.7,
+   "lo": 123.47,
+   "atr": 2.9396,
+   "rvol": 2.61,
    "green": true
   }
  ],
  "flags": {
   "grid": "15:30",
-  "feedcheck": true,
   "noise_done": true,
+  "feedcheck": true,
   "lasthalf_done": true
  }
 }

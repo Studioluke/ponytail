@@ -189,3 +189,17 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-05T10:00:02.385929-05:00,SH,risk_block,1.817,32.93,32.6,,,"[noise] noise area 10:00: SPY 754.19 below lower band 764.38; vetoed: stale data: last bar 14:55, now 10:00"
 2026-11-05T12:00:02.558425-05:00,SH,buy,1.789,33.47,33.12,,,[noise] noise area 12:00: SPY 742.20 below lower band 762.83; risk $0.63
 2026-11-05T15:59:03.845712-05:00,SH,exit_eod,1.789,33.80,33.12,,0.59,"[noise] entry 33.47, R = +0.94"
+2026-11-06T09:35:02.879898-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: ABNB 12.3x red, MCD 4.79x green, CAT 4.54x red, ADBE 3.62x red, LRCX 3.59x red, ANET 3.15x red, COP 3.02x green, KLAC 3.01x red, SBUX 2.79x red, WMT 2.61x green"
+2026-11-06T09:36:02.485561-05:00,COP,buy,0.442,135.47,134.88,,,"[sip_orb] 5-min ORB break of 135.32 (range 134.40-135.32), RVOL 3.0, ATR 4.41; risk $0.26"
+2026-11-06T09:38:02.239534-05:00,COP,exit_stop,0.442,134.81,134.88,,-0.29,"[sip_orb] entry 135.47, R = -1.12"
+2026-11-06T09:46:02.453313-05:00,SPY,buy,0.08,739.63,736.79,,,"[control] ORB break of 738.97 (range 734.61-738.97), VWAP 736.79, stop 3.08 below (ATR 10.50); risk $0.23"
+2026-11-06T09:46:02.453313-05:00,QQQ,skip,,662.62,,,,"[control] ORB break of 661.63 (range 655.25-661.63), VWAP 659.22, stop 4.18 below (ATR 16.38); skipped, gap +1.60% vs prior close 648.05 exceeds 0.75%"
+2026-11-06T09:48:02.504770-05:00,WMT,buy,0.479,124.75,124.41,,,"[sip_orb] 5-min ORB break of 124.70 (range 123.47-124.70), RVOL 2.6, ATR 2.94; risk $0.16"
+2026-11-06T09:49:02.838948-05:00,MCD,buy,0.22,271.44,271.08,,,"[sip_orb] 5-min ORB break of 271.69 (range 269.33-271.69), RVOL 4.8, ATR 6.06; risk $0.08"
+2026-11-06T09:50:02.174885-05:00,WMT,exit_stop,0.479,124.39,124.41,,-0.17,"[sip_orb] entry 124.75, R = -1.05"
+2026-11-06T09:50:02.174885-05:00,MCD,exit_stop,0.22,271.16,271.08,,-0.06,"[sip_orb] entry 271.44, R = -0.78"
+2026-11-06T09:52:02.407211-05:00,AAPL,skip,,341.80,,,,"[control] ORB break of 341.69 (range 338.59-341.69), VWAP 340.36, stop 2.07 below (ATR 8.30); skipped, gap -1.74% vs prior close 344.6 exceeds 0.75%"
+2026-11-06T10:11:02.107185-05:00,MSFT,skip,,532.37,,,,"[control] ORB break of 532.28 (range 525.00-532.28), VWAP 530.31, stop 3.81 below (ATR 15.23); skipped, gap -2.03% vs prior close 536.29 exceeds 0.75%"
+2026-11-06T12:37:02.666107-05:00,SPY,exit_stop,0.08,737.00,736.79,,-0.21,"[control] entry 739.63, R = -0.93"
+2026-11-06T15:30:02.058068-05:00,SPY,buy,0.081,737.94,734.19,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.30
+2026-11-06T15:57:07.235227-05:00,SPY,exit_eod,0.081,735.37,734.19,,-0.21,"[lasthalf] entry 737.94, R = -0.69"

@@ -3,3 +3,5 @@ time,strategy,symbol,qty,entry,stop,target,half_at,trail,dir,why,note,exit_time,
 2026-11-05T09:35:00-05:00,sip_orb,ARM,0.342,175.1900,173.9,,,,1,break came while the scan ran or price ran past the entry zone,"missed 5-min ORB break of 175.19, RVOL 5.6, ATR 12.91",2026-11-05T09:35:00-05:00,173.9,stop,-0.4412,-1.0
 2026-11-05T09:35:00-05:00,sip_orb,ANET,0.352,170.3200,169.37,,,,1,break came while the scan ran or price ran past the entry zone,"missed 5-min ORB break of 170.32, RVOL 3.7, ATR 9.54",2026-11-05T09:41:00-05:00,169.37,stop,-0.3344,-1.0
 2026-11-05T15:30:02.824098-05:00,lasthalf,SH,1.773,33.7500,33.58,,,,1,already holding SH,last half hour: SPY prior close to 10:00 down,2026-11-05T15:57:00-05:00,33.79,eod,0.0709,0.235
+2026-11-06T10:00:02.674134-05:00,noise,SPY,0.08,740.9500,733.54,,,band,1,already holding SPY,noise area 10:00: SPY 740.38 above upper band 736.62,2026-11-06T12:59:00-05:00,737.03,trail,-0.3136,-0.529
+2026-11-06T15:30:02.058068-05:00,lasthalf,IWM,0.218,274.2950,272.92,,,,1,lasthalf has one slot; IWM tracked as shadow,last half hour: SPY prior close to 10:00 up,2026-11-06T15:56:00-05:00,273.57,eod,-0.1581,-0.527
