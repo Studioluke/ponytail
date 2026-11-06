@@ -1,6 +1,6 @@
 """Replay the day's shadow trades: signals that got no slot (trader/run.py
 writes them to trader/journal/shadow.csv). Each one is played out on the
-day's 1-minute bars with its strategy's own stop, half-off, trail and 15:58
+day's 1-minute bars with its strategy's own stop, half-off, trail and 15:57
 exit (strategies.simulate). The risk review then counts them with the live
 trades, so every strategy reaches its 40-trade sample sooner.
 

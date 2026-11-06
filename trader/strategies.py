@@ -13,7 +13,7 @@ sample quickly. Promote a strategy at 40+ trades with PF > 1.2. Retire it at
             At 9:35, rank the 100-stock watchlist by relative volume
             9:30-9:35 and keep the top 10 green first candles. Buy the first
             break of the 5-minute high, until 10:30. Stop = high - 0.1 x ATR14.
-            No target: hold to 15:58. 2 slots.
+            No target: hold to 15:57. 2 slots.
   noise     SPY "noise area" momentum (Zarattini, Aziz and Barbon 2024).
             Checks only at :00 and :30. Above the upper band, buy SPY. Below
             the lower band, buy SH. Trail at the band or VWAP. If nothing has
@@ -21,10 +21,10 @@ sample quickly. Promote a strategy at 40+ trades with PF > 1.2. Retire it at
             vs its open. This replaces the 11:00 learning trade. 1 slot.
   lasthalf  Last-half-hour momentum (Gao, Han, Li and Zhou 2018). At 15:30,
             if SPY's return from the prior close to 10:00 is above 0, buy SPY;
-            below 0, buy SH. Hard stop 0.5%, exit 15:58. 1 slot.
+            below 0, buy SH. Hard stop 0.5%, exit 15:57. 1 slot.
   control   The old 15-minute ORB on the 5 core symbols only, strict gap and
             research rules. Stop = max(range midpoint, 0.25 x ATR14), $0.75
-            risk. Sell half at 2R, trail the rest at VWAP, exit 15:58. 1 slot.
+            risk. Sell half at 2R, trail the rest at VWAP, exit 15:57. 1 slot.
 """
 import re
 from datetime import datetime, time
@@ -101,16 +101,40 @@ def stocks_in_play(first_5m, hist_5m_vol, daily):
     return ranked[:SIP_TOP]
 
 
+SIP_MAX_CHASE_ATR = 0.20  # a late fill may sit at most this far above the 5-min high
+
+
+def sip_break(c, bars):
+    """The first post-9:35 bar whose high broke the 5-minute high, or None."""
+    return next((b for b in bars if bar_time(b).time() >= SIP_SCAN_AT and b["h"] > c["hi"]), None)
+
+
+def sip_missed(c, bars):
+    """A break we could not take live (it came while the scan ran, or price ran
+    away first), as the Signal a resting buy stop at the 5-min high would have
+    given: entry at the high, at the time of the breaking bar."""
+    b = sip_break(c, bars)
+    if not c["green"] or b is None:
+        return None, None
+    stop = round(c["hi"] - SIP_STOP_ATR * c["atr"], 2)
+    return (Signal(c["symbol"], c["hi"], stop, None,
+                   f"missed 5-min ORB break of {c['hi']:.2f}, RVOL {c['rvol']:.1f}, ATR {c['atr']:.2f}",
+                   strategy="sip_orb"), bar_time(b))
+
+
 def sip_signal(c, bars, last_price):
-    """c: a stocks_in_play entry. bars: today's 1-min bars. Signal on the first
-    post-9:35 bar whose high breaks the 5-minute high (a buy stop there), with
-    the market price as entry and the stop 0.1 x ATR below the trigger."""
+    """c: a stocks_in_play entry. bars: today's 1-min bars. Signal once any
+    post-9:35 bar has broken the 5-minute high (a buy stop there), with the
+    market price as entry and the stop 0.1 x ATR below the trigger. The scan
+    itself can take a few minutes, so a break that came while it ran still
+    counts while price holds above the high and has not run more than
+    0.2 x ATR past it (11-05: ARM, HD and ANET broke during the first scan)."""
     post = [b for b in bars if bar_time(b).time() >= SIP_SCAN_AT]
-    if not c["green"] or not post or post[-1]["h"] <= c["hi"] or any(b["h"] > c["hi"] for b in post[:-1]):
+    if not c["green"] or not any(b["h"] > c["hi"] for b in post):
+        return None
+    if last_price <= c["hi"] or last_price - c["hi"] > SIP_MAX_CHASE_ATR * c["atr"]:
         return None
     stop = round(c["hi"] - SIP_STOP_ATR * c["atr"], 2)
-    if last_price <= stop:
-        return None
     return Signal(c["symbol"], last_price, stop, None,
                   f"5-min ORB break of {c['hi']:.2f} (range {c['lo']:.2f}-{c['hi']:.2f}), RVOL {c['rvol']:.1f}, "
                   f"ATR {c['atr']:.2f}", strategy="sip_orb")
@@ -220,7 +244,7 @@ def exit_action(t, px, close, vw, spy=None, grid=False):
     return None
 
 
-def simulate(t, bars, spy_bars=None, prior_close=None, sigma=None, flatten=time(15, 58)):
+def simulate(t, bars, spy_bars=None, prior_close=None, sigma=None, flatten=time(15, 57)):
     """Replay open trade t (entered at t["time"], an ET iso string) over the
     day's 1-min bars. Returns {exit_time, exit_price, how, pnl, r}, with pnl in
     dollars for t["qty"] and r against the original stop."""

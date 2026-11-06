@@ -426,5 +426,18 @@ class ShadowReplay(Base):
         self.assertTrue(any(line.startswith("| control | 0 | 1 |") for line in lines), lines)
 
 
+class SipLateBreak(unittest.TestCase):
+    def test_break_during_the_scan_still_counts_within_the_chase_limit(self):
+        c = {"symbol": "CCC", "hi": 51.0, "lo": 49.8, "atr": 3.0, "rvol": 5.0, "green": True}
+        b = bars([50.5] * 5 + [51.2, 51.3, 51.25])  # broke at 9:35, still above
+        sig = strategies.sip_signal(c, b, 51.3)
+        self.assertIsNotNone(sig)
+        self.assertAlmostEqual(sig.stop, 50.7)
+        self.assertIsNone(strategies.sip_signal(c, b, 51.7))  # ran past 0.2 x ATR
+        self.assertIsNone(strategies.sip_signal(c, b, 50.9))  # back under the high
+        missed, at = strategies.sip_missed(c, b)
+        self.assertEqual((missed.entry, missed.stop, at.strftime("%H:%M")), (51.0, 50.7, "09:35"))
+
+
 if __name__ == "__main__":
     unittest.main()

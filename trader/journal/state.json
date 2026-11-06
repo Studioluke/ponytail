@@ -1,10 +1,15 @@
 {
  "day": "2026-11-06",
  "week": "2026-W45",
- "day_pnl": 0.0,
- "week_pnl": -2.947781999999954,
- "day_losses": 0,
- "traded_today": [],
+ "day_pnl": 0.21872999999999365,
+ "week_pnl": -2.7290519999999603,
+ "day_losses": 1,
+ "traded_today": [
+  "sip_orb:HD",
+  "sip_orb:ARM",
+  "sip_orb:ANET",
+  "sip_orb:QCOM"
+ ],
  "seen_orders": [
   "halt:2026-10-28",
   "halt:2026-10-29",
@@ -13,9 +18,97 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 0,
+ "entries": 2,
  "learning_tried": false,
- "strat_losses": {},
- "sip_watch": null,
- "flags": {}
+ "strat_losses": {
+  "sip_orb": 1
+ },
+ "sip_watch": [
+  {
+   "symbol": "QCOM",
+   "hi": 157.195,
+   "lo": 149.3,
+   "atr": 7.28,
+   "rvol": 13.33,
+   "green": true
+  },
+  {
+   "symbol": "HD",
+   "hi": 362.225,
+   "lo": 359.01,
+   "atr": 8.8736,
+   "rvol": 7.31,
+   "green": true
+  },
+  {
+   "symbol": "AXP",
+   "hi": 343.81,
+   "lo": 339.34,
+   "atr": 7.3154,
+   "rvol": 6.79,
+   "green": true
+  },
+  {
+   "symbol": "ARM",
+   "hi": 175.19,
+   "lo": 169.19,
+   "atr": 12.9082,
+   "rvol": 5.61,
+   "green": true
+  },
+  {
+   "symbol": "CSCO",
+   "hi": 102.01,
+   "lo": 100.38,
+   "atr": 2.9775,
+   "rvol": 5.17,
+   "green": true
+  },
+  {
+   "symbol": "UNP",
+   "hi": 301.43,
+   "lo": 295.63,
+   "atr": 5.8536,
+   "rvol": 4.32,
+   "green": false
+  },
+  {
+   "symbol": "MRVL",
+   "hi": 152,
+   "lo": 148.6,
+   "atr": 18.0489,
+   "rvol": 3.67,
+   "green": false
+  },
+  {
+   "symbol": "ANET",
+   "hi": 170.32,
+   "lo": 165.29,
+   "atr": 9.5425,
+   "rvol": 3.66,
+   "green": true
+  },
+  {
+   "symbol": "TXN",
+   "hi": 306.74,
+   "lo": 299.35,
+   "atr": 10.9914,
+   "rvol": 3.08,
+   "green": false
+  },
+  {
+   "symbol": "DIS",
+   "hi": 120.72,
+   "lo": 119.35,
+   "atr": 2.1993,
+   "rvol": 2.93,
+   "green": true
+  }
+ ],
+ "flags": {
+  "grid": "15:30",
+  "feedcheck": true,
+  "noise_done": true,
+  "lasthalf_done": true
+ }
 }
