@@ -183,3 +183,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-04T14:10:02.018557-05:00,DIA,exit_target,0.112,532.69,528.4,532.68,0.32,"entry 529.86, R = +1.93"
 2026-11-04T15:37:02.922280-05:00,NFLX,exit_target,0.916,66.65,64.63,66.65,1.26,"entry 65.28, R = +2.12"
 2026-11-04T15:45:02.867285-05:00,AAPL,exit_eod,0.17,351.81,345.71,360.63,0.18,"entry 350.78, R = +0.20"
+2026-11-05T09:35:02.384574-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: QCOM 13.33x green, HD 7.31x green, AXP 6.79x green, ARM 5.61x green, CSCO 5.17x green, UNP 4.32x red, MRVL 3.67x red, ANET 3.66x green, TXN 3.08x red, DIS 2.93x green"
