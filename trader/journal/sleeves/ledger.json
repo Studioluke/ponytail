@@ -2,8 +2,14 @@
  "start": "2026-10-26",
  "sleeves": {
   "QLD": {
-   "cash": 85.85953904925748,
-   "shares": null,
+   "cash": 10.859539049257478,
+   "shares": {
+    "qty": 1.0054660148967833,
+    "entry": 74.59227750000001,
+    "date": "2026-11-06",
+    "stop": 68.58,
+    "kind": "learning"
+   },
    "spread": null
   },
   "SSO": {
@@ -215,6 +221,17 @@
    "pnl": null,
    "why": "STRETCH on SPY",
    "kind": "signal"
+  },
+  {
+   "date": "2026-11-06",
+   "sleeve": "QLD",
+   "action": "buy",
+   "what": "QLD",
+   "qty": 1.0055,
+   "price": 74.5923,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 20 on QQQ",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -269,6 +286,12 @@
   "2026-11-05": {
    "QLD": 85.86,
    "SSO": 206.74,
+   "USD": 189.87,
+   "NVDL": 185.25
+  },
+  "2026-11-06": {
+   "QLD": 85.82,
+   "SSO": 207.74,
    "USD": 189.87,
    "NVDL": 185.25
   }
