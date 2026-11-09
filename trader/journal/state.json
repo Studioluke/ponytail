@@ -1,15 +1,18 @@
 {
- "day": "2026-11-06",
- "week": "2026-W45",
- "day_pnl": -0.938841999999994,
- "week_pnl": -3.6678939999999542,
- "day_losses": 5,
+ "day": "2026-11-09",
+ "week": "2026-W46",
+ "day_pnl": 2.921191999999998,
+ "week_pnl": 2.921191999999998,
+ "day_losses": 2,
  "traded_today": [
-  "sip_orb:COP",
-  "control:SPY",
+  "sip_orb:LRCX",
+  "sip_orb:ABNB",
+  "sip_orb:TGT",
+  "sip_orb:AVGO",
+  "sip_orb:AMZN",
+  "sip_orb:NVDA",
   "control:QQQ",
-  "sip_orb:WMT",
-  "sip_orb:MCD",
+  "control:SPY",
   "control:AAPL",
   "control:MSFT"
  ],
@@ -21,92 +24,90 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 5,
+ "entries": 3,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 3,
-  "control": 1,
-  "lasthalf": 1
+  "sip_orb": 2
  },
  "sip_watch": [
   {
-   "symbol": "ABNB",
-   "hi": 192.15,
-   "lo": 185,
-   "atr": 5.1036,
-   "rvol": 12.3,
-   "green": false
-  },
-  {
-   "symbol": "MCD",
-   "hi": 271.69,
-   "lo": 269.33,
-   "atr": 6.0625,
-   "rvol": 4.79,
+   "symbol": "NVDA",
+   "hi": 175.19,
+   "lo": 170.24,
+   "atr": 7.9821,
+   "rvol": 11.07,
    "green": true
   },
   {
-   "symbol": "CAT",
-   "hi": 571.86,
-   "lo": 558.39,
-   "atr": 30.0964,
-   "rvol": 4.54,
-   "green": false
-  },
-  {
-   "symbol": "ADBE",
-   "hi": 240.51,
-   "lo": 236.84,
-   "atr": 8.9339,
-   "rvol": 3.62,
+   "symbol": "C",
+   "hi": 121.6,
+   "lo": 121.02,
+   "atr": 3.4596,
+   "rvol": 3.82,
    "green": false
   },
   {
    "symbol": "LRCX",
-   "hi": 209.03,
-   "lo": 202.4,
-   "atr": 15.9907,
-   "rvol": 3.59,
-   "green": false
-  },
-  {
-   "symbol": "ANET",
-   "hi": 172.765,
-   "lo": 167.28,
-   "atr": 10.3368,
-   "rvol": 3.15,
-   "green": false
-  },
-  {
-   "symbol": "COP",
-   "hi": 135.32,
-   "lo": 134.4,
-   "atr": 4.4114,
-   "rvol": 3.02,
+   "hi": 206.925,
+   "lo": 204.02,
+   "atr": 16.5654,
+   "rvol": 3.36,
    "green": true
   },
   {
-   "symbol": "KLAC",
-   "hi": 140.95,
-   "lo": 137.81,
-   "atr": 9.0114,
-   "rvol": 3.01,
+   "symbol": "LOW",
+   "hi": 231.545,
+   "lo": 229.685,
+   "atr": 6.5789,
+   "rvol": 3.05,
    "green": false
   },
   {
-   "symbol": "SBUX",
-   "hi": 103.72,
-   "lo": 102.76,
-   "atr": 2.7389,
-   "rvol": 2.79,
+   "symbol": "AMD",
+   "hi": 478.49,
+   "lo": 468.49,
+   "atr": 37.9175,
+   "rvol": 2.81,
    "green": false
   },
   {
-   "symbol": "WMT",
-   "hi": 124.7,
-   "lo": 123.47,
-   "atr": 2.9396,
-   "rvol": 2.61,
+   "symbol": "ABNB",
+   "hi": 196.605,
+   "lo": 192.24,
+   "atr": 6.495,
+   "rvol": 2.71,
+   "green": true
+  },
+  {
+   "symbol": "TGT",
+   "hi": 162.57,
+   "lo": 161.085,
+   "atr": 5.2396,
+   "rvol": 2.55,
+   "green": true
+  },
+  {
+   "symbol": "AMZN",
+   "hi": 273.63,
+   "lo": 269.32,
+   "atr": 9.6911,
+   "rvol": 2.08,
+   "green": true
+  },
+  {
+   "symbol": "AVGO",
+   "hi": 310.84,
+   "lo": 304.43,
+   "atr": 15.0114,
+   "rvol": 1.91,
+   "green": true
+  },
+  {
+   "symbol": "MSFT",
+   "hi": 547.39,
+   "lo": 543.49,
+   "atr": 15.6764,
+   "rvol": 1.87,
    "green": true
   }
  ],
