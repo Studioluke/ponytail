@@ -1,6 +1,6 @@
 {
  "date": "2026-11-09",
- "generated": "2026-11-09T08:25-05:00",
+ "generated": "2026-11-09T08:26-05:00",
  "regime": "risk-off open",
  "regime_notes": [
   "SPY trend down, gap +0.86%, 5d -2.69%",
@@ -285,11 +285,11 @@
    "symbol": "NVDA",
    "verdict": "skip",
    "why": [
-    "premarket gap -5.52% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -5.51% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 186.7,
-   "price": 176.39,
-   "gap": -0.055222281735404444,
+   "price": 176.41,
+   "gap": -0.055115158007498666,
    "ret_5d": -0.08820082047274858,
    "ret_20d": -0.18596032265097018,
    "sma20": 211.575,
@@ -297,7 +297,7 @@
    "trend": "down",
    "atr_pct": 0.04275384497666232,
    "vol_expanding": true,
-   "price_time": "2026-11-09T13:25:46.090795558Z",
+   "price_time": "2026-11-09T13:25:49.003790102Z",
    "news": [
     {
      "time": "2026-11-09T13:03:19Z",
