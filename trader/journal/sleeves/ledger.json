@@ -2,8 +2,14 @@
  "start": "2026-10-26",
  "sleeves": {
   "QLD": {
-   "cash": 90.85461628764854,
-   "shares": null,
+   "cash": 15.85461628764854,
+   "shares": {
+    "qty": 0.9616743905148132,
+    "entry": 77.988975,
+    "date": "2026-11-10",
+    "stop": 71.68,
+    "kind": "learning"
+   },
    "spread": null
   },
   "SSO": {
@@ -259,6 +265,17 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 35 on NVDA",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-10",
+   "sleeve": "QLD",
+   "action": "buy",
+   "what": "QLD",
+   "qty": 0.9617,
+   "price": 77.989,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 81 on QQQ",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -327,6 +344,12 @@
    "SSO": 214.76,
    "USD": 189.87,
    "NVDL": 185.21
+  },
+  "2026-11-10": {
+   "QLD": 90.82,
+   "SSO": 214.76,
+   "USD": 189.87,
+   "NVDL": 177.21
   }
  },
  "last_entries": 1
