@@ -1,10 +1,21 @@
 {
  "day": "2026-11-09",
  "week": "2026-W46",
- "day_pnl": 0.0,
- "week_pnl": 0.0,
- "day_losses": 0,
- "traded_today": [],
+ "day_pnl": 2.921191999999998,
+ "week_pnl": 2.921191999999998,
+ "day_losses": 2,
+ "traded_today": [
+  "sip_orb:LRCX",
+  "sip_orb:ABNB",
+  "sip_orb:TGT",
+  "sip_orb:AVGO",
+  "sip_orb:AMZN",
+  "sip_orb:NVDA",
+  "control:QQQ",
+  "control:SPY",
+  "control:AAPL",
+  "control:MSFT"
+ ],
  "seen_orders": [
   "halt:2026-10-28",
   "halt:2026-10-29",
@@ -13,9 +24,97 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 0,
+ "entries": 3,
  "learning_tried": false,
- "strat_losses": {},
- "sip_watch": null,
- "flags": {}
+ "strat_losses": {
+  "sip_orb": 2
+ },
+ "sip_watch": [
+  {
+   "symbol": "NVDA",
+   "hi": 175.19,
+   "lo": 170.24,
+   "atr": 7.9821,
+   "rvol": 11.07,
+   "green": true
+  },
+  {
+   "symbol": "C",
+   "hi": 121.6,
+   "lo": 121.02,
+   "atr": 3.4596,
+   "rvol": 3.82,
+   "green": false
+  },
+  {
+   "symbol": "LRCX",
+   "hi": 206.925,
+   "lo": 204.02,
+   "atr": 16.5654,
+   "rvol": 3.36,
+   "green": true
+  },
+  {
+   "symbol": "LOW",
+   "hi": 231.545,
+   "lo": 229.685,
+   "atr": 6.5789,
+   "rvol": 3.05,
+   "green": false
+  },
+  {
+   "symbol": "AMD",
+   "hi": 478.49,
+   "lo": 468.49,
+   "atr": 37.9175,
+   "rvol": 2.81,
+   "green": false
+  },
+  {
+   "symbol": "ABNB",
+   "hi": 196.605,
+   "lo": 192.24,
+   "atr": 6.495,
+   "rvol": 2.71,
+   "green": true
+  },
+  {
+   "symbol": "TGT",
+   "hi": 162.57,
+   "lo": 161.085,
+   "atr": 5.2396,
+   "rvol": 2.55,
+   "green": true
+  },
+  {
+   "symbol": "AMZN",
+   "hi": 273.63,
+   "lo": 269.32,
+   "atr": 9.6911,
+   "rvol": 2.08,
+   "green": true
+  },
+  {
+   "symbol": "AVGO",
+   "hi": 310.84,
+   "lo": 304.43,
+   "atr": 15.0114,
+   "rvol": 1.91,
+   "green": true
+  },
+  {
+   "symbol": "MSFT",
+   "hi": 547.39,
+   "lo": 543.49,
+   "atr": 15.6764,
+   "rvol": 1.87,
+   "green": true
+  }
+ ],
+ "flags": {
+  "grid": "15:30",
+  "noise_done": true,
+  "feedcheck": true,
+  "lasthalf_done": true
+ }
 }
