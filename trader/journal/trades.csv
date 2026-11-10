@@ -203,3 +203,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-06T12:37:02.666107-05:00,SPY,exit_stop,0.08,737.00,736.79,,-0.21,"[control] entry 739.63, R = -0.93"
 2026-11-06T15:30:02.058068-05:00,SPY,buy,0.081,737.94,734.19,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.30
 2026-11-06T15:57:07.235227-05:00,SPY,exit_eod,0.081,735.37,734.19,,-0.21,"[lasthalf] entry 737.94, R = -0.69"
+2026-11-09T09:36:02.783217-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 11.07x green, C 3.82x red, LRCX 3.36x green, LOW 3.05x red, AMD 2.81x red, ABNB 2.71x green, TGT 2.55x green, AMZN 2.08x green, AVGO 1.91x green, MSFT 1.87x green"
