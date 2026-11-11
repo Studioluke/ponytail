@@ -196,6 +196,11 @@ class StocksInPlay(Base):
         self.assertAlmostEqual(t["stop"], 51.0 - 0.1 * 3.0, places=2)
         self.assertIsNone(t["target"])
         self.assertEqual(self.journal()[0]["event"], "sip_scan")
+        # 11-11 review: every signal also feeds the shadow-only wide-stop variant.
+        wide = [r for r in self.shadows() if r["strategy"] == "sip_orb_wide"]
+        self.assertEqual([r["symbol"] for r in wide], ["CCC"])
+        self.assertAlmostEqual(float(wide[0]["stop"]), max(49.8, 51.0 - 0.25 * 3.0), places=2)
+        self.assertGreater(float(wide[0]["qty"]), 0)
 
     def test_red_first_candle_is_not_traded(self):
         broker = self.broker(51.0, 51.2)
@@ -233,7 +238,7 @@ class Noise(Base):
                 "SH": daily(40), "AAA": daily(100), "BBB": daily(100), "IWM": daily(200)}
         n = len(spy_prices)
         data = {"SPY": bars(spy_prices), "SH": bars([40] * n), "AAA": bars([100] * n), "BBB": bars([100] * n),
-                "IWM": bars([200] * n)}
+                "IWM": bars([200] * n), "VOO": bars([460] * n), "SPDN": bars([10] * n)}
         return FakeBroker(data, days=days, hist_min={"SPY": hist})
 
     def test_break_above_upper_band_buys_spy_on_the_grid(self):
@@ -269,6 +274,46 @@ class Noise(Base):
         self.assertEqual(t["trail"], "vwap_grid")
         self.assertLessEqual(t["qty"] * t["entry"], self.cfg.capital * self.cfg.max_position_frac / 2 + 0.01)
         self.assertIn("fallback", self.journal()[-1]["note"])
+
+    def research(self, why, tag=None):
+        os.makedirs(self.cfg.research_dir, exist_ok=True)
+        w = {"symbol": "SPY", "verdict": "skip", "why": why}
+        if tag:
+            w["skip_tag"] = tag
+        with open(f"{self.cfg.research_dir}/2026-10-26.json", "w") as f:
+            json.dump({"watchlist": [w]}, f)
+
+    def test_gap_skip_does_not_veto_noise_but_an_event_skip_does(self):
+        for why, tag, n in (("premarket gap +0.86% is past the 0.75% gap rule", "gap", 1),
+                            ("premarket gap +0.86% is past the 0.75% gap rule", None, 1),
+                            ("CPI report at 8:30", "event", 0), ("FOMC decision today", None, 0)):
+            run._DAY.clear()
+            self.book = Book()
+            self.book.roll("2026-10-26", "2026-W44")
+            self.book.sip_watch = []
+            self.research(why, tag)
+            broker = self.broker([500] * 29 + [501.0])
+            run.step(broker, self.cfg, self.book, self.at(10, 0, 5))
+            self.assertEqual(len(self.buys(broker)), n, (why, tag))
+
+    def test_gap_skip_still_vetoes_control(self):
+        self.research("premarket gap +0.86% is past the 0.75% gap rule", "gap")
+        sig = strategy.Signal("SPY", 500.0, 497.0, None, "x", strategy="control")
+        d = risk_manager.check_entry(self.cfg, self.book, sig, 0.05, self.at(10, 0), {"equity": 300, "cash": 300},
+                                     [], None, 500.0, risk_manager.research_verdicts(self.cfg, "2026-10-26"),
+                                     False, strict=True, approved={"SPY"})
+        self.assertFalse(d.ok)
+
+    def test_noise_uses_voo_when_control_holds_spy(self):
+        broker = self.broker([500] * 29 + [501.0])
+        self.book.open["SPY"] = {"qty": 0.05, "entry": 500.0, "stop": 497.0, "stop0": 497.0, "target": None,
+                                 "stop_order_id": "s1", "strategy": "control", "half_at": 506.0, "trail": "vwap",
+                                 "dir": 1, "opened_at": "2026-10-26T09:50:00-04:00"}
+        broker.held = [{"symbol": "SPY", "qty": "0.05", "cost_basis": "25.0", "avg_entry_price": "500.0", "current_price": "500.0"}]
+        run.step(broker, self.cfg, self.book, self.at(10, 0, 5))
+        self.assertEqual([o[1] for o in self.buys(broker)], ["VOO"])
+        self.assertEqual(self.book.open["VOO"]["strategy"], "noise")
+        self.assertEqual(self.book.open["SPY"]["strategy"], "control")
 
     def test_lasthalf_buys_spy_and_shadows_iwm(self):
         prices = [500] * 29 + [501.0] + [500.5] * 330

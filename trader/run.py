@@ -170,7 +170,7 @@ def day_data(broker, cfg, now):
     day = now.date().isoformat()
     if _DAY.get("day") == day:
         return _DAY
-    syms = sorted(set(cfg.watchlist) | set(cfg.symbols) | {"SPY", "SH", "IWM"})
+    syms = sorted(set(cfg.watchlist) | set(cfg.symbols) | {"SPY", "SH", "IWM"} | set(strategies.TWIN.values()))
     start = (now - timedelta(days=45)).date().isoformat()
     daily = broker.bars(syms, "1Day", start, end=day, feed=cfg.data_feed)
     prior = {s: [b for b in bs if b["t"][:10] < day] for s, bs in daily.items()}
@@ -371,7 +371,12 @@ def step(broker, cfg, book, now):
     state = {"cash": min(float(account["cash"]), cfg.capital - used)}
     research = risk_manager.research_verdicts(cfg, book.day)
     fomc = risk_manager.fomc_day(cfg, book.day)
-    approved = set(cfg.symbols) | set(cfg.watchlist) | {"SPY", "SH", "IWM"}
+    approved = set(cfg.symbols) | set(cfg.watchlist) | {"SPY", "SH", "IWM"} | set(strategies.TWIN.values())
+    spy_research = strategies.spy_skips(research)
+
+    def spy_symbol(sym):
+        """SPY or SH, or its S&P 500 twin when another strategy holds it."""
+        return strategies.TWIN[sym] if sym in book.open else sym
 
     def enter(sig, trail=None, d=1, cap_frac=1.0, research_view=None):
         name = sig.strategy
@@ -396,7 +401,7 @@ def step(broker, cfg, book, now):
             return
         # SH trades rarely on IEX, so its bars can be minutes old while SPY,
         # which the noise and lasthalf signals come from, is current (11-05).
-        sb = bars.get("SPY" if sig.symbol == "SH" else sig.symbol) or []
+        sb = bars.get("SPY" if sig.symbol in strategies.SPY_PROXIES else sig.symbol) or []
         last_bar = datetime.fromisoformat(sb[-1]["t"].replace("Z", "+00:00")) if sb else None
         decision = risk_manager.check_entry(cfg, book, sig, qty, now, account, positions, last_bar,
                                             broker.latest_price(sig.symbol, cfg.data_feed),
@@ -438,6 +443,16 @@ def step(broker, cfg, book, now):
         if not stop_id:
             risk_manager.protect(broker, cfg, book, journal, log, now)
 
+    def wide_shadow(c, sig, at):
+        """11-11 review: every sip_orb signal also feeds the shadow-only
+        sip_orb_wide variant (stop at the 5-min low, capped at 0.25 x ATR)."""
+        w = strategies.sip_wide(c, sig)
+        if w:
+            q = size(cfg.capital, strategies.RISK_FRAC["sip_orb"], w.entry, w.stop,
+                     cfg.capital * cfg.max_position_frac, cfg.fractional)
+            if q:
+                shadow(cfg, at, w, q, "sip_orb_wide variant (shadow only)")
+
     # sip_orb: stocks in play, 5-minute ORB, 9:35-10:30.
     if book.sip_watch is None and t >= strategies.SIP_SCAN_AT:
         if t > strategies.SIP_LAST_ENTRY:
@@ -459,6 +474,7 @@ def step(broker, cfg, book, now):
             sig = strategies.sip_signal(c, bars[c["symbol"]], broker.latest_price(c["symbol"], cfg.data_feed))
             if sig:
                 book.traded_today.append(k)
+                wide_shadow(c, sig, now)
                 enter(sig, research_view=sip_research)
                 continue
             missed, at = strategies.sip_missed(c, bars[c["symbol"]])
@@ -469,6 +485,7 @@ def step(broker, cfg, book, now):
                 q = size(cfg.capital, strategies.RISK_FRAC["sip_orb"], missed.entry, missed.stop,
                          cfg.capital * cfg.max_position_frac, cfg.fractional)
                 shadow(cfg, at, missed, q, "break came while the scan ran or price ran past the entry zone")
+                wide_shadow(c, missed, at)
 
     # control: the old 15-min ORB on the core five, strict gap and research rules.
     for sym in cfg.core_symbols:
@@ -499,7 +516,7 @@ def step(broker, cfg, book, now):
             d = 1 if spy["close"] >= spy_bars[0]["o"] else -1
         if d and not in_skip and gt <= strategies.NOISE_LAST:
             book.flags["noise_done"] = True
-            sym = "SPY" if d > 0 else "SH"
+            sym = spy_symbol("SPY" if d > 0 else "SH")
             px = broker.latest_price(sym, cfg.data_feed)
             how = (f"fallback: no band break by {strategies.NOISE_FALLBACK_AT:%H:%M}, SPY "
                    f"{'above' if d > 0 else 'below'} its open {spy_bars[0]['o']:.2f}" if fallback else
@@ -508,7 +525,7 @@ def step(broker, cfg, book, now):
             sig = strategy.Signal(sym, px, round(px * (1 - strategies.NOISE_HARD_STOP), 2), None,
                                   f"noise area {key}: {how}", strategy="noise")
             enter(sig, trail="vwap_grid" if fallback else "band", d=d,
-                  cap_frac=strategies.NOISE_FALLBACK_CAP if fallback else 1.0)
+                  cap_frac=strategies.NOISE_FALLBACK_CAP if fallback else 1.0, research_view=spy_research)
 
     # lasthalf: 15:30, the direction of SPY's first half hour.
     if strategies.LASTHALF_AT <= t <= time(15, 31) and not book.flags.get("lasthalf_done"):
@@ -516,12 +533,12 @@ def step(broker, cfg, book, now):
         d = strategies.lasthalf_direction(spy_bars, spy_pc)
         if d:
             r = f"SPY prior close to 10:00 {'up' if d > 0 else 'down'}"
-            for i, sym in enumerate(["SPY", "IWM"] if d > 0 else ["SH"]):
+            for i, sym in enumerate([spy_symbol("SPY"), "IWM"] if d > 0 else [spy_symbol("SH")]):
                 px = broker.latest_price(sym, cfg.data_feed)
                 sig = strategy.Signal(sym, px, round(px * (1 - strategies.LASTHALF_STOP), 2), None,
                                       f"last half hour: {r}", strategy="lasthalf")
                 if i == 0:
-                    enter(sig)
+                    enter(sig, research_view=spy_research)
                 else:  # one slot: IWM is tracked as a shadow trade
                     q = size(cfg.capital, strategies.RISK_FRAC["lasthalf"], px, sig.stop,
                              cfg.capital * cfg.max_position_frac, cfg.fractional)
@@ -548,9 +565,15 @@ def run(mode):
             # the session; resting stops cover open positions meanwhile.
             if mode != "loop":
                 raise
+            # Around the bell (11-10, 11-11: data timeouts 9:30-9:33) retry
+            # after 10 seconds, and flag the day so a scan built on gappy
+            # opening data can be told apart in the review.
+            bell = time(9, 29) <= now.time() <= time(9, 40)
+            if bell:
+                book.flags.setdefault("open_data_errors", []).append(now.strftime("%H:%M:%S"))
             book.save(cfg.state_path)
-            log(f"network error, retrying next minute: {str(e)[:150]}")
-            _time.sleep(60 - datetime.now().second + 2)
+            log(f"network error, retrying in {'10 seconds' if bell else 'next minute'}: {str(e)[:150]}")
+            _time.sleep(10 if bell else 60 - datetime.now().second + 2)
             continue
         book.save(cfg.state_path)
         if mode == "once" or now.time() >= cfg.flatten_at:

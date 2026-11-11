@@ -63,7 +63,7 @@ def resume(cfg):
 # research input
 
 def research_verdicts(cfg, day):
-    """{symbol: (verdict, why)} from the market research brief for `day`
+    """{symbol: (verdict, why, skip_tag)} from the market research brief for `day`
     (trader/journal/research/DATE.json), or {} if there is no brief."""
     path = os.path.join(cfg.research_dir, f"{day}.json")
     if not os.path.exists(path):
@@ -74,7 +74,8 @@ def research_verdicts(cfg, day):
         out = {}
         for w in d.get("watchlist", []):
             why = w.get("why", "")
-            out[w["symbol"]] = (w.get("verdict", "ok"), "; ".join(why) if isinstance(why, list) else why)
+            out[w["symbol"]] = (w.get("verdict", "ok"), "; ".join(why) if isinstance(why, list) else why,
+                                w.get("skip_tag"))
         return out
     except (ValueError, KeyError, TypeError):
         return {}
@@ -134,7 +135,7 @@ def check_entry(cfg, book, sig, qty, now, account, positions, last_bar_time=None
     if halted:
         no.append(f"circuit breaker: {halted}")
     warn = []
-    verdict, why = (research or {}).get(sig.symbol, ("ok", ""))
+    verdict, why = ((research or {}).get(sig.symbol) or ("ok", ""))[:2]
     if verdict == "skip":
         warn_only = cfg.learning_mode if strict is None else not strict
         (warn if warn_only else no).append(f"research says skip {sig.symbol}: {why}")
@@ -378,7 +379,7 @@ def experiment_lines(cfg, all_trades, start=None):
              "| Strategy | Live | Shadow | Win rate | Profit factor | Avg R | P&L (live) | Verdict |",
              "|---|---|---|---|---|---|---|---|"]
     need, pf_min = strategies.PROMOTE["min_trades"], strategies.PROMOTE["profit_factor"]
-    for name in strategies.SLOTS:
+    for name in strategies.SCORED:
         lv = [t for t in live if t["group"] == name]
         sh = [t for t in shadows if t["group"] == name]
         both = lv + sh
