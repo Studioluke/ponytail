@@ -9,8 +9,5 @@ time,strategy,symbol,qty,entry,stop,target,half_at,trail,dir,why,note,exit_time,
 2026-11-09T09:36:02.358268-05:00,sip_orb,AVGO,0.192,311.6000,309.34,,,,1,"sip_orb slots full (LRCX, ABNB)","5-min ORB break of 310.84 (range 304.43-310.84), RVOL 1.9, ATR 15.01",2026-11-09T15:56:00-05:00,319.72,eod,1.559,3.593
 2026-11-09T09:37:02.266171-05:00,sip_orb,AMZN,0.218,274.0650,272.66,,,,1,"sip_orb slots full (LRCX, ABNB)","5-min ORB break of 273.63 (range 269.32-273.63), RVOL 2.1, ATR 9.69",2026-11-09T09:47:00-05:00,272.66,stop,-0.3063,-1.0
 2026-11-09T15:30:02.953766-05:00,lasthalf,IWM,0.211,283.3950,281.98,,,,1,lasthalf has one slot; IWM tracked as shadow,last half hour: SPY prior close to 10:00 up,2026-11-09T15:56:00-05:00,282.59,eod,-0.1699,-0.569
-<<<<<<< HEAD
 2026-11-10T09:38:02.076109-05:00,sip_orb,CAT,0.103,579.0000,573.89,,,,1,already holding CAT,"5-min ORB break of 577.01 (range 566.82-577.01), RVOL 3.0, ATR 31.18",,,,,
-=======
 2026-11-10T09:59:02.336085-05:00,control,GOOGL,0.206,290.8000,287.89,,296.61,vwap,1,control slots full (SPY),"ORB break of 290.61 (range 287.25-290.61), VWAP 289.11, stop 2.91 below (ATR 11.62)",2026-11-10T10:55:00-05:00,287.89,stop,-0.5995,-1.0
->>>>>>> 2d1cd7694d9bbb53b92e142c2b4b83c97886becd
