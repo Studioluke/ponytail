@@ -70,7 +70,9 @@ per day. This is a starting point to measure, not a proven edge.
 before the open: each symbol's premarket gap, trend, ATR and overnight
 headlines with a **skip / caution / ok** verdict, sector and macro ETFs, a
 regime read, a ranked **in play** list across the 100-stock research watchlist (`watchlist` in config.py, `TRADER_WATCHLIST`; the bot still trades only `symbols`), and scheduled events from `journal/research/events.csv` (earnings
-days are marked skip). It runs at 9:10 ET on weekdays and is copied to the
+days are marked skip). Each skip carries a `skip_tag`: `event` (earnings or a
+scheduled report) or `gap` (past the gap rule); the noise and last-half strategies
+honour only event skips. It runs at 8:17 ET on weekdays and is copied to the
 vault's Research-Briefs note. It informs the trader and the risk manager; it
 does not place or block orders.
 

@@ -135,6 +135,16 @@ def verdict(p, news, max_gap, events=()):
     return level, why or ["nothing unusual"]
 
 
+def skip_tag(p, max_gap, events=()):
+    """Why a "skip" is a skip: "event" (earnings or another scheduled report for the
+    symbol) or "gap" (past the gap rule). The noise and last-half strategies honour only
+    event and halt skips, since their bands already include the overnight gap."""
+    if any(e["symbol"] != "ALL" for e in events):
+        return "event"
+    gap = p.get("gap")
+    return "gap" if gap is not None and abs(gap) > max_gap else None
+
+
 def regime(spy, qqq, vixy):
     """One-line read of the market backdrop for a long-only breakout bot."""
     notes = []
@@ -229,12 +239,15 @@ def build(day, cfg=None, broker=None, events_path=EVENTS_PATH):
     for s in universe(cfg):
         p = prof.get(s, {})
         hs = tag_news(news, s)
-        level, why = verdict(p, hs, cfg.max_gap, [e for e in events if e["symbol"] == s])
+        mine = [e for e in events if e["symbol"] == s]
+        level, why = verdict(p, hs, cfg.max_gap, mine)
         # Keep every flagged headline so each verdict shows its evidence, then fill to five.
         shown = [n for n in hs if n["earnings"] or n["catalyst"]]
         shown += [n for n in hs if n not in shown][:max(0, 5 - len(shown))]
         watch.append({"symbol": s, "verdict": level, "why": why, **p, "news": shown,
                       "traded": s in cfg.symbols, "in_play": in_play(p, hs)})
+        if level == "skip":
+            watch[-1]["skip_tag"] = skip_tag(p, cfg.max_gap, mine)
     smart = load_smart_money(day)
     for w in watch:
         hits = [b for x in smart if x["symbol"] == w["symbol"] for b in x["buys"]]
