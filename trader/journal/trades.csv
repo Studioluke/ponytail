@@ -217,3 +217,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-09T14:41:02.869427-05:00,MSFT,skip,,547.53,,,,"[control] ORB break of 547.39 (range 542.21-547.39), VWAP 542.80, stop 3.92 below (ATR 15.68); skipped, gap +2.62% vs prior close 530.58 exceeds 0.75%"
 2026-11-09T15:30:02.953766-05:00,SPY,risk_block,0.079,754.87,751.09,,,"[lasthalf] last half hour: SPY prior close to 10:00 up; vetoed: research says skip SPY: premarket gap +0.86% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-09T15:57:07.534682-05:00,LRCX,exit_eod,0.287,221.36,205.27,,3.72,"[sip_orb] entry 208.41, R = +4.12"
+2026-11-10T09:35:48.221949-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: TGT 3.42x red, CAT 3.04x green, SLB 2.7x red, DELL 2.53x red, CSCO 2.15x red, LOW 1.85x green, COP 1.82x red, OXY 1.72x red, KLAC 1.45x green, GE 1.45x green"
