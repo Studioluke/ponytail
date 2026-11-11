@@ -37,6 +37,9 @@ EXPERIMENT_START = "2026-11-05"
 SLOTS = {"sip_orb": 2, "noise": 1, "lasthalf": 1, "control": 1}
 RISK_FRAC = {"sip_orb": 0.005, "noise": 0.005, "lasthalf": 0.005, "control": 0.0025}
 PROMOTE = {"min_trades": 40, "profit_factor": 1.2}
+# Shadow-only variants, scored next to the live strategies (11-11 review).
+VARIANTS = {"sip_orb_wide": "sip_orb"}
+SCORED = list(SLOTS) + list(VARIANTS)
 
 SIP_SCAN_AT = time(9, 35)
 SIP_LAST_ENTRY = time(10, 30)
@@ -44,6 +47,7 @@ SIP_TOP = 10
 SIP_MIN_PRICE = 5.0
 SIP_MIN_ATR = 0.50
 SIP_STOP_ATR = 0.10
+SIP_WIDE_CAP_ATR = 0.25  # sip_orb_wide: stop at the 5-min low, at most this far below the high
 # Research "skip" verdicts still veto sip_orb for these, not for gaps or earnings.
 SIP_BINARY = re.compile(r"halt|offering|FDA|PDUFA|delist|merger|acquisition", re.I)
 
@@ -54,6 +58,14 @@ NOISE_SKIP = (time(13, 30), time(15, 0))  # no new noise entries here; exits sti
 NOISE_FALLBACK_AT = time(11, 30)
 NOISE_HARD_STOP = 0.01
 NOISE_FALLBACK_CAP = 0.5  # half of the $60 slot
+
+# 11-11 review: research gap skips veto control only. noise and lasthalf trade
+# SPY/SH (their bands already price in the gap), so they honour event skips only.
+EVENT_SKIP = re.compile(r"FOMC|CPI|NFP|payroll|earnings|halt|report", re.I)
+# Each strategy keeps its own SPY exposure: when another strategy already holds
+# the symbol, noise and lasthalf use an S&P 500 twin so neither blocks the other.
+TWIN = {"SPY": "VOO", "SH": "SPDN"}
+SPY_PROXIES = {"SH", "VOO", "SPDN"}  # signals and staleness come from SPY bars
 
 LASTHALF_AT = time(15, 30)
 LASTHALF_STOP = 0.005
@@ -138,6 +150,28 @@ def sip_signal(c, bars, last_price):
     return Signal(c["symbol"], last_price, stop, None,
                   f"5-min ORB break of {c['hi']:.2f} (range {c['lo']:.2f}-{c['hi']:.2f}), RVOL {c['rvol']:.1f}, "
                   f"ATR {c['atr']:.2f}", strategy="sip_orb")
+
+
+def sip_wide(c, sig, at=None):
+    """The sip_orb_wide shadow twin of a sip_orb signal: same entry, stop at the
+    5-minute low but never more than 0.25 x ATR below the high."""
+    stop = round(max(c["lo"], c["hi"] - SIP_WIDE_CAP_ATR * c["atr"]), 2)
+    if stop >= sig.entry:
+        return None
+    return Signal(sig.symbol, sig.entry, stop, None, sig.reason + " [wide stop]", strategy="sip_orb_wide")
+
+
+def spy_skips(research):
+    """The research view for SPY-only strategies: keep a skip only when its
+    tag (or, without a tag, its reason) is an event, not a gap."""
+    out = {}
+    for s, v in research.items():
+        verdict, why = v[0], v[1]
+        tag = v[2] if len(v) > 2 else None
+        if verdict == "skip" and (tag == "gap" or (not tag and not EVENT_SKIP.search(why or ""))):
+            continue
+        out[s] = v
+    return out
 
 
 # noise area
