@@ -159,7 +159,13 @@ class Research(unittest.TestCase):
         self.assertEqual(sorted(e["symbol"] for e in ev), ["ALL", "MSFT"])  # after-close report carries over
         p = research.profile(self.daily([100] * 60), 100)
         self.assertEqual(research.verdict(p, [], 0.0075, [ev[0] if ev[0]["symbol"] == "MSFT" else ev[1]])[0], "skip")
+        self.assertEqual(research.skip_tag(p, 0.0075, [ev[0] if ev[0]["symbol"] == "MSFT" else ev[1]]), "event")
         os.unlink(f.name)
+
+    def test_skip_tag(self):
+        self.assertEqual(research.skip_tag({"gap": 0.02}, 0.0075), "gap")
+        self.assertEqual(research.skip_tag({"gap": 0.02}, 0.0075, [{"symbol": "AAPL"}]), "event")
+        self.assertIsNone(research.skip_tag({"gap": 0.001}, 0.0075, [{"symbol": "ALL"}]))
 
 
 class Watchlist(unittest.TestCase):
