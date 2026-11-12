@@ -1,0 +1,165 @@
+{
+ "date": "2026-10-28",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 721.25,
+   "sma200": 678.2269,
+   "rsi2": 100.0,
+   "trigger": 691.1479285714287,
+   "premarket": 724.15,
+   "setup": "needs -4.2% to trigger",
+   "news": [
+    "\u2018Evil Is Better Than Bad\u2019 \u2014 Peter Thiel's Unsettling Defense of Elon Musk",
+    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
+    "Verisk Integrates Amazon Quick, Microsoft Copilot, Claude Into Its Operations",
+    "EXCLUSIVE: SK Hynix Soars 11% on Record Profit, But This Expert Says Samsung Will Lead HBM in 2027",
+    "Delta Air, American Tower, Apple And A Health Care: CNBC\u2019s \u2018Final Trades\u2019"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET (press conference 2:30)",
+     "timing": "during",
+     "source": "mitrade.com and stocktwits.com week-ahead previews 2026-10-25"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead preview 2026-10-25"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead preview 2026-10-25"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 769.66,
+   "sma200": 727.7636,
+   "rsi2": 100.0,
+   "trigger": 752.6627142857142,
+   "premarket": 771.65,
+   "setup": "needs -2.2% to trigger",
+   "news": [
+    "Stock Market Today: S&P 500, Nasdaq 100 Futures Gain Ahead of Federal Reserve Interest Rate Decision\u2014 SKHY, STX, V, GOOGL in Focus (UPDATED)",
+    "Wholesale Inventories (MoM) For September 0.6% Vs 0.5% Est.; 0.5% Prior",
+    "Goods Trade Balance For Sept -134.90B Vs -130.40B Est.",
+    "Retail Inventories Ex Auto For Sept. 0.4%",
+    "Verisk Integrates Amazon Quick, Microsoft Copilot, Claude Into Its Operations"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET (press conference 2:30)",
+     "timing": "during",
+     "source": "mitrade.com and stocktwits.com week-ahead previews 2026-10-25"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead preview 2026-10-25"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead preview 2026-10-25"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 557.98,
+   "sma200": 517.0944999999999,
+   "rsi2": 100.0,
+   "trigger": 506.9907000000001,
+   "premarket": 563.05,
+   "setup": "needs -9.1% to trigger",
+   "news": [
+    "Liz Cheney Challenges Trump\u2019s Anti-Socialism Stance Over Taxpayer-Funded Stakes in Private Companies: 'A Level That We Haven't Seen Before\u201d",
+    "SK Hynix\u2019s 80% Profit Margin Fuels AI Frenzy: Should Investors Bet on 2X ETFs?",
+    "EXCLUSIVE: SK Hynix Soars 11% on Record Profit, But This Expert Says Samsung Will Lead HBM in 2027",
+    "Susquehanna Maintains Positive on Advanced Micro Devices, Raises Price Target to $650",
+    "HIVE Digital Technologies Secures Financing for NVIDIA GB200 GPU Cluster"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET (press conference 2:30)",
+     "timing": "during",
+     "source": "mitrade.com and stocktwits.com week-ahead previews 2026-10-25"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 217.94,
+   "sma200": 203.9856,
+   "rsi2": 100.0,
+   "trigger": 203.79317142857144,
+   "premarket": 220.02,
+   "setup": "needs -6.5% to trigger",
+   "news": [
+    "EXCLUSIVE: SK Hynix Soars 11% on Record Profit, But This Expert Says Samsung Will Lead HBM in 2027",
+    "HIVE Digital Technologies Secures Financing for NVIDIA GB200 GPU Cluster",
+    "\u2018Hard to Know If We\u2019re in an AI Bubble\u2019 Jeff Bezos Says, But Should a Retiree Buy AI Stocks? \u2014 \u2018I Would Usually Tell a Retiree to Buy the S&P 500\u2019",
+    "Otto Group and Sereact Deploy NVIDIA-Powered AI for Returns Processing",
+    "Cloudera Launches Cloudera Blueprints Integrating NVIDIA AI Stack"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET (press conference 2:30)",
+     "timing": "during",
+     "source": "mitrade.com and stocktwits.com week-ahead previews 2026-10-25"
+    }
+   ]
+  }
+ ]
+}

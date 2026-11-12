@@ -1,0 +1,214 @@
+{
+ "date": "2026-11-02",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 690.49,
+   "sma200": 679.5192999999999,
+   "rsi2": 0.0,
+   "trigger": 681.9563571428571,
+   "premarket": 694.52,
+   "setup": "needs -1.2% to trigger",
+   "news": [
+    "Wells Fargo Maintains Overweight on Alphabet, Lowers Price Target to $365",
+    "Live On CNBC, Marvell CEO Matt Murphy On Deal With Lumentum, Says 'This Is A Double Down On Supporting NVIDIA'",
+    "Clarivate Integrates CompuMark Trademark Data into Microsoft Copilot",
+    "Lumen Technologies and Microsoft Expand Collaboration on Cloud and AI Infrastructure",
+    "Uber Partners with NVIDIA for Robotaxi Deployment"
+   ],
+   "events": [
+    {
+     "date": "2026-11-02",
+     "symbol": "AAPL",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-02",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing PMI 10:00 ET",
+     "timing": "during",
+     "source": "moomoo.com week-ahead preview 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 755.72,
+   "sma200": 728.8541,
+   "rsi2": 0.0,
+   "trigger": 748.8288571428571,
+   "premarket": 760.22,
+   "setup": "needs -0.9% to trigger",
+   "news": [
+    "USA S&P Global Manufacturing PMI For October 54.9 Vs 56.0 Est",
+    "Wells Fargo Maintains Overweight on Alphabet, Lowers Price Target to $365",
+    "Live On CNBC, Marvell CEO Matt Murphy On Deal With Lumentum, Says 'This Is A Double Down On Supporting NVIDIA'",
+    "Clarivate Integrates CompuMark Trademark Data into Microsoft Copilot",
+    "Lumen Technologies and Microsoft Expand Collaboration on Cloud and AI Infrastructure"
+   ],
+   "events": [
+    {
+     "date": "2026-11-02",
+     "symbol": "AAPL",
+     "event": "Earnings",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-02",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing PMI 10:00 ET",
+     "timing": "during",
+     "source": "moomoo.com week-ahead preview 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 522.49,
+   "sma200": 519.50095,
+   "rsi2": 0.0,
+   "trigger": 500.7386428571428,
+   "premarket": 525.7,
+   "setup": "needs -4.2% to trigger",
+   "news": [
+    "Live On CNBC, Marvell CEO Matt Murphy On Deal With Lumentum, Says 'This Is A Double Down On Supporting NVIDIA'",
+    "Uber Partners with NVIDIA for Robotaxi Deployment",
+    "Nvidia, AMD, Marvell Targets Cut: Melius Pulls Back on AI Stocks as Big Tech Lines Up to Raise Cash",
+    "Semiconductor Stocks Are Cheaper Than the S&P 500: Is It Time to Buy SOXX and SMH ETFs?",
+    "AMD, Micron Selloff Is 'Just the Beginning,' Tom Sosnoff Says"
+   ],
+   "events": [
+    {
+     "date": "2026-11-02",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing PMI 10:00 ET",
+     "timing": "during",
+     "source": "moomoo.com week-ahead preview 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "AMD",
+     "event": "Earnings (day confirmed; time assumed after close)",
+     "timing": "after",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 204.64,
+   "sma200": 204.38455000000002,
+   "rsi2": 0.0,
+   "trigger": 200.30758571428572,
+   "premarket": 207.8,
+   "setup": "needs -2.1% to trigger",
+   "news": [
+    "Live On CNBC, Marvell CEO Matt Murphy On Deal With Lumentum, Says 'This Is A Double Down On Supporting NVIDIA'",
+    "Uber Partners with NVIDIA for Robotaxi Deployment",
+    "Nvidia, AMD, Marvell Targets Cut: Melius Pulls Back on AI Stocks as Big Tech Lines Up to Raise Cash",
+    "Semiconductor Stocks Are Cheaper Than the S&P 500: Is It Time to Buy SOXX and SMH ETFs?",
+    "AMD, Micron Selloff Is 'Just the Beginning,' Tom Sosnoff Says"
+   ],
+   "events": [
+    {
+     "date": "2026-11-02",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing PMI 10:00 ET",
+     "timing": "during",
+     "source": "moomoo.com week-ahead preview 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  }
+ ]
+}

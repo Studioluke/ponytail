@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-09",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 656.1,
+   "sma200": 680.88595,
+   "rsi2": 16.77479147358673,
+   "trigger": 653.7979285714287,
+   "premarket": 661.5,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "\u2018This Whole Thing\u2019s Crumbling\u2019: Scott Galloway Says AI Capex Now Rests on Just 2 Companies and Feels Exactly Like 1999",
+    "RBC Capital Reiterates Outperform on NVIDIA, Maintains $330 Price Target",
+    "Why Is IREN Stock Falling on Monday?",
+    "CoreWeave Stock Hits Turbulence Monday: What's Going On?",
+    "Will Jensen Huang Survive Nvidia's Spy Scandal? What Prediction Markets Say"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 735.29,
+   "sma200": 730.38255,
+   "rsi2": 6.34349030470905,
+   "trigger": 732.1582285714285,
+   "premarket": 741.75,
+   "setup": "needs -0.4% to trigger",
+   "news": [
+    "U.S. Trade Representative Suspends Any Action Related To China Shipbuilding And Maritime Sector Until Jan. 10, 2027, To Allow For Further Discussion; Also Announces Determination To Further Extend All 178 Current Exclusions Related To China\u2019s Technology Transfer, Intellectual Property, Innovation",
+    "\u2018This Whole Thing\u2019s Crumbling\u2019: Scott Galloway Says AI Capex Now Rests on Just 2 Companies and Feels Exactly Like 1999",
+    "RBC Capital Reiterates Outperform on NVIDIA, Maintains $330 Price Target",
+    "Why Is IREN Stock Falling on Monday?",
+    "CoreWeave Stock Hits Turbulence Monday: What's Going On?"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 463.96,
+   "sma200": 521.7552,
+   "rsi2": 22.303146901195504,
+   "trigger": 462.3773714285714,
+   "premarket": 464.8,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "RBC Capital Reiterates Outperform on NVIDIA, Maintains $330 Price Target",
+    "CoreWeave Stock Hits Turbulence Monday: What's Going On?",
+    "Will Jensen Huang Survive Nvidia's Spy Scandal? What Prediction Markets Say",
+    "Elon Musk Says He's 'Excited' About Qualcomm Deal As SpaceX Gears Up For Massive 5G Expansion",
+    "Stock Market Today: Dow, S&P 500 Futures Rise Despite Nvidia Sell-Off Over Jensen Huang Controversy \u2014 NVDA, OXY, CEG In Focus (UPDATED)"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 186.64,
+   "sma200": 204.6726,
+   "rsi2": 21.383114128128952,
+   "trigger": 185.49942857142855,
+   "premarket": 175.69,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "RBC Capital Reiterates Outperform on NVIDIA, Maintains $330 Price Target",
+    "CoreWeave Stock Hits Turbulence Monday: What's Going On?",
+    "Will Jensen Huang Survive Nvidia's Spy Scandal? What Prediction Markets Say",
+    "Stock Market Today: Dow, S&P 500 Futures Rise Despite Nvidia Sell-Off Over Jensen Huang Controversy \u2014 NVDA, OXY, CEG In Focus (UPDATED)",
+    "NVIDIA Expands South Korea AI Push With New Startup Investments"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  }
+ ]
+}
