@@ -1,15 +1,11 @@
 {
- "day": "2026-11-10",
+ "day": "2026-11-11",
  "week": "2026-W46",
- "day_pnl": -1.4038039999999974,
+ "day_pnl": 0.0,
  "week_pnl": 1.5173880000000004,
- "day_losses": 5,
+ "day_losses": 0,
  "traded_today": [
-  "sip_orb:CAT",
-  "sip_orb:KLAC",
-  "control:QQQ",
-  "control:SPY",
-  "control:GOOGL"
+  "sip_orb:COST"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -19,100 +15,90 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 5,
+ "entries": 0,
  "learning_tried": false,
- "strat_losses": {
-  "control": 1,
-  "sip_orb": 2,
-  "noise": 1,
-  "lasthalf": 1
- },
+ "strat_losses": {},
  "sip_watch": [
   {
-   "symbol": "TGT",
-   "hi": 161.27,
-   "lo": 159.385,
-   "atr": 5.6025,
-   "rvol": 3.42,
-   "green": false
-  },
-  {
-   "symbol": "CAT",
-   "hi": 577.01,
-   "lo": 566.82,
-   "atr": 31.1846,
-   "rvol": 3.04,
+   "symbol": "COST",
+   "hi": 1090.42,
+   "lo": 1079.97,
+   "atr": 20.9782,
+   "rvol": 2.68,
    "green": true
   },
   {
-   "symbol": "SLB",
-   "hi": 49.25,
-   "lo": 48.57,
-   "atr": 1.765,
-   "rvol": 2.7,
+   "symbol": "AVGO",
+   "hi": 354.37,
+   "lo": 348.575,
+   "atr": 17.1911,
+   "rvol": 2.63,
+   "green": true
+  },
+  {
+   "symbol": "GS",
+   "hi": 928.215,
+   "lo": 915.085,
+   "atr": 29.0811,
+   "rvol": 2.46,
    "green": false
   },
   {
-   "symbol": "DELL",
-   "hi": 338.005,
-   "lo": 328.61,
-   "atr": 33.8518,
-   "rvol": 2.53,
+   "symbol": "MU",
+   "hi": 779.48,
+   "lo": 768.75,
+   "atr": 59.5239,
+   "rvol": 2.19,
+   "green": false
+  },
+  {
+   "symbol": "AMD",
+   "hi": 543.13,
+   "lo": 531.265,
+   "atr": 42.275,
+   "rvol": 2.16,
    "green": false
   },
   {
    "symbol": "CSCO",
-   "hi": 97.645,
-   "lo": 96.485,
-   "atr": 3.7296,
-   "rvol": 2.15,
+   "hi": 101.29,
+   "lo": 100.2,
+   "atr": 3.8225,
+   "rvol": 2.07,
    "green": false
   },
   {
-   "symbol": "LOW",
-   "hi": 230.75,
-   "lo": 230.005,
-   "atr": 6.8993,
-   "rvol": 1.85,
+   "symbol": "DELL",
+   "hi": 367.99,
+   "lo": 359.86,
+   "atr": 32.77,
+   "rvol": 1.78,
    "green": true
   },
   {
-   "symbol": "COP",
-   "hi": 132.77,
-   "lo": 131.18,
-   "atr": 4.4432,
-   "rvol": 1.82,
+   "symbol": "ANET",
+   "hi": 199.19,
+   "lo": 194.35,
+   "atr": 11.6807,
+   "rvol": 1.77,
+   "green": true
+  },
+  {
+   "symbol": "V",
+   "hi": 419.89,
+   "lo": 417.64,
+   "atr": 9.58,
+   "rvol": 1.36,
+   "green": true
+  },
+  {
+   "symbol": "TXN",
+   "hi": 312.25,
+   "lo": 308.44,
+   "atr": 13.8993,
+   "rvol": 1.34,
    "green": false
-  },
-  {
-   "symbol": "OXY",
-   "hi": 55.35,
-   "lo": 54.2,
-   "atr": 1.8393,
-   "rvol": 1.72,
-   "green": false
-  },
-  {
-   "symbol": "KLAC",
-   "hi": 150.585,
-   "lo": 148.64,
-   "atr": 10.0661,
-   "rvol": 1.45,
-   "green": true
-  },
-  {
-   "symbol": "GE",
-   "hi": 340.45,
-   "lo": 334.25,
-   "atr": 12.44,
-   "rvol": 1.45,
-   "green": true
   }
  ],
- "flags": {
-  "grid": "15:30",
-  "feedcheck": true,
-  "noise_done": true,
-  "lasthalf_done": true
- }
+ "flags": {}
 }

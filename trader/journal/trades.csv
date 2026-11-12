@@ -230,3 +230,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-10T14:31:02.247528-05:00,SH,exit_trail,0.901,33.15,32.88,,-0.03,"[noise] entry 33.19, R = -0.12"
 2026-11-10T15:30:02.336672-05:00,SH,buy,1.807,33.13,32.94,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.34
 2026-11-10T15:57:12.753493-05:00,SH,exit_eod,1.807,33.07,32.94,,-0.11,"[lasthalf] entry 33.13, R = -0.32"
+2026-11-11T09:38:02.766429-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: COST 2.68x green, AVGO 2.63x green, GS 2.46x red, MU 2.19x red, AMD 2.16x red, CSCO 2.07x red, DELL 1.78x green, ANET 1.77x green, V 1.36x green, TXN 1.34x red"
