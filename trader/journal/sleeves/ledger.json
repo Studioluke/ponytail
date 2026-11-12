@@ -23,12 +23,12 @@
    "spread": null
   },
   "NVDL": {
-   "cash": 110.2475868890237,
+   "cash": 88.0728126114497,
    "shares": {
-    "qty": 3.515241207063526,
-    "entry": 21.335662499999998,
-    "date": "2026-11-09",
-    "stop": 17.92,
+    "qty": 4.124485212689391,
+    "entry": 18.1840875,
+    "date": "2026-11-12",
+    "stop": 14.5,
     "kind": "learning"
    },
    "spread": null
@@ -298,6 +298,28 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 78 on QQQ",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-12",
+   "sleeve": "NVDL",
+   "action": "sell",
+   "what": "NVDL",
+   "qty": 3.5152,
+   "price": 15.0275,
+   "pnl": -22.17,
+   "why": "stop",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-12",
+   "sleeve": "NVDL",
+   "action": "buy",
+   "what": "NVDL",
+   "qty": 4.1245,
+   "price": 18.1841,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 34 on NVDA",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -378,6 +400,12 @@
    "SSO": 214.76,
    "USD": 189.87,
    "NVDL": 182.54
+  },
+  "2026-11-12": {
+   "QLD": 93.75,
+   "SSO": 214.76,
+   "USD": 189.87,
+   "NVDL": 163.04
   }
  },
  "last_entries": 1
