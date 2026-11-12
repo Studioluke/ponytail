@@ -1,17 +1,10 @@
 {
- "day": "2026-11-11",
+ "day": "2026-11-12",
  "week": "2026-W46",
- "day_pnl": 0.9606600000000043,
+ "day_pnl": 0.0,
  "week_pnl": 2.4780480000000047,
  "day_losses": 0,
- "traded_today": [
-  "sip_orb:COST",
-  "sip_orb:V",
-  "sip_orb:DELL",
-  "control:QQQ",
-  "control:SPY",
-  "control:GOOGL"
- ],
+ "traded_today": [],
  "seen_orders": [
   "halt:2026-10-28",
   "halt:2026-10-29",
@@ -20,95 +13,9 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 1,
+ "entries": 0,
  "learning_tried": false,
  "strat_losses": {},
- "sip_watch": [
-  {
-   "symbol": "COST",
-   "hi": 1090.42,
-   "lo": 1079.97,
-   "atr": 20.9782,
-   "rvol": 2.68,
-   "green": true
-  },
-  {
-   "symbol": "AVGO",
-   "hi": 354.37,
-   "lo": 348.575,
-   "atr": 17.1911,
-   "rvol": 2.63,
-   "green": true
-  },
-  {
-   "symbol": "GS",
-   "hi": 928.215,
-   "lo": 915.085,
-   "atr": 29.0811,
-   "rvol": 2.46,
-   "green": false
-  },
-  {
-   "symbol": "MU",
-   "hi": 779.48,
-   "lo": 768.75,
-   "atr": 59.5239,
-   "rvol": 2.19,
-   "green": false
-  },
-  {
-   "symbol": "AMD",
-   "hi": 543.13,
-   "lo": 531.265,
-   "atr": 42.275,
-   "rvol": 2.16,
-   "green": false
-  },
-  {
-   "symbol": "CSCO",
-   "hi": 101.29,
-   "lo": 100.2,
-   "atr": 3.8225,
-   "rvol": 2.07,
-   "green": false
-  },
-  {
-   "symbol": "DELL",
-   "hi": 367.99,
-   "lo": 359.86,
-   "atr": 32.77,
-   "rvol": 1.78,
-   "green": true
-  },
-  {
-   "symbol": "ANET",
-   "hi": 199.19,
-   "lo": 194.35,
-   "atr": 11.6807,
-   "rvol": 1.77,
-   "green": true
-  },
-  {
-   "symbol": "V",
-   "hi": 419.89,
-   "lo": 417.64,
-   "atr": 9.58,
-   "rvol": 1.36,
-   "green": true
-  },
-  {
-   "symbol": "TXN",
-   "hi": 312.25,
-   "lo": 308.44,
-   "atr": 13.8993,
-   "rvol": 1.34,
-   "green": false
-  }
- ],
- "flags": {
-  "grid": "15:30",
-  "feedcheck": true,
-  "noise_done": true,
-  "lasthalf_done": true
- }
+ "sip_watch": null,
+ "flags": {}
 }

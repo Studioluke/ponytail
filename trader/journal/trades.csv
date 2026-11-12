@@ -239,3 +239,4 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-11T11:30:02.414804-05:00,SPY,risk_block,0.039,759.23,751.64,,,"[noise] noise area 11:30: fallback: no band break by 11:30, SPY above its open 756.72; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-11T15:30:02.829662-05:00,SPY,risk_block,0.078,760.15,756.35,,,"[lasthalf] last half hour: SPY prior close to 10:00 up; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-11T15:57:07.676938-05:00,DELL,exit_eod,0.162,374.62,364.71,,0.96,"[sip_orb] entry 368.69, R = +1.49"
+2026-11-12T09:36:02.665645-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 6.07x green, AVGO 4.11x green, DELL 3.31x green, AMD 3.0x red, SMCI 2.61x green, OXY 2.28x red, HOOD 2.08x green, AMAT 2.05x green, COST 1.82x green, GOOGL 1.6x green"
