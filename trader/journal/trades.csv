@@ -203,6 +203,7 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-06T12:37:02.666107-05:00,SPY,exit_stop,0.08,737.00,736.79,,-0.21,"[control] entry 739.63, R = -0.93"
 2026-11-06T15:30:02.058068-05:00,SPY,buy,0.081,737.94,734.19,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.30
 2026-11-06T15:57:07.235227-05:00,SPY,exit_eod,0.081,735.37,734.19,,-0.21,"[lasthalf] entry 737.94, R = -0.69"
+2026-11-09T09:36:02.783217-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 11.07x green, C 3.82x red, LRCX 3.36x green, LOW 3.05x red, AMD 2.81x red, ABNB 2.71x green, TGT 2.55x green, AMZN 2.08x green, AVGO 1.91x green, MSFT 1.87x green"
 2026-11-09T09:35:02.504280-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 11.07x green, C 3.82x red, LRCX 3.36x green, LOW 3.05x red, AMD 2.81x red, ABNB 2.71x green, TGT 2.55x green, AMZN 2.08x green, AVGO 1.91x green, MSFT 1.87x green"
 2026-11-09T09:36:02.358268-05:00,LRCX,buy,0.287,208.41,205.27,,,"[sip_orb] 5-min ORB break of 206.93 (range 204.02-206.93), RVOL 3.4, ATR 16.57; risk $0.90"
 2026-11-09T09:36:02.358268-05:00,ABNB,buy,0.303,197.49,195.96,,,"[sip_orb] 5-min ORB break of 196.60 (range 192.24-196.60), RVOL 2.7, ATR 6.50; risk $0.46"
@@ -216,6 +217,7 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-09T14:41:02.869427-05:00,MSFT,skip,,547.53,,,,"[control] ORB break of 547.39 (range 542.21-547.39), VWAP 542.80, stop 3.92 below (ATR 15.68); skipped, gap +2.62% vs prior close 530.58 exceeds 0.75%"
 2026-11-09T15:30:02.953766-05:00,SPY,risk_block,0.079,754.87,751.09,,,"[lasthalf] last half hour: SPY prior close to 10:00 up; vetoed: research says skip SPY: premarket gap +0.86% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-09T15:57:07.534682-05:00,LRCX,exit_eod,0.287,221.36,205.27,,3.72,"[sip_orb] entry 208.41, R = +4.12"
+2026-11-10T09:35:48.221949-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: TGT 3.42x red, CAT 3.04x green, SLB 2.7x red, DELL 2.53x red, CSCO 2.15x red, LOW 1.85x green, COP 1.82x red, OXY 1.72x red, KLAC 1.45x green, GE 1.45x green"
 2026-11-10T09:36:02.797975-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: TGT 3.42x red, CAT 3.04x green, SLB 2.7x red, DELL 2.53x red, CSCO 2.15x red, LOW 1.85x green, COP 1.82x red, OXY 1.72x red, KLAC 1.45x green, GE 1.45x green"
 2026-11-10T09:37:02.739832-05:00,CAT,buy,0.103,577.74,573.89,,,"[sip_orb] 5-min ORB break of 577.01 (range 566.82-577.01), RVOL 3.0, ATR 31.18; risk $0.40"
 2026-11-10T09:47:02.071962-05:00,KLAC,buy,0.395,151.09,149.58,,,"[sip_orb] 5-min ORB break of 150.59 (range 148.64-150.59), RVOL 1.4, ATR 10.07; risk $0.60"
@@ -228,6 +230,7 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-10T14:31:02.247528-05:00,SH,exit_trail,0.901,33.15,32.88,,-0.03,"[noise] entry 33.19, R = -0.12"
 2026-11-10T15:30:02.336672-05:00,SH,buy,1.807,33.13,32.94,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.34
 2026-11-10T15:57:12.753493-05:00,SH,exit_eod,1.807,33.07,32.94,,-0.11,"[lasthalf] entry 33.13, R = -0.32"
+2026-11-11T09:38:02.766429-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: COST 2.68x green, AVGO 2.63x green, GS 2.46x red, MU 2.19x red, AMD 2.16x red, CSCO 2.07x red, DELL 1.78x green, ANET 1.77x green, V 1.36x green, TXN 1.34x red"
 2026-11-11T09:35:02.498095-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: COST 2.68x green, AVGO 2.63x green, GS 2.46x red, MU 2.19x red, AMD 2.16x red, CSCO 2.07x red, DELL 1.78x green, ANET 1.77x green, V 1.36x green, TXN 1.34x red"
 2026-11-11T10:07:02.168843-05:00,DELL,buy,0.162,368.69,364.71,,,"[sip_orb] 5-min ORB break of 367.99 (range 359.86-367.99), RVOL 1.8, ATR 32.77; risk $0.64"
 2026-11-11T10:44:02.942442-05:00,QQQ,skip,,689.45,,,,"[control] ORB break of 688.87 (range 685.00-688.87), VWAP 686.55, stop 4.41 below (ATR 17.64); skipped, gap +1.84% vs prior close 674.82 exceeds 0.75%"
@@ -236,6 +239,7 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-11T11:30:02.414804-05:00,SPY,risk_block,0.039,759.23,751.64,,,"[noise] noise area 11:30: fallback: no band break by 11:30, SPY above its open 756.72; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-11T15:30:02.829662-05:00,SPY,risk_block,0.078,760.15,756.35,,,"[lasthalf] last half hour: SPY prior close to 10:00 up; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
 2026-11-11T15:57:07.676938-05:00,DELL,exit_eod,0.162,374.62,364.71,,0.96,"[sip_orb] entry 368.69, R = +1.49"
+2026-11-12T09:36:02.665645-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 6.07x green, AVGO 4.11x green, DELL 3.31x green, AMD 3.0x red, SMCI 2.61x green, OXY 2.28x red, HOOD 2.08x green, AMAT 2.05x green, COST 1.82x green, GOOGL 1.6x green"
 2026-11-12T09:35:02.030219-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: NVDA 6.07x green, AVGO 4.11x green, DELL 3.31x green, AMD 3.0x red, SMCI 2.61x green, OXY 2.28x red, HOOD 2.08x green, AMAT 2.05x green, COST 1.82x green, GOOGL 1.6x green"
 2026-11-12T09:36:02.789946-05:00,NVDA,buy,0.382,156.43,155.4,,,"[sip_orb] 5-min ORB break of 156.31 (range 148.80-156.31), RVOL 6.1, ATR 9.12; risk $0.39"
 2026-11-12T09:36:02.789946-05:00,AVGO,buy,0.165,362.42,360.07,,,"[sip_orb] 5-min ORB break of 361.85 (range 354.88-361.85), RVOL 4.1, ATR 17.76; risk $0.39"
