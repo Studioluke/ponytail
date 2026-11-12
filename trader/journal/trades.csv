@@ -231,3 +231,11 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-10T15:30:02.336672-05:00,SH,buy,1.807,33.13,32.94,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.34
 2026-11-10T15:57:12.753493-05:00,SH,exit_eod,1.807,33.07,32.94,,-0.11,"[lasthalf] entry 33.13, R = -0.32"
 2026-11-11T09:38:02.766429-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: COST 2.68x green, AVGO 2.63x green, GS 2.46x red, MU 2.19x red, AMD 2.16x red, CSCO 2.07x red, DELL 1.78x green, ANET 1.77x green, V 1.36x green, TXN 1.34x red"
+2026-11-11T09:35:02.498095-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: COST 2.68x green, AVGO 2.63x green, GS 2.46x red, MU 2.19x red, AMD 2.16x red, CSCO 2.07x red, DELL 1.78x green, ANET 1.77x green, V 1.36x green, TXN 1.34x red"
+2026-11-11T10:07:02.168843-05:00,DELL,buy,0.162,368.69,364.71,,,"[sip_orb] 5-min ORB break of 367.99 (range 359.86-367.99), RVOL 1.8, ATR 32.77; risk $0.64"
+2026-11-11T10:44:02.942442-05:00,QQQ,skip,,689.45,,,,"[control] ORB break of 688.87 (range 685.00-688.87), VWAP 686.55, stop 4.41 below (ATR 17.64); skipped, gap +1.84% vs prior close 674.82 exceeds 0.75%"
+2026-11-11T10:52:02.958752-05:00,SPY,skip,,758.07,,,,"[control] ORB break of 757.90 (range 755.71-757.90), VWAP 756.50, stop 2.90 below (ATR 11.60); skipped, gap +0.91% vs prior close 749.93 exceeds 0.75%"
+2026-11-11T10:52:02.958752-05:00,GOOGL,skip,,291.99,,,,"[control] ORB break of 291.81 (range 289.64-291.81), VWAP 290.72, stop 2.85 below (ATR 11.38); skipped, gap +0.93% vs prior close 287.445 exceeds 0.75%"
+2026-11-11T11:30:02.414804-05:00,SPY,risk_block,0.039,759.23,751.64,,,"[noise] noise area 11:30: fallback: no band break by 11:30, SPY above its open 756.72; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
+2026-11-11T15:30:02.829662-05:00,SPY,risk_block,0.078,760.15,756.35,,,"[lasthalf] last half hour: SPY prior close to 10:00 up; vetoed: research says skip SPY: premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
+2026-11-11T15:57:07.676938-05:00,DELL,exit_eod,0.162,374.62,364.71,,0.96,"[sip_orb] entry 368.69, R = +1.49"

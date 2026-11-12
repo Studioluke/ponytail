@@ -1,11 +1,16 @@
 {
  "day": "2026-11-11",
  "week": "2026-W46",
- "day_pnl": 0.0,
- "week_pnl": 1.5173880000000004,
+ "day_pnl": 0.9606600000000043,
+ "week_pnl": 2.4780480000000047,
  "day_losses": 0,
  "traded_today": [
-  "sip_orb:COST"
+  "sip_orb:COST",
+  "sip_orb:V",
+  "sip_orb:DELL",
+  "control:QQQ",
+  "control:SPY",
+  "control:GOOGL"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -15,7 +20,7 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 0,
+ "entries": 1,
  "learning_tried": false,
  "strat_losses": {},
  "sip_watch": [
@@ -100,5 +105,10 @@
    "green": false
   }
  ],
- "flags": {}
+ "flags": {
+  "grid": "15:30",
+  "feedcheck": true,
+  "noise_done": true,
+  "lasthalf_done": true
+ }
 }
