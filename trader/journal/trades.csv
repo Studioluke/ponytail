@@ -253,3 +253,7 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-12T15:30:02.323865-05:00,SH,buy,1.826,32.77,32.61,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.29
 2026-11-12T15:57:07.837595-05:00,NVDA,exit_eod,0.382,165.45,155.4,,3.45,"[sip_orb] entry 156.43, R = +8.72"
 2026-11-12T15:57:07.837595-05:00,SH,exit_eod,1.826,32.79,32.61,,0.04,"[lasthalf] entry 32.77, R = +0.12"
+2026-11-13T10:30:24.953999-05:00,SH,buy,1.803,33.10,32.85,,,[noise] noise area 10:30: SPY 750.11 below lower band 753.48; risk $0.45
+2026-11-13T13:01:02.493244-05:00,SH,exit_trail,1.803,33.04,32.85,,-0.11,"[noise] entry 33.10, R = -0.24"
+2026-11-13T15:30:02.320654-05:00,SH,buy,1.815,32.98,32.8,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.33
+2026-11-13T15:57:07.544933-05:00,SH,exit_eod,1.815,32.92,32.8,,-0.11,"[lasthalf] entry 32.98, R = -0.33"

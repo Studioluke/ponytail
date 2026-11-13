@@ -1,23 +1,10 @@
 {
- "day": "2026-11-12",
+ "day": "2026-11-13",
  "week": "2026-W46",
- "day_pnl": 2.595250000000007,
- "week_pnl": 5.073298000000012,
- "day_losses": 3,
- "traded_today": [
-  "sip_orb:NVDA",
-  "sip_orb:AVGO",
-  "sip_orb:DELL",
-  "sip_orb:HOOD",
-  "sip_orb:AMAT",
-  "sip_orb:SMCI",
-  "control:SPY",
-  "control:AAPL",
-  "control:MSFT",
-  "control:GOOGL",
-  "sip_orb:GOOGL",
-  "control:QQQ"
- ],
+ "day_pnl": -0.21707999999999572,
+ "week_pnl": 4.856218000000016,
+ "day_losses": 2,
+ "traded_today": [],
  "seen_orders": [
   "halt:2026-10-28",
   "halt:2026-10-29",
@@ -26,95 +13,13 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 5,
+ "entries": 2,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 1,
-  "control": 1,
-  "noise": 1
+  "noise": 1,
+  "lasthalf": 1
  },
- "sip_watch": [
-  {
-   "symbol": "NVDA",
-   "hi": 156.315,
-   "lo": 148.8,
-   "atr": 9.1154,
-   "rvol": 6.07,
-   "green": true
-  },
-  {
-   "symbol": "AVGO",
-   "hi": 361.85,
-   "lo": 354.88,
-   "atr": 17.7596,
-   "rvol": 4.11,
-   "green": true
-  },
-  {
-   "symbol": "DELL",
-   "hi": 349.47,
-   "lo": 338.17,
-   "atr": 33.5321,
-   "rvol": 3.31,
-   "green": true
-  },
-  {
-   "symbol": "AMD",
-   "hi": 569.14,
-   "lo": 555.05,
-   "atr": 42.4596,
-   "rvol": 3.0,
-   "green": false
-  },
-  {
-   "symbol": "SMCI",
-   "hi": 27.675,
-   "lo": 26.985,
-   "atr": 2.3661,
-   "rvol": 2.61,
-   "green": true
-  },
-  {
-   "symbol": "OXY",
-   "hi": 57.845,
-   "lo": 57.5,
-   "atr": 1.8939,
-   "rvol": 2.28,
-   "green": false
-  },
-  {
-   "symbol": "HOOD",
-   "hi": 81.74,
-   "lo": 80.545,
-   "atr": 4.8268,
-   "rvol": 2.08,
-   "green": true
-  },
-  {
-   "symbol": "AMAT",
-   "hi": 384.545,
-   "lo": 377.47,
-   "atr": 25.4132,
-   "rvol": 2.05,
-   "green": true
-  },
-  {
-   "symbol": "COST",
-   "hi": 1102.25,
-   "lo": 1092.83,
-   "atr": 21.3446,
-   "rvol": 1.82,
-   "green": true
-  },
-  {
-   "symbol": "GOOGL",
-   "hi": 296.78,
-   "lo": 293.935,
-   "atr": 11.0654,
-   "rvol": 1.6,
-   "green": true
-  }
- ],
+ "sip_watch": [],
  "flags": {
   "grid": "15:30",
   "feedcheck": true,
