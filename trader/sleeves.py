@@ -273,7 +273,9 @@ def step(led, day, mk):
         first = "spread" if wd in (1, 3) else "shares"
         ranked = sorted((s for s in led["sleeves"] if s in mk and mk[s]["under"]["rsi2"] is not None),
                         key=lambda s: mk[s]["under"]["rsi2"])
-        flat = [s for s in ranked if not led["sleeves"][s]["shares"] and not led["sleeves"][s]["spread"]]
+        # A sleeve that exited today goes last, so the learning trade is not an instant re-buy.
+        sold = {t["sleeve"] for t in led["trades"] if t["date"] == day and t["action"] in ("sell", "close spread")}
+        flat = [s for s in ranked if not led["sleeves"][s]["shares"] and not led["sleeves"][s]["spread"] and s not in sold]
         for s in flat + [s for s in ranked if s not in flat]:
             sl, why = led["sleeves"][s], f"learning trade: lowest RSI(2) {mk[s]['under']['rsi2']:.0f} on {SLEEVES[s]['under']}"
             order = [first, "shares" if first == "spread" else "spread"]

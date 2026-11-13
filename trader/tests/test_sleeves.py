@@ -103,6 +103,13 @@ class Step(unittest.TestCase):
         sells = [t for t in led["trades"] if t["action"] == "sell"]
         self.assertTrue(sells and sells[0]["pnl"] > 0)
 
+    def test_learning_trade_skips_sleeve_that_exited_today(self):
+        led = S.new_ledger("2026-10-26")
+        S.step(led, "2026-10-26", mk())  # QLD learning shares
+        S.step(led, "2026-10-28", mk(QLD={"etf": etf(price=53, low=50, prev_high=52)}))
+        buys = [t for t in led["trades"] if t["action"] == "buy" and t["date"] == "2026-10-28"]
+        self.assertEqual(buys[0]["sleeve"], "SSO")  # next-lowest RSI(2), not the QLD just sold
+
     def test_report_tracks_goal(self):
         led = S.new_ledger("2026-10-26")
         S.step(led, "2026-10-26", mk())
