@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-13",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 688.17,
+   "sma200": 681.9866000000001,
+   "rsi2": 87.60515984296113,
+   "trigger": 641.9014714285714,
+   "premarket": 689.92,
+   "setup": "needs -6.7% to trigger",
+   "news": [
+    "Jim Cramer Questions If Jensen Huang Betrayed Nvidia Shareholders, Says Former CEO Let Investors Down: \u2018Yes. End Of Story\u2019",
+    "11 AI Stocks to Buy on Dips: 'Don't Waste a Good Sell-Off,' Analyst Says",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100  Futures Rise as Nvidia CEO Exit Remains in Focus\u2014 CSCO, AMAT, NU in Focus(UPDATED)",
+    "SemiAnalysis Suspects US Intelligence Role in Jensen Huang\u2019s Exit as China Chip Crackdown Looms",
+    "Newsmax Delivers Its Strongest Quarter Since Going Public"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (date from one source; unconfirmed)",
+     "timing": "after",
+     "source": "news.futunn.com week outlook 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 757.12,
+   "sma200": 731.6159,
+   "rsi2": 78.61685214626425,
+   "trigger": 726.9280857142858,
+   "premarket": 760.34,
+   "setup": "needs -4.0% to trigger",
+   "news": [
+    "Jim Cramer Questions If Jensen Huang Betrayed Nvidia Shareholders, Says Former CEO Let Investors Down: \u2018Yes. End Of Story\u2019",
+    "11 AI Stocks to Buy on Dips: 'Don't Waste a Good Sell-Off,' Analyst Says",
+    "Fed's Goolsbee Says Even If The Price Of Oil Drops Rapidly, Refining Capacity Remains 'Problematic' And Will Keep Diesel And Jet Fuel Prices Elevated",
+    "Fed's Goolsbee Says Services Inflation And Rising Health Care Costs Don't Feel Like They Will Change Quickly; FOMC Trying To Figure Out The Same Thing As Bessent, Which Is Persistence Of Inflation; To The Extent Data Suggest Inflation Is Getting Worse It Would Make The Fed More Aggressive",
+    "'UN watchdog calls on Iran to reopen nuclear facilities to inspection; Tehran has told the IAEA that it is not possible to resume inspections in the current security situation' - Al Jazeera"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (date from one source; unconfirmed)",
+     "timing": "after",
+     "source": "news.futunn.com week outlook 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 501.73,
+   "sma200": 523.5399,
+   "rsi2": 81.6876750700281,
+   "trigger": 439.4315857142857,
+   "premarket": 501.16,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Jim Cramer Questions If Jensen Huang Betrayed Nvidia Shareholders, Says Former CEO Let Investors Down: \u2018Yes. End Of Story\u2019",
+    "B. Riley Securities Maintains Buy on Applied Materials, Raises Price Target to $500",
+    "11 AI Stocks to Buy on Dips: 'Don't Waste a Good Sell-Off,' Analyst Says",
+    "Evercore ISI Group Maintains Outperform on Applied Materials, Lowers Price Target to $430",
+    "B of A Securities Maintains Buy on Applied Materials, Lowers Price Target to $520"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (date from one source; unconfirmed)",
+     "timing": "after",
+     "source": "news.futunn.com week outlook 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 166.19,
+   "sma200": 204.3391,
+   "rsi2": 39.095315024232676,
+   "trigger": 161.75900000000001,
+   "premarket": 169.98,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Jim Cramer Questions If Jensen Huang Betrayed Nvidia Shareholders, Says Former CEO Let Investors Down: \u2018Yes. End Of Story\u2019",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100  Futures Rise as Nvidia CEO Exit Remains in Focus\u2014 CSCO, AMAT, NU in Focus(UPDATED)",
+    "SemiAnalysis Suspects US Intelligence Role in Jensen Huang\u2019s Exit as China Chip Crackdown Looms",
+    "Jensen Huang Faces Subpoena Threat As 3 Republican-Led House Committees Demand Closed-Door Testimony Over Nvidia\u2019s China Ties",
+    "What Is Going on With Micron Stock on Friday?"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (date from one source; unconfirmed)",
+     "timing": "after",
+     "source": "news.futunn.com week outlook 2026-11-08"
+    }
+   ]
+  }
+ ]
+}
