@@ -264,3 +264,18 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-16T11:01:02.334432-05:00,SH,exit_trail,1.798,33.27,32.95,,-0.07,"[noise] entry 33.31, R = -0.11"
 2026-11-16T15:30:02.256691-05:00,SH,buy,1.781,33.59,33.43,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.28
 2026-11-16T15:57:08.001746-05:00,SH,exit_eod,1.781,33.58,33.43,,-0.02,"[lasthalf] entry 33.59, R = -0.06"
+2026-11-17T09:35:02.965862-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: DIS 6.04x green, LOW 3.9x green, NKE 3.22x green, JPM 3.12x red, SLB 3.11x red, UNH 2.8x red, CVS 2.52x red, HD 2.21x green, SCHW 1.83x green, MRNA 1.76x red"
+2026-11-17T09:36:02.086338-05:00,LOW,buy,0.267,223.96,223.06,,,"[sip_orb] 5-min ORB break of 223.75 (range 220.47-223.75), RVOL 3.9, ATR 6.84; risk $0.24"
+2026-11-17T09:36:02.086338-05:00,NKE,buy,1.475,40.59,40.37,,,"[sip_orb] 5-min ORB break of 40.49 (range 39.66-40.49), RVOL 3.2, ATR 1.25; risk $0.32"
+2026-11-17T09:37:02.893372-05:00,NKE,exit_stop,1.475,40.26,40.37,,-0.49,"[sip_orb] entry 40.59, R = -1.50"
+2026-11-17T09:40:02.555985-05:00,LOW,exit_stop,0.267,222.99,223.06,,-0.26,"[sip_orb] entry 223.96, R = -1.07"
+2026-11-17T09:46:02.330860-05:00,AAPL,buy,0.169,353.88,351.52,,,"[control] ORB break of 353.52 (range 351.89-353.52), VWAP 352.72, stop 2.21 below (ATR 8.86); risk $0.40"
+2026-11-17T09:49:02.965167-05:00,HD,buy,0.174,342.82,341.49,,,"[sip_orb] 5-min ORB break of 342.46 (range 335.69-342.46), RVOL 2.2, ATR 9.78; risk $0.23"
+2026-11-17T09:52:02.254103-05:00,DIS,buy,0.495,120.95,120.44,,,"[sip_orb] 5-min ORB break of 120.69 (range 118.52-120.69), RVOL 6.0, ATR 2.49; risk $0.25"
+2026-11-17T10:01:02.104260-05:00,HD,exit_stop,0.174,341.36,341.49,,-0.25,"[sip_orb] entry 342.82, R = -1.10"
+2026-11-17T10:44:02.242013-05:00,AAPL,exit_stop,0.169,351.51,351.52,,-0.40,"[control] entry 353.88, R = -1.00"
+2026-11-17T10:46:02.204303-05:00,DIS,exit_stop,0.495,120.42,120.44,,-0.26,"[sip_orb] entry 120.95, R = -1.04"
+2026-11-17T11:00:02.562271-05:00,SH,buy,1.76,33.95,33.65,,,[noise] noise area 11:00: SPY 731.37 below lower band 733.50; risk $0.53
+2026-11-17T12:31:02.774913-05:00,SH,exit_trail,1.76,33.86,33.65,,-0.16,"[noise] entry 33.95, R = -0.30"
+2026-11-17T15:30:02.097512-05:00,SH,buy,1.759,34.01,33.84,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.30
+2026-11-17T15:57:07.960802-05:00,SH,exit_eod,1.759,33.97,33.84,,-0.07,"[lasthalf] entry 34.01, R = -0.24"
