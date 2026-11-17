@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-17",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 661.75,
+   "sma200": 682.4383,
+   "rsi2": 0.0,
+   "trigger": 634.6494714285715,
+   "premarket": 661.63,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Meta, Amazon, and Google Lobbying Fails to Stop China Data Center Curbs",
+    "Elon Musk Hints at Robotaxi Expansion for Model Y Owners",
+    "NVIDIA Issues Warning to Chip Buyers Regarding US Export Compliance",
+    "Microsoft Expands Use of Haivision Live Video Ecosystem",
+    "Apple Faces French Trial Over Alleged Planned Obsolescence"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 739.95,
+   "sma200": 732.1574499999999,
+   "rsi2": 0.0,
+   "trigger": 721.8766571428571,
+   "premarket": 738.8,
+   "setup": "RSI2 would fire now",
+   "news": [
+    "Meta, Amazon, and Google Lobbying Fails to Stop China Data Center Curbs",
+    "NVIDIA Issues Warning to Chip Buyers Regarding US Export Compliance",
+    "Microsoft Expands Use of Haivision Live Video Ecosystem",
+    "Apple Faces French Trial Over Alleged Planned Obsolescence",
+    "NVIDIA Establishes National Security and Export Control Oversight Committee"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 461.9,
+   "sma200": 524.1782499999999,
+   "rsi2": 0.0,
+   "trigger": 425.0234428571428,
+   "premarket": 461.82,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Qualcomm China Chairman Participates in 17th Caixin Summit",
+    "NVIDIA Issues Warning to Chip Buyers Regarding US Export Compliance",
+    "Getac Launches MX60 and MX60W End User Devices Powered by Qualcomm",
+    "AMD Shares Decline Following New Export Restrictions on AI Chips",
+    "Nvidia Reduces Stake in Intel Corporation"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 156.14,
+   "sma200": 204.01585,
+   "rsi2": 0.0,
+   "trigger": 150.44228571428573,
+   "premarket": 157.84,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Issues Warning to Chip Buyers Regarding US Export Compliance",
+    "NVIDIA Establishes National Security and Export Control Oversight Committee",
+    "NVIDIA Announces Quantum Computing Collaborations with IBM and Fermilab",
+    "NVIDIA Introduces Nemotron for Science Platform",
+    "NVIDIA Launches Vera CPU Platform for High-Performance Computing"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  }
+ ]
+}
