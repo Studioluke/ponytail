@@ -1,0 +1,165 @@
+{
+ "date": "2026-10-27",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 712.2,
+   "sma200": 677.7539,
+   "rsi2": 99.11054637865249,
+   "trigger": 691.4072142857143,
+   "premarket": 714.9,
+   "setup": "needs -2.9% to trigger",
+   "news": [
+    "DA Davidson Upgrades Broadcom to Buy, Raises Price Target to $400",
+    "Tom Lee\u2019s Top 6 Reasons for \u2018Conviction About the AI Trade\u2019: \u2018I\u2019m Buying This AI Dip\u2019",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet\u2014 Novartis, HSBC, Welltower in Focus (UPDATED)",
+    "Jim Cramer Says In Social Media Post 'If Jensen thinks that CoreWeave is money good he should buy up their their 15% debt'",
+    "PayPal Cuts Thousands of Jobs, Bets on AI and Lifts Profit Outlook"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 765.37,
+   "sma200": 727.38565,
+   "rsi2": 57.50798722044713,
+   "trigger": 752.2902714285714,
+   "premarket": 768.17,
+   "setup": "needs -1.7% to trigger",
+   "news": [
+    "DA Davidson Upgrades Broadcom to Buy, Raises Price Target to $400",
+    "Tom Lee\u2019s Top 6 Reasons for \u2018Conviction About the AI Trade\u2019: \u2018I\u2019m Buying This AI Dip\u2019",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 10 Futures Gain as Fed Begins Its Two-Day Meet\u2014 Novartis, HSBC, Welltower in Focus (UPDATED)",
+    "This Midterm\u2019s Stock-Market Pattern Hasn\u2019t Failed Since 1950, and It Kicks Off This Week",
+    "Redbook Retail Sales Index For October 2026 Vs October 2025: 9.6% YoY"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "MSFT",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-28",
+     "symbol": "GOOGL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "blofin.com earnings season preview (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 541.62,
+   "sma200": 516.2507,
+   "rsi2": 100.0,
+   "trigger": 506.66998571428576,
+   "premarket": 541.56,
+   "setup": "needs -6.5% to trigger",
+   "news": [
+    "DA Davidson Upgrades Broadcom to Buy, Raises Price Target to $400",
+    "Tom Lee\u2019s Top 6 Reasons for \u2018Conviction About the AI Trade\u2019: \u2018I\u2019m Buying This AI Dip\u2019",
+    "Jim Cramer Says In Social Media Post 'If Jensen thinks that CoreWeave is money good he should buy up their their 15% debt'",
+    "Amkor Technology Stock Is Gaining Tuesday: What's Going On?",
+    "Intel and SAP Collaborate on Autonomous Robot Integration"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 216,
+   "sma200": 203.8202,
+   "rsi2": 80.12718600953893,
+   "trigger": 204.04945714285716,
+   "premarket": 216.18,
+   "setup": "needs -5.5% to trigger",
+   "news": [
+    "Jim Cramer Says In Social Media Post 'If Jensen thinks that CoreWeave is money good he should buy up their their 15% debt'",
+    "Amkor Technology Stock Is Gaining Tuesday: What's Going On?",
+    "NVIDIA Commits $3 Billion to Meta, Expands Muse Partnership",
+    "NVIDIA and Meta Expand AI Partnership and Announce $3 Billion Investment",
+    "China\u2019s AI Stock Rout Scary, but Crypto Punters Aren\u2019t Calling a US Bubble Burst Yet"
+   ],
+   "events": [
+    {
+     "date": "2026-10-28",
+     "symbol": "ALL",
+     "event": "FOMC decision 2:00 ET",
+     "timing": "during",
+     "source": "vault Market-Research 2026-10-20 (unconfirmed)"
+    }
+   ]
+  }
+ ]
+}

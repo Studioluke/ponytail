@@ -1,0 +1,172 @@
+{
+ "date": "2026-11-03",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 681.09,
+   "sma200": 679.8158500000001,
+   "rsi2": 0.0,
+   "trigger": 675.6637857142857,
+   "premarket": 685.05,
+   "setup": "RSI2 would fire now",
+   "news": [
+    "Questcorp Mining Completes Acquisition of 100% Interest in North Island Copper Project",
+    "DA Davidson Maintains Neutral on Apple, Raises Price Target to $295",
+    "Nvidia Tightens the Screws on China's AI Access \u2014 Cloud Partners Worldwide Must Restrict Chinese Customers Under New Revenue Rule: Report (UPDATED)",
+    "Tech Stocks Are Trading as If ChatGPT Never Happened, Data Shows",
+    "Keybanc Reiterates Underweight on Apple, Maintains $250 Price Target"
+   ],
+   "events": [
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 752.1,
+   "sma200": 729.1533999999999,
+   "rsi2": 0.0,
+   "trigger": 745.4204285714286,
+   "premarket": 753.75,
+   "setup": "RSI2 would fire now",
+   "news": [
+    "DA Davidson Maintains Neutral on Apple, Raises Price Target to $295",
+    "Nvidia Tightens the Screws on China's AI Access \u2014 Cloud Partners Worldwide Must Restrict Chinese Customers Under New Revenue Rule: Report (UPDATED)",
+    "Tech Stocks Are Trading as If ChatGPT Never Happened, Data Shows",
+    "Keybanc Reiterates Underweight on Apple, Maintains $250 Price Target",
+    "Apple To $350? Here Are 10 Top Analyst Forecasts For Tuesday"
+   ],
+   "events": [
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 508.31,
+   "sma200": 520.06045,
+   "rsi2": 0.0,
+   "trigger": 494.07564285714284,
+   "premarket": 522.45,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nvidia Tightens the Screws on China's AI Access \u2014 Cloud Partners Worldwide Must Restrict Chinese Customers Under New Revenue Rule: Report (UPDATED)",
+    "Tech Stocks Are Trading as If ChatGPT Never Happened, Data Shows",
+    "AMD Stock Reports Earnings Today: Here\u2019s What Investors Need to Know",
+    "AMD Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+    "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Mixed as Trump Touts Iran Settlement Hopes \u2014 AAPL, PLTR, AMD in Focus (UPDATED)"
+   ],
+   "events": [
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-03",
+     "symbol": "AMD",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "finance.yahoo.com live blog 2026-11-03 and tradingkey.com"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 202.06,
+   "sma200": 204.4596,
+   "rsi2": 0.0,
+   "trigger": 198.21757142857143,
+   "premarket": 206.77,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nvidia Tightens the Screws on China's AI Access \u2014 Cloud Partners Worldwide Must Restrict Chinese Customers Under New Revenue Rule: Report (UPDATED)",
+    "Dan Ives Calls Tech Selloff a 'Gut Check' \u2014 Names His Top Stocks to Own for the Next 5 Years",
+    "Jim Cramer Likes This Industrial Stock: \u2018It\u2019s Come Down A Great Deal\u2019",
+    "NVIDIA Requires Cloud Clients to Limit Business With Chinese Customers",
+    "SPCX CEO Elon Musk Says Cooling AI Data Centers in Space Is 'Much Easier' \u2014 Here's How His Plan Could Work"
+   ],
+   "events": [
+    {
+     "date": "2026-11-03",
+     "symbol": "ALL",
+     "event": "US midterm elections (markets open)",
+     "timing": "during",
+     "source": "fxempire.com week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-04",
+     "symbol": "ALL",
+     "event": "ISM Services PMI 10:00 ET",
+     "timing": "during",
+     "source": "shattered.io week-ahead 2026-11-01"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  }
+ ]
+}

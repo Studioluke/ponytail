@@ -1,0 +1,114 @@
+{
+ "day": "2026-11-16",
+ "week": "2026-W47",
+ "day_pnl": -0.6357220000000083,
+ "week_pnl": -0.6357220000000083,
+ "day_losses": 3,
+ "traded_today": [
+  "sip_orb:MSTR",
+  "sip_orb:COIN"
+ ],
+ "seen_orders": [
+  "halt:2026-10-28",
+  "halt:2026-10-29",
+  "halt:2026-11-02",
+  "halt:2026-11-03",
+  "halt:2026-11-04"
+ ],
+ "open": {},
+ "entries": 3,
+ "learning_tried": false,
+ "strat_losses": {
+  "sip_orb": 1,
+  "noise": 1,
+  "lasthalf": 1
+ },
+ "sip_watch": [
+  {
+   "symbol": "DE",
+   "hi": 672.95,
+   "lo": 670.87,
+   "atr": 18.6339,
+   "rvol": 7.6,
+   "green": false
+  },
+  {
+   "symbol": "COST",
+   "hi": 1116.585,
+   "lo": 1110.45,
+   "atr": 21.2482,
+   "rvol": 3.62,
+   "green": true
+  },
+  {
+   "symbol": "UNP",
+   "hi": 304.39,
+   "lo": 303.9,
+   "atr": 6.17,
+   "rvol": 3.28,
+   "green": false
+  },
+  {
+   "symbol": "ISRG",
+   "hi": 446.2,
+   "lo": 444.05,
+   "atr": 15.0539,
+   "rvol": 2.8,
+   "green": true
+  },
+  {
+   "symbol": "MSTR",
+   "hi": 105.5,
+   "lo": 103.36,
+   "atr": 8.3318,
+   "rvol": 2.19,
+   "green": true
+  },
+  {
+   "symbol": "FDX",
+   "hi": 324.92,
+   "lo": 324,
+   "atr": 8.8571,
+   "rvol": 2.12,
+   "green": false
+  },
+  {
+   "symbol": "COIN",
+   "hi": 121.59,
+   "lo": 118.915,
+   "atr": 9.2846,
+   "rvol": 1.86,
+   "green": true
+  },
+  {
+   "symbol": "ADBE",
+   "hi": 249.32,
+   "lo": 246.665,
+   "atr": 7.5525,
+   "rvol": 1.78,
+   "green": true
+  },
+  {
+   "symbol": "AMAT",
+   "hi": 351.44,
+   "lo": 346.26,
+   "atr": 27.0436,
+   "rvol": 1.73,
+   "green": false
+  },
+  {
+   "symbol": "DIS",
+   "hi": 119.35,
+   "lo": 118.99,
+   "atr": 2.4482,
+   "rvol": 1.71,
+   "green": false
+  }
+ ],
+ "flags": {
+  "grid": "15:30",
+  "noise_done": true,
+  "feedcheck": true,
+  "lasthalf_done": true
+ }
+}

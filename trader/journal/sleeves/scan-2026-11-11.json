@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-11",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 674.76,
+   "sma200": 681.4155999999999,
+   "rsi2": 83.51293103448266,
+   "trigger": 643.8741714285713,
+   "premarket": 687.85,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Morgan Stanley Reiterates Overweight on NVIDIA, Maintains $300 Price Target",
+    "Dan Ives Says 'Irreplaceable' Nvidia CEO Jensen Huang Is the 'Central Nervous System' of US Tech, Says Company Has No Succession Plan Amid China Spy Allegations",
+    "Why Is NVIDIA Stock Gaining Wednesday?",
+    "Microsoft Warns Trump Administration's Proposed China Data-Center Tech Ban Could Slow US AI Buildout, Raise Costs: Report",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise as Bessent Urges US-China to \u2018De-Risk\u2019\u2014 Alcon, CoreWeave, Telefonica Brasil in Focus (UPDATED)"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 749.92,
+   "sma200": 730.9858,
+   "rsi2": 86.26673277144239,
+   "trigger": 727.7023714285715,
+   "premarket": 757.23,
+   "setup": "needs -3.0% to trigger",
+   "news": [
+    "Morgan Stanley Reiterates Overweight on NVIDIA, Maintains $300 Price Target",
+    "Dan Ives Says 'Irreplaceable' Nvidia CEO Jensen Huang Is the 'Central Nervous System' of US Tech, Says Company Has No Succession Plan Amid China Spy Allegations",
+    "Why Is NVIDIA Stock Gaining Wednesday?",
+    "Microsoft Warns Trump Administration's Proposed China Data-Center Tech Ban Could Slow US AI Buildout, Raise Costs: Report",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise as Bessent Urges US-China to \u2018De-Risk\u2019\u2014 Alcon, CoreWeave, Telefonica Brasil in Focus (UPDATED)"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 483.63,
+   "sma200": 522.61585,
+   "rsi2": 86.1182519280205,
+   "trigger": 446.6162714285714,
+   "premarket": 483.76,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Morgan Stanley Reiterates Overweight on NVIDIA, Maintains $300 Price Target",
+    "Dan Ives Says 'Irreplaceable' Nvidia CEO Jensen Huang Is the 'Central Nervous System' of US Tech, Says Company Has No Succession Plan Amid China Spy Allegations",
+    "Why Is NVIDIA Stock Gaining Wednesday?",
+    "Microsoft Warns Trump Administration's Proposed China Data-Center Tech Ban Could Slow US AI Buildout, Raise Costs: Report",
+    "Nvidia\u2019s China Comeback Faces 3 New Washington Roadblocks. Trump Holds the Wild Card"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 168.89,
+   "sma200": 204.5397,
+   "rsi2": 0.0,
+   "trigger": 172.60985714285712,
+   "premarket": 174.06,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Morgan Stanley Reiterates Overweight on NVIDIA, Maintains $300 Price Target",
+    "Dan Ives Says 'Irreplaceable' Nvidia CEO Jensen Huang Is the 'Central Nervous System' of US Tech, Says Company Has No Succession Plan Amid China Spy Allegations",
+    "Why Is NVIDIA Stock Gaining Wednesday?",
+    "Microsoft Warns Trump Administration's Proposed China Data-Center Tech Ban Could Slow US AI Buildout, Raise Costs: Report",
+    "Nvidia\u2019s China Comeback Faces 3 New Washington Roadblocks. Trump Holds the Wild Card"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  }
+ ]
+}

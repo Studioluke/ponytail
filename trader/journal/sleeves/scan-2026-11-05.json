@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-05",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 691.95,
+   "sma200": 680.5554,
+   "rsi2": 100.0,
+   "trigger": 672.5636428571429,
+   "premarket": 684.58,
+   "setup": "needs -2.8% to trigger",
+   "news": [
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed After Post-Midterm Rally\u2014 TM, ARM, QCOM in Focus (UPDATED)",
+    "Ed Yardeni Says Slowing AI Boom Is Actually Bullish for Big Tech",
+    "Five Signals That Preceded Past Recessions Are Back \u2014 and AI Is at the Center",
+    "Virgin Galactic Enters Three-Year Collaboration With Non-Profit Space For Humanity To Fly Three Dedicated Charters For Up To 18 Astronauts In Total",
+    "'Chinese AI lab Moonshot turned to Europe for Nvidia Blackwell access amid U.S. China curbs' - CNBC"
+   ],
+   "events": [
+    {
+     "date": "2026-11-05",
+     "symbol": "ALL",
+     "event": "Initial jobless claims 8:30 ET (consensus ~197K)",
+     "timing": "pre",
+     "source": "finwire.io five-things 2026-11-05"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 766.81,
+   "sma200": 729.913,
+   "rsi2": 100.0,
+   "trigger": 744.371,
+   "premarket": 767.3,
+   "setup": "needs -2.9% to trigger",
+   "news": [
+    "Fed's Hammack Says Fed's Hammack Says Gradual Rate Hikes Less Disruptive To Economy And Financial System; Inflation Has Been Too High, Moving In Wrong Direction; It's Hard To See Dollar Losing Reserve Status",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed After Post-Midterm Rally\u2014 TM, ARM, QCOM in Focus (UPDATED)",
+    "Ed Yardeni Says Slowing AI Boom Is Actually Bullish for Big Tech",
+    "Five Signals That Preceded Past Recessions Are Back \u2014 and AI Is at the Center",
+    "Virgin Galactic Enters Three-Year Collaboration With Non-Profit Space For Humanity To Fly Three Dedicated Charters For Up To 18 Astronauts In Total"
+   ],
+   "events": [
+    {
+     "date": "2026-11-05",
+     "symbol": "ALL",
+     "event": "Initial jobless claims 8:30 ET (consensus ~197K)",
+     "timing": "pre",
+     "source": "finwire.io five-things 2026-11-05"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 504.27,
+   "sma200": 521.2205,
+   "rsi2": 41.74161896974647,
+   "trigger": 489.0727857142857,
+   "premarket": 485.81,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Top 5 AI Stocks to Buy After Midterm Elections: This Strategist Calls the Sell-Off a Massive Opportunity",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Mixed After Post-Midterm Rally\u2014 TM, ARM, QCOM in Focus (UPDATED)",
+    "Ed Yardeni Says Slowing AI Boom Is Actually Bullish for Big Tech",
+    "'Chinese AI lab Moonshot turned to Europe for Nvidia Blackwell access amid U.S. China curbs' - CNBC",
+    "Susquehanna Maintains Neutral on Qualcomm, Lowers Price Target to $165"
+   ],
+   "events": [
+    {
+     "date": "2026-11-05",
+     "symbol": "ALL",
+     "event": "Initial jobless claims 8:30 ET (consensus ~197K)",
+     "timing": "pre",
+     "source": "finwire.io five-things 2026-11-05"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 200.13,
+   "sma200": 204.6722,
+   "rsi2": 41.376228775692546,
+   "trigger": 195.73714285714289,
+   "premarket": 197.01,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Ed Yardeni Says Slowing AI Boom Is Actually Bullish for Big Tech",
+    "'Chinese AI lab Moonshot turned to Europe for Nvidia Blackwell access amid U.S. China curbs' - CNBC",
+    "What Is Going On With Nvidia Stock on Thursday?",
+    "Politicians Fight Data Centers While Betting Your Retirement on Them",
+    "China Has Yet To Approve Large-Quantity Imports Of Nvidia H200 Chips, Though Smaller Volumes Have Entered Through Unofficial Channels; ~600K H200 AI Chips Are In Hong Kong Awaiting Shipment To Mainland China; Major Chinese Internet Companies Have Each Received ~10K H200 Chips In Recent Months -- Reuters Exclusive"
+   ],
+   "events": [
+    {
+     "date": "2026-11-05",
+     "symbol": "ALL",
+     "event": "Initial jobless claims 8:30 ET (consensus ~197K)",
+     "timing": "pre",
+     "source": "finwire.io five-things 2026-11-05"
+    },
+    {
+     "date": "2026-11-06",
+     "symbol": "ALL",
+     "event": "October jobs report 8:30 ET",
+     "timing": "pre",
+     "source": "stocktwits.com week-ahead 2026-11-01"
+    }
+   ]
+  }
+ ]
+}

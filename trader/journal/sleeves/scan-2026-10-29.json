@@ -1,0 +1,107 @@
+{
+ "date": "2026-10-29",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 725.61,
+   "sma200": 678.7191,
+   "rsi2": 100.0,
+   "trigger": 692.5820714285715,
+   "premarket": 713.02,
+   "setup": "needs -4.6% to trigger",
+   "news": [
+    "Apple Increases Production Targets for iPhone Duo Following Strong Demand",
+    "IANS Launches Practitioner-Validated Cybersecurity Intelligence in Microsoft Copilot",
+    "Keybanc Maintains Overweight on Microsoft, Raises Price Target to $630",
+    "Microsoft Goes Jumbo: $25 Billion Bond Sale in the Works",
+    "Alphabet Blames Even the World Cup for Google Search\u2019s Slowdown"
+   ],
+   "events": [
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 772.31,
+   "sma200": 728.14935,
+   "rsi2": 100.0,
+   "trigger": 753.3604285714285,
+   "premarket": 768.065,
+   "setup": "needs -2.5% to trigger",
+   "news": [
+    "Apple Increases Production Targets for iPhone Duo Following Strong Demand",
+    "IANS Launches Practitioner-Validated Cybersecurity Intelligence in Microsoft Copilot",
+    "Keybanc Maintains Overweight on Microsoft, Raises Price Target to $630",
+    "Microsoft Goes Jumbo: $25 Billion Bond Sale in the Works",
+    "Alphabet Blames Even the World Cup for Google Search\u2019s Slowdown"
+   ],
+   "events": [
+    {
+     "date": "2026-10-29",
+     "symbol": "AAPL",
+     "event": "Earnings (estimated date)",
+     "timing": "after",
+     "source": "third-party estimate (unconfirmed)"
+    },
+    {
+     "date": "2026-10-29",
+     "symbol": "AMZN",
+     "event": "Earnings (confirmed; call 5:00 ET)",
+     "timing": "after",
+     "source": "aboutamazon.com Q3 2026 announcement"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 567.67,
+   "sma200": 517.97955,
+   "rsi2": 100.0,
+   "trigger": 510.51341428571436,
+   "premarket": 558.675,
+   "setup": "needs -10.1% to trigger",
+   "news": [
+    "Hinduja Global Solutions Selects Rackspace Technology for AI Infrastructure Powered by AMD",
+    "'Nvidia is Boeing': Chamath Palihapitiya and Ken Griffin Back Viral Analogy Comparing AI GPUs to Airlines",
+    "Alphabet Stock Set for Worst Day Since March 2020: Search Slowdown Overshadows Cloud Boom",
+    "Bill Ackman\u2019s 20-Year Investing Rule Puts These Cash-Flow and Moat ETFs in Focus",
+    "This Hilton Hotels Analyst Turns Bullish; Here Are Top 5 Upgrades For Thursday"
+   ],
+   "events": []
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 215.38,
+   "sma200": 204.1378,
+   "rsi2": 43.11111111111106,
+   "trigger": 203.65217142857145,
+   "premarket": 212.88,
+   "setup": "needs -5.4% to trigger",
+   "news": [
+    "'Nvidia is Boeing': Chamath Palihapitiya and Ken Griffin Back Viral Analogy Comparing AI GPUs to Airlines",
+    "Alphabet Stock Set for Worst Day Since March 2020: Search Slowdown Overshadows Cloud Boom",
+    "Nvidia CEO Jensen Huang Was Target of Suspected Chinese Intelligence Asset, Raising Questions Over Potential AI Chip Diversion: Report",
+    "STMicroelectronics Lifts Forecast Thanks To Data Center Revenue Growth",
+    "Scott Bessent Brushes Off Concerns Over AI Debt Amid CoreWeave Slump, Calls Neoclouds a \u2018Small Component\u2019"
+   ],
+   "events": []
+  }
+ ]
+}

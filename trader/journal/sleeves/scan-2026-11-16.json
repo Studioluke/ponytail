@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-16",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 679.89,
+   "sma200": 682.2389,
+   "rsi2": 0.0,
+   "trigger": 640.0650428571428,
+   "premarket": 671.59,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Tesla To Invest Additional \u20ac3B In Its Gr\u00fcnheide Gigfactory In Germany - FAZ",
+    "Nebius Group Stock Slides Again Monday: What's Going On?",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Fall as Scott Bessent Presses Nvidia Over China Chips \u2014 BIDU, RKLB, MSTR in Focus (UPDATED)",
+    "Uber Riders in Vegas Can Now Get Driverless Zoox Robotaxi",
+    "Tesla-SpaceX Merger Is 'Almost Inconceivable' to Avoid, Says Elon Musk Biographer \u2014 'You'll Know More' on Dec. 3"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 754.37,
+   "sma200": 731.91755,
+   "rsi2": 0.0,
+   "trigger": 726.2400857142857,
+   "premarket": 749.66,
+   "setup": "needs -3.7% to trigger",
+   "news": [
+    "Nebius Group Stock Slides Again Monday: What's Going On?",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Fall as Scott Bessent Presses Nvidia Over China Chips \u2014 BIDU, RKLB, MSTR in Focus (UPDATED)",
+    "Uber Riders in Vegas Can Now Get Driverless Zoox Robotaxi",
+    "Tesla-SpaceX Merger Is 'Almost Inconceivable' to Avoid, Says Elon Musk Biographer \u2014 'You'll Know More' on Dec. 3",
+    "Microsoft Authorizes Parallels Desktop for Windows on Apple Silicon"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 486.75,
+   "sma200": 523.8860500000001,
+   "rsi2": 0.0,
+   "trigger": 434.3018714285714,
+   "premarket": 481.74,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "What's Going On With Micron Technology Stock Monday?",
+    "Nebius Group Stock Slides Again Monday: What's Going On?",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Fall as Scott Bessent Presses Nvidia Over China Chips \u2014 BIDU, RKLB, MSTR in Focus (UPDATED)",
+    "Tesla-SpaceX Merger Is 'Almost Inconceivable' to Avoid, Says Elon Musk Biographer \u2014 'You'll Know More' on Dec. 3",
+    "Applied Materials Announces Participation in Upcoming Investor Conferences"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 162.85,
+   "sma200": 204.19080000000002,
+   "rsi2": 0.0,
+   "trigger": 156.81542857142858,
+   "premarket": 157.95,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nebius Group Stock Slides Again Monday: What's Going On?",
+    "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Fall as Scott Bessent Presses Nvidia Over China Chips \u2014 BIDU, RKLB, MSTR in Focus (UPDATED)",
+    "Tesla-SpaceX Merger Is 'Almost Inconceivable' to Avoid, Says Elon Musk Biographer \u2014 'You'll Know More' on Dec. 3",
+    "AMD Stock Is Falling Monday: What's Going On?",
+    "TD Cowen Maintains Buy on NVIDIA, Lowers Price Target to $200"
+   ],
+   "events": [
+    {
+     "date": "2026-11-17",
+     "symbol": "NVDA",
+     "event": "Earnings (confirmed; after the close)",
+     "timing": "after",
+     "source": "Reuters via investing.com 2026-11-16"
+    }
+   ]
+  }
+ ]
+}

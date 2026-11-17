@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-12",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 690.38,
+   "sma200": 681.71185,
+   "rsi2": 77.28847105393358,
+   "trigger": 643.2958857142856,
+   "premarket": 681.75,
+   "setup": "needs -6.8% to trigger",
+   "news": [
+    "Michael Burry Says Nvidia Just Lost Its Enforcer: \u2018The Don Has Fallen\u2019",
+    "Quantum Stocks Slide as Rigetti, D-Wave Results Disappoint, Nvidia Turmoil Overshadows IonQ",
+    "NVIDIA Says Colette Kress To Serve As Interim CEO Until Permanent Successor Named; Board Is Initiating Search For Permanent CEO And Will Consider Internal And External Candidates",
+    "NVIDIA Appoints Harvey C. Jones As Its First-Ever Board Chair",
+    "NVIDIA Appoints Colette Kress As Interim CEO; Jensen Huang Has Resigned As President, Chief Executive Officer, And A Member Of The Board, Effective Immediately"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 759.81,
+   "sma200": 731.3074,
+   "rsi2": 78.12006319115262,
+   "trigger": 727.6413714285715,
+   "premarket": 755.12,
+   "setup": "needs -4.2% to trigger",
+   "news": [
+    "Michael Burry Says Nvidia Just Lost Its Enforcer: \u2018The Don Has Fallen\u2019",
+    "Quantum Stocks Slide as Rigetti, D-Wave Results Disappoint, Nvidia Turmoil Overshadows IonQ",
+    "NVIDIA Says Colette Kress To Serve As Interim CEO Until Permanent Successor Named; Board Is Initiating Search For Permanent CEO And Will Consider Internal And External Candidates",
+    "NVIDIA Appoints Harvey C. Jones As Its First-Ever Board Chair",
+    "NVIDIA Appoints Colette Kress As Interim CEO; Jensen Huang Has Resigned As President, Chief Executive Officer, And A Member Of The Board, Effective Immediately"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 506.96,
+   "sma200": 523.1144,
+   "rsi2": 86.05680560678707,
+   "trigger": 443.9282714285714,
+   "premarket": 488.04,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Michael Burry Says Nvidia Just Lost Its Enforcer: \u2018The Don Has Fallen\u2019",
+    "Quantum Stocks Slide as Rigetti, D-Wave Results Disappoint, Nvidia Turmoil Overshadows IonQ",
+    "NVIDIA Says Colette Kress To Serve As Interim CEO Until Permanent Successor Named; Board Is Initiating Search For Permanent CEO And Will Consider Internal And External Candidates",
+    "NVIDIA Appoints Harvey C. Jones As Its First-Ever Board Chair",
+    "NVIDIA Appoints Colette Kress As Interim CEO; Jensen Huang Has Resigned As President, Chief Executive Officer, And A Member Of The Board, Effective Immediately"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 173.73,
+   "sma200": 204.46575,
+   "rsi2": 33.10533515731876,
+   "trigger": 169.39514285714287,
+   "premarket": 155.38,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Michael Burry Says Nvidia Just Lost Its Enforcer: \u2018The Don Has Fallen\u2019",
+    "Quantum Stocks Slide as Rigetti, D-Wave Results Disappoint, Nvidia Turmoil Overshadows IonQ",
+    "NVIDIA Says Colette Kress To Serve As Interim CEO Until Permanent Successor Named; Board Is Initiating Search For Permanent CEO And Will Consider Internal And External Candidates",
+    "NVIDIA Appoints Harvey C. Jones As Its First-Ever Board Chair",
+    "NVIDIA Appoints Colette Kress As Interim CEO; Jensen Huang Has Resigned As President, Chief Executive Officer, And A Member Of The Board, Effective Immediately"
+   ],
+   "events": [
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  }
+ ]
+}

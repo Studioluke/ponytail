@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-10",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 679.35,
+   "sma200": 681.1691000000001,
+   "rsi2": 100.0,
+   "trigger": 649.9295714285714,
+   "premarket": 671.02,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nvidia\u2019s $7.5 Billion China Chip Scandal Leads to This Shanghai-Listed AI Company",
+    "Stock Market Today: Dow Futures Rise, S&P 500 and Nasdaq 100 Futures Fall as Trump Signals Iran War to End \u2018Fairly Soon\u2019 \u2014 CRWV, TTWO, BW In Focus (UPDATED)",
+    "Nvidia To $300? Here Are 10 Top Analyst Forecasts For Tuesday",
+    "Google\u2019s New AI System Doubles Compute in the Same Space. JPMorgan Sees a Broadcom Win",
+    "IMAX Inks Agreement With Meta For Meta VR Glasses As IMAX Enhanced Certified VR Device, Roll Out Updated IMAX App To Device In 2027"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 752.69,
+   "sma200": 730.69985,
+   "rsi2": 100.0,
+   "trigger": 730.4740857142857,
+   "premarket": 747.95,
+   "setup": "needs -3.0% to trigger",
+   "news": [
+    "Nvidia\u2019s $7.5 Billion China Chip Scandal Leads to This Shanghai-Listed AI Company",
+    "Stock Market Today: Dow Futures Rise, S&P 500 and Nasdaq 100 Futures Fall as Trump Signals Iran War to End \u2018Fairly Soon\u2019 \u2014 CRWV, TTWO, BW In Focus (UPDATED)",
+    "Redbook Retail Sales Index Up 10.1% YoY For Week Ended 11/07/26",
+    "Redbook Retail Sales Index For November 2026 Vs November 2025: 10.1% YoY",
+    "Watching S&P Futures, Bitcoin; Securities Become Volatile After U.S. Reports Its Consumer Price Index For October Increased Month-Over-Month"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 487.41,
+   "sma200": 522.1918000000001,
+   "rsi2": 100.0,
+   "trigger": 456.2382285714285,
+   "premarket": 474.07,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nvidia\u2019s $7.5 Billion China Chip Scandal Leads to This Shanghai-Listed AI Company",
+    "Nvidia To $300? Here Are 10 Top Analyst Forecasts For Tuesday",
+    "Google\u2019s New AI System Doubles Compute in the Same Space. JPMorgan Sees a Broadcom Win",
+    "Could Jensen Huang's Affair Be the Most Expensive in Human History?",
+    "Linux Kernel Patches Enable Support for Qualcomm Snapdragon XR2+ Gen 2 SoC"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 178.67,
+   "sma200": 204.62759999999997,
+   "rsi2": 38.739431206763996,
+   "trigger": 179.24542857142856,
+   "premarket": 176.22,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Nvidia\u2019s $7.5 Billion China Chip Scandal Leads to This Shanghai-Listed AI Company",
+    "Nvidia To $300? Here Are 10 Top Analyst Forecasts For Tuesday",
+    "Could Jensen Huang's Affair Be the Most Expensive in Human History?",
+    "NVIDIA CEO Jensen Huang Faces FBI Probe and Shareholder Lawsuit",
+    "Trump Says \u2018I Know The FBI Is Looking Into It\u2019 as Nvidia CEO Jensen Huang Faces Scrutiny Over Suspected Chinese Spy Allegations"
+   ],
+   "events": [
+    {
+     "date": "2026-11-10",
+     "symbol": "ALL",
+     "event": "October CPI 8:30 ET",
+     "timing": "pre",
+     "source": "thestreet.com and coincentral.com week-ahead 2026-11-08"
+    },
+    {
+     "date": "2026-11-13",
+     "symbol": "ALL",
+     "event": "PPI 8:30 ET (day per one preview; unconfirmed)",
+     "timing": "pre",
+     "source": "coincentral.com week-ahead 2026-11-08"
+    }
+   ]
+  }
+ ]
+}

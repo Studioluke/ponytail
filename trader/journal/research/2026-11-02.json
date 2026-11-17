@@ -1,0 +1,4189 @@
+{
+ "date": "2026-11-02",
+ "generated": "2026-11-02T09:02-05:00",
+ "regime": "mixed / range",
+ "regime_notes": [
+  "SPY trend mixed, gap +0.61%, 5d -0.54%",
+  "QQQ trend mixed, gap +0.87%, 5d -1.94%"
+ ],
+ "events": [
+  {
+   "date": "2026-11-02",
+   "symbol": "AAPL",
+   "event": "Earnings",
+   "timing": "after",
+   "source": "stocktwits.com week-ahead 2026-11-01"
+  },
+  {
+   "date": "2026-11-02",
+   "symbol": "ALL",
+   "event": "ISM Manufacturing PMI 10:00 ET",
+   "timing": "during",
+   "source": "moomoo.com week-ahead preview 2026-11-01"
+  },
+  {
+   "date": "2026-11-02",
+   "symbol": "PLTR",
+   "event": "Earnings",
+   "timing": "after",
+   "source": "stocktwits.com week-ahead 2026-11-01"
+  }
+ ],
+ "watchlist": [
+  {
+   "symbol": "SPY",
+   "verdict": "ok",
+   "why": [
+    "nothing unusual"
+   ],
+   "prior_close": 755.72,
+   "price": 760.34,
+   "gap": 0.0061133753241942035,
+   "ret_5d": -0.005409104668149478,
+   "ret_20d": -0.018099135970895852,
+   "sma20": 770.476,
+   "sma50": 767.4841,
+   "trend": "mixed",
+   "atr_pct": 0.010968253548177313,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:47:30.148132174Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:44:15Z",
+     "headline": "President Trump Says U.S. Receiving Millions Of Barrels Of Oil From Venezuela; We Will Have To Protect Musk If SpaceX Is At Risk From Democrats; Will Veto Everything If Democrats Win Midterm Elections",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62772444/president-trump-says-u-s-receiving-millions-barrels-oil-venezuela-we-will-have-protect-musk-if-space",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-10-30T05:02:49Z",
+     "headline": "'He Lied': Nancy Pelosi Blasts Trump for Not Keeping Promise to Lower Costs on 'Day One' (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/economic-data/26/10/62727214/nancy-pelosi-trump-lied-costs-tariffs-inflation-midterm-elections",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T07:32:04Z",
+     "headline": "S&P 500 Is Up '19 For 19 Times' In Midterm November-April Window, According To Ryan Detrick",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62768845/sp-500-is-up-19-for-19-times-in-midterm-november-april-window-according-to-ryan-detrick",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T05:47:19Z",
+     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62767926/stock-market-will-sp-500-open-up-or-down-today-70",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.56
+  },
+  {
+   "symbol": "QQQ",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +0.87% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 690.54,
+   "price": 696.53,
+   "gap": 0.008674370782286278,
+   "ret_5d": -0.01941182317774537,
+   "ret_20d": -0.07865348436937125,
+   "sma20": 728.163,
+   "sma50": 724.9865,
+   "trend": "mixed",
+   "atr_pct": 0.020846004576128823,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:58:14.957553403Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T07:32:04Z",
+     "headline": "S&P 500 Is Up '19 For 19 Times' In Midterm November-April Window, According To Ryan Detrick",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62768845/sp-500-is-up-19-for-19-times-in-midterm-november-april-window-according-to-ryan-detrick",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T05:47:19Z",
+     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62767926/stock-market-will-sp-500-open-up-or-down-today-70",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.67
+  },
+  {
+   "symbol": "AAPL",
+   "verdict": "skip",
+   "why": [
+    "Earnings (2026-11-02, after the session): the opening range is unreliable"
+   ],
+   "prior_close": 344.77,
+   "price": 344.22,
+   "gap": -0.001595266409490259,
+   "ret_5d": -0.008398285829330776,
+   "ret_20d": 0.033018726591760306,
+   "sma20": 342.1225,
+   "sma50": 333.06739999999996,
+   "trend": "up",
+   "atr_pct": 0.017547930504394245,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:48:47.48338893Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:54:37Z",
+     "headline": "Apple Earnings Prediction Market Preview: What Will John Ternus Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62777973/apple-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:31:36Z",
+     "headline": "Apple Scheduled to Report Fiscal Fourth-Quarter Earnings",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:aeccb8e4e7014:0-key-facts-apple-aapl-q4-revenue-113b-iphone-pre-order-trends/",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T16:15:06Z",
+     "headline": "Apple Diverges From Magnificent 7 as Options Point to Jump to $355 After Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766171/apple-stock-diverges-from-magnificent-7-as-options-point-to-a-jump-to-355-after-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.59
+  },
+  {
+   "symbol": "MSFT",
+   "verdict": "ok",
+   "why": [
+    "nothing unusual"
+   ],
+   "prior_close": 521.97,
+   "price": 525.47,
+   "gap": 0.006705366208785923,
+   "ret_5d": -0.004586412395709116,
+   "ret_20d": 0.008988633727673445,
+   "sma20": 531.10675,
+   "sma50": 512.9365,
+   "trend": "mixed",
+   "atr_pct": 0.02205997060586405,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:48:00.545172451Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:32:32Z",
+     "headline": "Lumen Technologies And Microsoft Announce Expanded Co-Selling Collaboration, Lumen Plans To Bring Full Cloud Networking Suite To Azure",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/quote/MSFT",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:15:24Z",
+     "headline": "Sam Altman During ADIPEC 2026 Opening Ceremony Said We Will See Economic Transformation; 10,000 Agents Of AI Model That Proved First Millennium Prize Problem Will Be Released As Next GPT Soon",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776477/sam-altman-during-adipec-2026-opening-ceremony-said-we-will-see-economic-transformation-10-000-agent",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:14:42Z",
+     "headline": "Earlier Sam Altman During ADIPEC 2026 Opening Ceremony Said AI Will \"Transform The Abundance And Efficiency Of Energy Of The World,\" And Models That Are Few Months Old Are Now Are Capable Of This",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776443/earlier-sam-altman-during-adipec-2026-opening-ceremony-said-ai-will-transform-abundance-and-efficien",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:13:53Z",
+     "headline": "Earlier Sam Altman During ADIPEC 2026 Opening Ceremony Said World Will Need More Energy; AI Will Help Enable Energy Industry; AI Technology Will Apply To Every Field Of Science And Will Apply To Complex Problems [Energy Producers] Face For Production And Delivery",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776428/earlier-sam-altman-during-adipec-2026-opening-ceremony-said-world-will-need-more-energy-ai-will-help",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:04:13Z",
+     "headline": "Apple Is the 'Only Mag 7 Stock' Beating S&P 500 by Avoiding the AI 'Spending Binge,' Says Market Strategist",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62775842/apple-is-the-only-mag-7-stock-beating-sp-500-by-avoiding-the-ai-spending-binge-says-market-strategist",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.3
+  },
+  {
+   "symbol": "GOOGL",
+   "verdict": "caution",
+   "why": [
+    "earnings headline overnight; check whether it reports today",
+    "volatility expanding (ATR 3.85% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 279.9,
+   "price": 281.75,
+   "gap": 0.006609503394069405,
+   "ret_5d": -0.12594073010024054,
+   "ret_20d": -0.1850816665210937,
+   "sma20": 333.9085,
+   "sma50": 339.0628,
+   "trend": "down",
+   "atr_pct": 0.03848185576481396,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:23:10.799900949Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:54:37Z",
+     "headline": "Apple Earnings Prediction Market Preview: What Will John Ternus Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62777973/apple-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:34:56Z",
+     "headline": "Entergy Arkansas Expands Service Agreement With Google",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/quote/ETR",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:50:06Z",
+     "headline": "Top Analyst Warns Amazon Could \u2018Kill the Golden Goose\u2019 by Embracing AI Shopping Bots \u2014 Says Jeff Bezos\u2019 E-Commerce Giant Must Rethink Its Business Model",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770465/top-analyst-warns-amazon-could-kill-the-golden-goose-by-embracing-ai-shopping-bots-says-jeff-bezos-e-commerce-giant-must-rethink-its-business-model",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:40:04Z",
+     "headline": "Jim Chanos Warns Elon Musk\u2019s Space Data Center Math Could Be Way Off: \u2018$5T Per GW\u2026\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770400/jim-chanos-warns-elon-musks-space-data-center-math-could-be-way-off-5t-per-gw",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:15:49Z",
+     "headline": "Alphabet Begins Euro Bond Sale With Seven Tranches Of Two- To 19-Year Maturities; Pricing Expected Later Today, IFR Says",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62769261/alphabet-begins-euro-bond-sale-seven-tranches-two-19-year-maturities-pricing-expected-later-today-if",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.92
+  },
+  {
+   "symbol": "NVDA",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.22% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 204.76,
+   "price": 207.26,
+   "gap": 0.012209415901543341,
+   "ret_5d": -0.029665434555966375,
+   "ret_20d": -0.124957264957265,
+   "sma20": 221.487,
+   "sma50": 221.7686,
+   "trend": "down",
+   "atr_pct": 0.0318229704462367,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T14:02:37.722126529Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:54:37Z",
+     "headline": "Apple Earnings Prediction Market Preview: What Will John Ternus Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62777973/apple-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:08:09Z",
+     "headline": "Palantir Earnings Prediction Market Preview: What Will Alex Karp Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62776238/palantir-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:02:52Z",
+     "headline": "Melius Research Lowers NVIDIA Price Target",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/prnewswire:01a36640e4973:0-cloud-numbers-are-in-this-week-the-spotlight-moves-to-phones-laptops-and-chips/",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:31:32Z",
+     "headline": "Melius Research Maintains Buy on NVIDIA, Lowers Price Target to $315",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774464/melius-research-maintains-buy-nvidia-lowers-price-target-315",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-01T20:35:05Z",
+     "headline": "AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766585/amd-stock-is-stuck-in-a-bear-market-on-circular-investing-fears-can-earnings-turn-the-tide",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T16:15:06Z",
+     "headline": "Apple Diverges From Magnificent 7 as Options Point to Jump to $355 After Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766171/apple-stock-diverges-from-magnificent-7-as-options-point-to-a-jump-to-355-after-earnings",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 1.13
+  },
+  {
+   "symbol": "META",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 614.86,
+   "price": 615.52,
+   "gap": null,
+   "ret_5d": -0.042632037867463835,
+   "ret_20d": -0.155516488346221,
+   "sma20": 691.1025,
+   "sma50": 669.9689999999999,
+   "trend": "mixed",
+   "atr_pct": 0.040553366387702634,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T20:26:51.419887641Z",
+   "news": [
+    {
+     "time": "2026-11-01T20:35:05Z",
+     "headline": "AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766585/amd-stock-is-stuck-in-a-bear-market-on-circular-investing-fears-can-earnings-turn-the-tide",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:04:13Z",
+     "headline": "Apple Is the 'Only Mag 7 Stock' Beating S&P 500 by Avoiding the AI 'Spending Binge,' Says Market Strategist",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62775842/apple-is-the-only-mag-7-stock-beating-sp-500-by-avoiding-the-ai-spending-binge-says-market-strategist",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:50:06Z",
+     "headline": "Top Analyst Warns Amazon Could \u2018Kill the Golden Goose\u2019 by Embracing AI Shopping Bots \u2014 Says Jeff Bezos\u2019 E-Commerce Giant Must Rethink Its Business Model",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770465/top-analyst-warns-amazon-could-kill-the-golden-goose-by-embracing-ai-shopping-bots-says-jeff-bezos-e-commerce-giant-must-rethink-its-business-model",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T17:30:06Z",
+     "headline": "$600B Tech Wipeout Meets $1.48T Margin Debt",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62766282/600b-tech-wipeout-meets-1-48t-margin-debt",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "AMZN",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +0.79% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 240.345,
+   "price": 242.24,
+   "gap": 0.007884499365495401,
+   "ret_5d": -0.030808315019053678,
+   "ret_20d": -0.04404979715217561,
+   "sma20": 254.41025,
+   "sma50": 254.27739999999997,
+   "trend": "mixed",
+   "atr_pct": 0.03190354341824105,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:50:53.802860585Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:22:32Z",
+     "headline": "Est\u00e9e Lauder Turns Up the Glamour With Strong Earnings, Higher Outlook",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62776622/estee-lauder-turns-up-the-glamour-with-strong-earnings-higher-outlook",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T16:15:06Z",
+     "headline": "Apple Diverges From Magnificent 7 as Options Point to Jump to $355 After Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766171/apple-stock-diverges-from-magnificent-7-as-options-point-to-a-jump-to-355-after-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T12:31:49Z",
+     "headline": "Narwal Launches V50 Cube Cordless Vacuum in the U.S.",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/narwal-launches-the-v50-cube-in-the-us-debuting-its-first-cordless-dry-vacuum-with-a-compact-auto-empty-base-station-302925955.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:50:06Z",
+     "headline": "Top Analyst Warns Amazon Could \u2018Kill the Golden Goose\u2019 by Embracing AI Shopping Bots \u2014 Says Jeff Bezos\u2019 E-Commerce Giant Must Rethink Its Business Model",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770465/top-analyst-warns-amazon-could-kill-the-golden-goose-by-embracing-ai-shopping-bots-says-jeff-bezos-e-commerce-giant-must-rethink-its-business-model",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:55:30Z",
+     "headline": "Nasdaq Tumbles Over 700 Points as Chip Stocks Fall: Investor Sentiment Weakens, Greed Index Remains in \u2018Fear\u2019 Zone",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62769481/nasdaq-tumbles-over-700-points-as-chip-stocks-fall-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 1.0
+  },
+  {
+   "symbol": "TSLA",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.53% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 399.8,
+   "price": 405.9,
+   "gap": 0.015257628814407065,
+   "ret_5d": 0.07429799811903814,
+   "ret_20d": 0.07867472480034543,
+   "sma20": 380.7105,
+   "sma50": 369.6093,
+   "trend": "up",
+   "atr_pct": 0.03569463303080111,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:41:31.778274938Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:57:04Z",
+     "headline": "Trump Threatens to Become 'Mr. Veto' if GOP Loses House Majority in Midterms: 'We Have More Than Two Years Left'",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/politics/26/11/62775209/trump-threatens-to-become-mr-veto-if-gop-loses-house-majority-in-midterms-we-have-more-than-two-years-left",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T12:03:21Z",
+     "headline": "Tesla Rival NIO's October Deliveries Sink 15%",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/movers/26/11/62772961/tesla-rival-nios-october-deliveries-sink-15",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:44:15Z",
+     "headline": "President Trump Says U.S. Receiving Millions Of Barrels Of Oil From Venezuela; We Will Have To Protect Musk If SpaceX Is At Risk From Democrats; Will Veto Everything If Democrats Win Midterm Elections",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62772444/president-trump-says-u-s-receiving-millions-barrels-oil-venezuela-we-will-have-protect-musk-if-space",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:32:00Z",
+     "headline": "Tesla Reports October Vehicle Registration Growth in Nordic Markets",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/tesla-registrations-rise-across-northern-europe-in-october-ce785fd8d188f32d",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:28:38Z",
+     "headline": "Tesla October New Registrations In Spain Reach 1,459 Cars, Up 271.2% YoY",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62771656/tesla-october-new-registrations-spain-reach-1-459-cars-271-2-yoy",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.43
+  },
+  {
+   "symbol": "AMD",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.94% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 505.2,
+   "price": 515,
+   "gap": 0.01939825811559781,
+   "ret_5d": -0.022540388894263352,
+   "ret_20d": -0.2028339474078691,
+   "sma20": 570.4565,
+   "sma50": 548.283,
+   "trend": "mixed",
+   "atr_pct": 0.0632649021603891,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:58:51.274774405Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:57Z",
+     "headline": "Morgan Stanley Adjusts Price Target on Advanced Micro Devices to $510 From $465",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-adjusts-price-target-on-advanced-micro-devices-to-510-from-465-ce785fd8d189f225",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-01T20:35:05Z",
+     "headline": "AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766585/amd-stock-is-stuck-in-a-bear-market-on-circular-investing-fears-can-earnings-turn-the-tide",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T09:47:42Z",
+     "headline": "Buying the Intel Dip Could Be a Mistake, Analyst Warns\u2014\u2018Dead Money\u2019 Until \u2018Bad Planning\u2019 and Capacity Woes Are Fixed",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62769860/buying-the-intel-dip-could-be-a-mistake-analyst-warns-dead-money-until-bad-planning-and-capacity-woes-are-fixed",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:55:30Z",
+     "headline": "Nasdaq Tumbles Over 700 Points as Chip Stocks Fall: Investor Sentiment Weakens, Greed Index Remains in \u2018Fear\u2019 Zone",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62769481/nasdaq-tumbles-over-700-points-as-chip-stocks-fall-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 1.06
+  },
+  {
+   "symbol": "IWM",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +0.94% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 279.37,
+   "price": 282,
+   "gap": 0.009414038729999685,
+   "ret_5d": 0.013238067604816495,
+   "ret_20d": -0.00735503126776571,
+   "sma20": 277.399,
+   "sma50": 284.27,
+   "trend": "mixed",
+   "atr_pct": 0.014248896752386666,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:44:39.431130724Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.66
+  },
+  {
+   "symbol": "DIA",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +0.77% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 517,
+   "price": 520.96,
+   "gap": 0.007659574468085184,
+   "ret_5d": -0.008372253603521562,
+   "ret_20d": 0.011900101777186256,
+   "sma20": 519.2915,
+   "sma50": 521.6547999999999,
+   "trend": "down",
+   "atr_pct": 0.010085659021829235,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:43:41.719930777Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T07:32:04Z",
+     "headline": "S&P 500 Is Up '19 For 19 Times' In Midterm November-April Window, According To Ryan Detrick",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62768845/sp-500-is-up-19-for-19-times-in-midterm-november-april-window-according-to-ryan-detrick",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T05:47:19Z",
+     "headline": "Stock Market: Will S&P 500 Open Up or Down Today?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62767926/stock-market-will-sp-500-open-up-or-down-today-70",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T17:45:07Z",
+     "headline": "S&P 500, Dow Jones, and Nasdaq 100 Outlook: Top Drivers for US Stocks This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766301/sp-500-dow-jones-and-nasdaq-100-outlook-top-drivers-for-us-stocks-this-week",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.76
+  },
+  {
+   "symbol": "NFLX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 62.09,
+   "price": 62.09,
+   "gap": null,
+   "ret_5d": -0.05731420329461767,
+   "ret_20d": -0.07425078276427599,
+   "sma20": 67.58574999999999,
+   "sma50": 72.6796,
+   "trend": "down",
+   "atr_pct": 0.033643558889170116,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.991580451Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:01:51Z",
+     "headline": "Netflix Expands K-Pop Content Strategy with 'We Go High' Audition Series",
+     "source": "fiscal.ai",
+     "url": "https://m.koreaherald.com/article/10923142",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:46:02Z",
+     "headline": "Bill Ackman Says MSFT, AMZN and NFLX Fit His \u2018Enormously Valuable\u2019 20-Year Investing Test",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62769430/bill-ackman-says-msft-amzn-and-nflx-fit-his-enormously-valuable-20-year-investing-test",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:59Z",
+     "headline": "Netflix Schedules Production for Extraction 3",
+     "source": "fiscal.ai",
+     "url": "https://www.nation.com.pk/02-Nov-2026/chris-hemsworth-s-long-awaited-netflix-sequel-finally-gets-exciting-filming-update",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T14:01:51Z",
+     "headline": "Netflix Shifts Content Strategy in India Toward Reality and Television Franchises",
+     "source": "fiscal.ai",
+     "url": "https://htsyndication.com/inc-42/article/netflix-flips-its-india-script/105656923",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T14:01:51Z",
+     "headline": "Netflix to Adapt Bestseller 'My Crazy Feminist Girlfriend'",
+     "source": "fiscal.ai",
+     "url": "https://www.finanznachrichten.de/nachrichten-aktien/netflix-inc.htm",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "AVGO",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +0.98% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 326.155,
+   "price": 329.36,
+   "gap": 0.009826616179424041,
+   "ret_5d": 0.01373801420423626,
+   "ret_20d": -0.08157690953889485,
+   "sma20": 345.742,
+   "sma50": 352.8201,
+   "trend": "down",
+   "atr_pct": 0.03948057124460984,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:58:26.237207794Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:54:37Z",
+     "headline": "Apple Earnings Prediction Market Preview: What Will John Ternus Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62777973/apple-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:31:28Z",
+     "headline": "South Korea's Supreme Court Upholds Antitrust Fine Against Broadcom",
+     "source": "fiscal.ai",
+     "url": "https://www.koreaherald.com/article/10923234",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T10:50:48Z",
+     "headline": "'Bond King' Jeffrey Gundlach Slams Anthropic\u2019s Investment-Grade Rating Bid: \u2018Any Rating Agency\u2019 Giving It Should Be \u2018Shut Down\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770477/bond-king-jeffrey-gundlach-slams-anthropics-investment-grade-rating-bid-any-rating-agency-giving-it-should-be-shut-down",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:43:46Z",
+     "headline": "What's Going On With Broadcom Stock Monday?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62770428/whats-going-on-with-broadcom-stock-monday-10",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:55:05Z",
+     "headline": "SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/etfs/sector-etfs/26/11/62766623/soxx-top-semiconductor-etf-targets-400-as-ai-bubble-worries-linger",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 1.0
+  },
+  {
+   "symbol": "COST",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 1012.52,
+   "price": 1012.52,
+   "gap": null,
+   "ret_5d": 0.009305362420690244,
+   "ret_20d": 0.09957321112474604,
+   "sma20": 977.8905000000001,
+   "sma50": 943.294,
+   "trend": "up",
+   "atr_pct": 0.016966507892613055,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:55.573295937Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "ORCL",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.31% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 130.68,
+   "price": 126.35,
+   "gap": -0.03313437404346509,
+   "ret_5d": 0.03632038065027765,
+   "ret_20d": -0.08236781124921,
+   "sma20": 134.71375,
+   "sma50": 141.7833,
+   "trend": "down",
+   "atr_pct": 0.060324566006384195,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:54:31.663122166Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:29:00Z",
+     "headline": "Stephens & Co. Upgrades Oracle to Overweight, Raises Price Target to $213",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776796/stephens-co-upgrades-oracle-overweight-raises-price-target-213",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:32:08Z",
+     "headline": "Stephens Upgrades Oracle to Overweight",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/stephens-upgrades-oracle-to-overweight-from-equalweight-213-price-target-ce785fd8d181f52c",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:41:34Z",
+     "headline": "\u2018Big Short\u2019 Investor Steve Eisman Warns AI Price Cuts and Slowing Usage Could Trigger a Massive Stock Market Correction \u2014 \u2018...Could Go Into a Recession Immediately\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62777488/big-short-investor-steve-eisman-warns-ai-price-cuts-and-slowing-usage-could-trigger-a-massive-stock-market-correction-could-go-into-a-recession-immediately",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:20:03Z",
+     "headline": "Oracle Announces $10B Public Offering Of Common Stock; Concurrently With $10B Senior Notes Offering",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776551/oracle-announces-10b-public-offering-common-stock-concurrently-10b-senior-notes-offering",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:02:09Z",
+     "headline": "Oracle Launches Six-Part US Dollar High-Grade Bond Offering",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1003190140/oracle-launches-six-part-us-dollar-high-grade-bond-offering",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.05
+  },
+  {
+   "symbol": "CRM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 229.15,
+   "price": 229.15,
+   "gap": null,
+   "ret_5d": -0.07779298132646484,
+   "ret_20d": -0.023272665274285065,
+   "sma20": 237.373,
+   "sma50": 238.9161,
+   "trend": "down",
+   "atr_pct": 0.03929428633770767,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:51.507948352Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "ADBE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 250.12,
+   "price": 250.12,
+   "gap": null,
+   "ret_5d": -0.052144914355009786,
+   "ret_20d": 0.052516411378555894,
+   "sma20": 247.63775,
+   "sma50": 254.3492,
+   "trend": "mixed",
+   "atr_pct": 0.0358627858627859,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.799038738Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:02:52Z",
+     "headline": "Rothschild & Co Redburn Adjusts Price Target on Adobe",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/rothschild-co-redburn-adjusts-price-target-on-adobe-to-140-from-270-ce785fd8d18ef326",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "INTC",
+   "verdict": "caution",
+   "why": [
+    "earnings headline overnight; check whether it reports today",
+    "volatility expanding (ATR 10.34% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 65.78,
+   "price": 65.91,
+   "gap": 0.0019762845849802257,
+   "ret_5d": -0.24356025758969635,
+   "ret_20d": -0.4487093530003352,
+   "sma20": 96.38825,
+   "sma50": 101.0967,
+   "trend": "down",
+   "atr_pct": 0.10341832080962515,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:59:42.717927011Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:35:05Z",
+     "headline": "AMD Stuck in Bear Market on Circular Investing Fears: Can Earnings Turn the Tide?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766585/amd-stock-is-stuck-in-a-bear-market-on-circular-investing-fears-can-earnings-turn-the-tide",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:30:07Z",
+     "headline": "Palantir Stock Slowly Forms a Bullish Pattern as Q3 Earnings Loom",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766560/palantir-stock-slowly-forms-a-bullish-pattern-as-q3-earnings-loom",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:09:48Z",
+     "headline": "Intel Stock Slides Again Monday: What's Going On?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62776331/intel-stock-slides-again-monday-whats-going-on",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.77
+  },
+  {
+   "symbol": "QCOM",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.59% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 164.78,
+   "price": 167.4,
+   "gap": 0.015899987862604714,
+   "ret_5d": -0.06364359586316626,
+   "ret_20d": -0.10857451988098454,
+   "sma20": 176.887,
+   "sma50": 177.84169999999997,
+   "trend": "down",
+   "atr_pct": 0.044507395141574015,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:41:14.382222358Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T17:30:06Z",
+     "headline": "$600B Tech Wipeout Meets $1.48T Margin Debt",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62766282/600b-tech-wipeout-meets-1-48t-margin-debt",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T14:01:29Z",
+     "headline": "Labor Union Initiates Warning Strike at Qualcomm Subsidiary in Munich",
+     "source": "fiscal.ai",
+     "url": "https://www.finanzen.at/nachrichten/aktien/warnstreiks-der-ig-metall-kurz-nach-mitternacht-gestartet-1036695935",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.86
+  },
+  {
+   "symbol": "MU",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.68% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 884.57,
+   "price": 899.46,
+   "gap": 0.01683303752105547,
+   "ret_5d": 0.008189107404389162,
+   "ret_20d": -0.17692214643950455,
+   "sma20": 950.5705,
+   "sma50": 978.4928,
+   "trend": "down",
+   "atr_pct": 0.05752916267629632,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T14:01:26.658884834Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:46:46Z",
+     "headline": "What's Going On With Micron Technology Stock Monday?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62772505/whats-going-on-with-micron-technology-stock-monday-8",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:55:30Z",
+     "headline": "Nasdaq Tumbles Over 700 Points as Chip Stocks Fall: Investor Sentiment Weakens, Greed Index Remains in \u2018Fear\u2019 Zone",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62769481/nasdaq-tumbles-over-700-points-as-chip-stocks-fall-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:33Z",
+     "headline": "Micron Objects to Tokenization of Shares on ICE-OKX Venue",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/stocktwits:01025bd3f094b:0-ice-and-okx-s-tokenized-stock-venue-hits-a-wall-as-nvidia-nike-join-growing-list-of-objectors/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:55:05Z",
+     "headline": "SOXX: Top Semiconductor ETF Targets $400 as AI Bubble Worries Linger",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/etfs/sector-etfs/26/11/62766623/soxx-top-semiconductor-etf-targets-400-as-ai-bubble-worries-linger",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.54
+  },
+  {
+   "symbol": "TXN",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.09% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 301.11,
+   "price": 304.4,
+   "gap": 0.010926239580219654,
+   "ret_5d": 0.057379639709239205,
+   "ret_20d": 0.025090215837134888,
+   "sma20": 289.64725,
+   "sma50": 275.6488,
+   "trend": "up",
+   "atr_pct": 0.03414271955668786,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:37:34.97105229Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.57
+  },
+  {
+   "symbol": "AMAT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.64% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 390.07,
+   "price": 389.14,
+   "gap": null,
+   "ret_5d": 0.03381834565741704,
+   "ret_20d": -0.27768827657722717,
+   "sma20": 442.38824999999997,
+   "sma50": 457.62629999999996,
+   "trend": "down",
+   "atr_pct": 0.056433094426275116,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T20:00:51.481069875Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "LRCX",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +2.25% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 239.155,
+   "price": 244.53,
+   "gap": 0.022474963935523062,
+   "ret_5d": 0.0396235437315251,
+   "ret_20d": -0.31170494445403785,
+   "sma20": 278.4785,
+   "sma50": 294.447,
+   "trend": "down",
+   "atr_pct": 0.0640693274236374,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:41:36.38211432Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.6
+  },
+  {
+   "symbol": "KLAC",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.32% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 157.83,
+   "price": 157.83,
+   "gap": null,
+   "ret_5d": 0.08429513602638083,
+   "ret_20d": -0.2364665473368487,
+   "sma20": 172.92425,
+   "sma50": 178.6096,
+   "trend": "down",
+   "atr_pct": 0.05323766077425076,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.068181378Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ARM",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +2.06% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 205.94,
+   "price": 210.19,
+   "gap": 0.020637078760804117,
+   "ret_5d": -0.020778850268651006,
+   "ret_20d": -0.3300367611177982,
+   "sma20": 243.9665,
+   "sma50": 258.7265,
+   "trend": "down",
+   "atr_pct": 0.06694217455847058,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:56:36.966824387Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:03:27Z",
+     "headline": "ECARX Signs Non-Binding MoU With Arm Holdings To Develop High Performance AI Computing Platforms",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62770665/ecarx-signs-non-binding-mou-arm-holdings-develop-high-performance-ai-computing-platforms",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T21:01:31Z",
+     "headline": "Arm Holdings plc Objects to Tokenized Stock Trading on ICE-OKX Venue",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/stocktwits:01025bd3f094b:0-ice-and-okx-s-tokenized-stock-venue-hits-a-wall-as-nvidia-nike-join-growing-list-of-objectors/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.31
+  },
+  {
+   "symbol": "SMCI",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.24% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 32.96,
+   "price": 33.37,
+   "gap": 0.012439320388349495,
+   "ret_5d": 0.00030349013657060553,
+   "ret_20d": -0.2455939574273288,
+   "sma20": 36.779,
+   "sma50": 38.2316,
+   "trend": "down",
+   "atr_pct": 0.07435419556171985,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:08:20.495729222Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.42
+  },
+  {
+   "symbol": "PLTR",
+   "verdict": "skip",
+   "why": [
+    "Earnings (2026-11-02, after the session): the opening range is unreliable",
+    "premarket gap +2.22% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 184.1,
+   "price": 188.18,
+   "gap": 0.02216186854970137,
+   "ret_5d": -0.064247229846498,
+   "ret_20d": -0.024894067796610297,
+   "sma20": 197.23825,
+   "sma50": 186.89950000000002,
+   "trend": "mixed",
+   "atr_pct": 0.04817063707612323,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:38:45.330472105Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:15:14Z",
+     "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62770209/stock-market-today-dow-jones-sp-500-futures-rise-ahead-of-apple-palantir-earnings-ryaay-uslm-ino-in-focus",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:08:09Z",
+     "headline": "Palantir Earnings Prediction Market Preview: What Will Alex Karp Say?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62776238/palantir-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:01:39Z",
+     "headline": "Cantor Fitzgerald Raises Palantir Price Target to $207",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:ca9c09e879441:0-cantor-fitzgerald-maintains-palantir-technologies-at-neutral-raises-price-target-to-207-from-156/",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:35:06Z",
+     "headline": "Cantor Fitzgerald Maintains Neutral on Palantir Technologies, Raises Price Target to $207",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774633/cantor-fitzgerald-maintains-neutral-palantir-technologies-raises-price-target-207",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T10:06:53Z",
+     "headline": "Top Wall Street Forecasters Revamp Palantir Expectations Ahead Of Q3 Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62770075/top-wall-street-forecasters-revamp-palantir-expectations-ahead-of-q3-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:00:05Z",
+     "headline": "Palantir Set to Report Earnings as Alex Karp Says Business Is \u2018Compounding\u2019 Like Never Before: Polymarket Bets on a Beat",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62769070/palantir-ceo-alex-karp-compounding-polymarket-traders-back-q3-earnings-beat",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:30:07Z",
+     "headline": "Palantir Stock Slowly Forms a Bullish Pattern as Q3 Earnings Loom",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766560/palantir-stock-slowly-forms-a-bullish-pattern-as-q3-earnings-loom",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.21
+  },
+  {
+   "symbol": "SNOW",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.75% of price)"
+   ],
+   "prior_close": 305.39,
+   "price": 305.39,
+   "gap": null,
+   "ret_5d": -0.06160889872173059,
+   "ret_20d": -0.10433622219289362,
+   "sma20": 333.02725,
+   "sma50": 331.99870000000004,
+   "trend": "mixed",
+   "atr_pct": 0.05751544863008894,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:54.974101517Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "CRWD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 5.24% of price)"
+   ],
+   "prior_close": 250.395,
+   "price": 250.395,
+   "gap": null,
+   "ret_5d": -0.027781013395457244,
+   "ret_20d": -0.0727828179966673,
+   "sma20": 254.949,
+   "sma50": 240.26069999999999,
+   "trend": "mixed",
+   "atr_pct": 0.05235299655116342,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:55.32172883Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:10:15Z",
+     "headline": "This CrowdStrike Analyst Turns Bullish; Here Are Top 5 Upgrades For Monday",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/upgrades/26/11/62776345/this-crowdstrike-analyst-turns-bullish-here-are-top-5-upgrades-for-monday-4",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:31:49Z",
+     "headline": "Deutsche Bank Upgrades CrowdStrike to Buy",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/deutsche-bank-upgrades-crowdstrike-to-buy-from-hold-300-price-target-ce785fd8d189ff21",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:14:21Z",
+     "headline": "Deutsche Bank Upgrades CrowdStrike Holdings to Buy, Raises Price Target to $300",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62771394/deutsche-bank-upgrades-crowdstrike-holdings-buy-raises-price-target-300",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:27:47Z",
+     "headline": "CrowdStrike Expands Project QuiltWorks Throughout Europe",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776740/crowdstrike-expands-project-quiltworks-throughout-europe",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:26:19Z",
+     "headline": "Regeneron Pharmaceuticals To Rally Around 11%? Here Are 10 Top Analyst Forecasts For Monday",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62776677/regeneron-pharmaceuticals-to-rally-around-11-here-are-10-top-analyst-forecasts-for-monday",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "PANW",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +1.33% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 365.98,
+   "price": 370.84,
+   "gap": 0.013279414175637827,
+   "ret_5d": -0.038438296418906504,
+   "ret_20d": -0.0923565299340311,
+   "sma20": 382.01300000000003,
+   "sma50": 372.11550000000005,
+   "trend": "mixed",
+   "atr_pct": 0.05249115876745802,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:41:32.170658272Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:46Z",
+     "headline": "Palo Alto Networks Announces Cortex Cloud SaaS Security",
+     "source": "fiscal.ai",
+     "url": "https://www.varindia.com/news/palo-alto-networks-announces-cortex-cloud-saas-security",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:39Z",
+     "headline": "Palo Alto Networks Files Objection to Tokenized Trading on OKXICE Platform",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/panews:3bfe8ba77acdf:0/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "NOW",
+   "verdict": "caution",
+   "why": [
+    "earnings headline overnight; check whether it reports today",
+    "volatility expanding (ATR 8.33% of price)"
+   ],
+   "prior_close": 105.12,
+   "price": 105.51,
+   "gap": 0.003710045662100425,
+   "ret_5d": -0.338701560140916,
+   "ret_20d": -0.21756605880163749,
+   "sma20": 142.1775,
+   "sma50": 138.6747,
+   "trend": "mixed",
+   "atr_pct": 0.08334352576647092,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:28:53.611977739Z",
+   "news": [
+    {
+     "time": "2026-11-01T20:30:07Z",
+     "headline": "Palantir Stock Slowly Forms a Bullish Pattern as Q3 Earnings Loom",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766560/palantir-stock-slowly-forms-a-bullish-pattern-as-q3-earnings-loom",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T17:30:06Z",
+     "headline": "$600B Tech Wipeout Meets $1.48T Margin Debt",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62766282/600b-tech-wipeout-meets-1-48t-margin-debt",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.79
+  },
+  {
+   "symbol": "SHOP",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 157.465,
+   "price": 157.465,
+   "gap": null,
+   "ret_5d": -0.06643149344874599,
+   "ret_20d": 0.040609304784562594,
+   "sma20": 169.23274999999998,
+   "sma50": 152.7678,
+   "trend": "mixed",
+   "atr_pct": 0.048890683190368836,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:55.909463351Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:56:34Z",
+     "headline": "Keybanc Maintains Overweight on Shopify, Raises Price Target to $185",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62778045/keybanc-maintains-overweight-shopify-raises-price-target-185",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T20:25:05Z",
+     "headline": "Shopify Has Dipped Into Earnings as Valuation Concerns Linger",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766549/shopify-stock-has-dipped-into-earnings-as-valuation-concerns-linger-will-it-rebound",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "UBER",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 65.235,
+   "price": 65.235,
+   "gap": null,
+   "ret_5d": -0.021523923803809852,
+   "ret_20d": -0.04207048458149776,
+   "sma20": 68.64475,
+   "sma50": 71.2101,
+   "trend": "down",
+   "atr_pct": 0.025265797282352783,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.676348549Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:53Z",
+     "headline": "Uber Completes Blockchain Treasury Pilot with HSBC and Franklin Templeton",
+     "source": "fiscal.ai",
+     "url": "https://civl.com/news/story/uber-completes-pilot-trading-money-market-fund-shares-over-weekend-3516090b",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "ABNB",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 164.365,
+   "price": 164.365,
+   "gap": null,
+   "ret_5d": -0.04450063946052785,
+   "ret_20d": 0.01160142786804541,
+   "sma20": 168.443,
+   "sma50": 170.37529999999998,
+   "trend": "down",
+   "atr_pct": 0.02354733150523006,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:57.158103271Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "COIN",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -1.76% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 143.28,
+   "price": 140.76,
+   "gap": -0.017587939698492483,
+   "ret_5d": -0.12867915349063486,
+   "ret_20d": -0.21683520087455588,
+   "sma20": 171.645,
+   "sma50": 179.72009999999997,
+   "trend": "down",
+   "atr_pct": 0.0707181742043551,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:29:03.194997886Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:27:14Z",
+     "headline": "This Coinbase Analyst Turns Bearish; Here Are Top 5 Downgrades For Monday",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/downgrades/26/11/62776725/this-coinbase-analyst-turns-bearish-here-are-top-5-downgrades-for-monday",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:32:05Z",
+     "headline": "Rothschild & Co Redburn Lowers Price Target on Coinbase Global",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/rothschild-co-redburn-cuts-price-target-on-coinbase-global-to-198-from-214-ce785fd8d18ef622",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:32:05Z",
+     "headline": "Morgan Stanley Downgrades Coinbase Global to Underweight",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-downgrades-coinbase-global-to-underweight-from-equalweight-price-target-is-120-ce785fd8d189f124",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:27:58Z",
+     "headline": "Morgan Stanley Downgrades Coinbase Global to Underweight, Lowers Price Target to $120",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62771645/morgan-stanley-downgrades-coinbase-global-underweight-lowers-price-target-120",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:26:19Z",
+     "headline": "Regeneron Pharmaceuticals To Rally Around 11%? Here Are 10 Top Analyst Forecasts For Monday",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62776677/regeneron-pharmaceuticals-to-rally-around-11-here-are-10-top-analyst-forecasts-for-monday",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "MSTR",
+   "verdict": "skip",
+   "why": [
+    "premarket gap +2.10% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 130.53,
+   "price": 133.27,
+   "gap": 0.020991342986286687,
+   "ret_5d": -0.10626497774734689,
+   "ret_20d": -0.18408551068883605,
+   "sma20": 147.342,
+   "sma50": 143.6701,
+   "trend": "mixed",
+   "atr_pct": 0.07633439493931335,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:40:25.196248031Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:39:03Z",
+     "headline": "Strategy Acquires 811 Bitcoin From Oct. 26 To Nov. 1 For $65.50M",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777369/strategy-acquires-811-bitcoin-oct-26-nov-1-65-50m",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T09:26:11Z",
+     "headline": "CRCL Faces Q3 Test as Prediction Markets Bet on Earnings Beat Despite AI Revenue Risks",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/prediction-markets/26/11/62769694/circle-crcl-q3-earnings-preview",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:48:32Z",
+     "headline": "Strategy Buys $65.5 Million in Bitcoin as Michael Saylor Adds 811 BTC",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/crypto/cryptocurrency/26/11/62777769/strategy-buys-65-5-million-in-bitcoin-as-michael-saylor-adds-811-btc",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:11:46Z",
+     "headline": "Bitwise Puts Bitcoin's 'Fair Value' at $197,000, Cites 3 Catalysts for Rally",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/crypto/cryptocurrency/26/11/62776397/bitwise-puts-bitcoins-fair-value-at-197000",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T01:50:14Z",
+     "headline": "Bitcoin, Ethereum, XRP, Dogecoin Hold Steady Despite Binance Hack; Analyst Warns History Points to \u2018Significant\u2019 BTC Correction After Midterms",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/crypto/cryptocurrency/26/11/62767403/bitcoin-ethereum-xrp-dogecoin-crypto-binance-hack",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.77
+  },
+  {
+   "symbol": "DELL",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 8.18% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 423.975,
+   "price": 423.975,
+   "gap": null,
+   "ret_5d": -0.07149270728395596,
+   "ret_20d": -0.2461326458036983,
+   "sma20": 506.12825000000004,
+   "sma50": 513.8429,
+   "trend": "down",
+   "atr_pct": 0.08176863528004515,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:48.524366191Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:31:47Z",
+     "headline": "Dell Technologies Updates 2026 Partner Program Strategy",
+     "source": "fiscal.ai",
+     "url": "https://www.varindia.com/news/channel-chiefs-architects-of-sustainable-partner-growth",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T14:01:40Z",
+     "headline": "Etihad GO Telecom Awards Data Center Infrastructure Contract Featuring Dell Technologies",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/reuters.com,2026-11-01:newsml_Zaw27PcJT:0-saudi-arabia-s-go-telecom-awards-49-6mln-ai-data-centre-infrastructure-contract/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ANET",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.96% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 168.79,
+   "price": 168.79,
+   "gap": null,
+   "ret_5d": -0.020541983403934427,
+   "ret_20d": -0.18590686570043657,
+   "sma20": 191.7495,
+   "sma50": 195.2279,
+   "trend": "down",
+   "atr_pct": 0.05957529643766978,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:57.813239423Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MRVL",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.25% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 196.4,
+   "price": 191.99,
+   "gap": -0.0224541751527495,
+   "ret_5d": -0.1408949739731421,
+   "ret_20d": -0.2788161421804428,
+   "sma20": 248.00775,
+   "sma50": 242.5988,
+   "trend": "mixed",
+   "atr_pct": 0.09460285132382892,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:37:39.613757724Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:31:48Z",
+     "headline": "Marvell Technology to Acquire Lumentum in $115 Billion All-Stock Transaction",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/technology",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:10:12Z",
+     "headline": "Marvell Technology Confirms Will Acquire Lumentum For 4.5 MRVL Shares Per LITE Share In An All-Stock Deal Valuing LITE At $1,132/Share With An Implied EV Of $115B",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/m/26/11/62773389/marvell-technology-confirms-will-acquire-lumentum-4-5-mrvl-shares-lite-share-all-stock-deal-valuing-",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:52:54Z",
+     "headline": "Marvell to Buy Lumentum in $115 Billion All-Stock Deal",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/m-a/26/11/62777911/marvell-to-buy-lumentum-in-115-billion-all-stock-deal",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:42:09Z",
+     "headline": "Marvell Technology CEO Says Expect Combined Entity With Lumentum To Become One Of Top Five Largest AI Infrastructure Semiconductor Companies",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777535/marvell-technology-ceo-says-expect-combined-entity-lumentum-become-one-top-five-largest-ai-infrastru",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.99
+  },
+  {
+   "symbol": "IBM",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 257.84,
+   "price": 257.84,
+   "gap": null,
+   "ret_5d": 0.016759335935959463,
+   "ret_20d": 0.158154785967749,
+   "sma20": 238.871,
+   "sma50": 235.1517,
+   "trend": "up",
+   "atr_pct": 0.02831628695536545,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.879999067Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "CSCO",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 104.53,
+   "price": 104.53,
+   "gap": null,
+   "ret_5d": -0.018405484083012458,
+   "ret_20d": -0.06819397397040472,
+   "sma20": 110.98274999999998,
+   "sma50": 109.9993,
+   "trend": "mixed",
+   "atr_pct": 0.02928755927894929,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.938923769Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "WMT",
+   "verdict": "ok",
+   "why": [
+    "nothing unusual"
+   ],
+   "prior_close": 123.51,
+   "price": 123.88,
+   "gap": 0.0029957088494858564,
+   "ret_5d": 0.03036623008258954,
+   "ret_20d": 0.1842937961453639,
+   "sma20": 115.95599999999999,
+   "sma50": 110.2366,
+   "trend": "up",
+   "atr_pct": 0.021085626380744196,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:21:00.796389642Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.14
+  },
+  {
+   "symbol": "HD",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 329.24,
+   "price": 329.24,
+   "gap": null,
+   "ret_5d": 0.029647235426569996,
+   "ret_20d": 0.16388574660633481,
+   "sma20": 306.90725000000003,
+   "sma50": 308.41740000000004,
+   "trend": "mixed",
+   "atr_pct": 0.022646310984605258,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:57.287331267Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "LOW",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 209.06,
+   "price": 209.06,
+   "gap": null,
+   "ret_5d": 0.0522448157841755,
+   "ret_20d": 0.15640125010371442,
+   "sma20": 194.02349999999998,
+   "sma50": 196.1818,
+   "trend": "mixed",
+   "atr_pct": 0.023972953765836236,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:53.176978214Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "MCD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 258.06,
+   "price": 258.06,
+   "gap": null,
+   "ret_5d": 0.038512616201859196,
+   "ret_20d": 0.11237553342816486,
+   "sma20": 243.32874999999999,
+   "sma50": 248.2897,
+   "trend": "mixed",
+   "atr_pct": 0.01822942615781491,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:52.952923072Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "SBUX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 103.65,
+   "price": 103.65,
+   "gap": null,
+   "ret_5d": 0.028273809523809534,
+   "ret_20d": 0.09416235617016788,
+   "sma20": 97.87125,
+   "sma50": 99.26100000000001,
+   "trend": "mixed",
+   "atr_pct": 0.022289986906484757,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.971077216Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:32:30Z",
+     "headline": "HSBC Adjusts Price Target on Starbucks to $104 From $101",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/hsbc-adjusts-price-target-on-starbucks-to-104-from-101-ce785fd8d189ff20",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "NKE",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 38.69,
+   "price": 38.69,
+   "gap": null,
+   "ret_5d": 0.03670953912111452,
+   "ret_20d": 0.14163470050162275,
+   "sma20": 36.536,
+   "sma50": 36.9486,
+   "trend": "mixed",
+   "atr_pct": 0.02638186316139277,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.911037547Z",
+   "news": [
+    {
+     "time": "2026-11-02T02:01:38Z",
+     "headline": "Nike Objects to Tokenized Stock Trading on ICE-OKX Venue",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/stocktwits:01025bd3f094b:0-ice-and-okx-s-tokenized-stock-venue-hits-a-wall-as-nvidia-nike-join-growing-list-of-objectors/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "TGT",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 154.23,
+   "price": 154.23,
+   "gap": null,
+   "ret_5d": 0.00988737558931363,
+   "ret_20d": -0.0110291760179545,
+   "sma20": 153.0255,
+   "sma50": 157.1409,
+   "trend": "mixed",
+   "atr_pct": 0.027586350626615165,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.520231617Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "DIS",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 110.96,
+   "price": 110.96,
+   "gap": null,
+   "ret_5d": -0.013645050891150867,
+   "ret_20d": 0.08613938919342212,
+   "sma20": 109.25075,
+   "sma50": 107.3584,
+   "trend": "up",
+   "atr_pct": 0.01658577093418477,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:54.800920299Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "CMG",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 31.875,
+   "price": 31.875,
+   "gap": null,
+   "ret_5d": 0.1582485465116279,
+   "ret_20d": -0.017113783533765026,
+   "sma20": 30.0015,
+   "sma50": 33.071799999999996,
+   "trend": "mixed",
+   "atr_pct": 0.033142857142857154,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.71049087Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "LULU",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 107.3,
+   "price": 107.3,
+   "gap": null,
+   "ret_5d": 0.08340064620355392,
+   "ret_20d": 0.13593055261486353,
+   "sma20": 98.6155,
+   "sma50": 103.0641,
+   "trend": "mixed",
+   "atr_pct": 0.03920583144721077,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:49.797244591Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "BKNG",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 148.13,
+   "price": 148.13,
+   "gap": null,
+   "ret_5d": -0.04922978177150206,
+   "ret_20d": -0.06848195195572893,
+   "sma20": 157.47025000000002,
+   "sma50": 171.2635,
+   "trend": "down",
+   "atr_pct": 0.034501547868185274,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.879178836Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "JPM",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 337.14,
+   "price": 337.14,
+   "gap": null,
+   "ret_5d": 0.016921545561487727,
+   "ret_20d": 0.014809463608452145,
+   "sma20": 334.79375,
+   "sma50": 343.30150000000003,
+   "trend": "mixed",
+   "atr_pct": 0.01972792142306291,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.236595531Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:57Z",
+     "headline": "JPMorgan Private Bank Opens New Branch in Dubai Financial Centre",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/jpmorgan-private-bank-opens-new-branch-in-dubai-financial-centre-ce785fd8de8efe24",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "BAC",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 50.01,
+   "price": 50.01,
+   "gap": null,
+   "ret_5d": -0.010682492581602365,
+   "ret_20d": -0.07010040907400528,
+   "sma20": 51.958749999999995,
+   "sma50": 56.4401,
+   "trend": "down",
+   "atr_pct": 0.025602022452652334,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.652623139Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "WFC",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 83.43,
+   "price": 83.43,
+   "gap": null,
+   "ret_5d": 0.012745812090313224,
+   "ret_20d": 0.037041640770665074,
+   "sma20": 82.4735,
+   "sma50": 84.3274,
+   "trend": "mixed",
+   "atr_pct": 0.022388315268574148,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.032153153Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "GS",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 894.09,
+   "price": 894.09,
+   "gap": null,
+   "ret_5d": 0.0212277485565473,
+   "ret_20d": -0.009516107590729739,
+   "sma20": 893.85625,
+   "sma50": 947.6358,
+   "trend": "mixed",
+   "atr_pct": 0.029968219881986936,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.891435151Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:54:18Z",
+     "headline": "'Goldman Restricts Traders and Bankers From Using Some AI Tools' - Bloomberg Exclusive",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777963/goldman-restricts-traders-and-bankers-using-some-ai-tools-bloomberg-exclusive",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:31:37Z",
+     "headline": "Goldman Sachs Files Major-Holdings Notification for Aurubis AG",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:a227adafcef40:0-aurubis-ag-nda-receives-goldman-sachs-voting-rights-notification/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T19:50:06Z",
+     "headline": "China EV Stocks Tumble: XPeng, Li Auto, BYD and Polestar Hit as Price War Bites",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766483/china-ev-stocks-tumble-xpeng-li-auto-byd-and-polestar-hit-as-the-price-war-bites",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T15:30:06Z",
+     "headline": "EXCLUSIVE: Former Goldman Sachs Analyst Turned Creator Says AI-Ready Workers Need More Than Prompting Skills \u2014 \u2018You Can\u2019t Outsource the Understanding\u2019",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/tech/26/11/62766123/exclusive-former-goldman-sachs-analyst-turned-creator-says-ai-ready-workers-need-more-than-prompting-skills-you-cant-outsource-the-understanding",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "MS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 3.06% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 184.345,
+   "price": 184.345,
+   "gap": null,
+   "ret_5d": 0.027048860660761065,
+   "ret_20d": -0.03103810775295668,
+   "sma20": 185.6835,
+   "sma50": 198.0791,
+   "trend": "down",
+   "atr_pct": 0.03064130531650672,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:55.044261831Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:32:40Z",
+     "headline": "Morgan Stanley Downgrades Coinbase Global",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-downgrades-coinbase-global-to-underweight-from-equalweight-price-target-is-120-ce785fd8d189f124",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:32:40Z",
+     "headline": "Morgan Stanley Files Major Holdings Notification for Vulcan Energy Resources",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:e9276a612b019:0-vulcan-energy-resources-limited-vul-reports-morgan-stanley-voting-rights-notification/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:44Z",
+     "headline": "Morgan Stanley Releases Updated Forecast for U.S. Data Center Power Shortfall",
+     "source": "fiscal.ai",
+     "url": "https://civl.com/news/story/morgan-stanley-raises-u-s-data-center-power-shortfall-forecast-to-70-gigawatts-27ef7172",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "C",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 122.64,
+   "price": 122.64,
+   "gap": null,
+   "ret_5d": 0.016493990882718634,
+   "ret_20d": -0.045825877227106515,
+   "sma20": 124.7865,
+   "sma50": 130.00639999999999,
+   "trend": "down",
+   "atr_pct": 0.027956388034665918,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.581333188Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:44Z",
+     "headline": "Citibank, N.A. to Provide Debt Financing for Perion Network Acquisition",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:18a69b15dcdda:0-key-facts-affle-3i-to-buy-peri-for-11-70-citibank-to-lend/",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "SCHW",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 88.02,
+   "price": 88.02,
+   "gap": null,
+   "ret_5d": -0.028315946348733245,
+   "ret_20d": -0.08962093396080062,
+   "sma20": 92.962,
+   "sma50": 100.4906,
+   "trend": "down",
+   "atr_pct": 0.0227545687668387,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.848328287Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "V",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 413.53,
+   "price": 413.53,
+   "gap": null,
+   "ret_5d": 0.013553921568627336,
+   "ret_20d": 0.14673543807107303,
+   "sma20": 396.1835,
+   "sma50": 381.3294,
+   "trend": "up",
+   "atr_pct": 0.017227977932159,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:53.061994751Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:36Z",
+     "headline": "Visa and HKSTP Announce Strategic Partnership to Advance Fintech in Hong Kong",
+     "source": "fiscal.ai",
+     "url": "https://www.eqs-news.com/news/corporate/hkstp-partners-to-power-the-next-frontier-of-ai-enabled-finance-at-fintech-week-x-startmeuphk-festival-2026/dc36dcf0-2dd0-4d6f-90b5-a0e744e5531b_en",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "MA",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 638.16,
+   "price": 637.97,
+   "gap": null,
+   "ret_5d": 0.023709454907119287,
+   "ret_20d": 0.1551661718919699,
+   "sma20": 606.336,
+   "sma50": 586.7757,
+   "trend": "up",
+   "atr_pct": 0.017556613657121356,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T20:31:47.21890564Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:45Z",
+     "headline": "Mastercard and TenPay Global Sign MOU for Cross-Border Payment Collaboration",
+     "source": "fiscal.ai",
+     "url": "https://www.manilatimes.net/2026/11/02/tmt-newswire/pr-newswire/tencent-and-mastercard-sign-mou-on-cross-border-payment-interoperability-and-agentic-payments/2459217",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:31:45Z",
+     "headline": "Sunrate Receives Mastercard Agent Pay Certification for New AI Agent Card",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/sunrate-launches-agentic-card-to-enable-ai-driven-business-payments-302919208.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "AXP",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 319.16,
+   "price": 319.16,
+   "gap": null,
+   "ret_5d": 0.019322282903771804,
+   "ret_20d": 0.05439468772196454,
+   "sma20": 313.5185,
+   "sma50": 317.2145,
+   "trend": "mixed",
+   "atr_pct": 0.021158218896030617,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:54.659666967Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "PYPL",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 57.02,
+   "price": 57.02,
+   "gap": null,
+   "ret_5d": 0.00035087719298254605,
+   "ret_20d": 0.08033345964380456,
+   "sma20": 56.18025,
+   "sma50": 55.361599999999996,
+   "trend": "up",
+   "atr_pct": 0.022542215763892356,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.835982838Z",
+   "news": [
+    {
+     "time": "2026-11-01T14:01:47Z",
+     "headline": "PayPal Accelerates AI Security Initiatives",
+     "source": "fiscal.ai",
+     "url": "https://www.varindia.com/news/paypal-accelerates-ai-security-amid-rising-threats",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "HOOD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 84.995,
+   "price": 85.09,
+   "gap": null,
+   "ret_5d": -0.10588049652850828,
+   "ret_20d": -0.24569577564785228,
+   "sma20": 100.96074999999999,
+   "sma50": 108.4885,
+   "trend": "down",
+   "atr_pct": 0.06749976889396858,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T20:00:12.8291592Z",
+   "news": [
+    {
+     "time": "2026-11-02T10:49:23Z",
+     "headline": "Binance Discloses Net Platform Outflows Of $4.7B Since Sunday, November 1",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62770454/binance-discloses-net-platform-outflows-4-7b-sunday-november-1",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:57Z",
+     "headline": "Dataline Announces AI Data Launch Partners Including Robinhood Chain",
+     "source": "fiscal.ai",
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/dataline-secures-10-million-to-expand-agent-data-marketplace/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T17:30:06Z",
+     "headline": "$600B Tech Wipeout Meets $1.48T Margin Debt",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62766282/600b-tech-wipeout-meets-1-48t-margin-debt",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "SOFI",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.11% of price)"
+   ],
+   "prior_close": 16.76,
+   "price": 16.76,
+   "gap": null,
+   "ret_5d": 0.14676702018474175,
+   "ret_20d": 0.06378927324658834,
+   "sma20": 15.43425,
+   "sma50": 16.5742,
+   "trend": "mixed",
+   "atr_pct": 0.0510995567678145,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:55.755662746Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "LLY",
+   "verdict": "caution",
+   "why": [
+    "headline catalyst overnight"
+   ],
+   "prior_close": 1417.01,
+   "price": 1409.98,
+   "gap": -0.004961150591738961,
+   "ret_5d": 0.11202143981040047,
+   "ret_20d": 0.23914336184129992,
+   "sma20": 1246.31475,
+   "sma50": 1197.3966,
+   "trend": "up",
+   "atr_pct": 0.03286850480942265,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:33:56.267381972Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:29:13Z",
+     "headline": "Cantor Fitzgerald Maintains Overweight on Eli Lilly, Raises Price Target to $1600",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774269/cantor-fitzgerald-maintains-overweight-eli-lilly-raises-price-target-1600",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:31:53Z",
+     "headline": "Berenberg Adjusts Price Target on Eli Lilly and Company to $1,570",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/berenberg-adjusts-price-target-on-eli-lilly-and-company-to-1-570-from-1-400-ce785fd8d189f526",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:31:53Z",
+     "headline": "Cantor Fitzgerald Adjusts Price Target on Eli Lilly to $1,600",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/cantor-fitzgerald-adjusts-price-target-on-eli-lilly-to-1-600-from-1-440-ce785fd8d188f725",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.4
+  },
+  {
+   "symbol": "UNH",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 3.10% of price)"
+   ],
+   "prior_close": 406.92,
+   "price": 406.92,
+   "gap": null,
+   "ret_5d": -0.02664689279050847,
+   "ret_20d": 0.09453298365947149,
+   "sma20": 398.61725,
+   "sma50": 390.1784,
+   "trend": "up",
+   "atr_pct": 0.031003812613219883,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:57.86903903Z",
+   "news": [
+    {
+     "time": "2026-11-02T09:12:33Z",
+     "headline": "\u2018We Need to Break Up Big Medicine\u2019: Elizabeth Warren Says Trump DOJ Gave UnitedHealth \u2018More Power\u2019 in $3.3 Billion Amedisys Deal",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62769650/elizabeth-warren-trump-doj-unitedhealth-amedisys-deal-raise-costs",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T02:01:42Z",
+     "headline": "Mark Cuban Alleges Public Companies Found Evidence of Overcharging by Major Insurers",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/stocktwits:52628e2c9094b:0-mark-cuban-says-public-companies-found-they-were-ripped-off-on-healthcare-but-won-t-say-so-on-earnings-calls/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T14:20:13Z",
+     "headline": "Mark Cuban Says AI Could 'Collapse' Big Healthcare Companies: 'The Cost of Healthcare\u2026 Would Drop Like a Rock'",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/health-care/26/11/62766036/mark-cuban-ai-collapse-big-healthcare-companies",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "JNJ",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.78% of price)"
+   ],
+   "prior_close": 273.25,
+   "price": 273.25,
+   "gap": null,
+   "ret_5d": 0.03566555488174661,
+   "ret_20d": 0.06727858607557868,
+   "sma20": 260.8435,
+   "sma50": 265.6447,
+   "trend": "mixed",
+   "atr_pct": 0.027847340216965125,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:50.986795408Z",
+   "news": [
+    {
+     "time": "2026-11-02T06:53:57Z",
+     "headline": "Reported Sunday, Johnson & Johnson Says Impella Outcomes Depend On Patient Selection, Timing And Post-Procedural Care, Citing Lower Mortality In Three TCT Analyses Versus CHIP-BCIS3; PROTECT IV Results Expected 2027",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/quote/JNJ",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:43Z",
+     "headline": "Johnson & Johnson Reports Positive Clinical Outcomes for Impella Heart Pumps in HRPCI",
+     "source": "fiscal.ai",
+     "url": "https://natlawreview.com/press-releases/data-show-positive-survival-and-patient-outcomes-best-practice-impella",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:43Z",
+     "headline": "Johnson & Johnson Reports Positive Clinical Trial Results for Shockwave Javelin Catheter",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/seekingalpha:83ea25ba4094b:0-johnson-johnson-reports-94-success-rate-in-trial-of-coronary-artery-device/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "PFE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 30.5,
+   "price": 30.5,
+   "gap": null,
+   "ret_5d": 0.016327890703098813,
+   "ret_20d": 0.09712230215827344,
+   "sma20": 29.16875,
+   "sma50": 28.5475,
+   "trend": "up",
+   "atr_pct": 0.01930913348946137,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.708773597Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:24:29Z",
+     "headline": "How To Earn $500 A Month From Pfizer Stock Ahead Of Q3 Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/dividends/26/11/62773993/how-to-earn-500-a-month-from-pfizer-stock-ahead-of-q3-earnings-2",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "MRK",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 3.37% of price)"
+   ],
+   "prior_close": 149.54,
+   "price": 149.54,
+   "gap": null,
+   "ret_5d": 0.029393543057754323,
+   "ret_20d": 0.03624142471069214,
+   "sma20": 144.598,
+   "sma50": 146.8735,
+   "trend": "mixed",
+   "atr_pct": 0.03368663902634751,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.726606363Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:32:02Z",
+     "headline": "Cantor Fitzgerald Adjusts Price Target on Merck & Co., Inc.",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/cantor-fitzgerald-adjusts-price-target-on-merck-to-155-from-145-ce785fd8d18ef121",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:30:22Z",
+     "headline": "Cantor Fitzgerald Maintains Neutral on Merck & Co, Raises Price Target to $155",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774332/cantor-fitzgerald-maintains-neutral-merck-co-raises-price-target-155",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:32:02Z",
+     "headline": "Merck to Present New Data from Its Oral HIV Portfolio at HIV Glasgow 2026",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/health/pharmaceutical",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:47:18Z",
+     "headline": "Merck To Present New Data Across Its HIV Treatment And Prevention Pipeline And Portfolio At HIV Drug Therapy Glasgow 2026",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62772525/merck-present-new-data-across-its-hiv-treatment-and-prevention-pipeline-and-portfolio-hiv-drug-thera",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "ABBV",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today",
+    "volatility expanding (ATR 2.27% of price)"
+   ],
+   "prior_close": 294.815,
+   "price": 294.815,
+   "gap": null,
+   "ret_5d": 0.03179575123368217,
+   "ret_20d": 0.12133198942624035,
+   "sma20": 281.6195,
+   "sma50": 269.29560000000004,
+   "trend": "up",
+   "atr_pct": 0.022700676695554853,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.25500963Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:49:53Z",
+     "headline": "Wells Fargo Maintains Overweight on AbbVie, Raises Price Target to $340",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777836/wells-fargo-maintains-overweight-abbvie-raises-price-target-340",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:33:50Z",
+     "headline": "These Analysts Increase Their Forecasts On AbbVie After Strong Q3 Results",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62777110/these-analysts-increase-their-forecasts-on-abbvie-after-strong-q3-results",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T13:24:44Z",
+     "headline": "RBC Capital Maintains Outperform on AbbVie, Raises Price Target to $330",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776652/rbc-capital-maintains-outperform-abbvie-raises-price-target-330",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:01:44Z",
+     "headline": "Analyst Price Target Adjustments for AbbVie",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/tradingview:c3aaa497cf49a:0-canaccord-genuity-maintains-abbvie-at-buy-raises-price-target-to-338-from-290/",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:38:56Z",
+     "headline": "Canaccord Genuity Maintains Buy on AbbVie, Raises Price Target to $338",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774809/canaccord-genuity-maintains-buy-abbvie-raises-price-target-338",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:26:49Z",
+     "headline": "Cantor Fitzgerald Maintains Overweight on AbbVie, Raises Price Target to $325",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62774136/cantor-fitzgerald-maintains-overweight-abbvie-raises-price-target-325",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.75
+  },
+  {
+   "symbol": "AMGN",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 466.1,
+   "price": 466.1,
+   "gap": null,
+   "ret_5d": 0.06128396917016743,
+   "ret_20d": 0.1563174477163911,
+   "sma20": 431.2245,
+   "sma50": 419.98019999999997,
+   "trend": "up",
+   "atr_pct": 0.024673583228614335,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:46.903625313Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "GILD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 170.95,
+   "price": 170.95,
+   "gap": null,
+   "ret_5d": 0.09537692628071626,
+   "ret_20d": 0.18120573501468296,
+   "sma20": 154.4715,
+   "sma50": 150.8745,
+   "trend": "up",
+   "atr_pct": 0.02706305101742366,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:48.530406995Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:31:40Z",
+     "headline": "Bernstein Increases Price Target for Gilead Sciences",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/hans/news/flash/1003179828/gilead-bernstein-raises-target-price-to-175-from-160",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ISRG",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 432.13,
+   "price": 432.13,
+   "gap": null,
+   "ret_5d": -0.04450979525051957,
+   "ret_20d": 0.10259746887119814,
+   "sma20": 430.43649999999997,
+   "sma50": 401.5683,
+   "trend": "up",
+   "atr_pct": 0.030607522207272267,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.803753927Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "VRTX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.87% of price)"
+   ],
+   "prior_close": 559.045,
+   "price": 559.045,
+   "gap": null,
+   "ret_5d": 0.0670426782714919,
+   "ret_20d": 0.10769977610018033,
+   "sma20": 514.6877499999999,
+   "sma50": 523.2664,
+   "trend": "mixed",
+   "atr_pct": 0.02869498110936638,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:57.99328669Z",
+   "news": [
+    {
+     "time": "2026-11-01T20:30:59Z",
+     "headline": "Apple, Palantir On Deck Monday As AI Demand, iPhone Growth Face Test",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62766571/apple-palantir-on-deck-monday-as-ai-demand-iphone-growth-face-test",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MRNA",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today",
+    "volatility expanding (ATR 10.29% of price)"
+   ],
+   "prior_close": 221.6,
+   "price": 221.6,
+   "gap": null,
+   "ret_5d": 0.10730793254216109,
+   "ret_20d": 0.16649997368005476,
+   "sma20": 215.06875,
+   "sma50": 182.43150000000003,
+   "trend": "up",
+   "atr_pct": 0.10288325167612172,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:57.647796468Z",
+   "news": [
+    {
+     "time": "2026-11-01T20:05:08Z",
+     "headline": "Tempus AI Earnings Ahead: Is TEM Set Up To Pop or Drop?",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/equities/26/11/62766521/tempus-ai-earnings-ahead-is-the-cathie-wood-stock-set-up-for-a-pop-or-a-drop",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-01T12:30:07Z",
+     "headline": "Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62765881/earnings-volatility-watch-10-stocks-set-to-swing-more-than-10-percent",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.75
+  },
+  {
+   "symbol": "CVS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 90.23,
+   "price": 90.23,
+   "gap": null,
+   "ret_5d": -0.03476679503637137,
+   "ret_20d": 0.04324199329402245,
+   "sma20": 90.44225,
+   "sma50": 91.21889999999999,
+   "trend": "down",
+   "atr_pct": 0.023448013805987874,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.937325386Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T02:01:59Z",
+     "headline": "Mark Cuban Alleges Public Companies Found Overcharging by Major Insurers",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/stocktwits:52628e2c9094b:0-mark-cuban-says-public-companies-found-they-were-ripped-off-on-healthcare-but-won-t-say-so-on-earnings-calls/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "XOM",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.27% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 187.26,
+   "price": 183.01,
+   "gap": -0.02269571718466301,
+   "ret_5d": 0.022105780252169582,
+   "ret_20d": 0.1410639205411004,
+   "sma20": 175.976,
+   "sma50": 167.7604,
+   "trend": "up",
+   "atr_pct": 0.021793610106650797,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:44:19.214519574Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:45:32Z",
+     "headline": "Evercore ISI Group Maintains Outperform on ExxonMobil Holdings, Raises Price Target to $200",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777676/evercore-isi-group-maintains-outperform-exxonmobil-holdings-raises-price-target-200",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:31:03Z",
+     "headline": "Wells Fargo Maintains Equal-Weight on ExxonMobil Holdings, Raises Price Target to $189",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776931/wells-fargo-maintains-equal-weight-exxonmobil-holdings-raises-price-target-189",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:31:26Z",
+     "headline": "ExxonMobil Increases Stakes in Rovuma LNG and Papua LNG Projects",
+     "source": "fiscal.ai",
+     "url": "https://www.diarioeconomico.co.mz/2026/11/02/oilgas/area-4-exxonmobil-acorda-reforco-no-rovuma-lng-para-50/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:32:14Z",
+     "headline": "Analysts Adjust Price Targets for ExxonMobil",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/bernstein-adjusts-price-target-on-exxon-mobil-to-193-from-182-ce785fd8d189ff27",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T08:55:30Z",
+     "headline": "Nasdaq Tumbles Over 700 Points as Chip Stocks Fall: Investor Sentiment Weakens, Greed Index Remains in \u2018Fear\u2019 Zone",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/market-summary/26/11/62769481/nasdaq-tumbles-over-700-points-as-chip-stocks-fall-investor-sentiment-weakens-greed-index-remains-in-fear-zone",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.29
+  },
+  {
+   "symbol": "CVX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 235.64,
+   "price": 235.64,
+   "gap": null,
+   "ret_5d": 0.010333147536766285,
+   "ret_20d": 0.1399545256639736,
+   "sma20": 221.77175000000003,
+   "sma50": 213.16330000000002,
+   "trend": "up",
+   "atr_pct": 0.0191696777166137,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:49.664999424Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:35:58Z",
+     "headline": "Evercore ISI Group Maintains Outperform on Chevron, Raises Price Target to $250",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777201/evercore-isi-group-maintains-outperform-chevron-raises-price-target-250",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:29:25Z",
+     "headline": "Wells Fargo Maintains Overweight on Chevron, Raises Price Target to $268",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776824/wells-fargo-maintains-overweight-chevron-raises-price-target-268",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:32:22Z",
+     "headline": "Morgan Stanley Adjusts Price Target on Chevron to $230 From $226",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-adjusts-price-target-on-chevron-to-230-from-226-ce785fd8d189fe22",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:32:22Z",
+     "headline": "JPMorgan Adjusts Price Target on Chevron to $261 From $241",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/jpmorgan-adjusts-price-target-on-chevron-to-261-from-241-ce785fd8de80ff2d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:02:02Z",
+     "headline": "Analysts Adjust Price Targets for Chevron Corporation",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/bernstein-adjusts-price-target-on-chevron-to-248-from-209-ce785fd8d188f727",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "OXY",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 63.99,
+   "price": 63.99,
+   "gap": null,
+   "ret_5d": -0.0026496259351620477,
+   "ret_20d": 0.10137693631669542,
+   "sma20": 61.708000000000006,
+   "sma50": 60.181099999999994,
+   "trend": "up",
+   "atr_pct": 0.023039314178554676,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.300091992Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:59Z",
+     "headline": "Occidental Petroleum CEO Richard Jackson Participates in ADIPEC 2026",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/reuters.com,2026-11-02:newsml_Zaw6XjLd9:0-zawya-adipec-2026-opens-in-abu-dhabi-with-over-40-policymakers-2-260-exhibitors/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "COP",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.92% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 154.05,
+   "price": 149.55,
+   "gap": -0.02921129503407982,
+   "ret_5d": 0.021416257790743964,
+   "ret_20d": 0.2153846153846155,
+   "sma20": 142.53775000000002,
+   "sma50": 136.1384,
+   "trend": "up",
+   "atr_pct": 0.022311865349840008,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:46:15.897199362Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:30:07Z",
+     "headline": "Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/markets/options/26/11/62774324/traders-are-pricing-a-12-swing-in-shopify-ahead-of-earnings",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T11:32:13Z",
+     "headline": "Raymond James Adjusts Price Target on ConocoPhillips to $170 From $168",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/raymond-james-adjusts-price-target-on-conocophillips-to-170-from-168-ce785fd8d189f321",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 1.81
+  },
+  {
+   "symbol": "SLB",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 53.745,
+   "price": 53.745,
+   "gap": null,
+   "ret_5d": 0.013005371783997743,
+   "ret_20d": 0.10257462303826026,
+   "sma20": 50.573,
+   "sma50": 52.489,
+   "trend": "mixed",
+   "atr_pct": 0.028182023576944045,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.873389718Z",
+   "news": [
+    {
+     "time": "2026-11-02T11:31:54Z",
+     "headline": "SLB Insider Executes Share Sale",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/slb-insider-sold-shares-worth-1-124-220-according-to-a-recent-sec-filing-ce785fd8de88f422",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "BA",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 171.57,
+   "price": 171.57,
+   "gap": null,
+   "ret_5d": -0.08877499535278965,
+   "ret_20d": -0.1135852858360673,
+   "sma20": 185.28575,
+   "sma50": 196.1125,
+   "trend": "down",
+   "atr_pct": 0.03316846934612278,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:52.103850259Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:01:54Z",
+     "headline": "Rothschild & Co Redburn Adjusts Price Target on Boeing",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/rothschild-co-redburn-adjusts-price-target-on-boeing-to-225-from-285-ce785fd8d088fe20",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:31:46Z",
+     "headline": "Ryanair CEO Comments on Boeing Production Challenges and 737 MAX 10 Timeline",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/hans/news/flash/1003177733/ryanair-ceo-boeing-are-still-struggling-to-get-production-up",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "CAT",
+   "verdict": "caution",
+   "why": [
+    "headline catalyst overnight",
+    "volatility expanding (ATR 5.01% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 622.77,
+   "price": 626.35,
+   "gap": 0.005748510686128139,
+   "ret_5d": -0.09316345103749546,
+   "ret_20d": -0.2634908996298355,
+   "sma20": 744.0350000000001,
+   "sma50": 783.2473,
+   "trend": "down",
+   "atr_pct": 0.05007982768231334,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:31:52.758202852Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:16:46Z",
+     "headline": "Freedom Broker Maintains Buy on Caterpillar, Lowers Price Target to $800",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62776505/freedom-broker-maintains-buy-caterpillar-lowers-price-target-800",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:02:06Z",
+     "headline": "DA Davidson Adjusts Price Target on Caterpillar to $685 From $882",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/da-davidson-adjusts-price-target-on-caterpillar-to-685-from-882-ce785fd8d08bf627",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T12:58:22Z",
+     "headline": "DA Davidson Maintains Neutral on Caterpillar, Lowers Price Target to $685",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62775244/da-davidson-maintains-neutral-caterpillar-lowers-price-target-685",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T11:32:23Z",
+     "headline": "Rothschild & Co Redburn Adjusts Price Target on Caterpillar to $700 From $950",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/rothschild-co-redburn-adjusts-price-target-on-caterpillar-to-700-from-950-ce785fd8de80fe24",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.61
+  },
+  {
+   "symbol": "DE",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 675.29,
+   "price": 675.29,
+   "gap": null,
+   "ret_5d": 0.045292014302741324,
+   "ret_20d": -0.016930646945786942,
+   "sma20": 648.126,
+   "sma50": 663.8142999999999,
+   "trend": "mixed",
+   "atr_pct": 0.024357789140327,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.032250611Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:31:48Z",
+     "headline": "Julie Boland Appointed to Deere & Company Board of Directors",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/former-ey-us-ceo-julie-boland-joins-deere--companys-board-of-directors-302923974.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "GE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 301.815,
+   "price": 301.815,
+   "gap": null,
+   "ret_5d": 0.05666421594370341,
+   "ret_20d": -0.02498788564044585,
+   "sma20": 303.57025,
+   "sma50": 317.3145,
+   "trend": "down",
+   "atr_pct": 0.03304413062874372,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.143648067Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "HON",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.46% of price)"
+   ],
+   "prior_close": 218.365,
+   "price": 218.365,
+   "gap": null,
+   "ret_5d": -0.012615586353462493,
+   "ret_20d": 0.02044488060189731,
+   "sma20": 213.53850000000003,
+   "sma50": 211.6156,
+   "trend": "up",
+   "atr_pct": 0.024616386063962378,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:47.128322029Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:02:10Z",
+     "headline": "Honeywell Technologies Selected for Sustainable Aviation Fuel Facility in UK",
+     "source": "fiscal.ai",
+     "url": "https://www.voxmarkets.com/articles/rns-hotlist-november-2-alkemy-anglesey-blackbird-helium-one-hydrogen-utopia-ixico-reveille-quadrise-vast-resources-84e1b47",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "LMT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.13% of price)"
+   ],
+   "prior_close": 637.12,
+   "price": 637.12,
+   "gap": null,
+   "ret_5d": 0.053700487885553594,
+   "ret_20d": 0.25850864197530865,
+   "sma20": 558.491,
+   "sma50": 544.16,
+   "trend": "up",
+   "atr_pct": 0.03125336334935783,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:53.931670751Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "RTX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.66% of price)"
+   ],
+   "prior_close": 199.85,
+   "price": 199.85,
+   "gap": null,
+   "ret_5d": 0.04638986334363038,
+   "ret_20d": 0.08237651646447142,
+   "sma20": 190.26875,
+   "sma50": 194.7928,
+   "trend": "mixed",
+   "atr_pct": 0.02658779799135066,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:50.879291047Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "UPS",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 108.27,
+   "price": 108.01,
+   "gap": null,
+   "ret_5d": 0.07129075347548608,
+   "ret_20d": 0.16381812318606892,
+   "sma20": 98.70775,
+   "sma50": 99.2044,
+   "trend": "mixed",
+   "atr_pct": 0.02258573143859926,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T20:00:32.81668925Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "FDX",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 312.825,
+   "price": 312.825,
+   "gap": null,
+   "ret_5d": 0.04735837685817601,
+   "ret_20d": 0.07740657826760788,
+   "sma20": 297.00575,
+   "sma50": 304.2753,
+   "trend": "mixed",
+   "atr_pct": 0.023520681348540348,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.306779095Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "UNP",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 303.96,
+   "price": 303.96,
+   "gap": null,
+   "ret_5d": 0.03777804332610657,
+   "ret_20d": 0.09230078160093425,
+   "sma20": 288.33325,
+   "sma50": 287.4572,
+   "trend": "up",
+   "atr_pct": 0.018347103942248026,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.408984107Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "T",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.36% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 21.435,
+   "price": 20.93,
+   "gap": -0.02355959878703051,
+   "ret_5d": 0.024128045867176207,
+   "ret_20d": -0.1182640888523242,
+   "sma20": 22.635749999999998,
+   "sma50": 24.362399999999997,
+   "trend": "down",
+   "atr_pct": 0.03557266153487287,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:08:48.482150804Z",
+   "news": [
+    {
+     "time": "2026-11-02T13:44:10Z",
+     "headline": "Evercore ISI Group Maintains In-Line on AT&T, Lowers Price Target to $25",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/news/26/11/62777612/evercore-isi-group-maintains-line-t-lowers-price-target-25",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-02T13:01:49Z",
+     "headline": "AT&T to Participate in FYUZ 26 Panel on Network Architecture",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/il/news-releases/drivenets-to-join-att-kddi-and-broadcom-on-fyuz-26-panel-from-backbone-networks-to-ai-fabrics-302924258.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:58:10Z",
+     "headline": "'SpaceX is in talks to buy Boost Mobile or use its network, giving Musk a potential backdoor into the $235 billion cellphone market' - Washington Post Exclusive",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/m/26/11/62770500/spacex-talks-buy-boost-mobile-or-use-its-network-giving-musk-potential-backdoor-235-billion-cellphon",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.16
+  },
+  {
+   "symbol": "VZ",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -1.84% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 44.745,
+   "price": 43.92,
+   "gap": -0.01843781428092517,
+   "ret_5d": 0.003138661585024183,
+   "ret_20d": -0.02601218981279929,
+   "sma20": 44.31075,
+   "sma50": 47.0439,
+   "trend": "mixed",
+   "atr_pct": 0.028151589163992758,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:25:04.064772471Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:31:49Z",
+     "headline": "Verizon Rejects SpaceX Request for Network Access",
+     "source": "fiscal.ai",
+     "url": "https://www.tradingview.com/news/seekingalpha:f2055bad0094b:0-echostar-gains-on-report-of-spacex-wireless-service-talks/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:58:10Z",
+     "headline": "'SpaceX is in talks to buy Boost Mobile or use its network, giving Musk a potential backdoor into the $235 billion cellphone market' - Washington Post Exclusive",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/m/26/11/62770500/spacex-talks-buy-boost-mobile-or-use-its-network-giving-musk-potential-backdoor-235-billion-cellphon",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.9
+  },
+  {
+   "symbol": "TMUS",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.86% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 156.5,
+   "price": 152.02,
+   "gap": -0.02862619808306699,
+   "ret_5d": 0.06767635420930551,
+   "ret_20d": -0.04316458791880662,
+   "sma20": 155.7945,
+   "sma50": 167.1141,
+   "trend": "mixed",
+   "atr_pct": 0.03602236421725241,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:12:47.448640602Z",
+   "news": [
+    {
+     "time": "2026-11-02T12:10:08Z",
+     "headline": "Wall Street's Most Accurate Analysts Give Their Take On 3 Tech And Telecom Stocks Delivering High-Dividend Yields",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/trading-ideas/dividends/26/11/62773378/wall-streets-most-accurate-analysts-give-their-take-on-3-tech-and-telecom-stocks-delivering-high-dividend-yields-8",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-02T10:58:10Z",
+     "headline": "'SpaceX is in talks to buy Boost Mobile or use its network, giving Musk a potential backdoor into the $235 billion cellphone market' - Washington Post Exclusive",
+     "source": "benzinga",
+     "url": "https://www.benzinga.com/m/26/11/62770500/spacex-talks-buy-boost-mobile-or-use-its-network-giving-musk-potential-backdoor-235-billion-cellphon",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.04
+  },
+  {
+   "symbol": "KO",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 1.82% of price)"
+   ],
+   "prior_close": 94.12,
+   "price": 94.12,
+   "gap": null,
+   "ret_5d": 0.015318230852211512,
+   "ret_20d": 0.09876254961475617,
+   "sma20": 91.10475,
+   "sma50": 89.47129999999999,
+   "trend": "up",
+   "atr_pct": 0.01824418675247404,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.77509613Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "PEP",
+   "verdict": "ok",
+   "why": [
+    "nothing unusual"
+   ],
+   "prior_close": 137.335,
+   "price": 137.54,
+   "gap": 0.0014927003313065512,
+   "ret_5d": 0.0116013553329406,
+   "ret_20d": 0.09117273160654693,
+   "sma20": 131.1195,
+   "sma50": 133.4922,
+   "trend": "mixed",
+   "atr_pct": 0.02196141863742985,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:56:56.496807826Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.07
+  },
+  {
+   "symbol": "PG",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.09% of price)"
+   ],
+   "prior_close": 161.57,
+   "price": 161.57,
+   "gap": null,
+   "ret_5d": 0.002792949354518237,
+   "ret_20d": 0.11512181655048659,
+   "sma20": 156.17249999999999,
+   "sma50": 149.9918,
+   "trend": "up",
+   "atr_pct": 0.020866674329569655,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:58.043467375Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "NEE",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 83.76,
+   "price": 83.76,
+   "gap": null,
+   "ret_5d": 0.020219244823386218,
+   "ret_20d": 0.09034105701640205,
+   "sma20": 79.52825,
+   "sma50": 80.2383,
+   "trend": "mixed",
+   "atr_pct": 0.019277015963978728,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:58.046548448Z",
+   "news": [
+    {
+     "time": "2026-11-02T02:01:54Z",
+     "headline": "West Virginia Utility Engineer Recommends Denial of NextEra Energy's MARL Transmission Project",
+     "source": "fiscal.ai",
+     "url": "https://civl.com/news/story/west-virginia-commission-ends-five-day-hearings-on-transmission-line-b65b99ff",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  }
+ ],
+ "in_play": [
+  "PLTR",
+  "NVDA",
+  "AMD",
+  "AMZN",
+  "AVGO"
+ ],
+ "sectors": {
+  "XLK": {
+   "prior_close": 179.5,
+   "price": 179.74,
+   "gap": null,
+   "ret_5d": -0.020410390744379003,
+   "ret_20d": -0.10187130991694193,
+   "sma20": 190.8625,
+   "sma50": 189.69830000000002,
+   "trend": "mixed",
+   "atr_pct": 0.027003581376840422,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T20:16:37.928226656Z"
+  },
+  "SMH": {
+   "prior_close": 522.88,
+   "price": 523.52,
+   "gap": null,
+   "ret_5d": -0.008137792362994833,
+   "ret_20d": -0.17085431119920713,
+   "sma20": 569.89175,
+   "sma50": 572.5842,
+   "trend": "down",
+   "atr_pct": 0.040112317494317214,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T20:21:33.169989278Z"
+  },
+  "XLC": {
+   "prior_close": 99.91,
+   "price": 99.91,
+   "gap": null,
+   "ret_5d": -0.053254998578603274,
+   "ret_20d": -0.09427975704831848,
+   "sma20": 108.41125,
+   "sma50": 110.7118,
+   "trend": "down",
+   "atr_pct": 0.018859830990748835,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.744763364Z"
+  },
+  "XLY": {
+   "prior_close": 115.38,
+   "price": 115.38,
+   "gap": null,
+   "ret_5d": 0.019978783592644822,
+   "ret_20d": 0.04852780806979262,
+   "sma20": 113.51624999999999,
+   "sma50": 113.2351,
+   "trend": "up",
+   "atr_pct": 0.014845355718990684,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:57.999487677Z"
+  },
+  "XLF": {
+   "prior_close": 56.53,
+   "price": 56.53,
+   "gap": null,
+   "ret_5d": 0.011179679813970056,
+   "ret_20d": 0.057228352347110656,
+   "sma20": 55.327999999999996,
+   "sma50": 55.942699999999995,
+   "trend": "mixed",
+   "atr_pct": 0.01317252533420941,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.679922722Z"
+  },
+  "XLI": {
+   "prior_close": 167.42,
+   "price": 167.42,
+   "gap": null,
+   "ret_5d": 0.017070651843751783,
+   "ret_20d": -0.014799776385088448,
+   "sma20": 168.0845,
+   "sma50": 170.6882,
+   "trend": "down",
+   "atr_pct": 0.016233766233766215,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:59.812608018Z"
+  },
+  "XLE": {
+   "prior_close": 70,
+   "price": 68.55,
+   "gap": -0.020714285714285796,
+   "ret_5d": 0.00980957876514732,
+   "ret_20d": 0.11394016549968167,
+   "sma20": 67.11575,
+   "sma50": 64.9268,
+   "trend": "up",
+   "atr_pct": 0.0200816326530612,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:47:11.912568412Z"
+  },
+  "XLV": {
+   "prior_close": 184.9,
+   "price": 184.9,
+   "gap": null,
+   "ret_5d": 0.03152022315202241,
+   "ret_20d": 0.11284983448690933,
+   "sma20": 175.69525000000002,
+   "sma50": 172.2184,
+   "trend": "up",
+   "atr_pct": 0.01784169048906746,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.865023034Z"
+  },
+  "XLP": {
+   "prior_close": 89.42,
+   "price": 89.52,
+   "gap": 0.001118318049653233,
+   "ret_5d": 0.01302820890449774,
+   "ret_20d": 0.11025577352868132,
+   "sma20": 86.00800000000001,
+   "sma50": 84.60600000000001,
+   "trend": "up",
+   "atr_pct": 0.016343419497076392,
+   "vol_expanding": true,
+   "price_time": "2026-11-02T13:47:10.514475351Z"
+  },
+  "XLU": {
+   "prior_close": 43.45,
+   "price": 43.45,
+   "gap": null,
+   "ret_5d": 0.02079173029484327,
+   "ret_20d": 0.0911602209944753,
+   "sma20": 41.94975,
+   "sma50": 41.748000000000005,
+   "trend": "up",
+   "atr_pct": 0.014121321716258428,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:59:57.115681719Z"
+  }
+ },
+ "macro": {
+  "IWM": {
+   "prior_close": 279.37,
+   "price": 282,
+   "gap": 0.009414038729999685,
+   "ret_5d": 0.013238067604816495,
+   "ret_20d": -0.00735503126776571,
+   "sma20": 277.399,
+   "sma50": 284.27,
+   "trend": "mixed",
+   "atr_pct": 0.014248896752386666,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:44:39.431130724Z"
+  },
+  "DIA": {
+   "prior_close": 517,
+   "price": 520.96,
+   "gap": 0.007659574468085184,
+   "ret_5d": -0.008372253603521562,
+   "ret_20d": 0.011900101777186256,
+   "sma20": 519.2915,
+   "sma50": 521.6547999999999,
+   "trend": "down",
+   "atr_pct": 0.010085659021829235,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:43:41.719930777Z"
+  },
+  "TLT": {
+   "prior_close": 81.85,
+   "price": 81.81,
+   "gap": -0.000488698839340107,
+   "ret_5d": 0.006331837462347112,
+   "ret_20d": 0.056333483900109727,
+   "sma20": 79.65975,
+   "sma50": 80.5001,
+   "trend": "mixed",
+   "atr_pct": 0.010345579893533496,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T13:56:38.342476128Z"
+  },
+  "UUP": {
+   "prior_close": 29.01,
+   "price": 29.01,
+   "gap": null,
+   "ret_5d": 0.0018994992229321994,
+   "ret_20d": 0.0038062283737025915,
+   "sma20": 29.004,
+   "sma50": 28.5845,
+   "trend": "up",
+   "atr_pct": 0.003323976953759799,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T19:56:00.753645874Z"
+  },
+  "GLD": {
+   "prior_close": 355.81,
+   "price": 361.67,
+   "gap": 0.016469464039796655,
+   "ret_5d": -0.029459098224271063,
+   "ret_20d": -0.0641381396388695,
+   "sma20": 375.77275,
+   "sma50": 390.5639,
+   "trend": "down",
+   "atr_pct": 0.016386153123456742,
+   "vol_expanding": false,
+   "price_time": "2026-11-02T14:02:21.379583021Z"
+  },
+  "USO": {
+   "prior_close": 168.86,
+   "price": 168.39,
+   "gap": null,
+   "ret_5d": -0.004069595989383612,
+   "ret_20d": 0.14559023066485755,
+   "sma20": 157.625,
+   "sma50": 150.0909,
+   "trend": "up",
+   "atr_pct": 0.027979645014466738,
+   "vol_expanding": false,
+   "price_time": "2026-10-30T20:51:02.003410756Z"
+  },
+  "VIXY": {
+   "prior_close": 18.415,
+   "price": 18.415,
+   "gap": null,
+   "ret_5d": 0.027049637479085398,
+   "ret_20d": 0.1013755980861244,
+   "sma20": 16.879749999999998,
+   "sma50": 17.1254,
+   "trend": "mixed",
+   "atr_pct": 0.05281020906869396,
+   "vol_expanding": true,
+   "price_time": "2026-10-30T19:59:59.697471952Z"
+  }
+ },
+ "market_news": [
+  {
+   "time": "2026-11-02T14:02:00Z",
+   "headline": "Seaport Therapeutics Reports Third Quarter 2026 Financial Results and Clinical Progress",
+   "symbols": [
+    "SPTX"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:52Z",
+   "headline": "Stepan Co. Raises Project Catalyst Savings Forecast and Increases Quarterly Dividend",
+   "symbols": [
+    "SCL"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:49Z",
+   "headline": "Dorchester Minerals, L.P. Announces Acquisition of Mineral and Royalty Interests",
+   "symbols": [
+    "DMLP"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:49Z",
+   "headline": "Bakkafrost Reports Q3 2026 Operational EBIT of DKK 128 Million",
+   "symbols": [
+    "BAKKA"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:48Z",
+   "headline": "Inchcape plc Announces Share Buyback Transactions",
+   "symbols": [
+    "INCH"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:44Z",
+   "headline": "Midea Group Conducts Share Repurchase on November 2, 2026",
+   "symbols": [
+    "000333"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:39Z",
+   "headline": "Land Securities Group PLC Announces Total Voting Rights",
+   "symbols": [
+    "LAND"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:39Z",
+   "headline": "Novartis Phase III ORION-4 Trial of Pelacarsen Misses Primary Endpoint",
+   "symbols": [
+    "NVS"
+   ]
+  },
+  {
+   "time": "2026-11-02T14:01:32Z",
+   "headline": "Descartes Integrates Advanced Ocean Visibility Solution with SAP Transportation Platforms",
+   "symbols": [
+    "SAP"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:58:15Z",
+   "headline": "Keybanc Maintains Overweight on Voyager Technologies, Lowers Price Target to $40",
+   "symbols": [
+    "VOYG"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:57:41Z",
+   "headline": "Wells Fargo Maintains Equal-Weight on Gates Industrial, Lowers Price Target to $28",
+   "symbols": [
+    "GTES"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:56:36Z",
+   "headline": "Fox Corp Says Fox One Will Bundle With Distributors, Platforms And Other Content Providers",
+   "symbols": [
+    "FOX",
+    "FOXA"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:56:34Z",
+   "headline": "Keybanc Maintains Overweight on Shopify, Raises Price Target to $185",
+   "symbols": [
+    "SHOP"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:56:07Z",
+   "headline": "Wells Fargo Maintains Equal-Weight on Lennar, Raises Price Target to $80",
+   "symbols": [
+    "LEN"
+   ]
+  },
+  {
+   "time": "2026-11-02T13:55:08Z",
+   "headline": "Wells Fargo Maintains Equal-Weight on Universal Health Services, Raises Price Target to $170",
+   "symbols": [
+    "UHS"
+   ]
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "change": 1.07,
+    "percent_change": 4.59,
+    "price": 24.36,
+    "symbol": "LITX"
+   }
+  ],
+  "losers": []
+ },
+ "smart_money": []
+}
