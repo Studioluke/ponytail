@@ -202,6 +202,22 @@ class StocksInPlay(Base):
         self.assertAlmostEqual(float(wide[0]["stop"]), max(49.8, 51.0 - 0.25 * 3.0), places=2)
         self.assertGreater(float(wide[0]["qty"]), 0)
 
+    def test_market_filter_shadow_needs_spy_at_or_above_its_open(self):
+        broker = self.broker(51.0, 51.2)
+        run.step(broker, self.cfg, self.book, self.at(9, 37))
+        self.assertEqual([r["symbol"] for r in self.shadows() if r["strategy"] == "sip_orb_mkt"], ["CCC"])
+        run._DAY.clear()
+        self.book = Book()
+        self.book.roll("2026-10-27", "2026-W44")
+        os.remove(run.shadow_path(self.cfg))
+        broker = self.broker(51.0, 51.2)
+        broker.data["SPY"] = bars([500] * 6 + [499.0])  # SPY below its 9:30 open
+        self.book.roll("2026-10-26", "2026-W44")
+        self.book.sip_watch = None
+        run.step(broker, self.cfg, self.book, self.at(9, 37))
+        self.assertEqual([o[1] for o in self.buys(broker)], ["CCC"])  # live sip_orb is unchanged
+        self.assertEqual([r for r in self.shadows() if r["strategy"] == "sip_orb_mkt"], [])
+
     def test_red_first_candle_is_not_traded(self):
         broker = self.broker(51.0, 51.2)
         broker.five["CCC"]["c"] = 49.9  # closed below its open
@@ -251,6 +267,17 @@ class Noise(Base):
         # Only once per grid point and once a day.
         run.step(broker, self.cfg, self.book, self.at(10, 1, 5))
         self.assertEqual(len(self.buys(broker)), 1)
+
+    def test_band_break_also_logs_a_band_only_shadow(self):
+        broker = self.broker([500] * 29 + [501.0])
+        run.step(broker, self.cfg, self.book, self.at(10, 0, 5))
+        nb = [r for r in self.shadows() if r["strategy"] == "noise_band"]
+        self.assertEqual([(r["symbol"], r["trail"], r["dir"]) for r in nb], [("SPY", "band_only", "1")])
+
+    def test_no_lasthalf_on_a_half_day(self):
+        self.assertEqual(run.session_cfg(self.cfg, "2026-11-27").flatten_at.strftime("%H:%M"), "12:57")
+        self.assertEqual(run.session_cfg(self.cfg, "2026-11-27").last_entry.strftime("%H:%M"), "12:31")
+        self.assertIs(run.session_cfg(self.cfg, "2026-11-26"), self.cfg)
 
     def test_break_below_lower_band_buys_sh(self):
         broker = self.broker([500] * 29 + [499.0])
@@ -362,6 +389,17 @@ class Exits(unittest.TestCase):
         self.assertIn(("sell", "AAA", 0.25), broker.orders)
         self.assertEqual((t["qty"], t["qty0"], t["stop"], t["half_done"]), (0.25, 0.5, 100, True))
         self.assertEqual(broker.orders[-1], ("stop", "AAA", 0.25, 100))
+
+
+class BandOnly(unittest.TestCase):
+    def test_band_only_ignores_vwap(self):
+        t = {"trail": "band_only", "dir": 1}
+        spy = {"close": 501.0, "vwap": 502.0, "upper": 500.5, "lower": 499.0}
+        self.assertIsNone(strategies.exit_action(t, 501.0, 501.0, 501.0, spy, grid=True))
+        self.assertEqual(strategies.exit_action(t, 501.0, 501.0, 501.0, dict(spy, close=500.2), grid=True),
+                         ("close", "trail"))
+        self.assertEqual(strategies.exit_action(dict(t, trail="band"), 501.0, 501.0, 501.0, spy, grid=True),
+                         ("close", "trail"))
 
 
 class Simulate(unittest.TestCase):

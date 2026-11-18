@@ -48,8 +48,10 @@ def replay(broker, cfg, day):
              "dir": int(r["dir"] or 1)}
         if not t["qty"]:
             continue
-        res = strategies.simulate(t, bars.get(r["symbol"], []), spy if t["trail"] in ("band", "vwap_grid") else None,
-                                  run.prior_close(ctx, "SPY"), ctx["sigma"])
+        res = strategies.simulate(t, bars.get(r["symbol"], []),
+                                  spy if t["trail"] in ("band", "vwap_grid", "band_only") else None,
+                                  run.prior_close(ctx, "SPY"), ctx["sigma"],
+                                  flatten=run.session_cfg(cfg, day.isoformat()).flatten_at)
         if res:
             r.update(res)
     with open(run.shadow_path(cfg), "w", newline="") as f:

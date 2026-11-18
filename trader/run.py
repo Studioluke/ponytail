@@ -5,11 +5,12 @@
     python -m trader.run loop    # run until the close, polling each minute
 """
 import csv
+import dataclasses
 import math
 import os
 import sys
 import time as _time
-from datetime import datetime, time, timedelta
+from datetime import date, datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
 import requests
@@ -311,8 +312,18 @@ def sip_history(broker, cfg, ctx):
     return hist
 
 
+def session_cfg(cfg, day):
+    """cfg with the entry window and flatten moved up on a half day."""
+    close = strategies.EARLY_CLOSE.get(day)
+    if not close:
+        return cfg
+    c = datetime.combine(date.fromisoformat(day), close)
+    return dataclasses.replace(cfg, last_entry=(c - timedelta(minutes=29)).time(),
+                               flatten_at=(c - timedelta(minutes=3)).time())
+
+
 def step(broker, cfg, book, now):
-    cfg = risk_manager.day_config(cfg, book.day)
+    cfg = session_cfg(risk_manager.day_config(cfg, book.day), book.day)
     t = now.time()
     killed = risk_manager.kill_reason(cfg)
     if killed:
@@ -453,6 +464,16 @@ def step(broker, cfg, book, now):
             if q:
                 shadow(cfg, at, w, q, "sip_orb_wide variant (shadow only)")
 
+    def mkt_shadow(sig, at):
+        """11-18 review: sip_orb_mkt takes the same signal only while SPY is at
+        or above its open and not below the lower noise band."""
+        if strategies.spy_ok_for_longs(spy_bars, bands):
+            q = size(cfg.capital, strategies.RISK_FRAC["sip_orb"], sig.entry, sig.stop,
+                     cfg.capital * cfg.max_position_frac, cfg.fractional)
+            if q:
+                shadow(cfg, at, dataclasses.replace(sig, strategy="sip_orb_mkt"), q,
+                       "sip_orb_mkt variant (shadow only): SPY at/above its open")
+
     # sip_orb: stocks in play, 5-minute ORB, 9:35-10:30.
     if book.sip_watch is None and t >= strategies.SIP_SCAN_AT:
         if t > strategies.SIP_LAST_ENTRY:
@@ -475,6 +496,7 @@ def step(broker, cfg, book, now):
             if sig:
                 book.traded_today.append(k)
                 wide_shadow(c, sig, now)
+                mkt_shadow(sig, now)
                 enter(sig, research_view=sip_research)
                 continue
             missed, at = strategies.sip_missed(c, bars[c["symbol"]])
@@ -486,6 +508,7 @@ def step(broker, cfg, book, now):
                          cfg.capital * cfg.max_position_frac, cfg.fractional)
                 shadow(cfg, at, missed, q, "break came while the scan ran or price ran past the entry zone")
                 wide_shadow(c, missed, at)
+                mkt_shadow(missed, at)
 
     # control: the old 15-min ORB on the core five, strict gap and research rules.
     for sym in cfg.core_symbols:
@@ -526,9 +549,17 @@ def step(broker, cfg, book, now):
                                   f"noise area {key}: {how}", strategy="noise")
             enter(sig, trail="vwap_grid" if fallback else "band", d=d,
                   cap_frac=strategies.NOISE_FALLBACK_CAP if fallback else 1.0, research_view=spy_research)
+            if not fallback:
+                # 11-18 review: the same entry with a band-only trail, as a shadow.
+                q = size(cfg.capital, strategies.RISK_FRAC["noise"], sig.entry, sig.stop,
+                         cfg.capital * cfg.max_position_frac, cfg.fractional)
+                if q:
+                    shadow(cfg, now, dataclasses.replace(sig, strategy="noise_band"), q,
+                           "noise_band variant (shadow only)", "band_only", d)
 
     # lasthalf: 15:30, the direction of SPY's first half hour.
-    if strategies.LASTHALF_AT <= t <= time(15, 31) and not book.flags.get("lasthalf_done"):
+    if (strategies.LASTHALF_AT <= t <= time(15, 31) and not book.flags.get("lasthalf_done")
+            and book.day not in strategies.EARLY_CLOSE):
         book.flags["lasthalf_done"] = True
         d = strategies.lasthalf_direction(spy_bars, spy_pc)
         if d:
@@ -576,8 +607,9 @@ def run(mode):
             _time.sleep(10 if bell else 60 - datetime.now().second + 2)
             continue
         book.save(cfg.state_path)
-        if mode == "once" or now.time() >= cfg.flatten_at:
-            if mode == "loop" and now.time() >= cfg.flatten_at:
+        flatten_at = session_cfg(cfg, book.day).flatten_at
+        if mode == "once" or now.time() >= flatten_at:
+            if mode == "loop" and now.time() >= flatten_at:
                 # Let the flatten orders fill, and close anything left by hand:
                 # on 11-05 the 15:58 flatten cancelled SH's stop but left the
                 # position open.
