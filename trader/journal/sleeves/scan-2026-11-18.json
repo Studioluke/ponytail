@@ -1,0 +1,109 @@
+{
+ "date": "2026-11-18",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 656.95,
+   "sma200": 682.59235,
+   "rsi2": 0.0,
+   "trigger": 629.1151857142858,
+   "premarket": 661.63,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces SEC Investigation and Delays Quarterly 10-Q Filing",
+    "Apple Services Experience Outage Following Internal Update",
+    "Barclays Maintains Tesla Buy Rating",
+    "NVIDIA Co-Founder Jensen Huang Retains Director Nomination Rights",
+    "Meta Platforms COO Javier Olivan Sells Shares Worth Over $1 Million"
+   ],
+   "events": [
+    {
+     "date": "2026-11-18",
+     "symbol": "ALL",
+     "event": "FOMC minutes 2:00 ET",
+     "timing": "during",
+     "source": "stockchartistry.substack.com week preview (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 732.44,
+   "sma200": 732.3426,
+   "rsi2": 0.0,
+   "trigger": 716.4272285714286,
+   "premarket": 734.27,
+   "setup": "needs -2.2% to trigger",
+   "news": [
+    "NVIDIA Faces SEC Investigation and Delays Quarterly 10-Q Filing",
+    "Apple Services Experience Outage Following Internal Update",
+    "NVIDIA Co-Founder Jensen Huang Retains Director Nomination Rights",
+    "Meta Platforms COO Javier Olivan Sells Shares Worth Over $1 Million",
+    "South Korean Regulator Orders Apple to Designate Legal Representatives"
+   ],
+   "events": [
+    {
+     "date": "2026-11-18",
+     "symbol": "ALL",
+     "event": "FOMC minutes 2:00 ET",
+     "timing": "during",
+     "source": "stockchartistry.substack.com week preview (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 460.1,
+   "sma200": 524.4389,
+   "rsi2": 0.0,
+   "trigger": 419.2701285714286,
+   "premarket": 470.16,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces SEC Investigation and Delays Quarterly 10-Q Filing",
+    "Intel Initiates New Round of Global Workforce Reductions",
+    "NVIDIA Co-Founder Jensen Huang Retains Director Nomination Rights",
+    "Bernstein Names Applied Materials a Top Pick in Semiconductor Equipment Sector",
+    "Baird Adjusts Price Target on Qualcomm"
+   ],
+   "events": [
+    {
+     "date": "2026-11-18",
+     "symbol": "ALL",
+     "event": "FOMC minutes 2:00 ET",
+     "timing": "during",
+     "source": "stockchartistry.substack.com week preview (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 155.46,
+   "sma200": 203.86509999999998,
+   "rsi2": 0.0,
+   "trigger": 145.5730142857143,
+   "premarket": 159.94,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces SEC Investigation and Delays Quarterly 10-Q Filing",
+    "NVIDIA Co-Founder Jensen Huang Retains Director Nomination Rights",
+    "NVIDIA Establishes Export Control Committee and Delays 10-Q Filing",
+    "NVIDIA Reports Financial Results for Third Quarter Fiscal 2027",
+    "Rockwell Automation Launches GPU-Enabled Industrial Computing with NVIDIA"
+   ],
+   "events": [
+    {
+     "date": "2026-11-18",
+     "symbol": "ALL",
+     "event": "FOMC minutes 2:00 ET",
+     "timing": "during",
+     "source": "stockchartistry.substack.com week preview (unconfirmed)"
+    }
+   ]
+  }
+ ]
+}
