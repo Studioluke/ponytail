@@ -1,16 +1,21 @@
 {
- "day": "2026-11-17",
+ "day": "2026-11-18",
  "week": "2026-W47",
- "day_pnl": -1.891602000000006,
- "week_pnl": -2.5273240000000143,
- "day_losses": 7,
+ "day_pnl": 1.5564319999999974,
+ "week_pnl": -0.970892000000017,
+ "day_losses": 3,
  "traded_today": [
   "sip_orb:LOW",
   "sip_orb:NKE",
-  "control:AAPL",
-  "sip_orb:HD",
   "sip_orb:DIS",
-  "sip_orb:SCHW"
+  "sip_orb:KO",
+  "sip_orb:LULU",
+  "sip_orb:UPS",
+  "sip_orb:SCHW",
+  "sip_orb:TGT",
+  "control:AAPL",
+  "control:QQQ",
+  "control:MSFT"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -20,93 +25,91 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 7,
+ "entries": 6,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 4,
-  "control": 1,
-  "noise": 1,
-  "lasthalf": 1
+  "control": 2,
+  "noise": 1
  },
  "sip_watch": [
   {
-   "symbol": "DIS",
-   "hi": 120.69,
-   "lo": 118.52,
-   "atr": 2.4893,
-   "rvol": 6.04,
+   "symbol": "LOW",
+   "hi": 216.52,
+   "lo": 211.4,
+   "atr": 7.0625,
+   "rvol": 8.84,
    "green": true
   },
   {
-   "symbol": "LOW",
-   "hi": 223.745,
-   "lo": 220.47,
-   "atr": 6.8432,
-   "rvol": 3.9,
+   "symbol": "TGT",
+   "hi": 165.68,
+   "lo": 160.045,
+   "atr": 5.3746,
+   "rvol": 6.52,
    "green": true
   },
   {
    "symbol": "NKE",
-   "hi": 40.49,
-   "lo": 39.655,
-   "atr": 1.2475,
-   "rvol": 3.22,
+   "hi": 35.62,
+   "lo": 34.985,
+   "atr": 1.5736,
+   "rvol": 2.67,
    "green": true
   },
   {
-   "symbol": "JPM",
-   "hi": 334.48,
-   "lo": 332.68,
-   "atr": 7.8218,
-   "rvol": 3.12,
+   "symbol": "UPS",
+   "hi": 109.85,
+   "lo": 109.08,
+   "atr": 2.5782,
+   "rvol": 2.14,
+   "green": true
+  },
+  {
+   "symbol": "LULU",
+   "hi": 104.59,
+   "lo": 103.54,
+   "atr": 4.1286,
+   "rvol": 1.95,
+   "green": true
+  },
+  {
+   "symbol": "DIS",
+   "hi": 117.92,
+   "lo": 116.76,
+   "atr": 2.8536,
+   "rvol": 1.94,
+   "green": true
+  },
+  {
+   "symbol": "MSTR",
+   "hi": 95.37,
+   "lo": 93.12,
+   "atr": 8.8743,
+   "rvol": 1.92,
    "green": false
   },
   {
-   "symbol": "SLB",
-   "hi": 50.215,
-   "lo": 49.94,
-   "atr": 1.5186,
-   "rvol": 3.11,
-   "green": false
-  },
-  {
-   "symbol": "UNH",
-   "hi": 398.3,
-   "lo": 391.33,
-   "atr": 10.6693,
-   "rvol": 2.8,
-   "green": false
-  },
-  {
-   "symbol": "CVS",
-   "hi": 85.92,
-   "lo": 84.75,
-   "atr": 3.3596,
-   "rvol": 2.52,
-   "green": false
-  },
-  {
-   "symbol": "HD",
-   "hi": 342.465,
-   "lo": 335.695,
-   "atr": 9.7829,
-   "rvol": 2.21,
+   "symbol": "KO",
+   "hi": 98.67,
+   "lo": 97.97,
+   "atr": 1.7461,
+   "rvol": 1.79,
    "green": true
   },
   {
    "symbol": "SCHW",
-   "hi": 92.855,
-   "lo": 91.96,
-   "atr": 2.0982,
-   "rvol": 1.83,
+   "hi": 92.5,
+   "lo": 92.075,
+   "atr": 2.2057,
+   "rvol": 1.74,
    "green": true
   },
   {
-   "symbol": "MRNA",
-   "hi": 222.18,
-   "lo": 208.525,
-   "atr": 17.3436,
-   "rvol": 1.76,
+   "symbol": "ANET",
+   "hi": 189.39,
+   "lo": 183.68,
+   "atr": 13.1411,
+   "rvol": 1.65,
    "green": false
   }
  ],
