@@ -38,7 +38,7 @@ SLOTS = {"sip_orb": 2, "noise": 1, "lasthalf": 1, "control": 1}
 RISK_FRAC = {"sip_orb": 0.005, "noise": 0.005, "lasthalf": 0.005, "control": 0.0025}
 PROMOTE = {"min_trades": 40, "profit_factor": 1.2}
 # Shadow-only variants, scored next to the live strategies (11-11 review).
-VARIANTS = {"sip_orb_wide": "sip_orb"}
+VARIANTS = {"sip_orb_wide": "sip_orb", "sip_orb_mkt": "sip_orb", "noise_band": "noise"}
 SCORED = list(SLOTS) + list(VARIANTS)
 
 SIP_SCAN_AT = time(9, 35)
@@ -161,6 +161,20 @@ def sip_wide(c, sig, at=None):
     return Signal(sig.symbol, sig.entry, stop, None, sig.reason + " [wide stop]", strategy="sip_orb_wide")
 
 
+def spy_ok_for_longs(spy_bars, bands):
+    """sip_orb_mkt's filter (11-18 review): SPY's last 1-min close at or above
+    its 9:30 open, and not below the lower noise band."""
+    if not spy_bars:
+        return False
+    c = spy_bars[-1]["c"]
+    return c >= spy_bars[0]["o"] and (not bands or c >= bands[1])
+
+
+# Half days: the market closes at 13:00 ET. Entries stop at 12:31, the flatten
+# runs at 12:57 and lasthalf is skipped (11-18 review).
+EARLY_CLOSE = {"2026-11-27": time(13, 0), "2026-12-24": time(13, 0)}
+
+
 def spy_skips(research):
     """The research view for SPY-only strategies: keep a skip only when its
     tag (or, without a tag, its reason) is an event, not a gap."""
@@ -267,9 +281,13 @@ def exit_action(t, px, close, vw, spy=None, grid=False):
     trail = t.get("trail")
     if trail == "vwap" and t.get("half_done") and close is not None and vw and close < vw:
         return ("close", "trail")
-    if grid and spy and trail in ("band", "vwap_grid"):
+    if grid and spy and trail in ("band", "vwap_grid", "band_only"):
         d = t.get("dir", 1)
-        if trail == "band" and spy.get("upper") is not None:
+        if trail == "band_only":
+            if spy.get("upper") is None:
+                return None
+            level = spy["upper"] if d > 0 else spy["lower"]
+        elif trail == "band" and spy.get("upper") is not None:
             level = max(spy["upper"], spy["vwap"]) if d > 0 else min(spy["lower"], spy["vwap"])
         else:
             level = spy["vwap"]
