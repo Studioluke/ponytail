@@ -14,6 +14,13 @@
    "event": "Earnings (confirmed; after the close)",
    "timing": "after",
    "source": "Reuters via investing.com 2026-11-16"
+  },
+  {
+   "date": "2026-11-18",
+   "symbol": "ALL",
+   "event": "FOMC minutes 2:00 ET",
+   "timing": "during",
+   "source": "stockchartistry.substack.com week preview (unconfirmed)"
   }
  ],
  "watchlist": [
