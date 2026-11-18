@@ -51,6 +51,11 @@ Learning trades are the forced 11:00 ET trade at half risk on days with no entry
 | lasthalf | 7 | 5 | 42% | 0.40 | -0.14R | $-0.34 | testing (12/40) |
 | control | 6 | 3 | 0% | 0.00 | -1.00R | $-1.77 | testing (9/40) |
 | sip_orb_wide | 0 | 22 | 32% | 1.55 | +0.20R | $0.00 | testing (22/40) |
+| sip_orb_mkt | 0 | 0 | | | | | no trades yet |
+| noise_band | 0 | 0 | | | | | no trades yet |
+
+**sip_orb live only:** 19 trades, win rate 26%, PF 2.08, avg +0.26R, $5.35.
+**sip_orb worst day (live+shadow):** 2026-11-17, -5.70R over 5 trades.
 
 Shadow trades are signals that got no slot, replayed on the day's bars. Promote at 40+ trades with PF above 1.2; retire at 40 trades with average R below 0.
 

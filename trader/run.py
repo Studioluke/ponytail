@@ -400,7 +400,9 @@ def step(broker, cfg, book, now):
         if len(held_by) >= strategies.SLOTS[name]:
             full = size(cfg.capital, risk_frac, sig.entry, sig.stop, cfg.capital * cfg.max_position_frac * cap_frac,
                         cfg.fractional)
-            return shadow(cfg, now, sig, full, f"{name} slots full ({', '.join(held_by)})", trail, d)
+            why = (f"{name} is shadow only (no live slot)" if not strategies.SLOTS[name]
+                   else f"{name} slots full ({', '.join(held_by)})")
+            return shadow(cfg, now, sig, full, why, trail, d)
         if not qty:
             full = size(cfg.capital, risk_frac, sig.entry, sig.stop, cfg.capital * cfg.max_position_frac * cap_frac,
                         cfg.fractional)

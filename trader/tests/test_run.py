@@ -119,7 +119,18 @@ class Base(unittest.TestCase):
         return [o for o in broker.orders if o[0] == "buy"]
 
 
-class Control(Base):
+class ControlLive(Base):
+    """Control's live mechanics, as they run if its slot reverts (11-18: control
+    is shadow only while sip_orb holds the third slot)."""
+    def setUp(self):
+        super().setUp()
+        from unittest import mock
+        p = mock.patch.dict(strategies.SLOTS, {"control": 1})
+        p.start()
+        self.addCleanup(p.stop)
+
+
+class Control(ControlLive):
     def test_orb_break_enters_with_wider_stop_and_half_at_2r(self):
         # 15-minute range 99.95-100.05, then a fresh close above it at 9:50.
         broker = FakeBroker({"AAA": bars([100] * 20 + [100.4]), "BBB": bars([100] * 21)})
@@ -464,7 +475,7 @@ class InPlay(Base):
         self.assertEqual(risk_manager.day_config(self.cfg, "2026-10-26").symbols, ("AAA", "BBB", "CCC"))
 
 
-class Fomc(Base):
+class Fomc(ControlLive):
     def brief(self):
         os.makedirs(self.cfg.research_dir, exist_ok=True)
         with open(f"{self.cfg.research_dir}/2026-10-26.json", "w") as f:
@@ -489,7 +500,7 @@ class Fomc(Base):
         self.assertFalse(any("FOMC" in r for r in d.reasons))
 
 
-class ShadowReplay(Base):
+class ShadowReplay(ControlLive):
     def test_replay_fills_results_and_review_counts_them(self):
         from trader import shadow
         broker = FakeBroker({"AAA": bars([100] * 20 + [100.4]), "BBB": bars([100] * 20 + [100.4])})
@@ -507,6 +518,19 @@ class ShadowReplay(Base):
         self.assertEqual(res[0]["group"], "control")
         lines = risk_manager.experiment_lines(self.cfg, [], start="2026-10-01")
         self.assertTrue(any(line.startswith("| control | 0 | 1 |") for line in lines), lines)
+
+
+class ControlShadowOnly(Base):
+    def test_control_signal_is_a_shadow_while_sip_orb_holds_its_slot(self):
+        self.assertEqual(strategies.SLOTS["control"], 0)
+        self.assertEqual(strategies.SLOTS["sip_orb"], 3)
+        self.assertEqual(sum(strategies.SLOTS.values()), 5)
+        broker = FakeBroker({"AAA": bars([100] * 20 + [100.4]), "BBB": bars([100] * 21)})
+        run.step(broker, self.cfg, self.book, self.at(9, 51))
+        self.assertEqual(self.buys(broker), [])
+        sh = self.shadows()
+        self.assertEqual([(r["strategy"], r["symbol"]) for r in sh], [("control", "AAA")])
+        self.assertIn("shadow only", sh[0]["why"])
 
 
 class SipLateBreak(unittest.TestCase):

@@ -24,7 +24,8 @@ sample quickly. Promote a strategy at 40+ trades with PF > 1.2. Retire it at
             below 0, buy SH. Hard stop 0.5%, exit 15:57. 1 slot.
   control   The old 15-minute ORB on the 5 core symbols only, strict gap and
             research rules. Stop = max(range midpoint, 0.25 x ATR14), $0.75
-            risk. Sell half at 2R, trail the rest at VWAP, exit 15:57. 1 slot.
+            risk. Sell half at 2R, trail the rest at VWAP, exit 15:57. Shadow only
+            from 11-19 (its slot went to sip_orb).
 """
 import re
 from datetime import datetime, time
@@ -34,7 +35,12 @@ from .strategy import Signal, opening_range, vwap
 
 ET = ZoneInfo("America/New_York")
 EXPERIMENT_START = "2026-11-05"
-SLOTS = {"sip_orb": 2, "noise": 1, "lasthalf": 1, "control": 1}
+# 11-18: sip_orb met the promote rule (40 trades, PF 2.41, +0.47R); from 11-19
+# it takes control's slot (3 of Luke's 5 x $60) and control runs as a shadow
+# only until it reaches 40. If sip_orb's live+shadow avg R over its next 40
+# trades (from PROMOTED) is below 0, the third slot reverts to control.
+SLOTS = {"sip_orb": 3, "noise": 1, "lasthalf": 1, "control": 0}
+PROMOTED = {"sip_orb": "2026-11-19"}
 RISK_FRAC = {"sip_orb": 0.005, "noise": 0.005, "lasthalf": 0.005, "control": 0.0025}
 PROMOTE = {"min_trades": 40, "profit_factor": 1.2}
 # Shadow-only variants, scored next to the live strategies (11-11 review).

@@ -396,6 +396,28 @@ def experiment_lines(cfg, all_trades, start=None):
         pf = "inf" if st["profit_factor"] == float("inf") else f"{st['profit_factor']:.2f}"
         lines.append(f"| {name} | {len(lv)} | {len(sh)} | {st['win_rate']:.0%} | {pf} | {st['avg_r']:+.2f}R | "
                      f"${sum(t['pnl'] for t in lv):.2f} | {verdict} |")
+    for name, since in strategies.PROMOTED.items():
+        lv = [t for t in live if t["group"] == name]
+        both = lv + [t for t in shadows if t["group"] == name]
+        if lv:
+            st = stats(lv, cfg.capital)
+            pf = "inf" if st["profit_factor"] == float("inf") else f"{st['profit_factor']:.2f}"
+            lines += ["", f"**{name} live only:** {st['trades']} trades, win rate {st['win_rate']:.0%}, PF {pf}, "
+                      f"avg {st['avg_r']:+.2f}R, ${st['pnl']:.2f}."]
+        days = {}
+        for t in both:
+            days[t["day"]] = days.get(t["day"], 0.0) + t["r"]
+        if days:
+            worst = min(days, key=days.get)
+            lines.append(f"**{name} worst day (live+shadow):** {worst}, {days[worst]:+.2f}R over "
+                         f"{sum(1 for t in both if t['day'] == worst)} trades.")
+        after = [t for t in both if t["day"] >= since]
+        if after:
+            st = stats(after, cfg.capital)
+            note = ("revert the extra slot (avg R below 0)" if st["trades"] >= need and st["avg_r"] < 0
+                    else f"{st['trades']}/{need}")
+            lines.append(f"**{name} since promotion ({since}):** {st['trades']} trades, avg {st['avg_r']:+.2f}R, "
+                         f"{note}.")
     lines += ["", f"Shadow trades are signals that got no slot, replayed on the day's bars. Promote at {need}+ trades "
               f"with PF above {pf_min}; retire at {need} trades with average R below 0.", ""]
     return lines

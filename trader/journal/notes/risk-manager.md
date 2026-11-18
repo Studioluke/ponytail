@@ -59,3 +59,11 @@ Luke: mistakes are fine on paper; trade through risk, note it, and learn. With `
   - Added (shadow only), noise_band: noise band-break entries with a band-only trail (exit when SPY is back inside the noise band, with no VWAP check). Reason: on 11-16 and 11-17 the live SH trade was closed at the first VWAP touch before the trend continued.
   - Kept: sip_orb_wide, lasthalf and control run unchanged to 40.
   - Half days (EARLY_CLOSE in strategies.py: 11-27 and 12-24, close 13:00). Entries stop at 12:31, the flatten runs at 12:57, lasthalf is skipped, and the shadow replay flattens at 12:57.
+
+## 2026-11-18 (evening): sip_orb promoted, live from 11-19
+- **What changed:** sip_orb met the promote rule set on 11-04: 40 trades (19 live, 21 shadow), PF 2.41 against a 1.2 bar, avg +0.47R. The research thread agreed to promote now rather than wait for 11-25. The control slot goes to sip_orb, so slots are sip_orb 3, noise 1, lasthalf 1, control 0. That is still Luke's 5 x $60. No capital or risk-cap change: per-trade risk stays at 0.5% ($1.50), and the day and week limits are unchanged.
+- **control:** stays as a shadow-only baseline, unchanged, until it reaches 40 trades (now 9).
+- **Revert rule:** if sip_orb's live+shadow avg R over its next 40 trades, counted from 11-19 (strategies.PROMOTED), falls below 0, the third slot goes back to control.
+- **Correlation risk:** three long breakouts can lose together on a weak open. The worst sip_orb day so far is 11-17, at −5.70R over 5 trades. With 3 live slots, the worst case is about 3 x $1.50 = $4.50, inside the −2% ($6) day limit, and the per-strategy 3-loss halt still applies.
+- **Scorecard:** now shows sip_orb's live-only stats (19 trades, PF 2.08, +0.26R), its worst day, and its count since promotion.
+- **Separate question:** sip_orb_mkt (filtering sip_orb by SPY direction) is decided when it has 40 forward trades.
