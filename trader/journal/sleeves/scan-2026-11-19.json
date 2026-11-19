@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-19",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 659.51,
+   "sma200": 682.8072999999999,
+   "rsi2": 34.7826086956519,
+   "trigger": 631.2230857142856,
+   "premarket": 671.7,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245",
+    "Cantor Fitzgerald Maintains $250 Price Target on NVIDIA",
+    "US Commerce Department Expedited H200 China Export Approvals for NVIDIA",
+    "Goldman Sachs Maintains Buy Rating on Broadcom, Adjusts Price Target",
+    "Amazon Web Services Hong Kong Receives Sustainable Technology Adoption Award"
+   ],
+   "events": [
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "Anthropic IPO first trade on Nasdaq",
+     "timing": "intraday",
+     "source": "MarketScreener 2026-11-19: priced at $83 above $70-78 range"
+    },
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "jobless claims",
+     "timing": "08:30",
+     "source": "weekly DOL release (Thursday schedule; unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 730.2,
+   "sma200": 732.5459500000001,
+   "rsi2": 0.0,
+   "trigger": 715.5553714285713,
+   "premarket": 737.72,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245",
+    "Cantor Fitzgerald Maintains $250 Price Target on NVIDIA",
+    "US Commerce Department Expedited H200 China Export Approvals for NVIDIA",
+    "Goldman Sachs Maintains Buy Rating on Broadcom, Adjusts Price Target",
+    "Amazon Web Services Hong Kong Receives Sustainable Technology Adoption Award"
+   ],
+   "events": [
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "Anthropic IPO first trade on Nasdaq",
+     "timing": "intraday",
+     "source": "MarketScreener 2026-11-19: priced at $83 above $70-78 range"
+    },
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "jobless claims",
+     "timing": "08:30",
+     "source": "weekly DOL release (Thursday schedule; unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 459.54,
+   "sma200": 524.7482,
+   "rsi2": 0.0,
+   "trigger": 419.7550428571429,
+   "premarket": 471.44,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245",
+    "Qualcomm Implements Workforce Reduction in San Diego",
+    "Cantor Fitzgerald Maintains $250 Price Target on NVIDIA",
+    "US Commerce Department Expedited H200 China Export Approvals for NVIDIA",
+    "Goldman Sachs Maintains Buy Rating on Broadcom, Adjusts Price Target"
+   ],
+   "events": [
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "Anthropic IPO first trade on Nasdaq",
+     "timing": "intraday",
+     "source": "MarketScreener 2026-11-19: priced at $83 above $70-78 range"
+    },
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "jobless claims",
+     "timing": "08:30",
+     "source": "weekly DOL release (Thursday schedule; unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 150.96,
+   "sma200": 203.7182,
+   "rsi2": 0.0,
+   "trigger": 141.20187142857145,
+   "premarket": 153.01,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245",
+    "Cantor Fitzgerald Maintains $250 Price Target on NVIDIA",
+    "US Commerce Department Expedited H200 China Export Approvals for NVIDIA",
+    "NVIDIA Announces Expanded Multiyear Supply Chain Commitments",
+    "NVIDIA Faces SEC Investigation and Delays Quarterly 10-Q Filing"
+   ],
+   "events": [
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "Anthropic IPO first trade on Nasdaq",
+     "timing": "intraday",
+     "source": "MarketScreener 2026-11-19: priced at $83 above $70-78 range"
+    },
+    {
+     "date": "2026-11-19",
+     "symbol": "ALL",
+     "event": "jobless claims",
+     "timing": "08:30",
+     "source": "weekly DOL release (Thursday schedule; unconfirmed)"
+    }
+   ]
+  }
+ ]
+}
