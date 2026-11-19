@@ -18,3 +18,7 @@ date,symbol,event,timing,source
 2026-11-13,ALL,PPI 8:30 ET (day per one preview; unconfirmed),pre,coincentral.com week-ahead 2026-11-08
 2026-11-17,NVDA,Earnings (confirmed; after the close),after,Reuters via investing.com 2026-11-16
 2026-11-18,ALL,FOMC minutes 2:00 ET,during,stockchartistry.substack.com week preview (unconfirmed)
+2026-11-18,PANW,earnings,after,Alpaca news 2026-11-18 21:32 UTC: Palo Alto Networks Reports Q1 Fiscal 2027 Earnings
+2026-11-19,ALL,Anthropic IPO first trade on Nasdaq,intraday,MarketScreener 2026-11-19: priced at $83 above $70-78 range
+2026-11-19,ALL,jobless claims,08:30,weekly DOL release (Thursday schedule; unconfirmed)
+2026-11-19,WMT,earnings,before,Alpaca news 2026-11-19 12:31 UTC: Walmart Raises Fiscal Year Guidance Amid 3Q Earnings Beat

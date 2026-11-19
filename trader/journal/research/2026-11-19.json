@@ -7,7 +7,36 @@
   "QQQ trend down, gap +2.11%, 5d -4.47%",
   "VIX futures up 20.4% in 5 days"
  ],
- "events": [],
+ "events": [
+  {
+   "date": "2026-11-18",
+   "symbol": "PANW",
+   "event": "earnings",
+   "timing": "after",
+   "source": "Alpaca news 2026-11-18 21:32 UTC: Palo Alto Networks Reports Q1 Fiscal 2027 Earnings"
+  },
+  {
+   "date": "2026-11-19",
+   "symbol": "ALL",
+   "event": "Anthropic IPO first trade on Nasdaq",
+   "timing": "intraday",
+   "source": "MarketScreener 2026-11-19: priced at $83 above $70-78 range"
+  },
+  {
+   "date": "2026-11-19",
+   "symbol": "ALL",
+   "event": "jobless claims",
+   "timing": "08:30",
+   "source": "weekly DOL release (Thursday schedule; unconfirmed)"
+  },
+  {
+   "date": "2026-11-19",
+   "symbol": "WMT",
+   "event": "earnings",
+   "timing": "before",
+   "source": "Alpaca news 2026-11-19 12:31 UTC: Walmart Raises Fiscal Year Guidance Amid 3Q Earnings Beat"
+  }
+ ],
  "watchlist": [
   {
    "symbol": "SPY",
@@ -60,8 +89,8 @@
     "volatility expanding (ATR 2.50% of price)"
    ],
    "prior_close": 352.3,
-   "price": 354.65,
-   "gap": 0.00667045131989763,
+   "price": 354.45,
+   "gap": 0.006102753335225586,
    "ret_5d": -0.009781325538253838,
    "ret_20d": 0.024321456089086535,
    "sma20": 347.74425,
@@ -69,7 +98,7 @@
    "trend": "up",
    "atr_pct": 0.025030412392035982,
    "vol_expanding": true,
-   "price_time": "2026-11-19T13:18:03.457348079Z",
+   "price_time": "2026-11-19T13:23:50.033218532Z",
    "news": [
     {
      "time": "2026-11-18T21:31:41Z",
@@ -113,7 +142,7 @@
     }
    ],
    "traded": true,
-   "in_play": 0.52
+   "in_play": 0.49
   },
   {
    "symbol": "MSFT",
@@ -204,11 +233,11 @@
    "symbol": "NVDA",
    "verdict": "skip",
    "why": [
-    "premarket gap +1.41% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap +1.46% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 150.86,
-   "price": 152.98,
-   "gap": 0.01405276415219392,
+   "price": 153.06,
+   "gap": 0.014583057139069266,
    "ret_5d": -0.1322404371584699,
    "ret_20d": -0.32014420910319963,
    "sma20": 189.044,
@@ -216,7 +245,7 @@
    "trend": "down",
    "atr_pct": 0.0784951989545652,
    "vol_expanding": true,
-   "price_time": "2026-11-19T13:22:37.183521738Z",
+   "price_time": "2026-11-19T13:23:43.088988362Z",
    "news": [
     {
      "time": "2026-11-19T13:02:23Z",
@@ -260,7 +289,7 @@
     }
    ],
    "traded": true,
-   "in_play": 0.68,
+   "in_play": 0.69,
    "skip_tag": "gap"
   },
   {
@@ -1286,11 +1315,12 @@
    "symbol": "PANW",
    "verdict": "skip",
    "why": [
-    "premarket gap +10.03% is past the 0.75% gap rule, so the bot will skip it"
+    "earnings (2026-11-18, after the session): the opening range is unreliable",
+    "premarket gap +9.37% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 339.68,
-   "price": 373.76,
-   "gap": 0.10032972209138014,
+   "price": 371.5,
+   "gap": 0.09367640131888844,
    "ret_5d": 0.015819851072101487,
    "ret_20d": -0.02170125138602874,
    "sma20": 347.3885,
@@ -1298,7 +1328,7 @@
    "trend": "down",
    "atr_pct": 0.05814821512684205,
    "vol_expanding": false,
-   "price_time": "2026-11-19T13:21:58.275699114Z",
+   "price_time": "2026-11-19T13:23:45.047180931Z",
    "news": [
     {
      "time": "2026-11-18T21:32:29Z",
@@ -1310,8 +1340,8 @@
     }
    ],
    "traded": false,
-   "in_play": 2.23,
-   "skip_tag": "gap"
+   "in_play": 2.11,
+   "skip_tag": "event"
   },
   {
    "symbol": "NOW",
@@ -1681,10 +1711,9 @@
   },
   {
    "symbol": "WMT",
-   "verdict": "caution",
+   "verdict": "skip",
    "why": [
-    "no premarket trade yet, gap unknown",
-    "earnings headline overnight; check whether it reports today"
+    "earnings (2026-11-19, before the session): the opening range is unreliable"
    ],
    "prior_close": 127.305,
    "price": 127.305,
@@ -1732,7 +1761,8 @@
     }
    ],
    "traded": false,
-   "in_play": 0.5
+   "in_play": 0.5,
+   "skip_tag": "event"
   },
   {
    "symbol": "HD",
