@@ -1,21 +1,14 @@
 {
- "day": "2026-11-18",
+ "day": "2026-11-19",
  "week": "2026-W47",
- "day_pnl": 1.5564319999999974,
- "week_pnl": -0.970892000000017,
- "day_losses": 3,
+ "day_pnl": 0.12600200000000683,
+ "week_pnl": -0.8448900000000101,
+ "day_losses": 1,
  "traded_today": [
-  "sip_orb:LOW",
-  "sip_orb:NKE",
-  "sip_orb:DIS",
-  "sip_orb:KO",
-  "sip_orb:LULU",
-  "sip_orb:UPS",
-  "sip_orb:SCHW",
-  "sip_orb:TGT",
-  "control:AAPL",
-  "control:QQQ",
-  "control:MSFT"
+  "sip_orb:CRWD",
+  "sip_orb:SNOW",
+  "control:MSFT",
+  "sip_orb:WMT"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -25,91 +18,90 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 6,
+ "entries": 3,
  "learning_tried": false,
  "strat_losses": {
-  "control": 2,
-  "noise": 1
+  "sip_orb": 1
  },
  "sip_watch": [
   {
-   "symbol": "LOW",
-   "hi": 216.52,
-   "lo": 211.4,
-   "atr": 7.0625,
-   "rvol": 8.84,
+   "symbol": "SNOW",
+   "hi": 295.41,
+   "lo": 288.22,
+   "atr": 16.3146,
+   "rvol": 4.47,
    "green": true
   },
   {
-   "symbol": "TGT",
-   "hi": 165.68,
-   "lo": 160.045,
-   "atr": 5.3746,
-   "rvol": 6.52,
+   "symbol": "WMT",
+   "hi": 125.3,
+   "lo": 123.3,
+   "atr": 3.0414,
+   "rvol": 3.56,
    "green": true
   },
   {
-   "symbol": "NKE",
-   "hi": 35.62,
-   "lo": 34.985,
-   "atr": 1.5736,
-   "rvol": 2.67,
+   "symbol": "PANW",
+   "hi": 370,
+   "lo": 354.2,
+   "atr": 19.7518,
+   "rvol": 3.14,
+   "green": true
+  },
+  {
+   "symbol": "MRK",
+   "hi": 137.9,
+   "lo": 137.185,
+   "atr": 4.0921,
+   "rvol": 2.97,
+   "green": false
+  },
+  {
+   "symbol": "MCD",
+   "hi": 269.325,
+   "lo": 268,
+   "atr": 7.1807,
+   "rvol": 2.79,
+   "green": false
+  },
+  {
+   "symbol": "DIS",
+   "hi": 122.13,
+   "lo": 121.2,
+   "atr": 3.1807,
+   "rvol": 2.45,
+   "green": false
+  },
+  {
+   "symbol": "CRWD",
+   "hi": 253.55,
+   "lo": 245.145,
+   "atr": 14.6071,
+   "rvol": 2.43,
    "green": true
   },
   {
    "symbol": "UPS",
-   "hi": 109.85,
-   "lo": 109.08,
-   "atr": 2.5782,
-   "rvol": 2.14,
+   "hi": 110.59,
+   "lo": 110.225,
+   "atr": 2.6211,
+   "rvol": 2.37,
    "green": true
   },
   {
-   "symbol": "LULU",
-   "hi": 104.59,
-   "lo": 103.54,
-   "atr": 4.1286,
-   "rvol": 1.95,
-   "green": true
-  },
-  {
-   "symbol": "DIS",
-   "hi": 117.92,
-   "lo": 116.76,
-   "atr": 2.8536,
-   "rvol": 1.94,
-   "green": true
-  },
-  {
-   "symbol": "MSTR",
-   "hi": 95.37,
-   "lo": 93.12,
-   "atr": 8.8743,
-   "rvol": 1.92,
+   "symbol": "HON",
+   "hi": 222.575,
+   "lo": 222.055,
+   "atr": 6.1529,
+   "rvol": 2.34,
    "green": false
   },
   {
-   "symbol": "KO",
-   "hi": 98.67,
-   "lo": 97.97,
-   "atr": 1.7461,
-   "rvol": 1.79,
-   "green": true
-  },
-  {
-   "symbol": "SCHW",
-   "hi": 92.5,
-   "lo": 92.075,
-   "atr": 2.2057,
-   "rvol": 1.74,
-   "green": true
-  },
-  {
-   "symbol": "ANET",
-   "hi": 189.39,
-   "lo": 183.68,
-   "atr": 13.1411,
-   "rvol": 1.65,
+   "symbol": "AMGN",
+   "hi": 443.8,
+   "lo": 441.22,
+   "atr": 11.2754,
+   "rvol": 2.26,
    "green": false
   }
  ],
