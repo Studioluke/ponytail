@@ -1,20 +1,22 @@
-# ETF sleeves (2026-11-18)
+# ETF sleeves (2026-11-19)
 
 Paper only, simulated fills on live Alpaca quotes (options at the ask/bid). Four $200 sleeves. Goal +5-8% a day is a stretch target; it is tracked, not expected.
 
 | Sleeve | Equity | Today | Since start | Goal at 5%/day | Goal at 8%/day | Holding |
 |---|---|---|---|---|---|---|
-| QLD | $89.75 | +1.2% | -55.1% | $481.32 | $799.20 | 1.02 sh @ 73.44 (stop 66.66) |
-| SSO | $211.08 | -0.0% | +5.5% | $481.32 | $799.20 | 1.19 sh @ 62.89 (stop 59.24) |
-| USD | $188.12 | +0.4% | -5.9% | $481.32 | $799.20 | 1.50 sh @ 50.06 (stop 39.49) |
-| NVDL | $151.09 | -1.5% | -24.5% | $481.32 | $799.20 | 4.12 sh @ 18.18 (stop 14.5) |
-| **All** | **$640.04** | -0.1% | -20.0% | $1925.30 | $3196.82 | |
+| QLD | $86.80 | -3.3% | -56.6% | $505.39 | $863.14 | 1.02 sh @ 73.44 (stop 66.66) |
+| SSO | $208.21 | -1.4% | +4.1% | $505.39 | $863.14 | 1.19 sh @ 62.89 (stop 59.24) |
+| USD | $185.40 | -1.4% | -7.3% | $505.39 | $863.14 | 1.50 sh @ 50.06 (stop 39.49) |
+| NVDL | $147.81 | -2.2% | -26.1% | $505.39 | $863.14 | 5.16 sh @ 14.54 (stop 10.11) |
+| **All** | **$628.22** | -1.8% | -21.5% | $2021.56 | $3452.56 | |
 
-Trading days: 18. Closed trades: 14, 6 won, P&L $-147.16.
+Trading days: 19. Closed trades: 15, 6 won, P&L $-162.38.
 
 ## Trades
 | Date | Sleeve | Action | What | Qty | Price | P&L | Why |
 |---|---|---|---|---|---|---|---|
+| 2026-11-19 | NVDL | buy | NVDL | 5.1592 | 14.54 |  | learning trade: lowest RSI(2) 0 on NVDA |
+| 2026-11-19 | NVDL | sell | NVDL | 4.1245 | 14.49 | -15.22 | stop |
 | 2026-11-18 | SSO | buy | SSO | 1.1926 | 62.89 |  | learning trade: lowest RSI(2) 0 on SPY |
 | 2026-11-17 | QLD | buy | QLD | 1.0213 | 73.44 |  | learning trade: lowest RSI(2) 0 on QQQ |
 | 2026-11-17 | SSO | sell | SSO | 1.1229 | 63.55 | -3.64 | stop |
