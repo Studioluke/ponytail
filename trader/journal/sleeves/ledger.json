@@ -2,36 +2,24 @@
  "start": "2026-10-26",
  "sleeves": {
   "QLD": {
-   "cash": 13.762089169896157,
+   "cash": 6.807089149470414,
    "shares": {
-    "qty": 1.0212877212619849,
-    "entry": 73.4367,
-    "date": "2026-11-17",
-    "stop": 66.66,
+    "qty": 1.1773601184330091,
+    "entry": 63.701834999999996,
+    "date": "2026-11-20",
+    "stop": 56.93,
     "kind": "learning"
    },
    "spread": null
   },
   "SSO": {
-   "cash": 136.12025326935793,
-   "shares": {
-    "qty": 1.1926261831298972,
-    "entry": 62.886427499999996,
-    "date": "2026-11-18",
-    "stop": 59.24,
-    "kind": "learning"
-   },
+   "cash": 206.73610277042874,
+   "shares": null,
    "spread": null
   },
   "USD": {
-   "cash": 114.8704419342053,
-   "shares": {
-    "qty": 1.4983513639941972,
-    "entry": 50.055015,
-    "date": "2026-11-16",
-    "stop": 39.49,
-    "kind": "learning"
-   },
+   "cash": 174.0107523506541,
+   "shares": null,
    "spread": null
   },
   "NVDL": {
@@ -420,6 +408,50 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 0 on NVDA",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-20",
+   "sleeve": "QLD",
+   "action": "sell",
+   "what": "QLD",
+   "qty": 1.0213,
+   "price": 66.6267,
+   "pnl": -6.96,
+   "why": "stop",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-20",
+   "sleeve": "SSO",
+   "action": "sell",
+   "what": "SSO",
+   "qty": 1.1926,
+   "price": 59.2104,
+   "pnl": -4.38,
+   "why": "stop",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-20",
+   "sleeve": "USD",
+   "action": "sell",
+   "what": "USD",
+   "qty": 1.4984,
+   "price": 39.4703,
+   "pnl": -15.86,
+   "why": "stop",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-20",
+   "sleeve": "QLD",
+   "action": "buy",
+   "what": "QLD",
+   "qty": 1.1774,
+   "price": 63.7018,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 0 on QQQ",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -536,6 +568,12 @@
    "SSO": 208.21,
    "USD": 185.4,
    "NVDL": 147.81
+  },
+  "2026-11-20": {
+   "QLD": 81.77,
+   "SSO": 206.74,
+   "USD": 174.01,
+   "NVDL": 128.05
   }
  },
  "last_entries": 1
