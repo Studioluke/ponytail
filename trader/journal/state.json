@@ -1,14 +1,17 @@
 {
- "day": "2026-11-19",
+ "day": "2026-11-20",
  "week": "2026-W47",
- "day_pnl": 0.12600200000000683,
- "week_pnl": -0.8448900000000101,
- "day_losses": 1,
+ "day_pnl": 0.9145980000000122,
+ "week_pnl": 0.0697080000000021,
+ "day_losses": 2,
  "traded_today": [
-  "sip_orb:CRWD",
-  "sip_orb:SNOW",
+  "sip_orb:NFLX",
+  "sip_orb:DIS",
+  "control:GOOGL",
+  "control:SPY",
   "control:MSFT",
-  "sip_orb:WMT"
+  "sip_orb:COP",
+  "control:QQQ"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -18,90 +21,91 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 3,
+ "entries": 4,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 1
+  "sip_orb": 1,
+  "lasthalf": 1
  },
  "sip_watch": [
   {
-   "symbol": "SNOW",
-   "hi": 295.41,
-   "lo": 288.22,
-   "atr": 16.3146,
-   "rvol": 4.47,
-   "green": true
-  },
-  {
-   "symbol": "WMT",
-   "hi": 125.3,
-   "lo": 123.3,
-   "atr": 3.0414,
-   "rvol": 3.56,
-   "green": true
-  },
-  {
-   "symbol": "PANW",
-   "hi": 370,
-   "lo": 354.2,
-   "atr": 19.7518,
-   "rvol": 3.14,
-   "green": true
-  },
-  {
-   "symbol": "MRK",
-   "hi": 137.9,
-   "lo": 137.185,
-   "atr": 4.0921,
-   "rvol": 2.97,
+   "symbol": "MS",
+   "hi": 173.35,
+   "lo": 169.745,
+   "atr": 5.9,
+   "rvol": 6.57,
    "green": false
   },
   {
-   "symbol": "MCD",
-   "hi": 269.325,
-   "lo": 268,
-   "atr": 7.1807,
-   "rvol": 2.79,
-   "green": false
+   "symbol": "COP",
+   "hi": 135.78,
+   "lo": 134.705,
+   "atr": 4.4132,
+   "rvol": 4.16,
+   "green": true
   },
   {
    "symbol": "DIS",
-   "hi": 122.13,
-   "lo": 121.2,
-   "atr": 3.1807,
-   "rvol": 2.45,
+   "hi": 121.94,
+   "lo": 120.7,
+   "atr": 3.2418,
+   "rvol": 3.5,
+   "green": true
+  },
+  {
+   "symbol": "C",
+   "hi": 114.18,
+   "lo": 112.22,
+   "atr": 3.5546,
+   "rvol": 3.48,
    "green": false
   },
   {
-   "symbol": "CRWD",
-   "hi": 253.55,
-   "lo": 245.145,
-   "atr": 14.6071,
-   "rvol": 2.43,
+   "symbol": "HOOD",
+   "hi": 68.57,
+   "lo": 67.47,
+   "atr": 4.8371,
+   "rvol": 3.39,
+   "green": false
+  },
+  {
+   "symbol": "NFLX",
+   "hi": 58.97,
+   "lo": 58.32,
+   "atr": 1.8904,
+   "rvol": 3.2,
    "green": true
   },
   {
-   "symbol": "UPS",
-   "hi": 110.59,
-   "lo": 110.225,
-   "atr": 2.6211,
-   "rvol": 2.37,
-   "green": true
-  },
-  {
-   "symbol": "HON",
-   "hi": 222.575,
-   "lo": 222.055,
-   "atr": 6.1529,
-   "rvol": 2.34,
+   "symbol": "GS",
+   "hi": 826.67,
+   "lo": 815.27,
+   "atr": 29.5214,
+   "rvol": 3.2,
    "green": false
   },
   {
    "symbol": "AMGN",
-   "hi": 443.8,
-   "lo": 441.22,
-   "atr": 11.2754,
-   "rvol": 2.26,
+   "hi": 443.59,
+   "lo": 440.83,
+   "atr": 10.81,
+   "rvol": 3.14,
+   "green": false
+  },
+  {
+   "symbol": "CMG",
+   "hi": 36.85,
+   "lo": 36.61,
+   "atr": 1.1639,
+   "rvol": 3.04,
+   "green": true
+  },
+  {
+   "symbol": "COST",
+   "hi": 1108.91,
+   "lo": 1103.66,
+   "atr": 20.5182,
+   "rvol": 3.0,
    "green": false
   }
  ],

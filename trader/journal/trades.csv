@@ -301,3 +301,14 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-19T15:30:02.191286-05:00,SPY,buy,0.083,716.52,712.98,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.29
 2026-11-19T15:57:07.675078-05:00,SH,exit_eod,0.877,34.64,33.76,,0.52,"[noise] entry 34.05, R = +2.06"
 2026-11-19T15:57:07.675078-05:00,SPY,exit_eod,0.083,716.56,712.98,,0.00,"[lasthalf] entry 716.52, R = +0.01"
+2026-11-20T09:35:02.875035-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: MS 6.57x red, COP 4.16x green, DIS 3.5x green, C 3.48x red, HOOD 3.39x red, NFLX 3.2x green, GS 3.2x red, AMGN 3.14x red, CMG 3.04x green, COST 3.0x red"
+2026-11-20T09:36:02.954522-05:00,NFLX,buy,1.014,58.97,58.78,,,"[sip_orb] 5-min ORB break of 58.97 (range 58.32-58.97), RVOL 3.2, ATR 1.89; risk $0.19"
+2026-11-20T09:48:02.302108-05:00,MSFT,skip,,498.88,,,,"[control] ORB break of 498.36 (range 491.02-498.36), VWAP 496.11, stop 4.66 below (ATR 18.63); skipped, gap -1.07% vs prior close 498.45 exceeds 0.75%"
+2026-11-20T09:51:02.630092-05:00,COP,buy,0.44,135.86,135.34,,,"[sip_orb] 5-min ORB break of 135.78 (range 134.71-135.78), RVOL 4.2, ATR 4.41; risk $0.23"
+2026-11-20T09:52:02.597814-05:00,NFLX,exit_stop,1.014,58.77,58.78,,-0.20,"[sip_orb] entry 58.97, R = -1.05"
+2026-11-20T09:55:02.985768-05:00,QQQ,skip,,639.76,,,,"[control] ORB break of 638.57 (range 633.96-638.57), VWAP 636.51, stop 4.84 below (ATR 19.34); skipped, gap -1.03% vs prior close 645.095 exceeds 0.75%"
+2026-11-20T11:30:02.151643-05:00,SH,buy,1.699,35.23,34.86,,,[noise] noise area 11:30: SPY 705.58 below lower band 708.08; risk $0.63
+2026-11-20T15:30:02.207488-05:00,SPY,buy,0.086,692.64,688.97,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.32
+2026-11-20T15:55:02.015814-05:00,SPY,exit_stop,0.086,688.90,688.97,,-0.32,"[lasthalf] entry 692.64, R = -1.02"
+2026-11-20T15:57:07.245229-05:00,COP,exit_eod,0.44,135.92,135.34,,0.03,"[sip_orb] entry 135.86, R = +0.13"
+2026-11-20T15:57:07.245229-05:00,SH,exit_eod,1.699,36.06,34.86,,1.41,"[noise] entry 35.23, R = +2.24"
