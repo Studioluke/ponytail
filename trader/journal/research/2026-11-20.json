@@ -189,11 +189,11 @@
    "symbol": "NVDA",
    "verdict": "skip",
    "why": [
-    "premarket gap -3.33% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -3.40% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 145.985,
-   "price": 141.13,
-   "gap": -0.033256841456314135,
+   "price": 141.02,
+   "gap": -0.034010343528444675,
    "ret_5d": -0.12094297585355562,
    "ret_20d": -0.3122673952984406,
    "sma20": 185.72975,
@@ -201,7 +201,7 @@
    "trend": "down",
    "atr_pct": 0.08094520474217014,
    "vol_expanding": true,
-   "price_time": "2026-11-20T13:11:30.062850381Z",
+   "price_time": "2026-11-20T13:22:17.744905168Z",
    "news": [
     {
      "time": "2026-11-20T11:32:28Z",
@@ -245,7 +245,7 @@
     }
    ],
    "traded": true,
-   "in_play": 0.91,
+   "in_play": 0.92,
    "skip_tag": "gap"
   },
   {
@@ -378,11 +378,11 @@
    "symbol": "TSLA",
    "verdict": "skip",
    "why": [
-    "premarket gap -2.29% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -2.63% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 374.48,
-   "price": 365.91,
-   "gap": -0.02288506729331341,
+   "price": 364.64,
+   "gap": -0.026276436658833613,
    "ret_5d": -0.05773416367868145,
    "ret_20d": -0.0005871363757672388,
    "sma20": 386.106,
@@ -390,7 +390,7 @@
    "trend": "mixed",
    "atr_pct": 0.048762855922116745,
    "vol_expanding": true,
-   "price_time": "2026-11-20T13:14:53.209634825Z",
+   "price_time": "2026-11-20T13:22:42.228839459Z",
    "news": [
     {
      "time": "2026-11-20T12:31:45Z",
@@ -434,7 +434,7 @@
     }
    ],
    "traded": true,
-   "in_play": 0.72,
+   "in_play": 0.79,
    "skip_tag": "gap"
   },
   {

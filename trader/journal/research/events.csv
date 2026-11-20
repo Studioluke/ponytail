@@ -22,3 +22,5 @@ date,symbol,event,timing,source
 2026-11-19,ALL,Anthropic IPO first trade on Nasdaq,intraday,MarketScreener 2026-11-19: priced at $83 above $70-78 range
 2026-11-19,ALL,jobless claims,08:30,weekly DOL release (Thursday schedule; unconfirmed)
 2026-11-19,WMT,earnings,before,Alpaca news 2026-11-19 12:31 UTC: Walmart Raises Fiscal Year Guidance Amid 3Q Earnings Beat
+2026-11-26,ALL,Thanksgiving market closed,all day,NYSE holiday calendar (standard schedule)
+2026-11-27,ALL,half day close 13:00 ET,13:00,NYSE holiday calendar (standard schedule)
