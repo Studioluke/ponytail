@@ -1,0 +1,4183 @@
+{
+ "date": "2026-11-20",
+ "generated": "2026-11-20T08:22-05:00",
+ "regime": "risk-off open",
+ "regime_notes": [
+  "SPY trend down, gap -0.96%, 5d -5.46%",
+  "QQQ trend down, gap -1.66%, 5d -6.26%",
+  "VIX futures up 30.4% in 5 days"
+ ],
+ "events": [],
+ "watchlist": [
+  {
+   "symbol": "SPY",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -0.96% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 715.84,
+   "price": 709,
+   "gap": -0.009555207867679938,
+   "ret_5d": -0.05457234930529864,
+   "ret_20d": -0.06307343952462596,
+   "sma20": 751.3362500000001,
+   "sma50": 761.6822999999999,
+   "trend": "down",
+   "atr_pct": 0.019739047831917763,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:14:07.563901415Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.73,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "QQQ",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -1.66% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 645.095,
+   "price": 634.38,
+   "gap": -0.01660995667304821,
+   "ret_5d": -0.06262759828246356,
+   "ret_20d": -0.08440019302827284,
+   "sma20": 683.3695,
+   "sma50": 713.0862,
+   "trend": "down",
+   "atr_pct": 0.029984509479777627,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:18:00.519523031Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.8,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "AAPL",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.57% of price)"
+   ],
+   "prior_close": 349.085,
+   "price": 350.4,
+   "gap": null,
+   "ret_5d": -0.016246301254051132,
+   "ret_20d": 0.0021387150485159268,
+   "sma20": 347.7815,
+   "sma50": 341.62879999999996,
+   "trend": "up",
+   "atr_pct": 0.0256619857218565,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:42:50.322767052Z",
+   "news": [
+    {
+     "time": "2026-11-20T13:01:25Z",
+     "headline": "Apple Developer Academy Showcase in Pohang",
+     "source": "fiscal.ai",
+     "url": "https://www.koreaherald.com/article/10944423",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T12:31:54Z",
+     "headline": "Apple Developing Autonomous AI Agent",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/AAPL-US?chain_id=Name1K9-3FXPhg.1lg030g&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FPDD-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T22:31:27Z",
+     "headline": "U.K. Tribunal Orders Government to Confirm Secret Demand for Apple Customer Data",
+     "source": "fiscal.ai",
+     "url": "https://newsfilter.io/articles/u-k-government-forced-to-disclose-secret-apple-backdoor-order-89f07cb47e5859b18ddafa5e02d91f83",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T20:01:24Z",
+     "headline": "Apple Camera and Photos Software Chief Jon McCormack Departs",
+     "source": "fiscal.ai",
+     "url": "https://appleosophy.com/wire/pe7xh2x/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:18Z",
+     "headline": "Apple Announces 2026 Black Friday Shopping Event",
+     "source": "fiscal.ai",
+     "url": "https://appleosophy.com/wire/b3dp95q/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MSFT",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.60% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 498.45,
+   "price": 485.47,
+   "gap": -0.02604072625137921,
+   "ret_5d": -0.046940726577437863,
+   "ret_20d": -0.044382668711656525,
+   "sma20": 525.067,
+   "sma50": 520.1047,
+   "trend": "mixed",
+   "atr_pct": 0.037378731209606914,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:15:17.163955619Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:19Z",
+     "headline": "Profound Launches Integrations for Microsoft Teams and Microsoft 365",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406573/0/en/profound-brings-your-ai-marketer-into-microsoft-teams-and-microsoft-365.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:30Z",
+     "headline": "Microsoft Integrates IDEMIA Mobile Driver's License Verification into Entra",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/idemia-public-security-to-bring-mobile-drivers-license-verification-to-the-microsoft-entra-verified-id-ecosystem-302945574.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T12:31:20Z",
+     "headline": "Microsoft Announces AI Innovations and Salesforce Partnership at Ignite",
+     "source": "fiscal.ai",
+     "url": "https://aimagazine.com/news/microsoft-unveils-copilot-workspaces-and-salesforce-deal",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.95,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "GOOGL",
+   "verdict": "caution",
+   "why": [
+    "volatility expanding (ATR 3.89% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 272.475,
+   "price": 270.93,
+   "gap": -0.0056702449766034,
+   "ret_5d": -0.08778185105207648,
+   "ret_20d": -0.15953361402859378,
+   "sma20": 292.21025,
+   "sma50": 323.762,
+   "trend": "down",
+   "atr_pct": 0.03890396235565516,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:20:46.247746714Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.4
+  },
+  {
+   "symbol": "NVDA",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.33% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 145.985,
+   "price": 141.13,
+   "gap": -0.033256841456314135,
+   "ret_5d": -0.12094297585355562,
+   "ret_20d": -0.3122673952984406,
+   "sma20": 185.72975,
+   "sma50": 208.8639,
+   "trend": "down",
+   "atr_pct": 0.08094520474217014,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:11:30.062850381Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:32:28Z",
+     "headline": "Democrats Open Probe Into Nvidia Influence on US Megaspeed Investigation",
+     "source": "fiscal.ai",
+     "url": "https://www.fidelity.com/news/article/technology/202611200600PR_NEWS_USPR_____SF03279",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T11:32:28Z",
+     "headline": "Nvidia Eyes Inception Acquisition to Strengthen Nemotron AI Models",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/nvidia-eyes-inception-acquisition-to-strengthen-nemotron-ai-models-ce785ed3d98bf025",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T14:31:01Z",
+     "headline": "NVIDIA Receives Analyst Downgrades Following CEO Resignation",
+     "source": "fiscal.ai",
+     "url": "https://www.morningstar.com/news/marketwatch/20261119102/nvidias-turmoil-has-me-spooked-should-i-sell-my-stocks-and-buy-real-estate-or-ride-out-the-storm",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T13:02:23Z",
+     "headline": "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/NVDA-US?chain_id=Name1K9-3FXPhg.1lftllg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Falex-gui-102899785%22%7D",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:32:36Z",
+     "headline": "Cantor Fitzgerald Maintains $250 Price Target on NVIDIA",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/NVDA-US?chain_id=Name1K9-3FXPhg.1lftekg&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FCRWD-US%2Fcommunity%22%7D",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": true,
+   "in_play": 0.91,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "META",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.59% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 596.44,
+   "price": 575,
+   "gap": -0.035946616591778,
+   "ret_5d": -0.04341550255809845,
+   "ret_20d": -0.08064615574326395,
+   "sma20": 622.663,
+   "sma50": 678.4087,
+   "trend": "down",
+   "atr_pct": 0.036638818896883446,
+   "vol_expanding": false,
+   "price_time": "2026-11-20T13:17:48.004906874Z",
+   "news": [
+    {
+     "time": "2026-11-19T14:31:58Z",
+     "headline": "UBS Raises Meta Platforms Price Target Following Muse AI Adoption",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/META-US?chain_id=Name1K9-3FXPhg.1lfti50&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Flouou-70661856%22%7D",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T11:32:24Z",
+     "headline": "Meta Warns of China-Linked Accounts Targeting Taiwan Elections on Threads",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/meta-platforms-warned-threads-being-used-by-china-to-influence-taiwan-local-elections-ce785ed2d081f627",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T11:32:24Z",
+     "headline": "Meta Platforms CFO Executes Insider Share Sale",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/META-US?chain_id=Name1K9-3FXPhg.1lfvvg0&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FSTLD-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T01:01:32Z",
+     "headline": "Meta Reevaluating 2030 Net Zero Emissions Goal",
+     "source": "fiscal.ai",
+     "url": "https://www.manilatimes.net/2026/11/20/world/americas-emea/meta-says-reevaluating-2030-net-zero-target-amid-ai-buildout/2474624",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T22:32:06Z",
+     "headline": "Meta to Price Muse Charm AI Device at $300",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/META-US?chain_id=Name1K9-3FXPhg.1lfuhpg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fvchong-888-105336580%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 1.23,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "AMZN",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.43% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 257.25,
+   "price": 251.01,
+   "gap": -0.024256559766763885,
+   "ret_5d": -0.03811998728710575,
+   "ret_20d": 0.027397260273972712,
+   "sma20": 257.52175,
+   "sma50": 255.2541,
+   "trend": "mixed",
+   "atr_pct": 0.0431195335276968,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:19:21.51867869Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:23Z",
+     "headline": "Amazon Web Services Provides Technical Support for Walt Disney Imagineering R&D",
+     "source": "fiscal.ai",
+     "url": "https://www.media-outreach.com/news/hong-kong/2026/11/20/503008/aws-%E5%8A%A9%E5%8A%9B%E8%BF%AA%E5%A3%AB%E5%B0%BC%E5%B9%BB%E6%83%B3%E5%B7%A5%E7%A8%8B%E3%80%80%E6%8F%AD%E9%96%8B-%E3%80%8A%E6%98%9F%E7%90%83%E5%A4%A7%E6%88%B0%E3%80%8Banzellans-%E6%A9%9F%E6%A2%B0/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T01:01:26Z",
+     "headline": "Third Point LLC Exits Entire Stake in Amazon",
+     "source": "fiscal.ai",
+     "url": "https://www.barchart.com/story/news/8926361/dan-loebs-third-point-exits-its-entire-stake-in-amazon-stock-where-it-invested-instead",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T21:31:33Z",
+     "headline": "Anthropic IPO Valuation and Amazon's Stake Disclosure",
+     "source": "fiscal.ai",
+     "url": "https://newsfilter.io/articles/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test-a8f2d6fda3135f21896995b1454f23c1",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:25Z",
+     "headline": "Teleport Achieves AWS Security Competency Status",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406533/0/en/teleport-achieves-aws-security-competency-in-identity-and-access-management-category.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T12:31:20Z",
+     "headline": "Amazon Web Services Hong Kong Receives Sustainable Technology Adoption Award",
+     "source": "fiscal.ai",
+     "url": "https://www.media-outreach.com/news/hong-kong/2026/11/19/502651/dual-engines-driving-the-green-transition-wgo-hosts-the-sustainable-finance-award-and-sustainable-enterprise-award-to-honour-cross-sector-pioneers/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.81,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "TSLA",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -2.29% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 374.48,
+   "price": 365.91,
+   "gap": -0.02288506729331341,
+   "ret_5d": -0.05773416367868145,
+   "ret_20d": -0.0005871363757672388,
+   "sma20": 386.106,
+   "sma50": 376.0304,
+   "trend": "mixed",
+   "atr_pct": 0.048762855922116745,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:14:53.209634825Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:45Z",
+     "headline": "Tesla Receives Regulatory Approval for Assisted Driving in Italy",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/tesla-secures-approval-for-assisted-driving-in-italy-ce785ed3d88ef127",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T00:02:07Z",
+     "headline": "ISS Recommends Shareholders Vote Against Tesla Chair Robyn Denholm",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/TSLA-US?chain_id=Name1K9-3FXPhg.1lfula0&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FENPH-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:02:39Z",
+     "headline": "Tesla Developing Steering Wheel-Free Model Y Version",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/TSLA-US?chain_id=Name1K9-3FXPhg.1lfu3ng&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2F600104-SH%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:02:39Z",
+     "headline": "Tesla Commences Commercial Operation of Megapack System in Oita, Japan",
+     "source": "fiscal.ai",
+     "url": "https://www.newsfilecorp.com/release/324736/Japans-Battery-Storage-Boom-KULRs-14.8M-Order-Highlights-Growth-Opportunity-Alongside-Tesla-Energy-Vault-and-Fluence",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:39Z",
+     "headline": "Tesla to Continue Boosting Production at China Factory",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/tesla-to-continue-boosting-production-at-china-factory-ce785ed2d98bf024",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.72,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "AMD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 10.33% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 489.44,
+   "price": 483.57,
+   "gap": null,
+   "ret_5d": -0.16433608222779972,
+   "ret_20d": -0.03679140385921065,
+   "sma20": 513.6324999999999,
+   "sma50": 554.8976,
+   "trend": "down",
+   "atr_pct": 0.10329808410778496,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:22:25.065991661Z",
+   "news": [
+    {
+     "time": "2026-11-19T19:01:52Z",
+     "headline": "Advanced Micro Devices Shares Decline Following Hunterbrook Media Report on China Ties",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/advanced-micro-devices-shares-fall-amid-hunterbrook-media-report-on-china-ties-ce785ed2dd8ff126",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "IWM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.23% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 264.21,
+   "price": 264.21,
+   "gap": null,
+   "ret_5d": -0.051038000143667994,
+   "ret_20d": -0.044949303258688955,
+   "sma20": 277.177,
+   "sma50": 278.9029,
+   "trend": "down",
+   "atr_pct": 0.02225637615100547,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.909515341Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "DIA",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 1.86% of price)"
+   ],
+   "prior_close": 490.75,
+   "price": 490.75,
+   "gap": null,
+   "ret_5d": -0.0606846522667025,
+   "ret_20d": -0.07039078630827222,
+   "sma20": 517.9465,
+   "sma50": 517.4123999999999,
+   "trend": "mixed",
+   "atr_pct": 0.01856342333163523,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.692848611Z",
+   "news": [],
+   "traded": true,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "NFLX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 58.47,
+   "price": 58.47,
+   "gap": null,
+   "ret_5d": -0.06716656030631785,
+   "ret_20d": -0.12841916971006928,
+   "sma20": 62.737249999999996,
+   "sma50": 67.8196,
+   "trend": "down",
+   "atr_pct": 0.03233037699430725,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.322230658Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:28Z",
+     "headline": "Omdia Analysis Shows Netflix Outperforms YouTube in Daily Viewing Time Across Latin American Markets",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.co.kr/newsRead.php?no=1047710",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:23Z",
+     "headline": "Netflix Announces Grendel Animated Series",
+     "source": "fiscal.ai",
+     "url": "https://www.avclub.com/article-type/news",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "AVGO",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 5.93% of price)"
+   ],
+   "prior_close": 346.545,
+   "price": 348.84,
+   "gap": null,
+   "ret_5d": -0.0485806061937184,
+   "ret_20d": 0.07188258764943312,
+   "sma20": 333.288,
+   "sma50": 343.8911,
+   "trend": "mixed",
+   "atr_pct": 0.05930996386781351,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:22:04.706852981Z",
+   "news": [
+    {
+     "time": "2026-11-19T12:31:56Z",
+     "headline": "Goldman Sachs Maintains Buy Rating on Broadcom, Adjusts Price Target",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/AVGO-US?chain_id=Name1K9-3FXPhg.1lftekg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fjun-8888-102742817%22%7D",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": true,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "COST",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 1094.025,
+   "price": 1094.025,
+   "gap": null,
+   "ret_5d": 0.0012492449618362045,
+   "ret_20d": 0.07461740958293239,
+   "sma20": 1052.53025,
+   "sma50": 982.8032000000001,
+   "trend": "up",
+   "atr_pct": 0.018754794712839536,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:54.226004028Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:28Z",
+     "headline": "Costco Issues Recall for Cheese Product in Ontario Due to E. Coli Risk",
+     "source": "fiscal.ai",
+     "url": "https://calgarysun.com/category/business/money-news/",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T17:31:29Z",
+     "headline": "Costain Announces New Medium-Term Targets and Share Buyback Program",
+     "source": "fiscal.ai",
+     "url": "https://www.investegate.co.uk/announcement/rns/costain-group--cost/capital-markets-event/9882972",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T14:31:20Z",
+     "headline": "Costco Wholesale Opens New Warehouse in Lloydminster, Alberta",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406679/0/en/costco-wholesale-opens-new-location-in-lloydminster.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": true,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ORCL",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.28% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 110.51,
+   "price": 106.89,
+   "gap": -0.03275721654148944,
+   "ret_5d": -0.13059554716387378,
+   "ret_20d": -0.11944223107569718,
+   "sma20": 123.73625,
+   "sma50": 133.1104,
+   "trend": "down",
+   "atr_pct": 0.07307354214873894,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:06:04.312726215Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:20Z",
+     "headline": "EndoSoft Launches Argus MedGPT on Oracle Cloud Marketplace",
+     "source": "fiscal.ai",
+     "url": "https://www.einpresswire.com/article/957053964/argus-medgpt-patient-chart-review-tool-and-endosoft-fhir-engine-now-available-on-oracle-cloud-marketplace",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.7,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "CRM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 4.75% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 183.44,
+   "price": 183.44,
+   "gap": null,
+   "ret_5d": -0.15688842927726065,
+   "ret_20d": -0.2670316058656651,
+   "sma20": 220.78850000000003,
+   "sma50": 231.0275,
+   "trend": "down",
+   "atr_pct": 0.04750872219799392,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:53.226106678Z",
+   "news": [
+    {
+     "time": "2026-11-19T14:31:44Z",
+     "headline": "Salesforce Selected for U.S. Department of Commerce AI Export Program",
+     "source": "fiscal.ai",
+     "url": "https://www.barchart.com/press-releases/8914938/salesforce-to-lead-consortium-bringing-trusted-american-si-to-global-markets",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ADBE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 221.705,
+   "price": 221.705,
+   "gap": null,
+   "ret_5d": -0.07059464671236027,
+   "ret_20d": -0.18075160741999852,
+   "sma20": 243.62525,
+   "sma50": 244.4046,
+   "trend": "down",
+   "atr_pct": 0.03641582927120015,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:54.325157225Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "INTC",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -4.34% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 55.7,
+   "price": 53.28,
+   "gap": -0.04344703770197489,
+   "ret_5d": -0.09001797091978436,
+   "ret_20d": -0.34853801169590637,
+   "sma20": 66.687,
+   "sma50": 91.2517,
+   "trend": "down",
+   "atr_pct": 0.07774429340856628,
+   "vol_expanding": false,
+   "price_time": "2026-11-20T13:17:07.52432494Z",
+   "news": [
+    {
+     "time": "2026-11-19T11:32:31Z",
+     "headline": "Fubon Securities Adjusts Price Target on Intel",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/fubon-securities-adjusts-price-target-on-intel-to-66-from-105-ce785ed2d98cf027",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T11:32:31Z",
+     "headline": "Intel Secures First External Customer for 18A Chip Technology",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005163104/intel-shares-rise-pre-bell-on-signing-first-external-customer",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.81,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "QCOM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 6.04% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 161.99,
+   "price": 161.99,
+   "gap": null,
+   "ret_5d": -0.08583521444695252,
+   "ret_20d": -0.0628832581279648,
+   "sma20": 171.191,
+   "sma50": 177.97439999999997,
+   "trend": "down",
+   "atr_pct": 0.06036968772322807,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:55.762907147Z",
+   "news": [
+    {
+     "time": "2026-11-20T00:02:53Z",
+     "headline": "Qualcomm Insider Executes Share Sale",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/qualcomm-insider-sold-shares-worth-404-238-according-to-a-recent-sec-filing-ce785ed2df8bf120",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T13:02:22Z",
+     "headline": "Qualcomm Implements Workforce Reduction in San Diego",
+     "source": "fiscal.ai",
+     "url": "https://www.baystreet.ca/articles/stockstowatch.aspx?articleid=125479",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MU",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -4.87% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 690.58,
+   "price": 656.97,
+   "gap": -0.04866923455645977,
+   "ret_5d": -0.13516965867892272,
+   "ret_20d": -0.19313455157265036,
+   "sma20": 800.911,
+   "sma50": 919.8947999999999,
+   "trend": "down",
+   "atr_pct": 0.09296947079680432,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:19:20.492912831Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:31:42Z",
+     "headline": "Micron Technology Schedules Fiscal First Quarter 2027 Earnings Call",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005226276/micron-technology-to-report-fiscal-first-quarter-results-on-december",
+     "earnings": true,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T13:01:27Z",
+     "headline": "Purpose Investments Launches Purpose Micron (MU) Yield Shares ETF",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/20/3407363/0/en/purpose-investments-launches-purpose-anthropic-ant-yield-shares-etf-and-purpose-micron-mu-yield-shares-etf.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.27,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "TXN",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 5.36% of price)"
+   ],
+   "prior_close": 285.73,
+   "price": 285.73,
+   "gap": null,
+   "ret_5d": -0.08551768282925254,
+   "ret_20d": 0.021704927411857255,
+   "sma20": 299.3345,
+   "sma50": 286.4686,
+   "trend": "mixed",
+   "atr_pct": 0.05363330016849074,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:57.800492119Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "AMAT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 7.76% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 338.91,
+   "price": 338.91,
+   "gap": null,
+   "ret_5d": -0.11069418386491559,
+   "ret_20d": -0.09774376039933441,
+   "sma20": 372.3185,
+   "sma50": 428.6943,
+   "trend": "down",
+   "atr_pct": 0.07757432440976747,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:55.026877902Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:32:01Z",
+     "headline": "Daiwa Securities Adjusts Price Target on Applied Materials",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/daiwa-securities-adjusts-price-target-on-applied-materials-to-370-from-515-ce785ed3d88eff20",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "LRCX",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.22% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 203.71,
+   "price": 197.16,
+   "gap": -0.03215355161749556,
+   "ret_5d": -0.1285879283055995,
+   "ret_20d": -0.11420806609414058,
+   "sma20": 224.86849999999998,
+   "sma50": 269.5359,
+   "trend": "down",
+   "atr_pct": 0.08301892746691729,
+   "vol_expanding": false,
+   "price_time": "2026-11-20T13:18:00.193615255Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.39,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "KLAC",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 141.57,
+   "price": 141.57,
+   "gap": null,
+   "ret_5d": -0.09977107974055699,
+   "ret_20d": -0.042540240768294435,
+   "sma20": 150.451,
+   "sma50": 169.77200000000002,
+   "trend": "down",
+   "atr_pct": 0.07065913884095701,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:52.593947962Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "ARM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 8.69% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 177.22,
+   "price": 175.07,
+   "gap": null,
+   "ret_5d": -0.11305740453430757,
+   "ret_20d": -0.15689819219790668,
+   "sma20": 197.12574999999998,
+   "sma50": 241.861,
+   "trend": "down",
+   "atr_pct": 0.08687547358408437,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:05:07.873200192Z",
+   "news": [
+    {
+     "time": "2026-11-19T15:02:30Z",
+     "headline": "Arm Holdings Chief Architect Reports Insider Share Sale",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/ARM-US?chain_id=Name1K9-3FXPhg.1lftp60&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fkheldarx-103578968%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:01:26Z",
+     "headline": "Arm Names ByteDance and Oracle as Customers for AI Data Centre Chips",
+     "source": "fiscal.ai",
+     "url": "https://stockanalysis.com/private/bytedance/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "SMCI",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 10.62% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 23.845,
+   "price": 23.74,
+   "gap": null,
+   "ret_5d": -0.11619718309859162,
+   "ret_20d": -0.29348148148148157,
+   "sma20": 29.467750000000002,
+   "sma50": 35.3635,
+   "trend": "down",
+   "atr_pct": 0.10619177425635805,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:19:57.514129646Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "PLTR",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.95% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 153.62,
+   "price": 147.55,
+   "gap": -0.039513084233823714,
+   "ret_5d": -0.10433489782234784,
+   "ret_20d": -0.21694362320318072,
+   "sma20": 174.49875,
+   "sma50": 183.7357,
+   "trend": "down",
+   "atr_pct": 0.06214081127829335,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:03:29.532758556Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:54Z",
+     "headline": "DZ Bank Adjusts Price Target on Palantir Technologies to $220 From $210",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/dz-bank-adjusts-price-target-on-palantir-technologies-to-220-from-210-ce785ed3d98ef42d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:31:40Z",
+     "headline": "Russian Espionage Case Involves Palantir Employees",
+     "source": "fiscal.ai",
+     "url": "https://htsyndication.com/hindustan-times/article/russian-man-accused-of-spying-targeted-workers-of-palantir%2C-which-is-aiding-ukraine-s-war-effort%3A-report/106206927",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 1.14,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "SNOW",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 268.59,
+   "price": 268.59,
+   "gap": null,
+   "ret_5d": -0.10095397489539759,
+   "ret_20d": -0.1442362836933666,
+   "sma20": 298.72875,
+   "sma50": 320.1486,
+   "trend": "down",
+   "atr_pct": 0.05901852531473887,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:53.970710088Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "CRWD",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 243.45,
+   "price": 243.45,
+   "gap": null,
+   "ret_5d": 0.058685394968580606,
+   "ret_20d": 0.022705790921884628,
+   "sma20": 239.502,
+   "sma50": 246.5834,
+   "trend": "mixed",
+   "atr_pct": 0.060031393950063086,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:49.132435862Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:32:21Z",
+     "headline": "CrowdStrike Holdings Insider Executes Share Sale",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/crowdstrike-holdings-insider-sold-shares-worth-4-507-504-according-to-a-recent-sec-filing-ce785ed2df88fe2d",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:33Z",
+     "headline": "Jamf Integrates Apple Device Management and Security Apps with CrowdStrike Falcon Foundry",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/technology/security",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "PANW",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 361.745,
+   "price": 364.5,
+   "gap": null,
+   "ret_5d": 0.12168992248062027,
+   "ret_20d": 0.01945947469281939,
+   "sma20": 347.73375,
+   "sma50": 367.1379,
+   "trend": "mixed",
+   "atr_pct": 0.05476726897202643,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T21:17:01.286781798Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:32:13Z",
+     "headline": "Analysts Adjust Price Targets for Palo Alto Networks",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/dz-bank-adjusts-price-target-on-palo-alto-networks-to-400-from-405-ce785ed3d98ff02c",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "NOW",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 5.10% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 88.86,
+   "price": 88.16,
+   "gap": null,
+   "ret_5d": -0.1174016686531586,
+   "ret_20d": -0.43404878670148395,
+   "sma20": 112.2275,
+   "sma50": 128.7665,
+   "trend": "down",
+   "atr_pct": 0.05101122150413171,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:05:51.314009125Z",
+   "news": [
+    {
+     "time": "2026-11-19T12:32:22Z",
+     "headline": "China Renaissance Adjusts Price Target on ServiceNow to $148",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/china-renaissance-adjusts-price-target-on-servicenow-to-148-from-151-ce785ed2d888fe2d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T11:31:25Z",
+     "headline": "ServiceNow Releases Research on AI Agent Security in India",
+     "source": "fiscal.ai",
+     "url": "https://www.varindia.com/news/92-of-indian-organisations-faced-ai-agent-security-incident-in-the-past-year-servicenow-report",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "SHOP",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 6.60% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 131.96,
+   "price": 131.96,
+   "gap": null,
+   "ret_5d": -0.10096743425534804,
+   "ret_20d": -0.2178757705073494,
+   "sma20": 152.15550000000002,
+   "sma50": 153.3615,
+   "trend": "down",
+   "atr_pct": 0.06595884034122897,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.502147851Z",
+   "news": [
+    {
+     "time": "2026-11-20T03:01:34Z",
+     "headline": "Hoppn Launches 'Similar Colors' App Block for Shopify Merchants",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3407164/0/en/hoppn-launches-similar-colors-bringing-color-matched-product-recommendations-to-shopify-product-pages.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "UBER",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.76% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 65.605,
+   "price": 65.605,
+   "gap": null,
+   "ret_5d": -0.05057887120115756,
+   "ret_20d": -0.04989138305575658,
+   "sma20": 67.9665,
+   "sma50": 69.13029999999999,
+   "trend": "down",
+   "atr_pct": 0.03764956939257681,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.952695543Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:33Z",
+     "headline": "Uber Eats Named Title Sponsor for 13th Edition of Eat Street Colombo",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.lk/business/weekend-of-flavour-uber-eats-joins-eat-street-colombo-as-title-sponsor-for-its-13th-edition/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:30Z",
+     "headline": "Uber Technologies Partners with AutoParts.com to Launch Auto Parts Category on Uber Eats",
+     "source": "fiscal.ai",
+     "url": "https://www.finanzen.ch/nachrichten/aktien/uber-eats-adds-auto-parts-through-autoparts-com-partnership-1036783627",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "ABNB",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 4.89% of price)"
+   ],
+   "prior_close": 172.815,
+   "price": 172.815,
+   "gap": null,
+   "ret_5d": -0.045800894484015364,
+   "ret_20d": -0.016867675503470236,
+   "sma20": 176.46425,
+   "sma50": 169.6368,
+   "trend": "mixed",
+   "atr_pct": 0.04885075286950123,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:56.183757507Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:32:18Z",
+     "headline": "Bernstein Adjusts Price Target on Airbnb to $234 From $217",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/bernstein-adjusts-price-target-on-airbnb-to-234-from-217-ce785ed3d98ef52d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:32:03Z",
+     "headline": "Airbnb Announces 'At Home with the Raichands' Experience for K3G 25th Anniversary",
+     "source": "fiscal.ai",
+     "url": "https://telugufeed.com/kareena-kapoor-hrithik-roshan-k3g-25-years-airbnb-raichands-campaign/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "COIN",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 7.92% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 108.88,
+   "price": 107.79,
+   "gap": null,
+   "ret_5d": -0.1665646050214329,
+   "ret_20d": -0.3563870662647042,
+   "sma20": 138.72225,
+   "sma50": 165.236,
+   "trend": "down",
+   "atr_pct": 0.07920580980371576,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:33:10.258405834Z",
+   "news": [
+    {
+     "time": "2026-11-19T19:01:55Z",
+     "headline": "Coinbase Plans to Launch In-House Prediction Markets in H1 2027",
+     "source": "fiscal.ai",
+     "url": "https://ch.marketscreener.com/boerse-nachrichten/coinbase-plant-im-ersten-halbjahr-2027-eigene-prognosemaerkte-zu-starten-ce785ed2dc89f32d",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MSTR",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 9.52% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 86.13,
+   "price": 85.95,
+   "gap": null,
+   "ret_5d": -0.24704956726986627,
+   "ret_20d": -0.4095427435387674,
+   "sma20": 124.13975,
+   "sma50": 139.9758,
+   "trend": "down",
+   "atr_pct": 0.09515516412068134,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:02:10.075975642Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "DELL",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 10.80% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 312.7,
+   "price": 308.97,
+   "gap": null,
+   "ret_5d": -0.15818661497873254,
+   "ret_20d": -0.30943862903582,
+   "sma20": 383.8565,
+   "sma50": 476.88669999999996,
+   "trend": "down",
+   "atr_pct": 0.10799259902234,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:49:31.512531451Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:27Z",
+     "headline": "JP Morgan Adjusts Price Target for Dell Technologies",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/flash/1005174879/dell-technologies-inc-jp-morgan-cuts-target-price-to-515",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T12:31:46Z",
+     "headline": "Dell Technologies PowerEdge Servers Deployed in New Shared AI Data Center",
+     "source": "fiscal.ai",
+     "url": "https://datacentremagazine.com/news/how-rimon-uses-t3-defenses-shared-ai-data-centre-in-israel",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "ANET",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 189.67,
+   "price": 189.67,
+   "gap": null,
+   "ret_5d": -0.08272276629186326,
+   "ret_20d": 0.10937591390302392,
+   "sma20": 182.3995,
+   "sma50": 192.66549999999998,
+   "trend": "mixed",
+   "atr_pct": 0.06957572927415287,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:53.003091592Z",
+   "news": [
+    {
+     "time": "2026-11-19T19:01:36Z",
+     "headline": "Rosenblatt Securities Maintains Buy Rating and $280 Price Target for Arista Networks",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005189972/rosenblatt-securities-maintains-arista-networks-anetus-with-buy-rating-maintains",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MRVL",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 11.23% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 138.45,
+   "price": 138.36,
+   "gap": null,
+   "ret_5d": -0.15805156896132333,
+   "ret_20d": -0.3804537521815009,
+   "sma20": 176.364,
+   "sma50": 222.53689999999997,
+   "trend": "down",
+   "atr_pct": 0.11233813135221586,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:59:30.6216561Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:32:05Z",
+     "headline": "Stifel Adjusts Price Target on Marvell Technology",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/stifel-adjusts-price-target-on-marvell-technology-to-280-from-370-ce785ed3d88ef126",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T14:06:15Z",
+     "headline": "Marvel Biosciences Announces Grant of Deferred Share Units",
+     "source": "fiscal.ai",
+     "url": "https://www.newsfilecorp.com/release/324730/Marvel-Biosciences-Announces-Grant-of-Deferred-Share-Units",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "IBM",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 223.88,
+   "price": 223.88,
+   "gap": null,
+   "ret_5d": -0.08506508101922805,
+   "ret_20d": -0.11253815356562413,
+   "sma20": 246.57399999999998,
+   "sma50": 237.7087,
+   "trend": "mixed",
+   "atr_pct": 0.02934288777151024,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.514141626Z",
+   "news": [
+    {
+     "time": "2026-11-19T11:31:44Z",
+     "headline": "BMO Demonstrates Quantum Utility Using IBM Quantum Computers",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/bmo-demonstrates-quantum-utility-in-machine-learning-application-using-ibm-quantum-computers-839215808.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "CSCO",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 4.36% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 94.67,
+   "price": 94.67,
+   "gap": null,
+   "ret_5d": -0.07158968324016868,
+   "ret_20d": -0.09752144899904669,
+   "sma20": 101.303,
+   "sma50": 106.6815,
+   "trend": "down",
+   "atr_pct": 0.04361013445200624,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.900258639Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:33Z",
+     "headline": "Cisco Partners with International Rescue Committee on Responsible AI for Humanitarian Aid",
+     "source": "fiscal.ai",
+     "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70180740-cisco-systems-inc-connecting-people-to-humanitarian-assistance-with-responsible-ai-200.htm",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:01:33Z",
+     "headline": "Qumulo and Cisco Launch Joint Ransomware Defense Solution",
+     "source": "fiscal.ai",
+     "url": "https://www.fidelity.com/news/article/technology/202611190905BIZWIRE_USPR_____20261119_BW996793",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:01:33Z",
+     "headline": "DXC Technology and Cisco Collaborate to Integrate Agentic AI into IT Operations",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/dxc-collaborates-with-cisco-to-turn-ai-powered-network-insights-into-action-with-dxc-oasis-302944315.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "WMT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "earnings headline overnight; check whether it reports today"
+   ],
+   "prior_close": 126.04,
+   "price": 126.04,
+   "gap": null,
+   "ret_5d": -0.0010303558690655246,
+   "ret_20d": 0.04044906719498109,
+   "sma20": 124.91900000000001,
+   "sma50": 116.2282,
+   "trend": "up",
+   "atr_pct": 0.024683207145123974,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.525785829Z",
+   "news": [
+    {
+     "time": "2026-11-19T12:31:28Z",
+     "headline": "Walmart Raises Fiscal Year Guidance Amid 3Q Earnings Beat",
+     "source": "fiscal.ai",
+     "url": "https://www.morningstar.com/news/dow-jones/202611194370/walmart-raises-fiscal-year-guidance-amid-3q-earnings-beat",
+     "earnings": true,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "HD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 3.02% of price)"
+   ],
+   "prior_close": 336.92,
+   "price": 336.92,
+   "gap": null,
+   "ret_5d": -0.03260354604838123,
+   "ret_20d": 0.028151177161690022,
+   "sma20": 338.554,
+   "sma50": 314.3737,
+   "trend": "mixed",
+   "atr_pct": 0.030150226420854444,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:58.040273399Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:02:11Z",
+     "headline": "Longbow Research Adjusts Home Depot Price Target to $385 From $415",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/longbow-research-adjusts-home-depot-price-target-to-385-from-415-ce785ed2da80f725",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T11:32:59Z",
+     "headline": "Barclays Adjusts Price Target on Home Depot to $412 From $420",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/barclays-adjusts-price-target-on-home-depot-to-412-from-420-ce785ed2d98cf72d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T11:32:59Z",
+     "headline": "DA Davidson Maintains Buy Rating on Home Depot and Raises Price Target to $390",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/HD-US?chain_id=Name1K9-3FXPhg.1lftekg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fjun-8888-102742817%22%7D",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T21:31:48Z",
+     "headline": "The Home Depot Declares Quarterly Cash Dividend",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/the-home-depot-declares-quarterly-dividend-of-2-33--302946007.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "LOW",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.34% of price)"
+   ],
+   "prior_close": 219.18,
+   "price": 219.18,
+   "gap": null,
+   "ret_5d": -0.03652907820123963,
+   "ret_20d": 0.0725715683875705,
+   "sma20": 218.046,
+   "sma50": 201.6068,
+   "trend": "up",
+   "atr_pct": 0.03342002007482436,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:55.372169069Z",
+   "news": [
+    {
+     "time": "2026-11-19T22:31:51Z",
+     "headline": "Lowe's to Host 2026 Analyst and Investor Conference on December 9",
+     "source": "fiscal.ai",
+     "url": "https://www.morningstar.com/news/pr-newswire/20261119cl03026/lowes-companies-inc-to-host-2026-analyst-and-investor-conference-on-dec-9",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:02:05Z",
+     "headline": "Analysts Adjust Price Targets for Lowe's Following Third Quarter Results",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/ubs-adjusts-lowe-s-price-target-to-269-from-275-maintains-buy-rating-ce785ed2da8cf621",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T13:01:56Z",
+     "headline": "Lowe's Strategic Integration and Growth Plans",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005160292/goldman-sachs-home-depot-and-lowe-s-companies-rely-on",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:32:14Z",
+     "headline": "Multiple Analysts Adjust Price Targets for Lowe's Companies, Inc.",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/gordon-haskett-adjusts-price-target-on-lowe-s-companies-to-220-from-230-ce785ed2d98fff21",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MCD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 2.66% of price)"
+   ],
+   "prior_close": 272.4,
+   "price": 272.4,
+   "gap": null,
+   "ret_5d": -0.004676995030692854,
+   "ret_20d": 0.07838479809976251,
+   "sma20": 267.952,
+   "sma50": 251.8343,
+   "trend": "up",
+   "atr_pct": 0.02658380532829877,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:57.037223933Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:02:17Z",
+     "headline": "Citi Downgrades McDonald's to Hold",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/MCD-US?chain_id=Name1K9-3FXPhg.1lftllg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fmasked-trader-101787142%22%7D",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T00:02:29Z",
+     "headline": "Wall Street Analysts Update Ratings for McDonald's Corporation",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/MCD-US?chain_id=Name1K9-3FXPhg.1lfuhpg&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fmasked-trader-101787142%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:33:06Z",
+     "headline": "McDonald's Canada Launches McCaf\u00e9 At-Home Charitable Campaign",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.ca/news-releases/every-cup-helps-families-stay-together-mccafe-at-home-s-coffee-that-cares-returns-865937650.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "SBUX",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 104.14,
+   "price": 104.14,
+   "gap": null,
+   "ret_5d": -0.029088196904717534,
+   "ret_20d": 0.021481118195193716,
+   "sma20": 106.09,
+   "sma50": 99.82770000000001,
+   "trend": "mixed",
+   "atr_pct": 0.03209964608082525,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.946265357Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:41Z",
+     "headline": "Starbucks Workers United Stages 'Red Cup Rebellion' Strike",
+     "source": "fiscal.ai",
+     "url": "https://businesschief.com/articles/starbucks-baristas-strike-as-ceo-brian-niccol-eyes-chipotle",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "NKE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 4.96% of price)"
+   ],
+   "prior_close": 34.33,
+   "price": 34.33,
+   "gap": null,
+   "ret_5d": -0.09107757479481082,
+   "ret_20d": -0.10388932393630912,
+   "sma20": 38.0355,
+   "sma50": 36.7765,
+   "trend": "mixed",
+   "atr_pct": 0.04964420956264824,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:55.280850815Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:32:22Z",
+     "headline": "Nike and Formula 1 Sign Long-Term Global Partnership Starting 2027",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/nike-formula-one-sign-long-term-global-partnership-starting-2027-ce785ed3d989f225",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T03:02:04Z",
+     "headline": "NIKE, Inc. Declares Quarterly Cash Dividend",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/nike-keeps-quarterly-dividend-at-0-41-per-share-payable-jan-4-2027-to-holders-of-record-dec-1-ce785ed2df8ef427",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T21:32:08Z",
+     "headline": "Nike and Science in Sport Announce Multi-Year Performance Nutrition Partnership",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005203655/nike-and-science-in-sport-expand-global-running-performance-nutrition",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:47Z",
+     "headline": "Nike Extends Partnership with Bank of America Chicago Marathon Through 2036",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/bank-of-america-chicago-marathon-and-nike-extend-partnership-through-2036-302945829.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:02:23Z",
+     "headline": "Nike Faces Analyst Skepticism Following Investor Day Outlook",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/NKE-US?chain_id=Name1K9-3FXPhg.1lftllg&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FNKE-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "TGT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.63% of price)"
+   ],
+   "prior_close": 167.46,
+   "price": 167.46,
+   "gap": null,
+   "ret_5d": 0.04077066500932247,
+   "ret_20d": 0.059136044525962994,
+   "sma20": 158.11575,
+   "sma50": 156.6201,
+   "trend": "up",
+   "atr_pct": 0.03632850488816092,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:48.304228578Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:53Z",
+     "headline": "COSRX Skincare Brand Expands Retail Presence to Target Australia",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/apac/news-releases/cosrx-drives-mainstream-k-beauty-growth-targeting-2-000-australian-stores-302946780.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T03:01:50Z",
+     "headline": "Target Reports Strong Third Quarter Results and Raises Full-Year Outlook",
+     "source": "fiscal.ai",
+     "url": "https://www.manilatimes.net/2026/11/20/business/foreign-business/target-reports-strongest-quarterly-sales-gain-in-5-years/2474648",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T22:31:51Z",
+     "headline": "Target Expands AI-Enabled Inventory Management Tools",
+     "source": "fiscal.ai",
+     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/target-puts-ai-behind-90percent-of-its-buying-and-restocking/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:48Z",
+     "headline": "Kendra Scott and maxbone Debut Exclusive Pet Collection at Target",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/kendra-scott-and-maxbone-debut-exclusive-pet-collection-at-target-302945017.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:48Z",
+     "headline": "Haruharu Wonder Launches Exclusive Skincare Set at Target",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/shop-haruharu-wonders-20-three-piece-comfort--joy---barrier-essentials-skincare-set-exclusively-at-target-this-holiday-season-302945405.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "DIS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.70% of price)"
+   ],
+   "prior_close": 120.28,
+   "price": 120.28,
+   "gap": null,
+   "ret_5d": 0.017339084834644414,
+   "ret_20d": 0.06273193143664946,
+   "sma20": 115.8955,
+   "sma50": 110.3687,
+   "trend": "up",
+   "atr_pct": 0.02695199296878711,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.284089689Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:52Z",
+     "headline": "Disney Declines to Bid for 2030 and 2034 World Cup Broadcast Rights",
+     "source": "fiscal.ai",
+     "url": "https://www.milanofinanza.it/news/mondiali-2030-e-2034-asta-da-4-miliardi-per-i-diritti-tv-usa-netflix-amazon-e-youtube-in-corsa-202611201203205408",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T11:31:54Z",
+     "headline": "Disney Declines to Bid for Certain Sports Rights",
+     "source": "fiscal.ai",
+     "url": "https://www.milanofinanza.it/news/mondiali-2030-e-2034-asta-da-4-miliardi-per-i-diritti-tv-usa-netflix-amazon-e-youtube-in-corsa-202611201203205408",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T11:31:54Z",
+     "headline": "Walt Disney Imagineering Unveils AI-Powered Anzellan Characters",
+     "source": "fiscal.ai",
+     "url": "https://www.media-outreach.com/news/hong-kong/2026/11/20/503008/aws-%E5%8A%A9%E5%8A%9B%E8%BF%AA%E5%A3%AB%E5%B0%BC%E5%B9%BB%E6%83%B3%E5%B7%A5%E7%A8%8B%E3%80%80%E6%8F%AD%E9%96%8B-%E3%80%8A%E6%98%9F%E7%90%83%E5%A4%A7%E6%88%B0%E3%80%8Banzellans-%E6%A9%9F%E6%A2%B0/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:02:14Z",
+     "headline": "Disney Will Not Bid on 2030 Men's World Cup Rights",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/netflix-amazon-fox-to-bid-on-2030-men-s-world-cup-rights-disney-will-not-cnbc-reports-ce785ed2dc8bfe25",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "CMG",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 36.3,
+   "price": 36.3,
+   "gap": null,
+   "ret_5d": 0.0316896404717919,
+   "ret_20d": 0.29066666666666663,
+   "sma20": 33.5395,
+   "sma50": 32.5184,
+   "trend": "up",
+   "atr_pct": 0.03206414797323887,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.300419479Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "LULU",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 105.57,
+   "price": 105.57,
+   "gap": null,
+   "ret_5d": 0.010529338566095392,
+   "ret_20d": 0.01460836136472854,
+   "sma20": 107.23525,
+   "sma50": 101.48360000000001,
+   "trend": "mixed",
+   "atr_pct": 0.0421047646111585,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:52.526475985Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "BKNG",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 4.45% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 147.35,
+   "price": 147.35,
+   "gap": null,
+   "ret_5d": -0.0860881969856726,
+   "ret_20d": -0.08535071384233395,
+   "sma20": 156.66375,
+   "sma50": 160.5208,
+   "trend": "down",
+   "atr_pct": 0.04447379902079597,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:52.594022562Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:51Z",
+     "headline": "Bernstein Adjusts Price Target on Booking Holdings to $172 From $188",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/bernstein-adjusts-price-target-on-booking-to-172-from-188-ce785ed3d98ef327",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T19:01:45Z",
+     "headline": "Booking.com Releases Research on Christmas Travel Trends",
+     "source": "fiscal.ai",
+     "url": "https://travelprnews.com/article/christmas-hosting-pressures-put-shared-holiday-homes-on-uk-travellers-wish-lists/amp/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "JPM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 2.58% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 320.37,
+   "price": 320.37,
+   "gap": null,
+   "ret_5d": -0.06530903998482884,
+   "ret_20d": -0.04796291343496473,
+   "sma20": 337.65999999999997,
+   "sma50": 338.2835,
+   "trend": "down",
+   "atr_pct": 0.025776000071346093,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:54.593747088Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:22Z",
+     "headline": "JPMorgan Downgrades Scout24 Amid AI Risk Concerns",
+     "source": "fiscal.ai",
+     "url": "https://www.finanzen.at/nachrichten/aktien/aktie-im-blick-scout24-bricht-ein-nachdem-jpmorgan-die-debatte-um-ki-risiken-wieder-aufflammen-lasst-1036787004",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T20:01:30Z",
+     "headline": "JPMorgan Chase Named Associate Sponsor for Wreaths Across America Radio",
+     "source": "fiscal.ai",
+     "url": "https://markets.businessinsider.com/news/stocks/wreaths-across-america-radio-is-proud-to-announce-the-2026-escort-to-arlington-coverage-sponsors-1036784720",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:23Z",
+     "headline": "J.P. Morgan Asset Management Launches JPMorgan All Country Research Enhanced Equity ETF (JALL)",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/jp-morgan-asset-management-launches-jpmorgan-all-country-research-enhanced-equity-etf-jall-on-nyse-arca-302944783.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:01:12Z",
+     "headline": "JPMorgan Chase Reports Cyberattack on Third-Party Vendors",
+     "source": "fiscal.ai",
+     "url": "https://wjno.iheart.com/content/2026-11-19-jpmorganchase-says-vendor-cyberattack-exposed-customer-data/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T13:01:13Z",
+     "headline": "JPMorgan Chase Increases Stake in Irish Residential Properties REIT",
+     "source": "fiscal.ai",
+     "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70176261-irish-residential-properties-reit-plc-holding-s-in-company-015.htm",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "BAC",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 48.56,
+   "price": 48.56,
+   "gap": null,
+   "ret_5d": -0.03917688959240195,
+   "ret_20d": -0.04952045410060679,
+   "sma20": 50.21925,
+   "sma50": 53.0092,
+   "trend": "down",
+   "atr_pct": 0.024358672628853818,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.052437939Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:31:46Z",
+     "headline": "Bank of America Chicago Marathon Extends Partnership with Nike",
+     "source": "fiscal.ai",
+     "url": "https://investingnews.com/bank-of-america-chicago-marathon-and-nike-extend-partnership-through-2036/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T20:01:28Z",
+     "headline": "Bank of America Named to 2026 Fortune Best Workplaces for Parents List",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406926/0/en/announcing-the-fortune-best-workplaces-for-parents-in-2026.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "WFC",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 80.615,
+   "price": 80.615,
+   "gap": null,
+   "ret_5d": -0.06026694643585706,
+   "ret_20d": -0.02908587257617734,
+   "sma20": 84.267,
+   "sma50": 83.65790000000001,
+   "trend": "mixed",
+   "atr_pct": 0.025557987258663314,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.771498462Z",
+   "news": [
+    {
+     "time": "2026-11-20T13:03:50Z",
+     "headline": "Wells Fargo Adjusts Price Target on Diamondback Energy",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-diamondback-energy-to-250-from-244-ce785ed3d88ef722",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T13:03:50Z",
+     "headline": "Wells Fargo Adjusts Price Target on Intuit",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-intuit-to-320-from-330-ce785ed3d88af325",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T13:03:50Z",
+     "headline": "Wells Fargo Adjusts Price Target on Keysight Technologies",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-keysight-technologies-to-350-from-405-ce785ed3d88af623",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T14:32:27Z",
+     "headline": "Wells Fargo Adjusts Price Target on Progressive",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-progressive-to-194-from-196-ce785ed2d888f320",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:32:51Z",
+     "headline": "Wells Fargo Upgrades Marsh & McLennan to Overweight",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-upgrades-marsh-mclennan-to-overweight-from-equalweight-price-target-is-235-ce785ed2d98cf123",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:32:51Z",
+     "headline": "Wells Fargo Upgrades Brown & Brown to Overweight",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/wells-fargo-upgrades-brown-brown-to-overweight-from-equalweight-price-target-is-82-ce785ed2d98cf220",
+     "earnings": false,
+     "catalyst": true
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "GS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 3.48% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 848.185,
+   "price": 848.185,
+   "gap": null,
+   "ret_5d": -0.07161151913836328,
+   "ret_20d": -0.04819162187335191,
+   "sma20": 897.4487499999999,
+   "sma50": 909.1916,
+   "trend": "down",
+   "atr_pct": 0.034805412228969594,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:53.425213441Z",
+   "news": [
+    {
+     "time": "2026-11-20T03:02:03Z",
+     "headline": "Goldman Sachs Serves as Financial Advisor in BILL Acquisition",
+     "source": "fiscal.ai",
+     "url": "https://www.fidelity.com/news/article/mergers-and-acquisitions/202611191746BIZWIRE_USPR_____20261119_BW835477",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T03:02:03Z",
+     "headline": "Goldman Sachs Adjusts Price Target for Kuaishou Technology",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/goldman-sachs-adjusts-kuaishou-technology-s-price-target-to-hk-29-ce785ed2de88f022",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:32:10Z",
+     "headline": "Goldman Sachs Adjusts Price Target on Palo Alto Networks",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/goldman-sachs-adjusts-price-target-on-palo-alto-networks-to-440-from-390-ce785ed2d981f126",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T11:31:36Z",
+     "headline": "The Goldman Sachs Group, Inc. Discloses Major Holding in Siltronic AG",
+     "source": "fiscal.ai",
+     "url": "https://www.finanzen.at/nachrichten/aktien/eqs-pvr-siltronic-ag-release-according-to-article-40-section-1-of-the-wphg-[the-german-securities-trading-act]-with-the-objective-of-europe-wide-distribution-1036787343",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T00:01:46Z",
+     "headline": "The Goldman Sachs Group, Inc. Files Voting Rights Announcement",
+     "source": "fiscal.ai",
+     "url": "https://www.eqs-news.com/news/voting-rights/the-goldman-sachs-group-inc-wilmington-de-united-states-of-america-usa/b25c2ba2-88ea-4085-a3f4-9bd292b73818_en",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "MS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 175.05,
+   "price": 175.05,
+   "gap": null,
+   "ret_5d": -0.07478858350951367,
+   "ret_20d": -0.04827923666612299,
+   "sma20": 185.727,
+   "sma50": 189.9928,
+   "trend": "down",
+   "atr_pct": 0.03370465581262496,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:49.761519804Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:33:32Z",
+     "headline": "Morgan Stanley Upgrades CAE to Equal Weight",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-upgrades-cae-to-equal-weight-from-underweight-raises-price-target-to-ca-44-from-ca-3-ce785ed2db8ef12d",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T20:03:03Z",
+     "headline": "Morgan Stanley Raises Price Target for Target Corporation",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-raises-target-s-price-target-to-185-from-170-maintains-overweight-rating-ce785ed2dd8bfe21",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T12:34:03Z",
+     "headline": "Morgan Stanley Adjusts Price Target on Humana to $475 From $370",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/morgan-stanley-adjusts-price-target-on-humana-to-475-from-370-ce785ed2d888fe22",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T22:31:43Z",
+     "headline": "Morgan Stanley Discloses Voting Rights in CECONOMY AG",
+     "source": "fiscal.ai",
+     "url": "https://www.eqs-news.com/news/voting-rights/morgan-stanley-wilmington-delaware-united-states-of-america-usa/1074f9dd-ae07-4b72-b87f-4b86d34f9243_en",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:44Z",
+     "headline": "Morgan Stanley Acts as Underwriter for Anthropic IPO",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406547/0/en/anthropic-ant-debuts-on-nasdaq-today-graniteshares-2x-long-and-2x-short-anthropic-etfs-expected-to-launch-november-23.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "C",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 115.23,
+   "price": 115.23,
+   "gap": null,
+   "ret_5d": -0.07132495164410058,
+   "ret_20d": -0.059500489715964666,
+   "sma20": 121.766,
+   "sma50": 126.31549999999999,
+   "trend": "down",
+   "atr_pct": 0.030848241405387992,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.483674115Z",
+   "news": [
+    {
+     "time": "2026-11-20T13:02:00Z",
+     "headline": "Citigroup Injects Capital Into Unit Following Trade Recording Error",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/citigroup-injects-capital-into-unit-after-trade-recording-error-understated-risk-ce785ed2d080f023",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T12:31:30Z",
+     "headline": "Citi Strategists Warn of Impending 'Generals' Market Signal",
+     "source": "fiscal.ai",
+     "url": "https://www.morningstar.com/news/marketwatch/20261120120/citi-warns-a-key-stock-market-signal-is-close-to-flashing-red",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "SCHW",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 92.14,
+   "price": 92.14,
+   "gap": null,
+   "ret_5d": 0.004579153946794534,
+   "ret_20d": 0.0075451066156368984,
+   "sma20": 91.1945,
+   "sma50": 95.6015,
+   "trend": "mixed",
+   "atr_pct": 0.02394260287140689,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.532834203Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:32Z",
+     "headline": "Charles R. Schwab Sells $6.59 Million in Company Stock",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005300075/schwab-charles-insider-sold-shares-worth-6587036-according-to-a",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T20:01:39Z",
+     "headline": "Income Lab Integrates Financial Planning Software with Charles Schwab",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406781/0/en/income-lab-connects-client-holdings-from-custodians-and-crm-to-one-financial-plan.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "V",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.52% of price)"
+   ],
+   "prior_close": 402.43,
+   "price": 402.43,
+   "gap": null,
+   "ret_5d": -0.04255141976850696,
+   "ret_20d": -0.02860384281162487,
+   "sma20": 417.2575,
+   "sma50": 394.037,
+   "trend": "mixed",
+   "atr_pct": 0.025173854547907187,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:57.819242943Z",
+   "news": [
+    {
+     "time": "2026-11-19T20:01:35Z",
+     "headline": "Visa Enables Stablecoin Funding for Cross-Border Payouts in APAC",
+     "source": "fiscal.ai",
+     "url": "https://www.pymnts.com/news/cross-border-payments/2026/visa-direct-brings-cross-border-payment-stablecoins-to-apac/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:30Z",
+     "headline": "Visa Launches 'Visa Recurrent' for Recurring Payment Management",
+     "source": "fiscal.ai",
+     "url": "https://glenbrook.com/payments-news/all-payments-news/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MA",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.46% of price)"
+   ],
+   "prior_close": 626.85,
+   "price": 626.85,
+   "gap": null,
+   "ret_5d": -0.039457554397793415,
+   "ret_20d": -0.009496571121575093,
+   "sma20": 644.2175,
+   "sma50": 605.9641,
+   "trend": "mixed",
+   "atr_pct": 0.024575257238573792,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:57.585362957Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:38Z",
+     "headline": "Mastercard Joins Microsoft-Led AI Transparency Initiative",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/15-press-releases-you-need-to-see-this-week-302946164.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T21:31:49Z",
+     "headline": "Mastercard Reports Limited Customer Data Leak Following Third-Party Security Incident",
+     "source": "fiscal.ai",
+     "url": "https://www.pymnts.com/cybersecurity/2026/visa-mastercard-and-jpmorgan-customer-data-leaked-in-breach/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T21:31:49Z",
+     "headline": "Mastercard and Rakuten Mobile Collaborate on Agentic Travel Experience",
+     "source": "fiscal.ai",
+     "url": "https://www.pymnts.com/partnerships/2026/rakuten-teams-with-mastercard-to-power-agentic-commerce/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:15Z",
+     "headline": "Mastercard and Yeahka Sign Agreement for AI Agent-Driven Commerce",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406963/0/en/from-a-cup-of-bubble-tea-to-a-transaction-yeahka-and-mastercard-deploy-agent-pay-capabilities.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:52Z",
+     "headline": "Mastercard and Ant International Advance Trusted Agentic Commerce Milestones",
+     "source": "fiscal.ai",
+     "url": "https://www.kipost.net/news/articleViewAmp.html?idxno=343487",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "AXP",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.34% of price)"
+   ],
+   "prior_close": 311.27,
+   "price": 311.27,
+   "gap": null,
+   "ret_5d": -0.021517375791773485,
+   "ret_20d": -0.04201034100701717,
+   "sma20": 320.268,
+   "sma50": 314.8405,
+   "trend": "mixed",
+   "atr_pct": 0.02342936082133564,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:53.746819444Z",
+   "news": [
+    {
+     "time": "2026-11-19T19:01:39Z",
+     "headline": "American Express Named to 2026 Fortune Best Workplaces for Parents List",
+     "source": "fiscal.ai",
+     "url": "https://www.globenewswire.com/news-release/2026/11/19/3406926/0/en/announcing-the-fortune-best-workplaces-for-parents-in-2026.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "PYPL",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.21% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 56.38,
+   "price": 54.57,
+   "gap": -0.032103582830791066,
+   "ret_5d": -0.03293310463121779,
+   "ret_20d": -0.020074737116537622,
+   "sma20": 58.049,
+   "sma50": 55.9565,
+   "trend": "mixed",
+   "atr_pct": 0.02786575786753153,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:07:52.684763589Z",
+   "news": [],
+   "traded": false,
+   "in_play": 1.4,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "HOOD",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 68.64,
+   "price": 68.64,
+   "gap": null,
+   "ret_5d": -0.15634218289085544,
+   "ret_20d": -0.28958807700269096,
+   "sma20": 82.7165,
+   "sma50": 99.479,
+   "trend": "down",
+   "atr_pct": 0.07047119547119544,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.682341783Z",
+   "news": [
+    {
+     "time": "2026-11-19T22:32:01Z",
+     "headline": "Director Baiju Bhatt Sells Robinhood Markets, Inc. Shares",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/hant/news/post/1005229393/robinhood-hoodus-director-sells-us-4-79-million-in-common",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "SOFI",
+   "verdict": "skip",
+   "why": [
+    "premarket gap -3.25% is past the 0.75% gap rule, so the bot will skip it"
+   ],
+   "prior_close": 13.52,
+   "price": 13.08,
+   "gap": -0.032544378698224796,
+   "ret_5d": -0.13444302176696543,
+   "ret_20d": -0.08463100880162489,
+   "sma20": 15.8565,
+   "sma50": 15.8925,
+   "trend": "down",
+   "atr_pct": 0.059937658495350814,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:18:32.049369239Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:33:33Z",
+     "headline": "SoFi Releases National Survey on Homebuyer Challenges and Sentiment",
+     "source": "fiscal.ai",
+     "url": "https://insurancenewsnet.com/oarticle/homebuyer-survey-how-americans-are-budgeting-saving-and-getting-to-the-close-2",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:53Z",
+     "headline": "SoFi Releases National Report on Cryptocurrency Trends",
+     "source": "fiscal.ai",
+     "url": "https://www.barchart.com/press-releases/8916818/from-side-quest-to-financial-strategy-sofi-study-reveals-how-crypto-is-becoming-part-of-the-bigger-financial-picture",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.79,
+   "skip_tag": "gap"
+  },
+  {
+   "symbol": "LLY",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 1351.48,
+   "price": 1351.48,
+   "gap": null,
+   "ret_5d": -0.054965264302471506,
+   "ret_20d": 0.03415082067567066,
+   "sma20": 1380.94825,
+   "sma50": 1262.8208,
+   "trend": "mixed",
+   "atr_pct": 0.03092059921609746,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:57.790186333Z",
+   "news": [
+    {
+     "time": "2026-11-20T03:01:25Z",
+     "headline": "General Medicine Integrates GLP-1 Weight Management Care into LillyDirect",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/general-medicine-brings-its-glp-1-weight-management-care-to-lillydirect-302945780.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "UNH",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 4.74% of price)"
+   ],
+   "prior_close": 330.355,
+   "price": 330.355,
+   "gap": null,
+   "ret_5d": -0.18457038481475074,
+   "ret_20d": -0.22250202991327261,
+   "sma20": 398.39875,
+   "sma50": 389.4586,
+   "trend": "mixed",
+   "atr_pct": 0.04742301031141824,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:57.543748928Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:32:02Z",
+     "headline": "HSBC Adjusts Price Target on UnitedHealth to $385 From $380",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/hsbc-adjusts-price-target-on-unitedhealth-to-385-from-380-ce785ed3d88bf226",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T13:02:32Z",
+     "headline": "Analyst Actions: HSBC and TD Cowen Update Ratings on UnitedHealth Group",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/hsbc-adjusts-price-target-on-unitedhealth-to-385-from-380-ce785ed3d88bf226",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T12:31:24Z",
+     "headline": "UnitedHealth Group Shares Decline Following Introduction of CRUSH Rule",
+     "source": "fiscal.ai",
+     "url": "https://www.baystreet.ca/stockstowatch/24434/Watch-Anthropic-Okta-UNH-and-More",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "JNJ",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 267.225,
+   "price": 267.225,
+   "gap": null,
+   "ret_5d": -0.057606855691917036,
+   "ret_20d": -0.0018489466606902427,
+   "sma20": 274.72375,
+   "sma50": 267.3762,
+   "trend": "mixed",
+   "atr_pct": 0.025394597917752545,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:54.725358539Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:45Z",
+     "headline": "JPMorgan Adjusts Price Target on Johnson & Johnson to $300 From $285",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/jpmorgan-adjusts-price-target-on-johnson-johnson-to-300-from-285-ce785ed3d888f220",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T11:31:35Z",
+     "headline": "Johnson & Johnson Technology Engineer Receives 2026 Global Recognition Award",
+     "source": "fiscal.ai",
+     "url": "https://news.marketersmedia.com/mahathi-kari-receives-2026-global-recognition-award-for-ai-cybersecurity-and-engineering-expertise/89210333",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:56Z",
+     "headline": "Johnson & Johnson Announces First Installation of New Robotic Surgical System",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/johnson-johnson-says-houston-hospital-will-be-first-to-install-robotic-surgical-system-ce785ed2da8af622",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:56Z",
+     "headline": "Johnson & Johnson Submits sNDA for Caplyta in Bipolar Mania",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/johnson--johnson-seeks-us-fda-approval-for-caplyta-in-bipolar-mania-marking-fifth-potential-indication-302945475.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "PFE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.80% of price)"
+   ],
+   "prior_close": 27.57,
+   "price": 27.57,
+   "gap": null,
+   "ret_5d": -0.04370447450572312,
+   "ret_20d": -0.09368836291913218,
+   "sma20": 29.451,
+   "sma50": 28.828699999999998,
+   "trend": "mixed",
+   "atr_pct": 0.02795481631172601,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.480499786Z",
+   "news": [
+    {
+     "time": "2026-11-19T11:31:55Z",
+     "headline": "Pfizer Accelerates Insight-to-Action Cycle Using AI Workflows",
+     "source": "fiscal.ai",
+     "url": "https://www.einpresswire.com/article/957592158/theydo-shows-how-fedex-pfizer-and-kimberly-clark-turn-insight-into-results",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "MRK",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 132.735,
+   "price": 132.735,
+   "gap": null,
+   "ret_5d": -0.09673358285130984,
+   "ret_20d": -0.09817576519346394,
+   "sma20": 144.94375,
+   "sma50": 145.4879,
+   "trend": "down",
+   "atr_pct": 0.03167428119400091,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.998989238Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:32Z",
+     "headline": "Merck Announces TroFuse-015 Trial Evaluating Sacituzumab Tirumotecan Met Primary Endpoint",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/health/pharmaceutical",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:01:48Z",
+     "headline": "German Court Overturns Injunction Against Merck's Keytruda SC",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/halozyme-provides-update-on-german-preliminary-injunction-hearing-302945598.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T12:31:37Z",
+     "headline": "Merck and Isomorphic Labs Enter Strategic Research Collaboration",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/health/oncology",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "ABBV",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 283.575,
+   "price": 282.84,
+   "gap": null,
+   "ret_5d": -0.037047727388491825,
+   "ret_20d": -0.004720623332865492,
+   "sma20": 290.41375,
+   "sma50": 278.4173,
+   "trend": "mixed",
+   "atr_pct": 0.02489011473407139,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T21:20:42.535741365Z",
+   "news": [
+    {
+     "time": "2026-11-20T03:01:43Z",
+     "headline": "AbbVie Announces $217 Million Investment in Puerto Rico Manufacturing Operations",
+     "source": "fiscal.ai",
+     "url": "https://world.einnews.com/pr_news/957755195/governor-announces-217-million-investment-by-abbvie-to-expand-barceloneta-manufacturing-operations",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:18Z",
+     "headline": "AbbVie and DISCO Pharmaceuticals Announce Strategic Collaboration for Solid Tumor Therapeutics",
+     "source": "fiscal.ai",
+     "url": "https://www.finanzen.ch/nachrichten/aktien/disco-pharmaceuticals-abbvie-announce-up-to-$2-5-bln-cancer-drug-collaboration-1036782736",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "AMGN",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 439.05,
+   "price": 439.05,
+   "gap": null,
+   "ret_5d": -0.06007150350024615,
+   "ret_20d": -0.019036128426838217,
+   "sma20": 458.50375,
+   "sma50": 429.30129999999997,
+   "trend": "mixed",
+   "atr_pct": 0.02462134153285504,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:57.160543596Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:27Z",
+     "headline": "Amgen Supports Pitch4RARE 2026 and SIAMG Indo US Bridging RARE Summit",
+     "source": "fiscal.ai",
+     "url": "https://www.einpresswire.com/article/957675994/indousrare-gord-announce-pitch4rare-2026-inviting-global-innovators-to-advance-rare-disease-solutions",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:28Z",
+     "headline": "BofA Securities Identifies Viridian Therapeutics' Lumvoa as Competitor to Amgen's Tepezza",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005207462/viridian-therapeutics-lumvoa-emerging-as-rival-to-amgen-s-tepezza",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "GILD",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 166.585,
+   "price": 166.585,
+   "gap": null,
+   "ret_5d": -0.008245520033339226,
+   "ret_20d": 0.060038180082723436,
+   "sma20": 166.78275,
+   "sma50": 156.8084,
+   "trend": "mixed",
+   "atr_pct": 0.027225483343981383,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.113073683Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:32:02Z",
+     "headline": "Gilead Sciences Executive Manny Rodriguez Named a 2027 Visionary",
+     "source": "fiscal.ai",
+     "url": "https://www.noticiasnewswire.com/manny-rodriguez-of-gilead-sciences-to-be-recognized/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "ISRG",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.89% of price)"
+   ],
+   "prior_close": 407.21,
+   "price": 407.21,
+   "gap": null,
+   "ret_5d": -0.07452272727272735,
+   "ret_20d": -0.08259174983666395,
+   "sma20": 444.78900000000004,
+   "sma50": 422.9339,
+   "trend": "mixed",
+   "atr_pct": 0.03892691380719671,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:50.149205822Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "VRTX",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 520.615,
+   "price": 520.615,
+   "gap": null,
+   "ret_5d": -0.04057092309676946,
+   "ret_20d": -0.027251494768311013,
+   "sma20": 538.544,
+   "sma50": 522.7896,
+   "trend": "mixed",
+   "atr_pct": 0.028794241974807268,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:46.856262082Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "MRNA",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 199.245,
+   "price": 199.245,
+   "gap": null,
+   "ret_5d": -0.13877242273611412,
+   "ret_20d": -0.018062195061850028,
+   "sma20": 225.48375000000001,
+   "sma50": 206.8213,
+   "trend": "mixed",
+   "atr_pct": 0.09033028253083965,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.529620071Z",
+   "news": [
+    {
+     "time": "2026-11-19T20:02:01Z",
+     "headline": "Moderna Officer Stephen Hoge Sells $16.9 Million in Common Stock",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/MRNA-US?chain_id=Name1K9-3FXPhg.1lfuaog&global_content=%7B%22promote_id%22%3A%22%22%2C%22sub_promote_id%22%3A64%2C%22subpromote_id%22%3A%22%22%2C%22f%22%3A%22www.moomoo.com%2Fcommunity%2Fprofile%2Fm-7-r-105564249%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "CVS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 4.77% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 80.07,
+   "price": 80.07,
+   "gap": null,
+   "ret_5d": -0.10835189309576843,
+   "ret_20d": -0.15260874166578475,
+   "sma20": 87.563,
+   "sma50": 88.7018,
+   "trend": "down",
+   "atr_pct": 0.04769041374511588,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:54.941184632Z",
+   "news": [
+    {
+     "time": "2026-11-20T00:02:38Z",
+     "headline": "CVS Health Mentioned in Context of Proposed CMS 'CRUSH' Rule",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.ca/news-releases/cms-proposes-medicare-advantage-audit-recoveries-reaching-back-to-2018-871789633.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:45Z",
+     "headline": "CVS Health Expands Integrated Flu and COVID-19 Testing and Treatment Services",
+     "source": "fiscal.ai",
+     "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70179304-cvs-health-from-symptoms-to-next-steps-making-flu-and-covid-19-care-more-connected-200.htm",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:26Z",
+     "headline": "Aetna Launches 'Aetna For You & Baby' Initiative",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/aetna-commits-to-connecting-90-of-members-to-essential-end-to-end-maternal-and-infant-care-by-2032-with-launch-of-the-aetna-for-you--baby-initiative-302944719.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "XOM",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.94% of price)"
+   ],
+   "prior_close": 158.94,
+   "price": 158.94,
+   "gap": null,
+   "ret_5d": -0.06368188512518413,
+   "ret_20d": -0.10803075368988158,
+   "sma20": 172.40025,
+   "sma50": 169.4661,
+   "trend": "mixed",
+   "atr_pct": 0.02941361520070468,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.89995859Z",
+   "news": [
+    {
+     "time": "2026-11-19T21:31:49Z",
+     "headline": "TechnipFMC Awarded Subsea Contract for ExxonMobil's Longtail Project",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/energy/oil-gas",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "CVX",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 206.595,
+   "price": 206.595,
+   "gap": null,
+   "ret_5d": -0.0457064991454571,
+   "ret_20d": -0.0882028422632184,
+   "sma20": 220.15675000000002,
+   "sma50": 215.5187,
+   "trend": "mixed",
+   "atr_pct": 0.02640258891620253,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.117665006Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:20Z",
+     "headline": "Seismic Research Vessel Commences Operations for Chevron-HELLENiQ ENERGY Joint Venture",
+     "source": "fiscal.ai",
+     "url": "https://www.euro2day.gr/news/economy/article/2381065/ypen-xekinoyn-oi-seismikes-ereynes-sto-notio-ionio.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T11:31:34Z",
+     "headline": "Chevron and HELLENiQ ENERGY Receive NAVTEX Approval for Seismic Research in Greece",
+     "source": "fiscal.ai",
+     "url": "https://www.euro2day.gr/amp/news/economy/article/2381065/ypen-xekinoyn-oi-seismikes-ereynes-sto-notio-ionio.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:29Z",
+     "headline": "Chevron Selects GEP SMART for Global Digital Procurement Transformation",
+     "source": "fiscal.ai",
+     "url": "https://procurementmag.com/news/vendor-insight-agentic-ai-transform-source-to-pay-platforms",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:19Z",
+     "headline": "Developers Reconsider Canadian LNG Site Previously Jettisoned by Chevron",
+     "source": "fiscal.ai",
+     "url": "https://calgaryherald.com/category/business/energy/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "OXY",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.72% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 53.81,
+   "price": 53.81,
+   "gap": null,
+   "ret_5d": -0.07875363807567193,
+   "ret_20d": -0.13890222435589694,
+   "sma20": 59.02725,
+   "sma50": 59.3253,
+   "trend": "down",
+   "atr_pct": 0.037194361111848574,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.817208128Z",
+   "news": [
+    {
+     "time": "2026-11-19T22:31:46Z",
+     "headline": "Morgan Stanley Maintains Occidental Petroleum with Hold Rating",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005189644/morgan-stanley-maintains-occidental-petroleum-oxyus-with-hold-rating-maintains",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "COP",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.27% of price)"
+   ],
+   "prior_close": 135.01,
+   "price": 135.01,
+   "gap": null,
+   "ret_5d": -0.03633119200571022,
+   "ret_20d": -0.07317910345301026,
+   "sma20": 142.1625,
+   "sma50": 137.4353,
+   "trend": "mixed",
+   "atr_pct": 0.0326880548530797,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:58.912530125Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "SLB",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 47.905,
+   "price": 47.905,
+   "gap": null,
+   "ret_5d": -0.05957989791912044,
+   "ret_20d": -0.03378378378378377,
+   "sma20": 51.31925,
+   "sma50": 50.8324,
+   "trend": "mixed",
+   "atr_pct": 0.03285520449699557,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.993348058Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "BA",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.92% of price)",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 160.55,
+   "price": 160.55,
+   "gap": null,
+   "ret_5d": -0.06401212615868934,
+   "ret_20d": -0.14387031408307993,
+   "sma20": 172.16424999999998,
+   "sma50": 185.1741,
+   "trend": "down",
+   "atr_pct": 0.02921430795924723,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:58.036881964Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:32:11Z",
+     "headline": "Northrop Grumman Will Not Contest Boeing's $20 Billion F/A-XX Navy Contract",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/BA-US?chain_id=Name1K9-3FXPhg.1lfvvg0&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FNVS-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T11:32:07Z",
+     "headline": "Boeing to Exceed Patriot Component Production Target",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/boeing-to-exceed-patriot-component-production-target-ce785ed2d080f020",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T22:31:48Z",
+     "headline": "EAS Group Plans to Reactivate Two Former AirBridgeCargo Boeing 747-400 Freighters",
+     "source": "fiscal.ai",
+     "url": "https://cargonewswire.com/eas-group-plans-to-reactivate-two-former-airbridgecargo-boeing-747-400-freighters-in-2027/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:02:27Z",
+     "headline": "Boeing Director Akhil Johri Purchases Shares",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/BA-US?chain_id=Name1K9-3FXPhg.1lftp60&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FUBS-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "CAT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 537.13,
+   "price": 537.13,
+   "gap": null,
+   "ret_5d": -0.1124898795459428,
+   "ret_20d": -0.23656494733999467,
+   "sma20": 612.23925,
+   "sma50": 720.3371000000001,
+   "trend": "down",
+   "atr_pct": 0.05068206419834513,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.559683084Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "DE",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "below its 20- and 50-day averages; long breakouts fight the trend"
+   ],
+   "prior_close": 625.01,
+   "price": 625.01,
+   "gap": null,
+   "ret_5d": -0.07931059880680569,
+   "ret_20d": -0.02886176651102812,
+   "sma20": 662.225,
+   "sma50": 665.2589999999999,
+   "trend": "down",
+   "atr_pct": 0.029358958828087294,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.559171065Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "GE",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 318.865,
+   "price": 318.865,
+   "gap": null,
+   "ret_5d": -0.03628313234805214,
+   "ret_20d": 0.08575660582947431,
+   "sma20": 318.47875,
+   "sma50": 314.33729999999997,
+   "trend": "up",
+   "atr_pct": 0.03396981705199916,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:57.985294097Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:33Z",
+     "headline": "GE Aerospace Recommends Shareholders Reject \u201cMini-Tender\u201d Offer by Potemkin Limited",
+     "source": "fiscal.ai",
+     "url": "https://www.morningstar.com/news/globe-newswire/9881999/ge-aerospace-recommends-shareholders-reject-mini-tender-offer-by-potemkin-limited",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T20:02:05Z",
+     "headline": "Boeing and GE Aerospace expand digital tracking to combat unapproved parts",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/GE-US?chain_id=Name1K9-3FXPhg.1lfu780&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FGD-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "HON",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.89% of price)"
+   ],
+   "prior_close": 217.96,
+   "price": 217.96,
+   "gap": null,
+   "ret_5d": -0.02465655345236495,
+   "ret_20d": -0.0019232530451506191,
+   "sma20": 221.96999999999997,
+   "sma50": 214.6925,
+   "trend": "mixed",
+   "atr_pct": 0.028874891854337628,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:52.011325685Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "LMT",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 3.21% of price)"
+   ],
+   "prior_close": 572.07,
+   "price": 572.07,
+   "gap": null,
+   "ret_5d": -0.052989670242352016,
+   "ret_20d": -0.030619852916257018,
+   "sma20": 606.13125,
+   "sma50": 557.825,
+   "trend": "mixed",
+   "atr_pct": 0.03213829975852107,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:55.268728726Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:40Z",
+     "headline": "Boeing to Exceed Production Targets for Patriot Missile Seekers",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/hans/news/post/1005310414/market-chatter-boeing-to-exceed-patriot-component-production-target",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "RTX",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 193.49,
+   "price": 193.49,
+   "gap": null,
+   "ret_5d": -0.02452673237377423,
+   "ret_20d": -0.005704008221993795,
+   "sma20": 197.195,
+   "sma50": 192.5803,
+   "trend": "mixed",
+   "atr_pct": 0.027376830105653276,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:56.024194225Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:31:55Z",
+     "headline": "RTX's Pratt & Whitney Canada Joins Canadian Consortium for Scout Project",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.ca/news-releases/dominion-dynamics-announces-a-canadian-consortium-to-develop-scout-canada-s-first-autonomous-collaborative-platform-822361147.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-20T03:01:31Z",
+     "headline": "Raytheon Donates SM-6 Missile Display to White Sands Missile Range",
+     "source": "fiscal.ai",
+     "url": "https://www.dvidshub.net/news/579796/new-standard-missile-6-historical-display-highlights-navys-heritage-weapons-testing-white-sands-missile-range",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "UPS",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.48% of price)"
+   ],
+   "prior_close": 109.1,
+   "price": 109.1,
+   "gap": null,
+   "ret_5d": -0.011864867312743388,
+   "ret_20d": 0.07477095852625348,
+   "sma20": 109.0335,
+   "sma50": 101.40700000000001,
+   "trend": "up",
+   "atr_pct": 0.02475121120858976,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.950611582Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "FDX",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "volatility expanding (ATR 2.55% of price)"
+   ],
+   "prior_close": 314.47,
+   "price": 314.47,
+   "gap": null,
+   "ret_5d": -0.015589294099232931,
+   "ret_20d": 0.034610955749301064,
+   "sma20": 315.3995,
+   "sma50": 302.9683,
+   "trend": "mixed",
+   "atr_pct": 0.02550549904828534,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:43.632549256Z",
+   "news": [
+    {
+     "time": "2026-11-19T16:01:21Z",
+     "headline": "FedEx Featured in 'Threads of Connectivity' Documentary Series",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.co.uk/news-releases/from-italian-coffee-to-polish-crops-threads-of-connectivity-part-two-launches-on-natgeocom-302942136.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:31Z",
+     "headline": "FedEx Reports 20% Reduction in Credit Notes Through Process Improvements",
+     "source": "fiscal.ai",
+     "url": "https://www.einpresswire.com/article/957592158/theydo-shows-how-fedex-pfizer-and-kimberly-clark-turn-insight-into-results",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "UNP",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight",
+    "volatility expanding (ATR 2.37% of price)"
+   ],
+   "prior_close": 290.62,
+   "price": 290.62,
+   "gap": null,
+   "ret_5d": -0.0447044901715864,
+   "ret_20d": -0.02509225092250933,
+   "sma20": 299.9515,
+   "sma50": 288.1358,
+   "trend": "mixed",
+   "atr_pct": 0.023695645762261942,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:51.336368053Z",
+   "news": [
+    {
+     "time": "2026-11-20T03:01:40Z",
+     "headline": "Union Pacific and Norfolk Southern File Response to STB Regarding Merger Review",
+     "source": "fiscal.ai",
+     "url": "https://www.businesswire.com/newsroom/industry/transport/rail",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T12:31:55Z",
+     "headline": "Union Pacific CEO Apologizes for Rate Retaliation Remarks",
+     "source": "fiscal.ai",
+     "url": "https://www.trains.com/pro/freight/class-i/union-pacific-ceo-apologizes-for-rate-remark/",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.5
+  },
+  {
+   "symbol": "T",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 21.84,
+   "price": 21.84,
+   "gap": null,
+   "ret_5d": -0.015329125338142457,
+   "ret_20d": -0.040843214756258184,
+   "sma20": 21.6385,
+   "sma50": 23.299400000000002,
+   "trend": "mixed",
+   "atr_pct": 0.019590528519099943,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.017762253Z",
+   "news": [
+    {
+     "time": "2026-11-20T12:31:59Z",
+     "headline": "Barclays Upgrades TELUS to Buy Rating",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/news/post/1005312845/barclays-upgrades-telus-tuus-to-buy-rating-cuts-target-price",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T14:32:41Z",
+     "headline": "National Bank Upgrades TELUS to Outperform",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/national-bank-upgrades-telus-to-outperform-from-sector-perform-price-target-is-ca-16-ce785ed2db8ff226",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-20T00:01:35Z",
+     "headline": "AT&T CEO to Participate in Fireside Chat at UBS Global Media and Communications Conference",
+     "source": "fiscal.ai",
+     "url": "https://www.fidelity.com/news/article/technology/202611191630PR_NEWS_USPR_____DA03086",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:52Z",
+     "headline": "Telus Pulls Plug on Vancouver AI Data Centers",
+     "source": "fiscal.ai",
+     "url": "https://www.baystreet.ca/articles/stockstowatch/125506/telus-pulls-plug-on-vancouver-ai-data-centers-amid-major-transition",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:01:30Z",
+     "headline": "AT&T Renews Multiyear Sponsorship of U.S. Soccer",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/att-and-us-soccer-extend-longstanding-relationship-to-continue-shaping-the-future-of-soccer-in-america-302945611.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "VZ",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 45.76,
+   "price": 45.75,
+   "gap": null,
+   "ret_5d": -0.01718213058419249,
+   "ret_20d": 0.012501382896338065,
+   "sma20": 45.3855,
+   "sma50": 45.9151,
+   "trend": "mixed",
+   "atr_pct": 0.020409278221778227,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T21:00:00.024987317Z",
+   "news": [
+    {
+     "time": "2026-11-19T14:31:34Z",
+     "headline": "Verizon Survey: Small Businesses Turn to Social Media & AI for Holidays",
+     "source": "fiscal.ai",
+     "url": "https://www.finanznachrichten.de/nachrichten-index/us-500.htm",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "TMUS",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 162.48,
+   "price": 162.48,
+   "gap": null,
+   "ret_5d": -0.04982456140350888,
+   "ret_20d": 0.023044956554590046,
+   "sma20": 160.1915,
+   "sma50": 162.5207,
+   "trend": "mixed",
+   "atr_pct": 0.03326123654779492,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:57.134469874Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "KO",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 96.115,
+   "price": 96.115,
+   "gap": null,
+   "ret_5d": -0.013395606651611658,
+   "ret_20d": 0.008128802181665451,
+   "sma20": 95.65275,
+   "sma50": 91.63709999999999,
+   "trend": "up",
+   "atr_pct": 0.01928493397046694,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.999140435Z",
+   "news": [
+    {
+     "time": "2026-11-19T19:01:25Z",
+     "headline": "BC Bottle and Recycling Depot Association Launches Campaign Challenging Beverage Giants",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.ca/news-releases/return-your-empties-reject-the-closure-of-local-bottle-depots-881344989.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "PEP",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 139,
+   "price": 139,
+   "gap": null,
+   "ret_5d": -0.023053134664042796,
+   "ret_20d": 0.000864055299539146,
+   "sma20": 139.966,
+   "sma50": 134.04049999999998,
+   "trend": "mixed",
+   "atr_pct": 0.02580678314491264,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.657107888Z",
+   "news": [
+    {
+     "time": "2026-11-20T00:01:49Z",
+     "headline": "PepsiCo Announces Price Reductions on Select Snack Brands",
+     "source": "fiscal.ai",
+     "url": "https://businessnewswire.org/pepsico-slashes-snack-prices-to-reclaim-market-share/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T19:01:41Z",
+     "headline": "PepsiCo and Hyatt Announce 10-Year Food and Beverage Agreement",
+     "source": "fiscal.ai",
+     "url": "https://www.prnewswire.com/news-releases/hyatt-and-pepsico-enter-new-chapter-with-a-10-year-collaboration-supporting-guest-experience-and-growth-across-700-properties-in-the-united-states-302945841.html",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T16:31:45Z",
+     "headline": "Searenergy Awarded Contract for Ba\u0142tyk 2 and Ba\u0142tyk 3 Offshore Wind Projects",
+     "source": "fiscal.ai",
+     "url": "https://splash247.com/searenergy-lands-offshore-wind-commissioning-deal-in-poland/",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T14:31:35Z",
+     "headline": "PepsiCo Canada Releases Gatorade Survey on Hockey Athlete Hydration",
+     "source": "fiscal.ai",
+     "url": "https://www.newswire.ca/news-releases/hockey-parents-are-prioritizing-everything-but-hydration-new-gatorade-r-canada-survey-finds-866638414.html",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.0
+  },
+  {
+   "symbol": "PG",
+   "verdict": "caution",
+   "why": [
+    "no premarket trade yet, gap unknown",
+    "headline catalyst overnight"
+   ],
+   "prior_close": 167.92,
+   "price": 167.92,
+   "gap": null,
+   "ret_5d": -0.0009519276534984966,
+   "ret_20d": 0.01400966183574881,
+   "sma20": 165.5975,
+   "sma50": 156.3766,
+   "trend": "up",
+   "atr_pct": 0.01901841012727146,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.524795117Z",
+   "news": [
+    {
+     "time": "2026-11-20T11:32:01Z",
+     "headline": "Citigroup Adjusts Price Target on Procter & Gamble",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/citigroup-adjusts-price-target-on-procter-gamble-to-190-from-187-ce785ed3d98ff426",
+     "earnings": false,
+     "catalyst": true
+    },
+    {
+     "time": "2026-11-19T22:31:32Z",
+     "headline": "Procter & Gamble Plans to Cut Manufacturing and Logistics Workforce by 20% to 30%",
+     "source": "fiscal.ai",
+     "url": "https://www.marketscreener.com/news/p-g-to-cut-up-to-30-of-product-supply-workers-amid-automation-push-ce785ed2df8ff124",
+     "earnings": false,
+     "catalyst": false
+    },
+    {
+     "time": "2026-11-19T11:31:54Z",
+     "headline": "Analysts Update Price Targets for Procter & Gamble",
+     "source": "fiscal.ai",
+     "url": "https://www.moomoo.com/stock/PG-US?chain_id=Name1K9-3FXPhg.1lftekg&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FETSY-US%22%7D",
+     "earnings": false,
+     "catalyst": false
+    }
+   ],
+   "traded": false,
+   "in_play": 0.25
+  },
+  {
+   "symbol": "NEE",
+   "verdict": "ok",
+   "why": [
+    "no premarket trade yet, gap unknown"
+   ],
+   "prior_close": 83.82,
+   "price": 83.82,
+   "gap": null,
+   "ret_5d": -0.017580872011251802,
+   "ret_20d": 0.02344322344322336,
+   "sma20": 84.727,
+   "sma50": 80.93390000000001,
+   "trend": "mixed",
+   "atr_pct": 0.019446432832259598,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:58.082612075Z",
+   "news": [],
+   "traded": false,
+   "in_play": 0.0
+  }
+ ],
+ "in_play": [],
+ "sectors": {
+  "XLK": {
+   "prior_close": 160.72,
+   "price": 160.72,
+   "gap": null,
+   "ret_5d": -0.07488631784953659,
+   "ret_20d": -0.1185213623649427,
+   "sma20": 174.17075,
+   "sma50": 185.1913,
+   "trend": "down",
+   "atr_pct": 0.04009190784327669,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.716028129Z"
+  },
+  "SMH": {
+   "prior_close": 447.42,
+   "price": 444.27,
+   "gap": null,
+   "ret_5d": -0.10858304112209116,
+   "ret_20d": -0.14490482379023006,
+   "sma20": 500.78824999999995,
+   "sma50": 550.8233,
+   "trend": "down",
+   "atr_pct": 0.061061195297483384,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:35:15.380271181Z"
+  },
+  "XLC": {
+   "prior_close": 102.74,
+   "price": 102.74,
+   "gap": null,
+   "ret_5d": -0.04498977505112478,
+   "ret_20d": -0.04365633435725602,
+   "sma20": 104.67549999999999,
+   "sma50": 108.87809999999999,
+   "trend": "down",
+   "atr_pct": 0.022897605606385072,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:00:00.052926052Z"
+  },
+  "XLY": {
+   "prior_close": 115.85,
+   "price": 115.85,
+   "gap": null,
+   "ret_5d": -0.038110262371305215,
+   "ret_20d": 0.007216136324117439,
+   "sma20": 117.8235,
+   "sma50": 114.1641,
+   "trend": "mixed",
+   "atr_pct": 0.025103273937973986,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.738981948Z"
+  },
+  "XLF": {
+   "prior_close": 55.59,
+   "price": 55.59,
+   "gap": null,
+   "ret_5d": -0.044681216703900906,
+   "ret_20d": -0.0188845746558417,
+   "sma20": 57.25,
+   "sma50": 55.921099999999996,
+   "trend": "mixed",
+   "atr_pct": 0.019530748079048154,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T21:00:00.330975672Z"
+  },
+  "XLI": {
+   "prior_close": 161.33,
+   "price": 161.33,
+   "gap": null,
+   "ret_5d": -0.04775115098571581,
+   "ret_20d": -0.03256176541136946,
+   "sma20": 167.22175,
+   "sma50": 168.2448,
+   "trend": "down",
+   "atr_pct": 0.02244069387502102,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.742614447Z"
+  },
+  "XLE": {
+   "prior_close": 60.9,
+   "price": 60.9,
+   "gap": null,
+   "ret_5d": -0.05302441299953353,
+   "ret_20d": -0.09884581237052381,
+   "sma20": 65.063,
+   "sma50": 64.791,
+   "trend": "mixed",
+   "atr_pct": 0.029204785362420847,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.45381158Z"
+  },
+  "XLV": {
+   "prior_close": 177.48,
+   "price": 177.48,
+   "gap": null,
+   "ret_5d": -0.05510301868711076,
+   "ret_20d": -0.021232007941322628,
+   "sma20": 184.47275,
+   "sma50": 176.27360000000002,
+   "trend": "mixed",
+   "atr_pct": 0.021076821533211,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.733857637Z"
+  },
+  "XLP": {
+   "prior_close": 89.9,
+   "price": 89.9,
+   "gap": null,
+   "ret_5d": -0.012847260349181822,
+   "ret_20d": -0.0007780371234855643,
+   "sma20": 90.14975,
+   "sma50": 86.2589,
+   "trend": "mixed",
+   "atr_pct": 0.018353726362625146,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:59.742106219Z"
+  },
+  "XLU": {
+   "prior_close": 43.02,
+   "price": 43.06,
+   "gap": null,
+   "ret_5d": -0.018256503879507058,
+   "ret_20d": 0.0037330844610359293,
+   "sma20": 43.382,
+   "sma50": 41.9376,
+   "trend": "mixed",
+   "atr_pct": 0.014237563923756384,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T21:05:18.77443414Z"
+  }
+ },
+ "macro": {
+  "IWM": {
+   "prior_close": 264.21,
+   "price": 264.21,
+   "gap": null,
+   "ret_5d": -0.051038000143667994,
+   "ret_20d": -0.044949303258688955,
+   "sma20": 277.177,
+   "sma50": 278.9029,
+   "trend": "down",
+   "atr_pct": 0.02225637615100547,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.909515341Z"
+  },
+  "DIA": {
+   "prior_close": 490.75,
+   "price": 490.75,
+   "gap": null,
+   "ret_5d": -0.0606846522667025,
+   "ret_20d": -0.07039078630827222,
+   "sma20": 517.9465,
+   "sma50": 517.4123999999999,
+   "trend": "mixed",
+   "atr_pct": 0.01856342333163523,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.692848611Z"
+  },
+  "TLT": {
+   "prior_close": 80.34,
+   "price": 80.3,
+   "gap": null,
+   "ret_5d": 0.007650821522638962,
+   "ret_20d": -0.017007218891471942,
+   "sma20": 80.98925,
+   "sma50": 80.0617,
+   "trend": "mixed",
+   "atr_pct": 0.008975248052917929,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T21:20:30.001481873Z"
+  },
+  "UUP": {
+   "prior_close": 29.645,
+   "price": 29.645,
+   "gap": null,
+   "ret_5d": 0.00764785859959205,
+   "ret_20d": 0.026133610245759664,
+   "sma20": 29.195,
+   "sma50": 28.9279,
+   "trend": "up",
+   "atr_pct": 0.004144278726839021,
+   "vol_expanding": false,
+   "price_time": "2026-11-19T20:59:17.164408143Z"
+  },
+  "GLD": {
+   "prior_close": 335.15,
+   "price": 327.14,
+   "gap": -0.023899746382216924,
+   "ret_5d": -0.0555696452221941,
+   "ret_20d": -0.0919312886095156,
+   "sma20": 362.6145,
+   "sma50": 376.4069,
+   "trend": "down",
+   "atr_pct": 0.021905969608490863,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:15:10.89948759Z"
+  },
+  "USO": {
+   "prior_close": 138.11,
+   "price": 136.05,
+   "gap": -0.014915646948084893,
+   "ret_5d": -0.05475326808568881,
+   "ret_20d": -0.15004000246168991,
+   "sma20": 151.59449999999998,
+   "sma50": 151.9811,
+   "trend": "down",
+   "atr_pct": 0.04072064710324069,
+   "vol_expanding": true,
+   "price_time": "2026-11-20T13:10:58.212082835Z"
+  },
+  "VIXY": {
+   "prior_close": 22.85,
+   "price": 22.85,
+   "gap": null,
+   "ret_5d": 0.30422374429223753,
+   "ret_20d": 0.2902315076228119,
+   "sma20": 18.6535,
+   "sma50": 17.5546,
+   "trend": "up",
+   "atr_pct": 0.08491716161300404,
+   "vol_expanding": true,
+   "price_time": "2026-11-19T20:59:59.366617472Z"
+  }
+ },
+ "market_news": [
+  {
+   "time": "2026-11-20T13:03:50Z",
+   "headline": "Wells Fargo Adjusts Price Target on Diamondback Energy",
+   "symbols": [
+    "WFC"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:03:50Z",
+   "headline": "Wells Fargo Adjusts Price Target on Intuit",
+   "symbols": [
+    "WFC"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:03:50Z",
+   "headline": "Wells Fargo Adjusts Price Target on Keysight Technologies",
+   "symbols": [
+    "WFC"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:53Z",
+   "headline": "Commerzbank Raises 2026 Net Profit Outlook",
+   "symbols": [
+    "CBK"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:53Z",
+   "headline": "Commerzbank AG (London Branch) Issues Post-Stabilisation Notice",
+   "symbols": [
+    "CBK"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:51Z",
+   "headline": "Allianz Finance II B.V. Post-Stabilisation Notice",
+   "symbols": [
+    "ALV"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:41Z",
+   "headline": "J.P. Morgan Maintains Buy Rating on Garrett Motion",
+   "symbols": [
+    "GTX"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:34Z",
+   "headline": "Truist Securities Lowers Price Target on Ross Stores",
+   "symbols": [
+    "TFC"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:34Z",
+   "headline": "Truist Securities Upgrades Evolent Health to Buy",
+   "symbols": [
+    "TFC"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:33Z",
+   "headline": "Roth MKM Initiates Coverage on STMicroelectronics with Buy Rating",
+   "symbols": [
+    "STM"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:33Z",
+   "headline": "STMicroelectronics Announces Over 100 Million Euro Investment in Rousset Site",
+   "symbols": [
+    "STM"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:32Z",
+   "headline": "Analyst Actions: HSBC and TD Cowen Update Ratings on UnitedHealth Group",
+   "symbols": [
+    "UNH"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:29Z",
+   "headline": "AUMOVIO SE Publishes Regulatory Disclosure Under WpHG",
+   "symbols": [
+    "AMV0"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:29Z",
+   "headline": "Berenberg Upgrades AUTO1 Group to 'Buy' Following Price Correction",
+   "symbols": [
+    "AG1"
+   ]
+  },
+  {
+   "time": "2026-11-20T13:02:28Z",
+   "headline": "RBC Updates Volkswagen Estimates Following Everllence Sale",
+   "symbols": [
+    "VOW3"
+   ]
+  }
+ ],
+ "movers": {
+  "gainers": [
+   {
+    "change": 32.15,
+    "percent_change": 84.27,
+    "price": 70.3,
+    "symbol": "FVNNU"
+   },
+   {
+    "change": 11.12,
+    "percent_change": 24.22,
+    "price": 57.04,
+    "symbol": "UVIX"
+   },
+   {
+    "change": 24.66,
+    "percent_change": 20.58,
+    "price": 144.46,
+    "symbol": "INSM"
+   }
+  ],
+  "losers": [
+   {
+    "change": -14.38,
+    "percent_change": -26.71,
+    "price": 39.45,
+    "symbol": "SNEX"
+   },
+   {
+    "change": -10.94,
+    "percent_change": -24.88,
+    "price": 33.03,
+    "symbol": "LQDT"
+   }
+  ]
+ },
+ "smart_money": []
+}
