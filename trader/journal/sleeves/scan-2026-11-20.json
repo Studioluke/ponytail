@@ -1,0 +1,77 @@
+{
+ "date": "2026-11-20",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 645.04,
+   "sma200": 683.00375,
+   "rsi2": 15.03229594832618,
+   "trigger": 628.6329428571429,
+   "premarket": 636.43,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Apple Developer Academy Showcase in Pohang",
+    "Apple Developing Autonomous AI Agent",
+    "Tesla Receives Regulatory Approval for Assisted Driving in Italy",
+    "Democrats Open Probe Into Nvidia Influence on US Megaspeed Investigation",
+    "Nvidia Eyes Inception Acquisition to Strengthen Nemotron AI Models"
+   ],
+   "events": []
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 715.87,
+   "sma200": 732.69435,
+   "rsi2": 0.0,
+   "trigger": 711.4303857142856,
+   "premarket": 709.85,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Apple Developer Academy Showcase in Pohang",
+    "Apple Developing Autonomous AI Agent",
+    "Democrats Open Probe Into Nvidia Influence on US Megaspeed Investigation",
+    "Nvidia Eyes Inception Acquisition to Strengthen Nemotron AI Models",
+    "Meta Warns of China-Linked Accounts Targeting Taiwan Elections on Threads"
+   ],
+   "events": []
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 447.48,
+   "sma200": 525.0755,
+   "rsi2": 0.0,
+   "trigger": 419.3696142857143,
+   "premarket": 444.27,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Purpose Investments Launches Purpose Micron (MU) Yield Shares ETF",
+    "Daiwa Securities Adjusts Price Target on Applied Materials",
+    "Democrats Open Probe Into Nvidia Influence on US Megaspeed Investigation",
+    "Nvidia Eyes Inception Acquisition to Strengthen Nemotron AI Models",
+    "Qualcomm Insider Executes Share Sale"
+   ],
+   "events": []
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 145.98,
+   "sma200": 203.57715,
+   "rsi2": 0.0,
+   "trigger": 136.6835857142857,
+   "premarket": 142.68,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Democrats Open Probe Into Nvidia Influence on US Megaspeed Investigation",
+    "Nvidia Eyes Inception Acquisition to Strengthen Nemotron AI Models",
+    "NVIDIA to Present at 30th Annual UBS Global Technology and AI Conference",
+    "NVIDIA Receives Analyst Downgrades Following CEO Resignation",
+    "Daiwa Securities Adjusts Price Target on Nvidia to $185 From $245"
+   ],
+   "events": []
+  }
+ ]
+}
