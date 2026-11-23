@@ -1,17 +1,16 @@
 {
- "day": "2026-11-20",
- "week": "2026-W47",
- "day_pnl": 0.9145980000000122,
- "week_pnl": 0.0697080000000021,
- "day_losses": 2,
+ "day": "2026-11-23",
+ "week": "2026-W48",
+ "day_pnl": -0.7002540000000081,
+ "week_pnl": -0.7002540000000081,
+ "day_losses": 3,
  "traded_today": [
-  "sip_orb:NFLX",
-  "sip_orb:DIS",
-  "control:GOOGL",
+  "sip_orb:IBM",
+  "sip_orb:UNH",
   "control:SPY",
-  "control:MSFT",
-  "sip_orb:COP",
-  "control:QQQ"
+  "control:AAPL",
+  "control:QQQ",
+  "control:GOOGL"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -24,88 +23,88 @@
  "entries": 4,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 1,
+  "sip_orb": 2,
   "lasthalf": 1
  },
  "sip_watch": [
   {
-   "symbol": "MS",
-   "hi": 173.35,
-   "lo": 169.745,
-   "atr": 5.9,
-   "rvol": 6.57,
+   "symbol": "QQQ",
+   "hi": 655.96,
+   "lo": 648.2,
+   "atr": 20.7532,
+   "rvol": 5.56,
    "green": false
   },
   {
-   "symbol": "COP",
-   "hi": 135.78,
-   "lo": 134.705,
-   "atr": 4.4132,
-   "rvol": 4.16,
+   "symbol": "UNH",
+   "hi": 330.21,
+   "lo": 321.04,
+   "atr": 15.8582,
+   "rvol": 5.07,
    "green": true
   },
   {
-   "symbol": "DIS",
-   "hi": 121.94,
-   "lo": 120.7,
-   "atr": 3.2418,
-   "rvol": 3.5,
-   "green": true
-  },
-  {
-   "symbol": "C",
-   "hi": 114.18,
-   "lo": 112.22,
-   "atr": 3.5546,
-   "rvol": 3.48,
-   "green": false
-  },
-  {
-   "symbol": "HOOD",
-   "hi": 68.57,
-   "lo": 67.47,
-   "atr": 4.8371,
-   "rvol": 3.39,
-   "green": false
-  },
-  {
-   "symbol": "NFLX",
-   "hi": 58.97,
-   "lo": 58.32,
-   "atr": 1.8904,
-   "rvol": 3.2,
-   "green": true
-  },
-  {
-   "symbol": "GS",
-   "hi": 826.67,
-   "lo": 815.27,
-   "atr": 29.5214,
-   "rvol": 3.2,
-   "green": false
-  },
-  {
-   "symbol": "AMGN",
-   "hi": 443.59,
-   "lo": 440.83,
-   "atr": 10.81,
-   "rvol": 3.14,
+   "symbol": "CRWD",
+   "hi": 224.36,
+   "lo": 215.02,
+   "atr": 14.85,
+   "rvol": 4.94,
    "green": false
   },
   {
    "symbol": "CMG",
-   "hi": 36.85,
-   "lo": 36.61,
-   "atr": 1.1639,
-   "rvol": 3.04,
+   "hi": 35.98,
+   "lo": 35.515,
+   "atr": 1.1664,
+   "rvol": 4.4,
+   "green": false
+  },
+  {
+   "symbol": "GE",
+   "hi": 321.245,
+   "lo": 316.63,
+   "atr": 10.7118,
+   "rvol": 3.95,
+   "green": false
+  },
+  {
+   "symbol": "IBM",
+   "hi": 230.74,
+   "lo": 228.955,
+   "atr": 6.7307,
+   "rvol": 3.49,
    "green": true
   },
   {
-   "symbol": "COST",
-   "hi": 1108.91,
-   "lo": 1103.66,
-   "atr": 20.5182,
-   "rvol": 3.0,
+   "symbol": "GS",
+   "hi": 834.15,
+   "lo": 824.84,
+   "atr": 32.2961,
+   "rvol": 3.46,
+   "green": false
+  },
+  {
+   "symbol": "IWM",
+   "hi": 266.025,
+   "lo": 264.45,
+   "atr": 6.2539,
+   "rvol": 3.08,
+   "green": false
+  },
+  {
+   "symbol": "HON",
+   "hi": 220.27,
+   "lo": 219.42,
+   "atr": 6.4218,
+   "rvol": 2.67,
+   "green": true
+  },
+  {
+   "symbol": "KLAC",
+   "hi": 150.63,
+   "lo": 142.5,
+   "atr": 10.4739,
+   "rvol": 2.5,
    "green": false
   }
  ],
