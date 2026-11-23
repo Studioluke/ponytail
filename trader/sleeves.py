@@ -393,6 +393,10 @@ def cmd_trade(day=None):
         print(f"MARKET CLOSED {day}")
         return
     led = load() or new_ledger(day)
+    if day in led["equity"]:
+        # Half days (e.g. day after Thanksgiving) get an early run; the regular 15:41 run then skips.
+        print(f"ALREADY TRADED {day}")
+        return
     mk = market(br, day)
     before = len(led["trades"])
     step(led, day, mk)

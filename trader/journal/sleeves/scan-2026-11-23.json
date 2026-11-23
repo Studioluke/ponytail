@@ -1,0 +1,135 @@
+{
+ "date": "2026-11-23",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 608.45,
+   "sma200": 683.0608500000001,
+   "rsi2": 0.0,
+   "trigger": 615.0681285714286,
+   "premarket": 649.12,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Microsoft UAE and Space42 Release Report on Geospatial Agentic AI",
+    "NVIDIA Former CEO Jensen Huang Agrees to Senate Testimony",
+    "DXL Adopts Meta's Muse AI Agent for Customer Engagement",
+    "Tesla Announces December Rollout for FSD V15",
+    "Morgan Stanley and Loop Capital Adjust Price Targets for Meta Platforms"
+   ],
+   "events": [
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 689.81,
+   "sma200": 732.7553,
+   "rsi2": 0.0,
+   "trigger": 699.7821,
+   "premarket": 719.67,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Microsoft UAE and Space42 Release Report on Geospatial Agentic AI",
+    "NVIDIA Former CEO Jensen Huang Agrees to Senate Testimony",
+    "DXL Adopts Meta's Muse AI Agent for Customer Engagement",
+    "Morgan Stanley and Loop Capital Adjust Price Targets for Meta Platforms",
+    "Trump Administration Pushes for Reinstatement of Jensen Huang as NVIDIA CEO"
+   ],
+   "events": [
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 400.06,
+   "sma200": 525.17045,
+   "rsi2": 0.0,
+   "trigger": 402.4197571428571,
+   "premarket": 465.16,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Former CEO Jensen Huang Agrees to Senate Testimony",
+    "Rothschild & Co Redburn Adjusts Price Target on Texas Instruments",
+    "Cantor Fitzgerald Upgrades Texas Instruments to Overweight",
+    "Trump Administration Pushes for Reinstatement of Jensen Huang as NVIDIA CEO",
+    "NVIDIA Launches Alpamayo 2 Edge Vision-Language-Action Model"
+   ],
+   "events": [
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 125.53,
+   "sma200": 203.3454,
+   "rsi2": 0.0,
+   "trigger": 127.44414285714288,
+   "premarket": 160.53,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Former CEO Jensen Huang Agrees to Senate Testimony",
+    "Trump Administration Pushes for Reinstatement of Jensen Huang as NVIDIA CEO",
+    "NVIDIA Launches Alpamayo 2 Edge Vision-Language-Action Model"
+   ],
+   "events": [
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  }
+ ]
+}

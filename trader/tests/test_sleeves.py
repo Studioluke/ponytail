@@ -120,3 +120,20 @@ class Step(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TradeTwiceTest(unittest.TestCase):
+    def test_second_run_same_day_skips(self):
+        import io, contextlib
+        from unittest import mock
+        from trader import sleeves as S
+        led = {"equity": {"2026-11-27": {"QLD": 1}}}
+        with mock.patch.object(S, "_broker", return_value=object()), \
+             mock.patch.object(S, "is_open", return_value=True), \
+             mock.patch.object(S, "load", return_value=led), \
+             mock.patch.object(S, "market") as mk:
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                S.cmd_trade("2026-11-27")
+        self.assertIn("ALREADY TRADED", out.getvalue())
+        mk.assert_not_called()
