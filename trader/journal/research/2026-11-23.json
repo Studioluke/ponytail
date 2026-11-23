@@ -898,15 +898,13 @@
   },
   {
    "symbol": "PANW",
-   "verdict": "caution",
+   "verdict": "skip",
    "why": [
-    "no premarket trade yet, gap unknown",
-    "headline catalyst overnight",
-    "below its 20- and 50-day averages; long breakouts fight the trend"
+    "premarket gap +1.31% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 343.51,
-   "price": 334.99,
-   "gap": null,
+   "price": 348,
+   "gap": 0.013070944077319568,
    "ret_5d": 0.0665031512931169,
    "ret_20d": -0.09747510575129403,
    "sma20": 345.87874999999997,
@@ -914,7 +912,7 @@
    "trend": "down",
    "atr_pct": 0.05916234503466314,
    "vol_expanding": false,
-   "price_time": "2026-11-20T21:38:42.17476693Z",
+   "price_time": "2026-11-23T13:26:57.564352986Z",
    "news": [
     {
      "time": "2026-11-23T11:31:46Z",
@@ -926,7 +924,8 @@
     }
    ],
    "traded": false,
-   "in_play": 0.25
+   "in_play": 0.47,
+   "skip_tag": "gap"
   },
   {
    "symbol": "NOW",
@@ -2928,8 +2927,8 @@
   },
   "USO": {
    "prior_close": 139.65,
-   "price": 135.98,
-   "gap": -0.026279985678482,
+   "price": 135.93,
+   "gap": -0.026638023630504826,
    "ret_5d": -0.0407995054605399,
    "ret_20d": -0.17634915953995878,
    "sma20": 150.0995,
@@ -2937,7 +2936,7 @@
    "trend": "down",
    "atr_pct": 0.03606209401053654,
    "vol_expanding": true,
-   "price_time": "2026-11-23T13:23:43.318154953Z"
+   "price_time": "2026-11-23T13:26:29.061902738Z"
   },
   "VIXY": {
    "prior_close": 26.15,
