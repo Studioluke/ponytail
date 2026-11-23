@@ -1,20 +1,23 @@
-# ETF sleeves (2026-11-20)
+# ETF sleeves (2026-11-23)
 
 Paper only, simulated fills on live Alpaca quotes (options at the ask/bid). Four $200 sleeves. Goal +5-8% a day is a stretch target; it is tracked, not expected.
 
 | Sleeve | Equity | Today | Since start | Goal at 5%/day | Goal at 8%/day | Holding |
 |---|---|---|---|---|---|---|
-| QLD | $81.77 | -5.8% | -59.1% | $530.66 | $932.19 | 1.18 sh @ 63.70 (stop 56.93) |
-| SSO | $206.74 | -0.7% | +3.4% | $530.66 | $932.19 | cash |
-| USD | $174.01 | -6.1% | -13.0% | $530.66 | $932.19 | cash |
-| NVDL | $128.05 | -13.4% | -36.0% | $530.66 | $932.19 | 5.16 sh @ 14.54 (stop 10.11) |
-| **All** | **$590.57** | -6.0% | -26.2% | $2122.64 | $3728.77 | |
+| QLD | $91.88 | +12.4% | -54.1% | $557.19 | $1006.77 | cash |
+| SSO | $206.74 | +0.0% | +3.4% | $557.19 | $1006.77 | cash |
+| USD | $173.97 | -0.0% | -13.0% | $557.19 | $1006.77 | 1.57 sh @ 47.84 (stop 36.99) |
+| NVDL | $159.58 | +24.6% | -20.2% | $557.19 | $1006.77 | cash |
+| **All** | **$632.17** | +7.0% | -21.0% | $2228.77 | $4027.07 | |
 
-Trading days: 20. Closed trades: 18, 6 won, P&L $-189.58.
+Trading days: 21. Closed trades: 20, 8 won, P&L $-167.78.
 
 ## Trades
 | Date | Sleeve | Action | What | Qty | Price | P&L | Why |
 |---|---|---|---|---|---|---|---|
+| 2026-11-23 | USD | buy | USD | 1.5676 | 47.84 |  | learning trade: lowest RSI(2) 56 on SMH |
+| 2026-11-23 | NVDL | sell | NVDL | 5.1592 | 16.81 | +11.73 | target: above prior day's high |
+| 2026-11-23 | QLD | sell | QLD | 1.1774 | 72.25 | +10.07 | target: above prior day's high |
 | 2026-11-20 | QLD | buy | QLD | 1.1774 | 63.70 |  | learning trade: lowest RSI(2) 0 on QQQ |
 | 2026-11-20 | USD | sell | USD | 1.4984 | 39.47 | -15.86 | stop |
 | 2026-11-20 | SSO | sell | SSO | 1.1926 | 59.21 | -4.38 | stop |
@@ -52,4 +55,3 @@ Trading days: 20. Closed trades: 18, 6 won, P&L $-189.58.
 | 2026-10-28 | NVDL | buy | NVDL | 2.3411 | 32.04 |  | learning trade: lowest RSI(2) 39 on NVDA |
 | 2026-10-27 | QLD | open spread | 99C 2026-11-20 | 1 | 0.98 |  | learning trade: lowest RSI(2) 100 on QQQ |
 | 2026-10-27 | SSO | sell | SSO | 1.0783 | 70.49 | +1.01 | target: above prior day's high |
-| 2026-10-26 | SSO | buy | SSO | 1.0783 | 69.55 |  | learning trade: lowest RSI(2) 58 on SPY |
