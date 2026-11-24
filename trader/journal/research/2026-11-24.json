@@ -361,11 +361,11 @@
    "symbol": "TSLA",
    "verdict": "skip",
    "why": [
-    "premarket gap -1.07% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -1.09% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 385.19,
-   "price": 381.06,
-   "gap": -0.010721981359848365,
+   "price": 381,
+   "gap": -0.01087774864352653,
    "ret_5d": 0.013924717030797673,
    "ret_20d": -0.016594756057085935,
    "sma20": 384.485,
@@ -373,7 +373,7 @@
    "trend": "up",
    "atr_pct": 0.0569088353428549,
    "vol_expanding": true,
-   "price_time": "2026-11-24T13:23:12.563194033Z",
+   "price_time": "2026-11-24T13:23:42.515004231Z",
    "news": [
     {
      "time": "2026-11-24T12:31:46Z",
@@ -531,11 +531,11 @@
    "symbol": "AVGO",
    "verdict": "skip",
    "why": [
-    "premarket gap -4.43% is past the 0.75% gap rule, so the bot will skip it"
+    "premarket gap -3.89% is past the 0.75% gap rule, so the bot will skip it"
    ],
    "prior_close": 313.44,
-   "price": 299.57,
-   "gap": -0.04425089331291476,
+   "price": 301.25,
+   "gap": -0.038891015824400244,
    "ret_5d": -0.06085393258426963,
    "ret_20d": -0.04809050186014718,
    "sma20": 331.62175,
@@ -543,10 +543,10 @@
    "trend": "down",
    "atr_pct": 0.07483318748632686,
    "vol_expanding": true,
-   "price_time": "2026-11-24T13:15:43.457566283Z",
+   "price_time": "2026-11-24T13:23:25.041862746Z",
    "news": [],
    "traded": true,
-   "in_play": 0.84,
+   "in_play": 0.77,
    "skip_tag": "gap"
   },
   {
