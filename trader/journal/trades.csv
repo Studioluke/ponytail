@@ -325,3 +325,16 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-23T13:19:02.230833-05:00,GOOGL,skip,,284.67,,,,"[control] ORB break of 284.54 (range 275.38-284.54), VWAP 281.66, stop 4.71 below (ATR 11.37); skipped, gap +7.02% vs prior close 265.62 exceeds 0.75%"
 2026-11-23T15:30:02.246011-05:00,SPY,buy,0.082,724.41,720.86,,,[lasthalf] last half hour: SPY prior close to 10:00 up; risk $0.29
 2026-11-23T15:57:07.184043-05:00,SPY,exit_eod,0.082,722.48,720.86,,-0.16,"[lasthalf] entry 724.41, R = -0.54"
+2026-11-24T09:35:02.711538-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: GILD 4.75x green, UPS 2.73x red, VRTX 2.56x green, DE 2.37x red, LULU 2.13x green, MRK 1.89x red, DELL 1.62x red, MRNA 1.55x green, ANET 1.54x red, COP 1.52x green"
+2026-11-24T09:36:02.621472-05:00,GILD,buy,0.344,173.80,172.75,,,"[sip_orb] 5-min ORB break of 173.20 (range 171.14-173.20), RVOL 4.8, ATR 4.50; risk $0.36"
+2026-11-24T09:36:02.621472-05:00,VRTX,buy,0.108,552.28,549.43,,,"[sip_orb] 5-min ORB break of 550.85 (range 541.60-550.85), RVOL 2.6, ATR 14.11; risk $0.31"
+2026-11-24T09:36:02.621472-05:00,MRNA,buy,0.273,219.43,216.8,,,"[sip_orb] 5-min ORB break of 218.66 (range 212.56-218.66), RVOL 1.6, ATR 18.62; risk $0.72"
+2026-11-24T09:46:02.885442-05:00,SPY,skip,,718.79,,,,"[control] ORB break of 717.78 (range 712.16-717.78), VWAP 714.80, stop 4.45 below (ATR 17.81); skipped, gap -1.00% vs prior close 722.56 exceeds 0.75%"
+2026-11-24T09:46:02.885442-05:00,QQQ,skip,,641.57,,,,"[control] ORB break of 641.16 (range 635.91-641.16), VWAP 638.57, stop 5.91 below (ATR 23.63); skipped, gap -1.67% vs prior close 651.18 exceeds 0.75%"
+2026-11-24T11:30:02.879563-05:00,SH,buy,0.864,34.66,34.28,,,"[noise] noise area 11:30: fallback: no band break by 11:30, SPY below its open 715.30; risk $0.33"
+2026-11-24T12:31:02.416510-05:00,SH,exit_trail,0.864,34.44,34.28,,-0.19,"[noise] entry 34.66, R = -0.57"
+2026-11-24T15:30:02.858332-05:00,SH,buy,1.73,34.59,34.41,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.31
+2026-11-24T15:57:07.733263-05:00,GILD,exit_eod,0.344,178.35,172.75,,1.57,"[sip_orb] entry 173.80, R = +4.35"
+2026-11-24T15:57:07.733263-05:00,VRTX,exit_eod,0.108,563.47,549.43,,1.21,"[sip_orb] entry 552.28, R = +3.93"
+2026-11-24T15:57:07.733263-05:00,MRNA,exit_eod,0.273,227.77,216.8,,2.28,"[sip_orb] entry 219.43, R = +3.16"
+2026-11-24T15:57:07.733263-05:00,SH,exit_eod,1.73,34.46,34.41,,-0.22,"[lasthalf] entry 34.59, R = -0.72"
