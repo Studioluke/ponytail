@@ -1,0 +1,163 @@
+{
+ "date": "2026-11-24",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 651.03,
+   "sma200": 683.26775,
+   "rsi2": 53.78299861058483,
+   "trigger": 611.0274142857143,
+   "premarket": 635.76,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Meta Abandons 2030 Net-Zero Emissions Goal",
+    "Apple Announces Fifth Season of 'Ted Lasso'",
+    "UBS Adjusts Price Target on Tesla to $430",
+    "AWS CEO Matt Garman Advocates for Architectural Containment in AI Security",
+    "Analysts Adjust Price Targets for Meta Platforms"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 722.29,
+   "sma200": 732.9136500000001,
+   "rsi2": 55.48343013324218,
+   "trigger": 695.5242428571428,
+   "premarket": 713.21,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "Meta Abandons 2030 Net-Zero Emissions Goal",
+    "Apple Announces Fifth Season of 'Ted Lasso'",
+    "AWS CEO Matt Garman Advocates for Architectural Containment in AI Security",
+    "Analysts Adjust Price Targets for Meta Platforms",
+    "Meta Launches Muse AI in the UK"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 460.18,
+   "sma200": 525.4630999999999,
+   "rsi2": 55.90477961688673,
+   "trigger": 398.5296142857143,
+   "premarket": 435.08,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "BNP Paribas Adjusts Price Target for AMD",
+    "Bernstein Initiates Coverage on AMD with Buy Rating",
+    "BNP Paribas Adjusts Price Target on Intel to $60 From $70",
+    "BNP Paribas Downgrades Micron Technology to Neutral",
+    "TrendForce Reports Growing Demand for AMD Helios AI Server Systems"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 165.05,
+   "sma200": 203.24360000000001,
+   "rsi2": 65.89961647490414,
+   "trigger": 125.4564285714286,
+   "premarket": 157.43,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Reinstates Jensen Huang as President and CEO",
+    "NVIDIA Former CEO Jensen Huang Agrees to Senate Testimony",
+    "Trump Administration Pushes for Reinstatement of Jensen Huang as NVIDIA CEO"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  }
+ ]
+}
