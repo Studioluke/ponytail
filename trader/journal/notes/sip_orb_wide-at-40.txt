@@ -1,0 +1,4 @@
+wide shadows 41, paired with a sip_orb trade on the same day+symbol: 41
+paired avg R: wide +0.56R, tight +0.62R, diff -0.06R
+wide since 2026-11-12
+wide better on 17 of 41

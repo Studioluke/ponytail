@@ -1,17 +1,19 @@
 {
- "day": "2026-11-24",
+ "day": "2026-11-25",
  "week": "2026-W48",
- "day_pnl": 4.639185999999999,
- "week_pnl": 3.9389319999999906,
- "day_losses": 2,
+ "day_pnl": -0.4129119999999986,
+ "week_pnl": 3.526019999999992,
+ "day_losses": 5,
  "traded_today": [
-  "sip_orb:GILD",
-  "sip_orb:VRTX",
-  "sip_orb:MRNA",
-  "sip_orb:COP",
-  "sip_orb:LULU",
-  "control:SPY",
+  "sip_orb:DE",
+  "sip_orb:C",
+  "sip_orb:BAC",
+  "sip_orb:CVX",
+  "sip_orb:LMT",
+  "sip_orb:DELL",
+  "control:GOOGL",
   "control:QQQ",
+  "control:SPY",
   "control:MSFT",
   "control:AAPL"
  ],
@@ -23,92 +25,93 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 5,
+ "entries": 6,
  "learning_tried": false,
  "strat_losses": {
+  "sip_orb": 3,
   "noise": 1,
   "lasthalf": 1
  },
  "sip_watch": [
   {
-   "symbol": "GILD",
-   "hi": 173.2,
-   "lo": 171.14,
-   "atr": 4.5018,
-   "rvol": 4.75,
-   "green": true
-  },
-  {
-   "symbol": "UPS",
-   "hi": 108.815,
-   "lo": 108,
-   "atr": 3.0193,
-   "rvol": 2.73,
-   "green": false
-  },
-  {
-   "symbol": "VRTX",
-   "hi": 550.845,
-   "lo": 541.595,
-   "atr": 14.11,
-   "rvol": 2.56,
-   "green": true
-  },
-  {
    "symbol": "DE",
-   "hi": 632.445,
-   "lo": 628.53,
-   "atr": 19.3207,
-   "rvol": 2.37,
-   "green": false
-  },
-  {
-   "symbol": "LULU",
-   "hi": 106.785,
-   "lo": 104.28,
-   "atr": 4.6932,
-   "rvol": 2.13,
+   "hi": 610.78,
+   "lo": 582.79,
+   "atr": 19.8064,
+   "rvol": 5.21,
    "green": true
   },
   {
-   "symbol": "MRK",
-   "hi": 136.16,
-   "lo": 134.73,
-   "atr": 4.1271,
-   "rvol": 1.89,
+   "symbol": "MSTR",
+   "hi": 74.9,
+   "lo": 72.55,
+   "atr": 8.54,
+   "rvol": 4.98,
+   "green": false
+  },
+  {
+   "symbol": "CVX",
+   "hi": 209.71,
+   "lo": 207.26,
+   "atr": 4.7461,
+   "rvol": 4.54,
+   "green": true
+  },
+  {
+   "symbol": "BAC",
+   "hi": 47.45,
+   "lo": 46.96,
+   "atr": 1.2164,
+   "rvol": 3.37,
+   "green": true
+  },
+  {
+   "symbol": "TGT",
+   "hi": 175.5,
+   "lo": 174.15,
+   "atr": 6.0682,
+   "rvol": 3.11,
    "green": false
   },
   {
    "symbol": "DELL",
-   "hi": 317.2,
-   "lo": 301.675,
-   "atr": 39.4657,
-   "rvol": 1.62,
-   "green": false
-  },
-  {
-   "symbol": "MRNA",
-   "hi": 218.66,
-   "lo": 212.56,
-   "atr": 18.6179,
-   "rvol": 1.55,
+   "hi": 277.57,
+   "lo": 265.27,
+   "atr": 39.6757,
+   "rvol": 2.93,
    "green": true
   },
   {
-   "symbol": "ANET",
-   "hi": 174.66,
-   "lo": 166.92,
-   "atr": 15.2539,
-   "rvol": 1.54,
+   "symbol": "LMT",
+   "hi": 585.88,
+   "lo": 583.08,
+   "atr": 16.1914,
+   "rvol": 2.65,
+   "green": true
+  },
+  {
+   "symbol": "COIN",
+   "hi": 98.56,
+   "lo": 97.06,
+   "atr": 8.1364,
+   "rvol": 2.54,
    "green": false
   },
   {
-   "symbol": "COP",
-   "hi": 133.34,
-   "lo": 132.75,
-   "atr": 4.1771,
-   "rvol": 1.52,
+   "symbol": "C",
+   "hi": 110.81,
+   "lo": 110.06,
+   "atr": 3.7964,
+   "rvol": 2.05,
    "green": true
+  },
+  {
+   "symbol": "SHOP",
+   "hi": 126.62,
+   "lo": 125.21,
+   "atr": 8.2371,
+   "rvol": 1.93,
+   "green": false
   }
  ],
  "flags": {
