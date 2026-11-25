@@ -1,0 +1,161 @@
+{
+ "date": "2026-11-25",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 638.1,
+   "sma200": 683.3866499999999,
+   "rsi2": 76.70689965771936,
+   "trigger": 603.9764142857142,
+   "premarket": 616.98,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA CEO Jensen Huang Reportedly Apologizes to Staff and Enters Therapy",
+    "European Union Postpones Approval Discussion for Tesla's Self-Driving Technology",
+    "Amazon to Launch Auto Marketplace in the UK",
+    "AWS Representatives Participate in AI Infrastructure Roundtable in South Korea",
+    "Apple Participates in Korea-US AI Infrastructure Roundtable"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 718.78,
+   "sma200": 733.0378,
+   "rsi2": 90.24729091414285,
+   "trigger": 692.6616714285715,
+   "premarket": 703.61,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA CEO Jensen Huang Reportedly Apologizes to Staff and Enters Therapy",
+    "Amazon to Launch Auto Marketplace in the UK",
+    "AWS Representatives Participate in AI Infrastructure Roundtable in South Korea",
+    "Apple Participates in Korea-US AI Infrastructure Roundtable",
+    "Meta Releases 2026 Sustainability Report"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 426.75,
+   "sma200": 525.5636,
+   "rsi2": 64.26509887760555,
+   "trigger": 384.75132857142853,
+   "premarket": 404.54,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA CEO Jensen Huang Reportedly Apologizes to Staff and Enters Therapy",
+    "Qualcomm Participates in Korea-US AI Infrastructure Roundtable",
+    "Qualcomm Announces Executive Equity Incentive Awards",
+    "Micron Discloses Increased Executive Security Expenses",
+    "Qualcomm Highlights Long-Term Commitment to Innovation and Ecosystem Development"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 155.38,
+   "sma200": 203.07029999999997,
+   "rsi2": 80.34153283187638,
+   "trigger": 121.59157142857143,
+   "premarket": 145.26,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA CEO Jensen Huang Reportedly Apologizes to Staff and Enters Therapy"
+   ],
+   "events": [
+    {
+     "date": "2026-11-25",
+     "symbol": "ALL",
+     "event": "PCE inflation",
+     "timing": "08:30",
+     "source": "CNBC/rallies.ai 2026-11-24 premarket: traders watching Wednesday PCE (time unconfirmed)"
+    },
+    {
+     "date": "2026-11-26",
+     "symbol": "ALL",
+     "event": "Thanksgiving market closed",
+     "timing": "all day",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    }
+   ]
+  }
+ ]
+}
