@@ -67,3 +67,11 @@ Luke: mistakes are fine on paper; trade through risk, note it, and learn. With `
 - **Correlation risk:** three long breakouts can lose together on a weak open. The worst sip_orb day so far is 11-17, at −5.70R over 5 trades. With 3 live slots, the worst case is about 3 x $1.50 = $4.50, inside the −2% ($6) day limit, and the per-strategy 3-loss halt still applies.
 - **Scorecard:** now shows sip_orb's live-only stats (19 trades, PF 2.08, +0.26R), its worst day, and its count since promotion.
 - **Separate question:** sip_orb_mkt (filtering sip_orb by SPY direction) is decided when it has 40 forward trades.
+
+## 2026-11-25 weekly review (agreed with the strategy research thread; live from 11-27/11-30)
+- **lasthalf goes shadow only.** It had 19 trades, PF 0.19, −0.27R. SLOTS now: sip_orb 3, noise 1, lasthalf 0, control 0. The 5th slot stays empty instead of giving sip_orb a 4th, because concentration is the main risk (worst sip_orb day −5.7R over 5 trades). If lasthalf is still below 0R at 40 trades, it retires.
+- **lasthalf_vwap (shadow):** the same signal, but long only when SPY is at or above its VWAP at 15:30, and short only below it. The in-sample backfill (notes/lasthalf-vwap-backfill.txt) had 9 trades that passed, at −0.18R, and 10 it blocked, at −0.35R. Only forward trades count toward 40.
+- **sip_orb_gapdn (shadow):** skips sip_orb longs when SPY gaps up while its close is below the close 5 sessions ago (from 11-19 and 11-23). It is capped at 2 sip_orb filter variants at once (mkt and gapdn).
+- **sip_orb_wide at 40 trades:** compare it with sip_orb on the same signals and dates. Swap only if it is better by more than +0.1R; otherwise keep the tight stop.
+- **Risk review:** adds the same live gate computed from 11-05 onward. As of 11-24 it shows 55 trades, PF 1.82, +0.11R and 1.17% drawdown, but 1 breach (NKE 11-17). Even a pass there only means asking Luke. The research thread's advice is to wait for about 60 live sip_orb trades.
+- **No capital or risk-cap changes.** Next review: Wed 12-02.

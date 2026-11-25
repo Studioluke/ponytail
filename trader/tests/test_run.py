@@ -354,6 +354,10 @@ class Noise(Base):
         self.assertEqual(self.book.open["SPY"]["strategy"], "control")
 
     def test_lasthalf_buys_spy_and_shadows_iwm(self):
+        from unittest import mock
+        p = mock.patch.dict(strategies.SLOTS, {"lasthalf": 1})  # live mechanics, if its slot returns
+        p.start()
+        self.addCleanup(p.stop)
         prices = [500] * 29 + [501.0] + [500.5] * 330
         broker = self.broker(prices, prior=500.0)
         self.book.flags["noise_done"] = True
@@ -362,7 +366,28 @@ class Noise(Base):
         t = self.book.open["SPY"]
         self.assertEqual(t["strategy"], "lasthalf")
         self.assertAlmostEqual(t["stop"], round(500.5 * 0.995, 2))
-        self.assertEqual([(r["strategy"], r["symbol"]) for r in self.shadows()], [("lasthalf", "IWM")])
+        self.assertEqual(sorted((r["strategy"], r["symbol"]) for r in self.shadows()),
+                         [("lasthalf", "IWM"), ("lasthalf_vwap", "SPY")])
+
+    def test_lasthalf_is_shadow_only_and_vwap_variant_needs_spy_above_vwap(self):
+        self.assertEqual(strategies.SLOTS["lasthalf"], 0)
+        prices = [500] * 29 + [501.0] + [499.0] * 330  # up at 10:00, but below VWAP at 15:30
+        broker = self.broker(prices, prior=500.0)
+        self.book.flags["noise_done"] = True
+        run.step(broker, self.cfg, self.book, self.at(15, 30, 5))
+        self.assertEqual(self.buys(broker), [])
+        sh = sorted((r["strategy"], r["symbol"]) for r in self.shadows())
+        self.assertEqual(sh, [("lasthalf", "IWM"), ("lasthalf", "SPY")])
+
+
+class GapDown(unittest.TestCase):
+    def test_gap_into_downtrend(self):
+        daily = [{"c": c} for c in [110, 108, 106, 104, 102, 100]]
+        self.assertTrue(strategies.gap_into_downtrend([{"o": 101}], daily))
+        self.assertFalse(strategies.gap_into_downtrend([{"o": 99}], daily))
+        up = [{"c": c} for c in [90, 92, 94, 96, 98, 100]]
+        self.assertFalse(strategies.gap_into_downtrend([{"o": 101}], up))
+        self.assertFalse(strategies.gap_into_downtrend([{"o": 101}], daily[:3]))
 
 
 class Exits(unittest.TestCase):
@@ -524,7 +549,7 @@ class ControlShadowOnly(Base):
     def test_control_signal_is_a_shadow_while_sip_orb_holds_its_slot(self):
         self.assertEqual(strategies.SLOTS["control"], 0)
         self.assertEqual(strategies.SLOTS["sip_orb"], 3)
-        self.assertEqual(sum(strategies.SLOTS.values()), 5)
+        self.assertEqual(sum(strategies.SLOTS.values()), 4)  # 11-25: lasthalf shadow only, 5th slot empty
         broker = FakeBroker({"AAA": bars([100] * 20 + [100.4]), "BBB": bars([100] * 21)})
         run.step(broker, self.cfg, self.book, self.at(9, 51))
         self.assertEqual(self.buys(broker), [])

@@ -476,6 +476,16 @@ def step(broker, cfg, book, now):
                 shadow(cfg, at, dataclasses.replace(sig, strategy="sip_orb_mkt"), q,
                        "sip_orb_mkt variant (shadow only): SPY at/above its open")
 
+    def gapdn_shadow(sig, at):
+        """11-25 review: sip_orb_gapdn takes the same signal unless SPY gapped up
+        into a falling 5-day trend."""
+        if not strategies.gap_into_downtrend(spy_bars, ctx["prior"].get("SPY") or []):
+            q = size(cfg.capital, strategies.RISK_FRAC["sip_orb"], sig.entry, sig.stop,
+                     cfg.capital * cfg.max_position_frac, cfg.fractional)
+            if q:
+                shadow(cfg, at, dataclasses.replace(sig, strategy="sip_orb_gapdn"), q,
+                       "sip_orb_gapdn variant (shadow only): no gap-up into a 5-day downtrend")
+
     # sip_orb: stocks in play, 5-minute ORB, 9:35-10:30.
     if book.sip_watch is None and t >= strategies.SIP_SCAN_AT:
         if t > strategies.SIP_LAST_ENTRY:
@@ -499,6 +509,7 @@ def step(broker, cfg, book, now):
                 book.traded_today.append(k)
                 wide_shadow(c, sig, now)
                 mkt_shadow(sig, now)
+                gapdn_shadow(sig, now)
                 enter(sig, research_view=sip_research)
                 continue
             missed, at = strategies.sip_missed(c, bars[c["symbol"]])
@@ -511,6 +522,7 @@ def step(broker, cfg, book, now):
                 shadow(cfg, at, missed, q, "break came while the scan ran or price ran past the entry zone")
                 wide_shadow(c, missed, at)
                 mkt_shadow(missed, at)
+                gapdn_shadow(missed, at)
 
     # control: the old 15-min ORB on the core five, strict gap and research rules.
     for sym in cfg.core_symbols:
@@ -572,6 +584,12 @@ def step(broker, cfg, book, now):
                                       f"last half hour: {r}", strategy="lasthalf")
                 if i == 0:
                     enter(sig, research_view=spy_research)
+                    if strategies.vwap_agrees(spy_bars, d):
+                        q = size(cfg.capital, strategies.RISK_FRAC["lasthalf"], px, sig.stop,
+                                 cfg.capital * cfg.max_position_frac, cfg.fractional)
+                        if q:
+                            shadow(cfg, now, dataclasses.replace(sig, strategy="lasthalf_vwap"), q,
+                                   "lasthalf_vwap variant (shadow only): SPY on the right side of VWAP")
                 else:  # one slot: IWM is tracked as a shadow trade
                     q = size(cfg.capital, strategies.RISK_FRAC["lasthalf"], px, sig.stop,
                              cfg.capital * cfg.max_position_frac, cfg.fractional)
