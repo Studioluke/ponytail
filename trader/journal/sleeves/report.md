@@ -1,20 +1,22 @@
-# ETF sleeves (2026-11-24)
+# ETF sleeves (2026-11-25)
 
 Paper only, simulated fills on live Alpaca quotes (options at the ask/bid). Four $200 sleeves. Goal +5-8% a day is a stretch target; it is tracked, not expected.
 
 | Sleeve | Equity | Today | Since start | Goal at 5%/day | Goal at 8%/day | Holding |
 |---|---|---|---|---|---|---|
-| QLD | $91.84 | -0.0% | -54.1% | $585.05 | $1087.31 | 1.09 sh @ 68.58 (stop 60.52) |
-| SSO | $206.74 | +0.0% | +3.4% | $585.05 | $1087.31 | cash |
-| USD | $163.08 | -6.3% | -18.5% | $585.05 | $1087.31 | 1.57 sh @ 47.84 (stop 36.99) |
-| NVDL | $159.58 | +0.0% | -20.2% | $585.05 | $1087.31 | cash |
-| **All** | **$621.24** | -1.7% | -22.3% | $2340.21 | $4349.23 | |
+| QLD | $90.50 | -1.5% | -54.8% | $614.30 | $1174.29 | 1.09 sh @ 68.58 (stop 60.52) |
+| SSO | $206.70 | -0.0% | +3.3% | $614.30 | $1174.29 | 1.26 sh @ 59.70 (stop 55.15) |
+| USD | $155.43 | -4.7% | -22.3% | $614.30 | $1174.29 | cash |
+| NVDL | $159.58 | +0.0% | -20.2% | $614.30 | $1174.29 | cash |
+| **All** | **$612.21** | -1.5% | -23.5% | $2457.22 | $4697.17 | |
 
-Trading days: 22. Closed trades: 20, 8 won, P&L $-167.78.
+Trading days: 23. Closed trades: 21, 8 won, P&L $-186.36.
 
 ## Trades
 | Date | Sleeve | Action | What | Qty | Price | P&L | Why |
 |---|---|---|---|---|---|---|---|
+| 2026-11-25 | SSO | buy | SSO | 1.2563 | 59.70 |  | learning trade: lowest RSI(2) 0 on SPY |
+| 2026-11-25 | USD | sell | USD | 1.5676 | 35.99 | -18.58 | stop |
 | 2026-11-24 | QLD | buy | QLD | 1.0935 | 68.58 |  | learning trade: lowest RSI(2) 74 on QQQ |
 | 2026-11-23 | USD | buy | USD | 1.5676 | 47.84 |  | learning trade: lowest RSI(2) 56 on SMH |
 | 2026-11-23 | NVDL | sell | NVDL | 5.1592 | 16.81 | +11.73 | target: above prior day's high |
@@ -53,5 +55,3 @@ Trading days: 22. Closed trades: 20, 8 won, P&L $-167.78.
 | 2026-10-30 | QLD | close spread | 98C 2026-11-20 | 1 | 0.08 | -50.00 | stop -50% |
 | 2026-10-29 | QLD | open spread | 98C 2026-11-20 | 1 | 0.58 |  | learning trade: lowest RSI(2) 27 on QQQ |
 | 2026-10-29 | QLD | close spread | 99C 2026-11-20 | 1 | 0.33 | -65.00 | stop -50% |
-| 2026-10-28 | NVDL | buy | NVDL | 2.3411 | 32.04 |  | learning trade: lowest RSI(2) 39 on NVDA |
-| 2026-10-27 | QLD | open spread | 99C 2026-11-20 | 1 | 0.98 |  | learning trade: lowest RSI(2) 100 on QQQ |
