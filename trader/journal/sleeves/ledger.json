@@ -13,19 +13,19 @@
    "spread": null
   },
   "SSO": {
-   "cash": 206.73610277042874,
-   "shares": null,
+   "cash": 131.73610277042874,
+   "shares": {
+    "qty": 1.2562848791793144,
+    "entry": 59.699835,
+    "date": "2026-11-25",
+    "stop": 55.15,
+    "kind": "learning"
+   },
    "spread": null
   },
   "USD": {
-   "cash": 99.01075235065409,
-   "shares": {
-    "qty": 1.5675976315480904,
-    "entry": 47.84391,
-    "date": "2026-11-23",
-    "stop": 36.99,
-    "kind": "learning"
-   },
+   "cash": 155.4317184673448,
+   "shares": null,
    "spread": null
   },
   "NVDL": {
@@ -496,6 +496,28 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 74 on QQQ",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-25",
+   "sleeve": "USD",
+   "action": "sell",
+   "what": "USD",
+   "qty": 1.5676,
+   "price": 35.992,
+   "pnl": -18.58,
+   "why": "stop",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-25",
+   "sleeve": "SSO",
+   "action": "buy",
+   "what": "SSO",
+   "qty": 1.2563,
+   "price": 59.6998,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 0 on SPY",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -629,6 +651,12 @@
    "QLD": 91.84,
    "SSO": 206.74,
    "USD": 163.08,
+   "NVDL": 159.58
+  },
+  "2026-11-25": {
+   "QLD": 90.5,
+   "SSO": 206.7,
+   "USD": 155.43,
    "NVDL": 159.58
   }
  },
