@@ -49,7 +49,9 @@ Learning trades are the forced 11:00 ET trade at half risk on days with no entry
 | control | 6 | 8 | 21% | 0.19 | -0.67R | $-1.77 | testing (14/40) |
 | sip_orb_wide | 0 | 41 | 46% | 2.22 | +0.56R | $0.00 | promote (more slots) |
 | sip_orb_mkt | 0 | 2 | 0% | 0.00 | -1.00R | $0.00 | testing (2/40) |
+| sip_orb_gapdn | 0 | 0 | | | | | no trades yet |
 | noise_band | 0 | 2 | 50% | 21.76 | +1.16R | $0.00 | testing (2/40) |
+| lasthalf_vwap | 0 | 0 | | | | | no trades yet |
 
 **sip_orb live only:** 31 trades, win rate 32%, PF 2.20, avg +0.46R, $9.17.
 **sip_orb worst day (live+shadow):** 2026-11-17, -5.70R over 5 trades.
@@ -70,6 +72,8 @@ Shadow trades are signals that got no slot, replayed on the day's bars. Promote 
 | Positive average R | yes | +0.09R |
 | Max drawdown under 6% of capital | yes | 3.48% |
 | No risk rule breaches | no | 3 |
+
+**Same gate, 2026-11-05 onward:** At least 30 closed paper trades yes (61); Profit factor at least 1.2 yes (1.66); Positive average R yes (+0.12R); Max drawdown under 6% of capital yes (1.17%); No risk rule breaches no (1). Does not pass.
 
 **Verdict:** stay on paper
 
