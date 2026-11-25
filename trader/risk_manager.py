@@ -362,6 +362,17 @@ def review(cfg, day, book=None, account=None):
     checks, ready = gate(s, len(br))
     lines += ["### Live-money gate", "| Check | Pass | Value |", "|---|---|---|"]
     lines += [f"| {name} | {'yes' if ok else 'no'} | {val} |" for name, ok, val in checks]
+    # 11-25 review: the same gate on the current system only (since the
+    # experiment began), so October's breaches don't hide today's numbers.
+    # Passing it still only means asking Luke.
+    from . import strategies
+    cur = [t for t in all_trades if t["day"] >= strategies.EXPERIMENT_START]
+    if cur:
+        cur_br = [b for b in br if b[:10] >= strategies.EXPERIMENT_START]
+        cchecks, cready = gate(stats(cur, cfg.capital), len(cur_br))
+        lines += ["", f"**Same gate, {strategies.EXPERIMENT_START} onward:** "
+                  + "; ".join(f"{name} {'yes' if ok else 'no'} ({val})" for name, ok, val in cchecks)
+                  + f". {'Passes: ask Luke, no change without him' if cready else 'Does not pass'}."]
     lines += ["", f"**Verdict:** {'meets the gate; Luke decides on live' if ready else 'stay on paper'}", ""]
     return "\n".join(lines)
 

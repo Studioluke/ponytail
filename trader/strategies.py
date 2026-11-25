@@ -39,12 +39,16 @@ EXPERIMENT_START = "2026-11-05"
 # it takes control's slot (3 of Luke's 5 x $60) and control runs as a shadow
 # only until it reaches 40. If sip_orb's live+shadow avg R over its next 40
 # trades (from PROMOTED) is below 0, the third slot reverts to control.
-SLOTS = {"sip_orb": 3, "noise": 1, "lasthalf": 1, "control": 0}
+# 11-25 review: lasthalf (19 trades, PF 0.19, -0.27R) runs as a shadow only;
+# its slot stays empty (4 of Luke's 5 used). Retire it at 40 if still below 0R.
+SLOTS = {"sip_orb": 3, "noise": 1, "lasthalf": 0, "control": 0}
 PROMOTED = {"sip_orb": "2026-11-19"}
 RISK_FRAC = {"sip_orb": 0.005, "noise": 0.005, "lasthalf": 0.005, "control": 0.0025}
 PROMOTE = {"min_trades": 40, "profit_factor": 1.2}
 # Shadow-only variants, scored next to the live strategies (11-11 review).
-VARIANTS = {"sip_orb_wide": "sip_orb", "sip_orb_mkt": "sip_orb", "noise_band": "noise"}
+# 11-25: at most two sip_orb filter variants at once (mkt, gapdn).
+VARIANTS = {"sip_orb_wide": "sip_orb", "sip_orb_mkt": "sip_orb", "sip_orb_gapdn": "sip_orb",
+            "noise_band": "noise", "lasthalf_vwap": "lasthalf"}
 SCORED = list(SLOTS) + list(VARIANTS)
 
 SIP_SCAN_AT = time(9, 35)
@@ -165,6 +169,24 @@ def sip_wide(c, sig, at=None):
     if stop >= sig.entry:
         return None
     return Signal(sig.symbol, sig.entry, stop, None, sig.reason + " [wide stop]", strategy="sip_orb_wide")
+
+
+def gap_into_downtrend(spy_bars, spy_daily, days=5):
+    """11-25 review (sip_orb_gapdn): SPY opened above the prior close while its
+    close is below the close `days` sessions ago."""
+    if not spy_bars or len(spy_daily) < days + 1:
+        return False
+    pc = spy_daily[-1]["c"]
+    return spy_bars[0]["o"] > pc and pc < spy_daily[-1 - days]["c"]
+
+
+def vwap_agrees(spy_bars, d):
+    """11-25 review (lasthalf_vwap): long only at/above SPY's VWAP, short only below."""
+    v = vwap(spy_bars) if spy_bars else None
+    if v is None:
+        return False
+    c = spy_bars[-1]["c"]
+    return c >= v if d > 0 else c < v
 
 
 def spy_ok_for_longs(spy_bars, bands):
