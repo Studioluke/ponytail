@@ -27,3 +27,5 @@ date,symbol,event,timing,source
 2026-11-25,DE,earnings,before,ifyouspent.com preview citing Deere 11-11 notice (call 9:00 am CT)
 2026-11-26,ALL,Thanksgiving market closed,all day,NYSE holiday calendar (standard schedule)
 2026-11-27,ALL,half day close 13:00 ET,13:00,NYSE holiday calendar (standard schedule)
+2026-12-01,ALL,ISM Manufacturing,10:00,standard first-business-day schedule (unconfirmed)
+2026-12-04,ALL,jobs report,08:30,standard first-Friday BLS schedule (unconfirmed)
