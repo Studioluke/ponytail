@@ -1,0 +1,136 @@
+{
+ "date": "2026-11-27",
+ "sleeves": [
+  {
+   "etf": "QLD",
+   "under": "QQQ",
+   "close": 633.93,
+   "sma200": 683.49895,
+   "rsi2": 0.0,
+   "trigger": 600.2125571428571,
+   "premarket": 633.92,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+    "Tesla Files Plans to Acquire German Company Emag",
+    "ScitiX Launches Model Inference Services on AWS Marketplace",
+    "MegazoneCloud Launches Amazon Quick Center of Excellence",
+    "Tesla Deploys Manual Battery Preconditioning Feature"
+   ],
+   "events": [
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-12-01",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing",
+     "timing": "10:00",
+     "source": "standard first-business-day schedule (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "SSO",
+   "under": "SPY",
+   "close": 716.7,
+   "sma200": 733.1607,
+   "rsi2": 0.0,
+   "trigger": 689.9502428571428,
+   "premarket": 728.04,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+    "ScitiX Launches Model Inference Services on AWS Marketplace",
+    "MegazoneCloud Launches Amazon Quick Center of Excellence",
+    "Microsoft AI CEO Mustafa Suleyman Issues Warning on AI Safety Thresholds",
+    "Amazon Announces Quick Sight Upgrade and Autonomous Workload Build Capabilities"
+   ],
+   "events": [
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-12-01",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing",
+     "timing": "10:00",
+     "source": "standard first-business-day schedule (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "USD",
+   "under": "SMH",
+   "close": 422.46,
+   "sma200": 525.6521,
+   "rsi2": 0.0,
+   "trigger": 380.08247142857147,
+   "premarket": 439.04,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+    "Micron Reports High Bandwidth Memory (HBM) Capacity Largely Booked for Upcoming Year",
+    "NVIDIA and Kioxia Announce Collaboration to Extend GPU Memory Capacity",
+    "NVIDIA Orders Partners to Stop Server Shipments to ASEAN States",
+    "S&P Global Ratings Places NVIDIA on CreditWatch Negative"
+   ],
+   "events": [
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-12-01",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing",
+     "timing": "10:00",
+     "source": "standard first-business-day schedule (unconfirmed)"
+    }
+   ]
+  },
+  {
+   "etf": "NVDL",
+   "under": "NVDA",
+   "close": 149.3,
+   "sma200": 202.8741,
+   "rsi2": 0.0,
+   "trigger": 119.93142857142857,
+   "premarket": 152.75,
+   "setup": "below 200d: setups off, learning trades only",
+   "news": [
+    "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+    "NVIDIA and Kioxia Announce Collaboration to Extend GPU Memory Capacity",
+    "NVIDIA Orders Partners to Stop Server Shipments to ASEAN States",
+    "S&P Global Ratings Places NVIDIA on CreditWatch Negative"
+   ],
+   "events": [
+    {
+     "date": "2026-11-27",
+     "symbol": "ALL",
+     "event": "half day close 13:00 ET",
+     "timing": "13:00",
+     "source": "NYSE holiday calendar (standard schedule)"
+    },
+    {
+     "date": "2026-12-01",
+     "symbol": "ALL",
+     "event": "ISM Manufacturing",
+     "timing": "10:00",
+     "source": "standard first-business-day schedule (unconfirmed)"
+    }
+   ]
+  }
+ ]
+}
