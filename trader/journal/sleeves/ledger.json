@@ -2,25 +2,13 @@
  "start": "2026-10-26",
  "sleeves": {
   "QLD": {
-   "cash": 16.875896429511897,
-   "shares": {
-    "qty": 1.0935451311543354,
-    "entry": 68.58427499999999,
-    "date": "2026-11-24",
-    "stop": 60.52,
-    "kind": "learning"
-   },
+   "cash": 94.12355542277238,
+   "shares": null,
    "spread": null
   },
   "SSO": {
-   "cash": 131.73610277042874,
-   "shares": {
-    "qty": 1.2562848791793144,
-    "entry": 59.699835,
-    "date": "2026-11-25",
-    "stop": 55.15,
-    "kind": "learning"
-   },
+   "cash": 209.22895827832087,
+   "shares": null,
    "spread": null
   },
   "USD": {
@@ -29,8 +17,14 @@
    "spread": null
   },
   "NVDL": {
-   "cash": 159.5815403393733,
-   "shares": null,
+   "cash": 91.1473257966937,
+   "shares": {
+    "qty": 5.087394164032124,
+    "entry": 13.451722499999999,
+    "date": "2026-11-27",
+    "stop": 8.54,
+    "kind": "learning"
+   },
    "spread": null
   }
  },
@@ -518,6 +512,39 @@
    "pnl": null,
    "why": "learning trade: lowest RSI(2) 0 on SPY",
    "kind": "learning"
+  },
+  {
+   "date": "2026-11-27",
+   "sleeve": "QLD",
+   "action": "sell",
+   "what": "QLD",
+   "qty": 1.0935,
+   "price": 70.6397,
+   "pnl": 2.25,
+   "why": "target: above prior day's high",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-27",
+   "sleeve": "SSO",
+   "action": "sell",
+   "what": "SSO",
+   "qty": 1.2563,
+   "price": 61.6841,
+   "pnl": 2.49,
+   "why": "target: above prior day's high",
+   "kind": "learning"
+  },
+  {
+   "date": "2026-11-27",
+   "sleeve": "NVDL",
+   "action": "buy",
+   "what": "NVDL",
+   "qty": 5.0874,
+   "price": 13.4517,
+   "pnl": null,
+   "why": "learning trade: lowest RSI(2) 0 on NVDA",
+   "kind": "learning"
   }
  ],
  "equity": {
@@ -658,6 +685,12 @@
    "SSO": 206.7,
    "USD": 155.43,
    "NVDL": 159.58
+  },
+  "2026-11-27": {
+   "QLD": 94.12,
+   "SSO": 209.23,
+   "USD": 155.43,
+   "NVDL": 159.55
   }
  },
  "last_entries": 1
