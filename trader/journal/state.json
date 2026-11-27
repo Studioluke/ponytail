@@ -1,21 +1,14 @@
 {
- "day": "2026-11-25",
+ "day": "2026-11-27",
  "week": "2026-W48",
- "day_pnl": -0.4129119999999986,
- "week_pnl": 3.526019999999992,
- "day_losses": 5,
+ "day_pnl": -0.3073999999999941,
+ "week_pnl": 3.218619999999998,
+ "day_losses": 2,
  "traded_today": [
-  "sip_orb:DE",
-  "sip_orb:C",
-  "sip_orb:BAC",
-  "sip_orb:CVX",
-  "sip_orb:LMT",
-  "sip_orb:DELL",
-  "control:GOOGL",
-  "control:QQQ",
+  "sip_orb:GILD",
+  "control:AAPL",
   "control:SPY",
-  "control:MSFT",
-  "control:AAPL"
+  "control:QQQ"
  ],
  "seen_orders": [
   "halt:2026-10-28",
@@ -25,99 +18,97 @@
   "halt:2026-11-04"
  ],
  "open": {},
- "entries": 6,
+ "entries": 2,
  "learning_tried": false,
  "strat_losses": {
-  "sip_orb": 3,
-  "noise": 1,
-  "lasthalf": 1
+  "sip_orb": 1,
+  "noise": 1
  },
  "sip_watch": [
   {
-   "symbol": "DE",
-   "hi": 610.78,
-   "lo": 582.79,
-   "atr": 19.8064,
-   "rvol": 5.21,
-   "green": true
-  },
-  {
-   "symbol": "MSTR",
-   "hi": 74.9,
-   "lo": 72.55,
-   "atr": 8.54,
-   "rvol": 4.98,
+   "symbol": "VRTX",
+   "hi": 520.445,
+   "lo": 506.695,
+   "atr": 14.5646,
+   "rvol": 16.06,
    "green": false
   },
   {
-   "symbol": "CVX",
-   "hi": 209.71,
-   "lo": 207.26,
-   "atr": 4.7461,
-   "rvol": 4.54,
-   "green": true
-  },
-  {
-   "symbol": "BAC",
-   "hi": 47.45,
-   "lo": 46.96,
-   "atr": 1.2164,
-   "rvol": 3.37,
-   "green": true
-  },
-  {
-   "symbol": "TGT",
-   "hi": 175.5,
-   "lo": 174.15,
-   "atr": 6.0682,
-   "rvol": 3.11,
+   "symbol": "ABBV",
+   "hi": 292.82,
+   "lo": 289.785,
+   "atr": 6.5579,
+   "rvol": 4.65,
    "green": false
   },
   {
-   "symbol": "DELL",
-   "hi": 277.57,
-   "lo": 265.27,
-   "atr": 39.6757,
-   "rvol": 2.93,
-   "green": true
-  },
-  {
-   "symbol": "LMT",
-   "hi": 585.88,
-   "lo": 583.08,
-   "atr": 16.1914,
-   "rvol": 2.65,
-   "green": true
-  },
-  {
-   "symbol": "COIN",
-   "hi": 98.56,
-   "lo": 97.06,
-   "atr": 8.1364,
-   "rvol": 2.54,
-   "green": false
-  },
-  {
-   "symbol": "C",
-   "hi": 110.81,
-   "lo": 110.06,
-   "atr": 3.7964,
-   "rvol": 2.05,
+   "symbol": "RTX",
+   "hi": 198.67,
+   "lo": 197.825,
+   "atr": 4.9321,
+   "rvol": 4.58,
    "green": true
   },
   {
    "symbol": "SHOP",
-   "hi": 126.62,
-   "lo": 125.21,
-   "atr": 8.2371,
-   "rvol": 1.93,
+   "hi": 142.02,
+   "lo": 139.045,
+   "atr": 7.9332,
+   "rvol": 2.59,
+   "green": true
+  },
+  {
+   "symbol": "MSTR",
+   "hi": 84.61,
+   "lo": 80.16,
+   "atr": 7.9775,
+   "rvol": 2.03,
+   "green": false
+  },
+  {
+   "symbol": "PLTR",
+   "hi": 170.99,
+   "lo": 166.59,
+   "atr": 9.055,
+   "rvol": 1.9,
+   "green": false
+  },
+  {
+   "symbol": "DIA",
+   "hi": 506.53,
+   "lo": 505.75,
+   "atr": 9.4075,
+   "rvol": 1.79,
+   "green": false
+  },
+  {
+   "symbol": "GILD",
+   "hi": 175.7,
+   "lo": 174.405,
+   "atr": 4.1071,
+   "rvol": 1.78,
+   "green": true
+  },
+  {
+   "symbol": "GS",
+   "hi": 817.13,
+   "lo": 807.85,
+   "atr": 31.115,
+   "rvol": 1.68,
+   "green": false
+  },
+  {
+   "symbol": "DE",
+   "hi": 653.85,
+   "lo": 647.43,
+   "atr": 22.4343,
+   "rvol": 1.57,
    "green": false
   }
  ],
  "flags": {
-  "grid": "15:30",
+  "grid": "12:30",
   "feedcheck": true,
-  "noise_done": true,
-  "lasthalf_done": true
+  "noise_done": true
  }
 }

@@ -355,3 +355,11 @@ time,symbol,event,qty,price,stop,target,pnl,note
 2026-11-25T15:30:02.538227-05:00,SH,buy,1.73,34.65,34.41,,,[lasthalf] last half hour: SPY prior close to 10:00 down; risk $0.42
 2026-11-25T15:57:07.609218-05:00,BAC,exit_eod,1.259,48.68,47.33,,1.42,"[sip_orb] entry 47.55, R = +5.14"
 2026-11-25T15:57:07.609218-05:00,SH,exit_eod,1.73,34.51,34.41,,-0.24,"[lasthalf] entry 34.65, R = -0.58"
+2026-11-27T09:35:02.794311-05:00,,sip_scan,,,,,,"[sip_orb] top RVOL: VRTX 16.06x red, ABBV 4.65x red, RTX 4.58x green, SHOP 2.59x green, MSTR 2.03x red, PLTR 1.9x red, DIA 1.79x red, GILD 1.78x green, GS 1.68x red, DE 1.57x red"
+2026-11-27T09:41:02.587269-05:00,GILD,buy,0.34,176.01,175.29,,,"[sip_orb] 5-min ORB break of 175.70 (range 174.41-175.70), RVOL 1.8, ATR 4.11; risk $0.25"
+2026-11-27T09:47:02.752297-05:00,GILD,exit_stop,0.34,175.25,175.29,,-0.26,"[sip_orb] entry 176.01, R = -1.05"
+2026-11-27T10:41:02.724374-05:00,AAPL,skip,,358.94,,,,"[control] ORB break of 358.85 (range 356.11-358.85), VWAP 357.27, stop 1.97 below (ATR 7.88); skipped, gap +0.78% vs prior close 355.58 exceeds 0.75%"
+2026-11-27T10:46:02.268453-05:00,SPY,skip,,726.26,,,,"[control] ORB break of 726.05 (range 720.99-726.05), VWAP 722.61, stop 4.18 below (ATR 16.74); skipped, gap +1.28% vs prior close 716.735 exceeds 0.75%"
+2026-11-27T10:46:02.268453-05:00,QQQ,skip,,646.01,,,,"[control] ORB break of 645.74 (range 638.14-645.74), VWAP 640.34, stop 5.72 below (ATR 22.90); skipped, gap +1.86% vs prior close 633.92 exceeds 0.75%"
+2026-11-27T11:30:02.848633-05:00,SH,buy,0.875,34.18,33.84,,,"[noise] noise area 11:30: fallback: no band break by 11:30, SPY below its open 725.88; risk $0.30"
+2026-11-27T12:01:02.330763-05:00,SH,exit_trail,0.875,34.12,33.84,,-0.05,"[noise] entry 34.18, R = -0.17"
